@@ -12,3 +12,5 @@ for i in {1..22}
 do
 echo "count $i" >> $OUTFILE
 done
+cat $OUTFILE
+echo `date`
