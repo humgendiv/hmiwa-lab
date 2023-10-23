@@ -15,7 +15,9 @@ if [ ! -z ${PBS_O_WORKDIR} ]; then
 fi
 echo `pwd`
 
-cd ~/hmiwa1/rawdata
-echo `pwd`
+#qsub -v pwd=`pwd` qtest01.sh
 
-echo $PBS_JOBNAME
+#scp hmiwa-spc:~/hmiwa/downloads/XXXXX ~/hmiwa1/rawdata/XXXXX
+
+XXX=""
+scp hmiwa-spc:~/hmiwa/${XXX} ${XXX}
