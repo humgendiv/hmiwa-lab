@@ -1,7 +1,7 @@
 #!/bin/bash
 #PBS -j oe 
-#PBS -o ~/hmiwa/hmiwa-labserver/99_log/qtest05.log
-#PBS -e ~/hmiwa/hmiwa-labserver/99_log/qtest05.log
+#PBS -o /home/hmiwa/hmiwa/hmiwa-labserver/99_log/qtest05.log
+#PBS -e /home/hmiwa/hmiwa/hmiwa-labserver/99_log/qtest05.log
 
 #qsystem test
 echo `date`
