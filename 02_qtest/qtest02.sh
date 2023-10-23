@@ -5,3 +5,4 @@
 
 #qsystem test
 echo `pwd`
+echo $PBS_O_WORKDIR
