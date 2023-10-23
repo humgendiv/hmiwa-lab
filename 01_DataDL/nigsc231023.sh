@@ -8,5 +8,4 @@ cd ~/hmiwa1/rawdata/
 
 #以下をちまちま実行していく。
 XXX=""
-scp hmiwa-spc:~/hmiwa/downloads/${XXX}.tar.gz ${XXX}.tar.gz
-tar xvzf ${XXX}.tar.gz
+date;scp hmiwa-spc:~/hmiwa/downloads/${XXX}.tar.gz ${XXX}.tar.gz;tar xvzf ${XXX}.tar.gz;echo "$XXX done `date`"
