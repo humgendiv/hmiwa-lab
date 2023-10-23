@@ -12,7 +12,7 @@ fi
 #cd ~/hmiwa1/rawdata/
 #scp hmiwa-spc:~/hmiwa/downloads/XXXXX ~/hmiwa1/rawdata/XXXXX
 
-scp hmiwa-spc:~/hmiwa/${FILENAME} ${FILENAME}
+#scp hmiwa-spc:~/hmiwa/${FILENAME} ${FILENAME}
 #$sshpass -p $PASS scp hmiwa-spc:~/hmiwa/${FILENAME} ${FILENAME}
 #scp hmiwa-spc:~/hmiwa/downloads/XXXXX ~/hmiwa1/rawdata/XXXXX
 
