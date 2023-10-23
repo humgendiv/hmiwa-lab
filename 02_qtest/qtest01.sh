@@ -1,7 +1,7 @@
 #!/bin/bash
 #PBS -N QSUB_TEST
-#PBS -o qtest01.log
-#PBS -e qtest01.log
+#PBS -o qtest01.o
+#PBS -e qtest01.e
 
 #qsystem test
 #qsub -v pwd=`pwd` qtest01.sh
