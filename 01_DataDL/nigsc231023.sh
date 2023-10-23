@@ -1,13 +1,12 @@
 #!/bin/bash
 #PBS -N SCP
-#PBS -o qtest03.o
-#PBS -e qtest03.e
-
-#qsub -v pwd=`pwd` qtest01.sh
+#PBS -o /home/hmiwa/hmiwa/hmiwa-labserver/99_log/SCP.o
+#PBS -e /home/hmiwa/hmiwa/hmiwa-labserver/99_log/SCP.e
 
 cd ~/hmiwa1/rawdata/
 #scp hmiwa-spc:~/hmiwa/downloads/XXXXX ~/hmiwa1/rawdata/XXXXX
 
+#以下をちまちま実行していく。
 XXX=""
 scp hmiwa-spc:~/hmiwa/downloads/${XXX}.tar.gz ${XXX}.tar.gz
 tar xvzf ${XXX}.tar.gz
