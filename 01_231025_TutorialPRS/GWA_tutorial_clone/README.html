@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="gwa-tutorial">GWA tutorial</h2>
+<p>This GitHub repository provides several tutorials about techniques used to analyze genetic data.
+Underneath this README we have provided a step-by-step guide to help researchers without experience in Unix to complete these tutorials succesfully. For reseachers familiar with Unix this README will probably be sufficient.</p>
+<h4 id="we-have-made-scripts-available-for">We have made scripts available for:</h4>
+<ul>
+<li>
+<ol>
+<li>All essential GWAS QC steps along with scripts for data visualization.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Dealing with population stratification, using 1000 genomes as a reference.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Association analyses of GWAS data.</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>Polygenic risk score (PRS) analyses.</li>
+</ol>
+</li>
+</ul>
+<p>The scripts downloadable from this GitHub page can be seen purely as tutorials and used for educational purposes, but can also be used as a template for analyzing your own data.
+All scripts/tutorials from this GitHub page use freely downloadable data, commands to download the necessary data can be found in the scripts.</p>
+<h4 id="content">Content:</h4>
+<ul>
+<li>1_QC_GWAS.zip</li>
+<li>2_Population_stratification.zip</li>
+<li>3_Association_GWAS</li>
+<li>4_ PRS.doc</li>
+</ul>
+<p>How to use the tutorials on this page:
+The tutorials are designed to run on an UNIX/Linux computer/server. The first 3 tutorials contain both *.text as *.R scripts. The main scripts for performing these tutorials are the *.text scripts (respectively for the first 3 tutorials: 1_Main_script_QC_GWAS, 2_Main_script_MDS.txt, and 3_Main_script_association_GWAS.txt). These script will execute the *.R scripts, when those are placed in the same directory.
+Note, without placing all files belonging to a specific tutorial in the same directory the tutorials cannot be completed.
+Furthermore, the first 3 tutorials are not independent; they should be followed in the order given above, according to their number. For example, the files generated at the end of tutorial 1 are essential in performing tutorial 2. Therefore, those files should be moved/copied to the directory in which tutorial 2 is executed. In addition, the files from tutorial 2 are essential for tutorial 3.
+The fourth tutorial (4_ PRS.doc) is a MS Word document, and runs independently of the previous 3 tutorials.</p>
+<p>All scripts are developed for UNIX/Linux computer resources, and all commands should be typed/pasted at the shell prompt.</p>
+<p>Note:
+The *.zip files contain multiple files, in order to successfully complete the tutorials it is essential to download all files from the *.zip files and upload them to your working directory.
+To pull all tutorials to your computer simply use the following command: git clone https://github.com/MareesAT/GWA_tutorial.git . Alternatively, you can manually open the *.zip folders and PRS.doc file by clicking on the folder/file followed by clicking on &quot;View Raw&quot;.</p>
+<h4 id="contact">Contact:</h4>
+<p>Please email Andries Marees (a.t.marees@vu.nl) for questions</p>
+<h4 id="additional-material">Additional material</h4>
+<p>Once you completed the current tutorial we recommend you to visit https://github.com/AngelaMinaVargas/eMAGMA-tutorial
+This Github repository guides the steps to use eMAGMA.<br>
+eMAGMA is a post-GWAS analysis, that conducts eQTL informed gene-based tests by assigning SNPs to tissue-specific eGenes.</p>
+<hr>
+<h1 id="step-by-step-guide-for-this-tutorial">Step-by-step-guide for this tutorial</h1>
+<p>Step-by-step-guide for researches new to Unix and/or genetic analyses.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The tutorial consist of four separate parts. The first three are dependent of each other and can only be performed in consecutive order, starting from the first (1_QC_GWAS.zip), then the second (2_Population_stratification.zip, followed by the third (3_Association_GWAS). The fourth part (4_ PRS.doc) can be performed independently.</p>
+<p>The Unix commands provided in this guide should be typed/copy-and-pasted after the prompt ($ or &gt;) on your Unix machine. Note, the &quot;&gt;&quot; in front of the commands should not be copy-and-pasted. Only what comes after the &quot;&gt;&quot;.</p>
+<p>We assume that you have read the accompanying article &quot;A tutorial on conducting Genome-Wide-Association Studies: Quality control and statistical analysis
+&quot; (https://www.ncbi.nlm.nih.gov/pubmed/29484742), which should provide you with a basic theoretical understanding of the type of analyses covered in this tutorial.</p>
+<p>This step-by-step guide serves researchers who have none or very little experience with Unix, by helping them through the Unix commands in preparation of the tutorial.</p>
+<h2 id="preparation">Preparation</h2>
+<p>Step 1) The current set of tutorials on this GitHub page are based on a GNU/Linux-based computer, therefore:</p>
+<ul>
+<li>Make sure you have access to a GNU/Linux-based computer resource.</li>
+<li>Create a directory where you plan to conduct the analysis.</li>
+</ul>
+<h4 id="execute-the-command-below-copy-and-paste-without-the-prompt--and-without-the">Execute the command below (copy-and-paste without the prompt: &gt; and without the {} ).</h4>
+<blockquote>
+<p>mkdir {name_for_your_directory}
+<br /></p>
+</blockquote>
+<p>Step 2) Download the files from the GitHub page</p>
+<ul>
+<li>Change the directory of your Unix machine to the created directory from step 1.</li>
+</ul>
+<h4 id="execute-the-command-below">Execute the command below</h4>
+<blockquote>
+<p>cd HOME/{user}/{path/name_for_your_directory}<br>
+git clone https://github.com/MareesAT/GWA_tutorial.git</p>
+</blockquote>
+<ul>
+<li>Unzip the folder of the first tutorial and move into the newly created directory.</li>
+</ul>
+<h4 id="execute-the-commands-below">Execute the commands below</h4>
+<blockquote>
+<p>unzip 1_QC_GWAS.zip
+cd 1_QC_GWAS
+<br /></p>
+</blockquote>
+<p>Step 3) This tutorial requires the open-source programming language R and the open-source whole genome association analysis toolset PLINK version 1.07 (all commands also work with PLINK2). If these programs are not already installed on your computer they can be downloaded from respectively:
+https://www.r-project.org/
+http://zzz.bwh.harvard.edu/plink/
+https://www.cog-genomics.org/plink2</p>
+<ul>
+<li>
+<p>We recommend using the newest versions. These websites will guide you through the installation process.</p>
+</li>
+<li>
+<p>Congratulations everything is set up to start the tutorial!</p>
+</li>
+</ul>
+<h2 id="execution-of-tutorial-1">Execution of tutorial 1</h2>
+<p>Step 4) Once you've created a directory in which you have downloaded and unzipped the folder: 1_QC_GWAS.zip, you are ready to start the first part of the actual tutorial.
+All steps of this tutorial will be excecuted using the commands from the main script: 1_Main_script_QC_GWAS.txt, the only thing necessary in completing the tutorial is copy-and-paste the commands from the main script at the prompt of your Unix device. Note, make sure you are in the directory containing all files, which is the directory after the last command of step 2. There is no need to open the other files manually.</p>
+<p>There are two ways to use the main script:</p>
+<h4 id="option-1">Option 1</h4>
+<ul>
+<li>If you are a novice user, we recommend opening 1_Main_script_QC_GWAS.txt in WordPad or Notepad on your Windows computer.</li>
+</ul>
+<h4 id="option-2">Option 2</h4>
+<ul>
+<li>Alternatively, 1_Main_script_QC_GWAS.txt can be opened using an Unix text editor, for example vi.</li>
+</ul>
+<h4 id="open-the-main-script-with-vi">Open the main script with vi :</h4>
+<blockquote>
+<p>vi 1_Main_script_QC_GWAS.txt</p>
+</blockquote>
+<ul>
+<li>This enables you to read the script within the Unix environment and copy the command lines from it.</li>
+</ul>
+<h4 id="to-exit-vi-and-return-to-your-directory-use">To exit vi and return to your directory use:</h4>
+<blockquote>
+<p>:q</p>
+</blockquote>
+<ul>
+<li>From there, using either option 1 or 2, you can read the information given at every step of script “, 1_Main_script_QC_GWAS.txt” and copy-paste the commands after the prompt on your Unix machine.</li>
+</ul>
+<p>Note, if R or PLINK are installed in a directory other than your working directory please specify the path to the excecutables in the given script. Alternatively, you can copy the executables of the programs to your working directory. For example, by using:
+cp {path/program name} {path/directiory}. However, when using a cluster computer, commands such a &quot;module load plink&quot;, and &quot;module load R&quot; will suffice, regardless of directory.</p>
+<p>For more information of using R and PLINK in a Unix/Linux environment we refer to:
+http://zzz.bwh.harvard.edu/plink/download.shtml#nixs</p>
+<h2 id="execution-of-tutorial-23">Execution of tutorial 2&amp;3</h2>
+<ul>
+<li>Unzip the tutorial folder of choice as described in step 2.</li>
+<li>Use the output file from the last tutorial as input for the tutorial you want to start.</li>
+</ul>
+<h4 id="the-command-below-can-be-used-to-copy-the-file-to-another-directory">The command below can be used to copy the file to another directory</h4>
+<blockquote>
+<p>cp {path/directory/file} {path/directory}</p>
+</blockquote>
+<ul>
+<li>Use 2_Main_script_MDS.txt for the second tutorial and 3_Main_script_association_GWAS.txt for the third tutorial.</li>
+</ul>
+<h2 id="execution-of-tutorial-4">Execution of tutorial 4</h2>
+<p>4_ PRS.doc works independently from the other tutorials. After downloading 4_ PRS.doc, you can run the script, without the need for unzipping, in a directory of choice.</p>
+
+</body>
+</html>
