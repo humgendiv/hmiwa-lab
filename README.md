@@ -1,6 +1,11 @@
 # hmiwa-lab
 解析スクリプト等管理用（new）
 
+(2023/11/05)
+* d_20231023:現在使用中
+* hmiwa-labserver:ラボサーバ用レポジトリ統合版（更新終了）
+* coming soon...
+
 ### レポジトリ統合手順
 
     cd /Users/hmiwa/Documents/GitHub
