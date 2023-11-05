@@ -46,3 +46,5 @@
     git fetch hmiwa-labserver
     git merge --allow-unrelated-histories -X subtree=hmiwa-labserver hmiwa-labserver/main
     git push git@github.com:humgendiv/hmiwa-lab.git
+
+※ 基本的にこれで良いはずだが、なぜかd_20231023の一部ファイルが移動できていなかったので、最終的には単純コピーしている（先にログだけ入ってしまったので統合できなくなったのかな…）。ファイルの最初のコミット履歴は残っているので良いことにする。
