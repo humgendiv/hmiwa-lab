@@ -1,0 +1,526 @@
+Last login: Fri Nov  3 21:58:07 on console
+hmiwa@hanakonoMacBook-Air ~ % jupyter notebook        
+[I 2023-11-03 22:03:38.438 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-03 22:03:38.448 ServerApp] Package jupyter_lsp took 0.0095s to import
+[W 2023-11-03 22:03:38.448 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-03 22:03:38.453 ServerApp] Package jupyter_server_terminals took 0.0053s to import
+[I 2023-11-03 22:03:38.454 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-03 22:03:38.478 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-03 22:03:38.478 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-03 22:03:38.478 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-03 22:03:38.479 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-03 22:03:38.481 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-03 22:03:38.482 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-03 22:03:38.642 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-03 22:03:38.658 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-03 22:03:38.659 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-03 22:03:38.659 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-03 22:03:38.660 LabApp] JupyterLab extension loaded from /Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyterlab
+[I 2023-11-03 22:03:38.660 LabApp] JupyterLab application directory is /Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/lab
+[I 2023-11-03 22:03:38.661 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-03 22:03:38.661 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-03 22:03:38.662 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-03 22:03:38.663 ServerApp] Serving notebooks from local directory: /Users/hmiwa
+[I 2023-11-03 22:03:38.663 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-03 22:03:38.663 ServerApp] http://localhost:8888/tree?token=418798ed2d28c450e2e18c4c0b97dafb736c912ce30354cb
+[I 2023-11-03 22:03:38.663 ServerApp]     http://127.0.0.1:8888/tree?token=418798ed2d28c450e2e18c4c0b97dafb736c912ce30354cb
+[I 2023-11-03 22:03:38.663 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2023-11-03 22:03:38.665 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///Users/hmiwa/Library/Jupyter/runtime/jpserver-1176-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=418798ed2d28c450e2e18c4c0b97dafb736c912ce30354cb
+        http://127.0.0.1:8888/tree?token=418798ed2d28c450e2e18c4c0b97dafb736c912ce30354cb
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2023-11-03 22:03:43.056 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-03 22:03:56.624 ServerApp] Kernel started: 2e52ee2e-a6ca-4326-92a7-5d903cf97cb8
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2023-11-03 22:03:59.242 ServerApp] Connecting to kernel 2e52ee2e-a6ca-4326-92a7-5d903cf97cb8.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[E 2023-11-03 22:04:00.689 ServerApp] nbconvert failed: PandocMissing("Pandoc wasn't found.\nPlease check that pandoc is installed:\nhttps://pandoc.org/installing.html")
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 187, in from_notebook_node
+        latex, resources = super().from_notebook_node(nb, resources=resources, **kw)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/latex.py", line 92, in from_notebook_node
+        return super().from_notebook_node(nb, resources, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/templateexporter.py", line 427, in from_notebook_node
+        output = self.template.render(nb=nb_copy, resources=resources)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+        self.environment.handle_exception()
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/index.tex.j2", line 8, in top-level template code
+        ((* extends cell_style *))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/style_jupyter.tex.j2", line 176, in top-level template code
+        \prompt{(((prompt)))}{(((prompt_color)))}{(((execution_count)))}{(((extra_space)))}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/base.tex.j2", line 7, in top-level template code
+        ((*- extends 'document_contents.tex.j2' -*))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/document_contents.tex.j2", line 51, in top-level template code
+        ((*- block figure scoped -*))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/display_priority.j2", line 5, in top-level template code
+        ((*- extends 'null.j2' -*))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/null.j2", line 30, in top-level template code
+        ((*- block body -*))
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/base.tex.j2", line 220, in block 'body'
+        ((( super() )))
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/null.j2", line 32, in block 'body'
+        ((*- block any_cell scoped -*))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/null.j2", line 85, in block 'any_cell'
+        ((*- block markdowncell scoped-*)) ((*- endblock markdowncell -*))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/share/jupyter/nbconvert/templates/latex/document_contents.tex.j2", line 68, in block 'markdowncell'
+        ((( cell.source | citation2latex | strip_files_prefix | convert_pandoc('markdown+tex_math_double_backslash', 'json',extra_args=[]) | resolve_references | convert_explicitly_relative_paths | convert_pandoc('json','latex'))))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/filters/pandoc.py", line 35, in convert_pandoc
+        return pandoc(source, from_format, to_format, extra_args=extra_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/utils/pandoc.py", line 51, in pandoc
+        check_pandoc_version()
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/utils/pandoc.py", line 99, in check_pandoc_version
+        v = get_pandoc_version()
+            ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/utils/pandoc.py", line 76, in get_pandoc_version
+        raise PandocMissing()
+    nbconvert.utils.pandoc.PandocMissing: Pandoc wasn't found.
+    Please check that pandoc is installed:
+    https://pandoc.org/installing.html
+[W 2023-11-03 22:04:00.693 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: Pandoc wasn't found.
+    Please check that pandoc is installed:
+    https://pandoc.org/installing.html
+[E 2023-11-03 22:04:00.699 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:04:00.699 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 223.42ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:06:28.807 ServerApp] Writing 28993 bytes to notebook.tex
+[I 2023-11-03 22:06:28.807 ServerApp] Building PDF
+[E 2023-11-03 22:06:28.808 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:06:28.808 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:06:28.809 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:06:28.809 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 1508.44ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:07:12.269 ServerApp] Writing 28993 bytes to notebook.tex
+[I 2023-11-03 22:07:12.269 ServerApp] Building PDF
+[E 2023-11-03 22:07:12.270 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:07:12.270 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:07:12.271 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:07:12.271 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 271.36ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:11:59.362 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:14:00.401 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:16:01.413 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:16:31.864 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:16:32.192 ServerApp] Writing 43464 bytes to notebook.tex
+[I 2023-11-03 22:16:32.192 ServerApp] Building PDF
+[E 2023-11-03 22:16:32.193 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:16:32.193 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:16:32.194 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:16:32.194 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 289.50ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:18:31.902 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:20:31.935 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:21:16.044 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:21:16.353 ServerApp] Writing 64743 bytes to notebook.tex
+[I 2023-11-03 22:21:16.353 ServerApp] Building PDF
+[E 2023-11-03 22:21:16.354 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:21:16.355 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:21:16.355 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:21:16.355 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 272.22ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:52:56.826 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:52:57.255 ServerApp] Writing 65066 bytes to notebook.tex
+[I 2023-11-03 22:52:57.255 ServerApp] Building PDF
+[E 2023-11-03 22:52:57.256 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:52:57.258 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:52:57.259 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:52:57.259 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 387.09ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:53:55.230 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:53:55.542 ServerApp] Writing 65327 bytes to notebook.tex
+[I 2023-11-03 22:53:55.542 ServerApp] Building PDF
+[E 2023-11-03 22:53:55.543 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:53:55.543 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:53:55.544 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:53:55.544 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 270.83ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:55:13.913 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:55:14.219 ServerApp] Writing 65368 bytes to notebook.tex
+[I 2023-11-03 22:55:14.219 ServerApp] Building PDF
+[E 2023-11-03 22:55:14.220 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:55:14.220 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:55:14.221 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:55:14.221 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 264.83ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:57:35.765 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:57:42.350 ServerApp] Writing 65368 bytes to notebook.tex
+[I 2023-11-03 22:57:42.350 ServerApp] Building PDF
+[E 2023-11-03 22:57:42.350 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:57:42.351 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:57:42.352 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:57:42.352 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 269.31ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:58:02.958 ServerApp] Writing 65368 bytes to notebook.tex
+[I 2023-11-03 22:58:02.958 ServerApp] Building PDF
+[E 2023-11-03 22:58:02.959 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:58:02.959 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:58:02.960 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:58:02.960 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 268.57ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[E 2023-11-03 22:59:12.258 ServerApp] nbconvert failed: RuntimeError('PyQtWebEngine is not installed to support Qt PDF conversion. Please install `nbconvert[qtpdf]` to enable.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/qt_exporter.py", line 54, in from_notebook_node
+        self._check_launch_reqs()
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/qt_exporter.py", line 32, in _check_launch_reqs
+        raise RuntimeError(msg)
+    RuntimeError: PyQtWebEngine is not installed to support Qt PDF conversion. Please install `nbconvert[qtpdf]` to enable.
+[W 2023-11-03 22:59:12.259 ServerApp] 500 GET /nbconvert/qtpdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: PyQtWebEngine is not installed to support Qt PDF conversion. Please install `nbconvert[qtpdf]` to enable.
+[E 2023-11-03 22:59:12.260 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:59:12.260 ServerApp] 500 GET /nbconvert/qtpdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 27.51ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 22:59:18.133 ServerApp] Writing 65368 bytes to notebook.tex
+[I 2023-11-03 22:59:18.134 ServerApp] Building PDF
+[E 2023-11-03 22:59:18.134 ServerApp] nbconvert failed: OSError('xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.')
+    Traceback (most recent call last):
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 134, in get
+        output, resources = await run_sync(
+                            ^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/to_thread.py", line 33, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2106, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 833, in run
+        result = context.run(func, *args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/jupyter_server/nbconvert/handlers.py", line 135, in <lambda>
+        lambda: exporter.from_notebook_node(nb, resources=resource_dict)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 200, in from_notebook_node
+        self.run_latex(tex_file)
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 169, in run_latex
+        return self.run_command(
+               ^^^^^^^^^^^^^^^^^
+      File "/Users/hmiwa/.pyenv/versions/3.11.4/lib/python3.11/site-packages/nbconvert/exporters/pdf.py", line 123, in run_command
+        raise OSError(msg)
+    OSError: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[W 2023-11-03 22:59:18.135 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (::1): nbconvert failed: xelatex not found on PATH, if you have not installed xelatex you may need to do so. Find further instructions at https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex.
+[E 2023-11-03 22:59:18.135 ServerApp] {
+      "Host": "localhost:8888",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Referer": "http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    }
+[E 2023-11-03 22:59:18.135 ServerApp] 500 GET /nbconvert/pdf/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb?download=true (5d4de759c950434bbdaa539e4beca031@::1) 267.49ms referer=http://localhost:8888/notebooks/hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 23:01:36.445 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 23:02:00.340 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 23:22:34.068 ServerApp] Saving file at /hmiwa/d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+[I 2023-11-03 23:22:37.984 ServerApp] Kernel shutdown: 2e52ee2e-a6ca-4326-92a7-5d903cf97cb8
+[I 2023-11-03 23:22:40.623 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-03 23:22:40.624 ServerApp] Shutting down 5 extensions
+hmiwa@hanakonoMacBook-Air ~ % 

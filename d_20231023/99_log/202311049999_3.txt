@@ -1,0 +1,1852 @@
+Last login: Fri Nov  3 22:05:22 on ttys002
+hmiwa@hanakonoMacBook-Air ~ % cd hmiwa          
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	hmiwa-labserver	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % cat alias.sh
+#!/bin/zsh
+
+alias ssh_nigsc='ssh hmiwa-spc'
+alias ssh_labsv='ssh hmiwa@133.11.2.58'%                                                                                                              hmiwa@hanakonoMacBook-Air hmiwa % ssh hmiwa@133.11.2.58
+^C
+hmiwa@hanakonoMacBook-Air hmiwa % ssh hmiwa@133.11.2.58
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Tue Oct 24 00:18:37 2023 from 133.11.2.151
+hmiwa@humgendiv:~$ cd
+hmiwa@humgendiv:~$ ls
+bcftools-1.17  hmiwa  hmiwa1  homebrew  local  R  snap
+hmiwa@humgendiv:~$ cd local
+hmiwa@humgendiv:~/local$ pip install jupyter
+Defaulting to user installation because normal site-packages is not writeable
+Collecting jupyter
+  Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
+Collecting qtconsole
+  Downloading qtconsole-5.4.4-py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.9/121.9 KB 2.5 MB/s eta 0:00:00
+Collecting jupyter-console
+  Downloading jupyter_console-6.6.3-py3-none-any.whl (24 kB)
+Collecting notebook
+  Downloading notebook-7.0.6-py3-none-any.whl (4.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 49.6 MB/s eta 0:00:00
+Collecting ipywidgets
+  Downloading ipywidgets-8.1.1-py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.4/139.4 KB 39.4 MB/s eta 0:00:00
+Collecting ipykernel
+  Downloading ipykernel-6.26.0-py3-none-any.whl (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.3/114.3 KB 37.0 MB/s eta 0:00:00
+Collecting nbconvert
+  Downloading nbconvert-7.10.0-py3-none-any.whl (256 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 256.7/256.7 KB 64.2 MB/s eta 0:00:00
+Collecting comm>=0.1.1
+  Downloading comm-0.1.4-py3-none-any.whl (6.6 kB)
+Collecting ipython>=7.23.1
+  Downloading ipython-8.17.2-py3-none-any.whl (808 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 808.4/808.4 KB 78.7 MB/s eta 0:00:00
+Collecting traitlets>=5.4.0
+  Downloading traitlets-5.13.0-py3-none-any.whl (84 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 KB 32.7 MB/s eta 0:00:00
+Collecting psutil
+  Downloading psutil-5.9.6-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (283 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 283.6/283.6 KB 76.9 MB/s eta 0:00:00
+Collecting pyzmq>=20
+  Downloading pyzmq-25.1.1-cp310-cp310-manylinux_2_28_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 82.0 MB/s eta 0:00:00
+Collecting nest-asyncio
+  Downloading nest_asyncio-1.5.8-py3-none-any.whl (5.3 kB)
+Collecting debugpy>=1.6.5
+  Downloading debugpy-1.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 58.5 MB/s eta 0:00:00
+Collecting jupyter-core!=5.0.*,>=4.12
+  Downloading jupyter_core-5.5.0-py3-none-any.whl (28 kB)
+Collecting tornado>=6.1
+  Downloading tornado-6.3.3-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (427 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 427.7/427.7 KB 85.6 MB/s eta 0:00:00
+Collecting jupyter-client>=6.1.12
+  Downloading jupyter_client-8.5.0-py3-none-any.whl (105 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.7/105.7 KB 35.3 MB/s eta 0:00:00
+Collecting matplotlib-inline>=0.1
+  Downloading matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Requirement already satisfied: packaging in /home/hmiwa/.local/lib/python3.10/site-packages (from ipykernel->jupyter) (23.1)
+Collecting widgetsnbextension~=4.0.9
+  Downloading widgetsnbextension-4.0.9-py3-none-any.whl (2.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 98.2 MB/s eta 0:00:00
+Collecting jupyterlab-widgets~=3.0.9
+  Downloading jupyterlab_widgets-3.0.9-py3-none-any.whl (214 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.9/214.9 KB 67.4 MB/s eta 0:00:00
+Requirement already satisfied: pygments in /usr/lib/python3/dist-packages (from jupyter-console->jupyter) (2.11.2)
+Collecting prompt-toolkit>=3.0.30
+  Downloading prompt_toolkit-3.0.39-py3-none-any.whl (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.2/385.2 KB 84.4 MB/s eta 0:00:00
+Requirement already satisfied: markupsafe>=2.0 in /usr/lib/python3/dist-packages (from nbconvert->jupyter) (2.0.1)
+Collecting nbclient>=0.5.0
+  Downloading nbclient-0.8.0-py3-none-any.whl (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 KB 25.5 MB/s eta 0:00:00
+Collecting tinycss2
+  Downloading tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Collecting mistune<4,>=2.0.3
+  Downloading mistune-3.0.2-py3-none-any.whl (47 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.0/48.0 KB 14.5 MB/s eta 0:00:00
+Collecting jinja2>=3.0
+  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 KB 40.5 MB/s eta 0:00:00
+Collecting beautifulsoup4
+  Downloading beautifulsoup4-4.12.2-py3-none-any.whl (142 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.0/143.0 KB 42.8 MB/s eta 0:00:00
+Collecting defusedxml
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting jupyterlab-pygments
+  Downloading jupyterlab_pygments-0.2.2-py2.py3-none-any.whl (21 kB)
+Collecting bleach!=5.0.0
+  Downloading bleach-6.1.0-py3-none-any.whl (162 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.8/162.8 KB 46.0 MB/s eta 0:00:00
+Collecting nbformat>=5.7
+  Downloading nbformat-5.9.2-py3-none-any.whl (77 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.6/77.6 KB 27.9 MB/s eta 0:00:00
+Collecting pandocfilters>=1.4.1
+  Downloading pandocfilters-1.5.0-py2.py3-none-any.whl (8.7 kB)
+Collecting jupyter-server<3,>=2.4.0
+  Downloading jupyter_server-2.9.1-py3-none-any.whl (377 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 377.6/377.6 KB 81.7 MB/s eta 0:00:00
+Collecting notebook-shim<0.3,>=0.2
+  Downloading notebook_shim-0.2.3-py3-none-any.whl (13 kB)
+Collecting jupyterlab<5,>=4.0.2
+  Downloading jupyterlab-4.0.8-py3-none-any.whl (9.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.2/9.2 MB 84.1 MB/s eta 0:00:00
+Collecting jupyterlab-server<3,>=2.22.1
+  Downloading jupyterlab_server-2.25.0-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.2/57.2 KB 20.2 MB/s eta 0:00:00
+Collecting ipython-genutils
+  Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl (26 kB)
+Collecting qtpy>=2.4.0
+  Downloading QtPy-2.4.1-py3-none-any.whl (93 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.5/93.5 KB 35.4 MB/s eta 0:00:00
+Collecting webencodings
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: six>=1.9.0 in /usr/lib/python3/dist-packages (from bleach!=5.0.0->nbconvert->jupyter) (1.16.0)
+Collecting jedi>=0.16
+  Downloading jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 100.3 MB/s eta 0:00:00
+Collecting stack-data
+  Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+Requirement already satisfied: pexpect>4.3 in /usr/lib/python3/dist-packages (from ipython>=7.23.1->ipykernel->jupyter) (4.8.0)
+Collecting exceptiongroup
+  Downloading exceptiongroup-1.1.3-py3-none-any.whl (14 kB)
+Collecting decorator
+  Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting python-dateutil>=2.8.2
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 KB 70.3 MB/s eta 0:00:00
+Collecting platformdirs>=2.5
+  Downloading platformdirs-3.11.0-py3-none-any.whl (17 kB)
+Collecting terminado>=0.8.3
+  Downloading terminado-0.17.1-py3-none-any.whl (17 kB)
+Collecting jupyter-events>=0.6.0
+  Downloading jupyter_events-0.8.0-py3-none-any.whl (18 kB)
+Collecting argon2-cffi
+  Downloading argon2_cffi-23.1.0-py3-none-any.whl (15 kB)
+Collecting anyio>=3.1.0
+  Downloading anyio-4.0.0-py3-none-any.whl (83 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 KB 31.4 MB/s eta 0:00:00
+Collecting prometheus-client
+  Downloading prometheus_client-0.18.0-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 KB 25.1 MB/s eta 0:00:00
+Collecting overrides
+  Downloading overrides-7.4.0-py3-none-any.whl (17 kB)
+Collecting websocket-client
+  Downloading websocket_client-1.6.4-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 KB 22.2 MB/s eta 0:00:00
+Collecting send2trash>=1.8.2
+  Downloading Send2Trash-1.8.2-py3-none-any.whl (18 kB)
+Collecting jupyter-server-terminals
+  Downloading jupyter_server_terminals-0.4.4-py3-none-any.whl (13 kB)
+Collecting async-lru>=1.0.0
+  Downloading async_lru-2.0.4-py3-none-any.whl (6.1 kB)
+Collecting tomli
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting jupyter-lsp>=2.0.0
+  Downloading jupyter_lsp-2.2.0-py3-none-any.whl (65 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.0/66.0 KB 25.1 MB/s eta 0:00:00
+Collecting babel>=2.10
+  Downloading Babel-2.13.1-py3-none-any.whl (10.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.1/10.1 MB 86.6 MB/s eta 0:00:00
+Collecting requests>=2.31
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 KB 21.3 MB/s eta 0:00:00
+Collecting jsonschema>=4.18.0
+  Downloading jsonschema-4.19.2-py3-none-any.whl (83 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.6/83.6 KB 26.8 MB/s eta 0:00:00
+Collecting json5>=0.9.0
+  Downloading json5-0.9.14-py2.py3-none-any.whl (19 kB)
+Collecting fastjsonschema
+  Downloading fastjsonschema-2.18.1-py3-none-any.whl (23 kB)
+Collecting wcwidth
+  Downloading wcwidth-0.2.9-py2.py3-none-any.whl (102 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 102.3/102.3 KB 34.5 MB/s eta 0:00:00
+Collecting soupsieve>1.2
+  Downloading soupsieve-2.5-py3-none-any.whl (36 kB)
+Requirement already satisfied: idna>=2.8 in /usr/lib/python3/dist-packages (from anyio>=3.1.0->jupyter-server<3,>=2.4.0->notebook->jupyter) (3.3)
+Collecting sniffio>=1.1
+  Downloading sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting typing-extensions>=4.0.0
+  Downloading typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting parso<0.9.0,>=0.8.3
+  Downloading parso-0.8.3-py2.py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 KB 24.1 MB/s eta 0:00:00
+Collecting referencing>=0.28.4
+  Downloading referencing-0.30.2-py3-none-any.whl (25 kB)
+Collecting rpds-py>=0.7.1
+  Downloading rpds_py-0.10.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 80.6 MB/s eta 0:00:00
+Collecting jsonschema-specifications>=2023.03.6
+  Downloading jsonschema_specifications-2023.7.1-py3-none-any.whl (17 kB)
+Collecting attrs>=22.2.0
+  Downloading attrs-23.1.0-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 KB 20.6 MB/s eta 0:00:00
+Collecting python-json-logger>=2.0.4
+  Downloading python_json_logger-2.0.7-py3-none-any.whl (8.1 kB)
+Requirement already satisfied: pyyaml>=5.3 in /usr/lib/python3/dist-packages (from jupyter-events>=0.6.0->jupyter-server<3,>=2.4.0->notebook->jupyter) (5.4.1)
+Collecting rfc3339-validator
+  Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Collecting rfc3986-validator>=0.1.1
+  Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Collecting charset-normalizer<4,>=2
+  Downloading charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.1/142.1 KB 36.7 MB/s eta 0:00:00
+Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.31->jupyterlab-server<3,>=2.22.1->notebook->jupyter) (2020.6.20)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.31->jupyterlab-server<3,>=2.22.1->notebook->jupyter) (1.26.5)
+Requirement already satisfied: ptyprocess in /usr/lib/python3/dist-packages (from terminado>=0.8.3->jupyter-server<3,>=2.4.0->notebook->jupyter) (0.7.0)
+Collecting argon2-cffi-bindings
+  Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (86 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.2/86.2 KB 28.8 MB/s eta 0:00:00
+Collecting executing>=1.2.0
+  Downloading executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Collecting asttokens>=2.1.0
+  Downloading asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Collecting pure-eval
+  Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting uri-template
+  Downloading uri_template-1.3.0-py3-none-any.whl (11 kB)
+Collecting jsonpointer>1.13
+  Downloading jsonpointer-2.4-py2.py3-none-any.whl (7.8 kB)
+Collecting webcolors>=1.11
+  Downloading webcolors-1.13-py3-none-any.whl (14 kB)
+Collecting isoduration
+  Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+Collecting fqdn
+  Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Collecting cffi>=1.0.1
+  Downloading cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 KB 100.8 MB/s eta 0:00:00
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 KB 40.5 MB/s eta 0:00:00
+Collecting arrow>=0.15.0
+  Downloading arrow-1.3.0-py3-none-any.whl (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.4/66.4 KB 23.7 MB/s eta 0:00:00
+Collecting types-python-dateutil>=2.8.10
+  Downloading types_python_dateutil-2.8.19.14-py3-none-any.whl (9.4 kB)
+Installing collected packages: webencodings, wcwidth, types-python-dateutil, pure-eval, json5, ipython-genutils, fastjsonschema, widgetsnbextension, websocket-client, webcolors, uri-template, typing-extensions, traitlets, tornado, tomli, tinycss2, soupsieve, sniffio, send2trash, rpds-py, rfc3986-validator, rfc3339-validator, qtpy, pyzmq, python-json-logger, python-dateutil, pycparser, psutil, prompt-toolkit, prometheus-client, platformdirs, parso, pandocfilters, overrides, nest-asyncio, mistune, jupyterlab-widgets, jupyterlab-pygments, jsonpointer, jinja2, fqdn, executing, exceptiongroup, defusedxml, decorator, debugpy, charset-normalizer, bleach, babel, attrs, asttokens, terminado, stack-data, requests, referencing, matplotlib-inline, jupyter-core, jedi, comm, cffi, beautifulsoup4, async-lru, arrow, anyio, jupyter-server-terminals, jupyter-client, jsonschema-specifications, isoduration, ipython, argon2-cffi-bindings, jsonschema, ipywidgets, ipykernel, argon2-cffi, qtconsole, nbformat, jupyter-console, nbclient, jupyter-events, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab, notebook, jupyter
+Successfully installed anyio-4.0.0 argon2-cffi-23.1.0 argon2-cffi-bindings-21.2.0 arrow-1.3.0 asttokens-2.4.1 async-lru-2.0.4 attrs-23.1.0 babel-2.13.1 beautifulsoup4-4.12.2 bleach-6.1.0 cffi-1.16.0 charset-normalizer-3.3.2 comm-0.1.4 debugpy-1.8.0 decorator-5.1.1 defusedxml-0.7.1 exceptiongroup-1.1.3 executing-2.0.1 fastjsonschema-2.18.1 fqdn-1.5.1 ipykernel-6.26.0 ipython-8.17.2 ipython-genutils-0.2.0 ipywidgets-8.1.1 isoduration-20.11.0 jedi-0.19.1 jinja2-3.1.2 json5-0.9.14 jsonpointer-2.4 jsonschema-4.19.2 jsonschema-specifications-2023.7.1 jupyter-1.0.0 jupyter-client-8.5.0 jupyter-console-6.6.3 jupyter-core-5.5.0 jupyter-events-0.8.0 jupyter-lsp-2.2.0 jupyter-server-2.9.1 jupyter-server-terminals-0.4.4 jupyterlab-4.0.8 jupyterlab-pygments-0.2.2 jupyterlab-server-2.25.0 jupyterlab-widgets-3.0.9 matplotlib-inline-0.1.6 mistune-3.0.2 nbclient-0.8.0 nbconvert-7.10.0 nbformat-5.9.2 nest-asyncio-1.5.8 notebook-7.0.6 notebook-shim-0.2.3 overrides-7.4.0 pandocfilters-1.5.0 parso-0.8.3 platformdirs-3.11.0 prometheus-client-0.18.0 prompt-toolkit-3.0.39 psutil-5.9.6 pure-eval-0.2.2 pycparser-2.21 python-dateutil-2.8.2 python-json-logger-2.0.7 pyzmq-25.1.1 qtconsole-5.4.4 qtpy-2.4.1 referencing-0.30.2 requests-2.31.0 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rpds-py-0.10.6 send2trash-1.8.2 sniffio-1.3.0 soupsieve-2.5 stack-data-0.6.3 terminado-0.17.1 tinycss2-1.2.1 tomli-2.0.1 tornado-6.3.3 traitlets-5.13.0 types-python-dateutil-2.8.19.14 typing-extensions-4.8.0 uri-template-1.3.0 wcwidth-0.2.9 webcolors-1.13 webencodings-0.5.1 websocket-client-1.6.4 widgetsnbextension-4.0.9
+hmiwa@humgendiv:~/local$ cd
+hmiwa@humgendiv:~$ ls
+bcftools-1.17  hmiwa  hmiwa1  homebrew  local  R  snap
+hmiwa@humgendiv:~$ ls -a
+.   .bash_history  .bashrc        .cache   .gitconfig  hmiwa1    .lesshst  local     .python_history  snap  .wget-hsts
+..  .bash_logout   bcftools-1.17  .config  hmiwa       homebrew  .local    .profile  R                .ssh
+hmiwa@humgendiv:~$ jupyter notebook --generate-config
+Writing default config to: /home/hmiwa/.jupyter/jupyter_notebook_config.py
+hmiwa@humgendiv:~$ ls
+bcftools-1.17  hmiwa  hmiwa1  homebrew  local  R  snap
+hmiwa@humgendiv:~$ ls -a
+.   .bash_history  .bashrc        .cache   .gitconfig  hmiwa1    .jupyter  .local  .profile         R     .ssh
+..  .bash_logout   bcftools-1.17  .config  hmiwa       homebrew  .lesshst  local   .python_history  snap  .wget-hsts
+hmiwa@humgendiv:~$ cd hmiwa
+hmiwa@humgendiv:~/hmiwa$ ls -a
+.  ..  hmiwa-labserver  m_20211215  white.rsa
+hmiwa@humgendiv:~/hmiwa$ cd
+hmiwa@humgendiv:~$ cd /home/hmiwa/
+hmiwa@humgendiv:~$ cd /home/hmiwa/
+hmiwa@humgendiv:~$ ls -a
+.   .bash_history  .bashrc        .cache   .gitconfig  hmiwa1    .jupyter  .local  .profile         R     .ssh
+..  .bash_logout   bcftools-1.17  .config  hmiwa       homebrew  .lesshst  local   .python_history  snap  .wget-hsts
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py
+# Configuration file for notebook.
+
+c = get_config()  #noqa
+
+#------------------------------------------------------------------------------
+# Application(SingletonConfigurable) configuration
+#------------------------------------------------------------------------------
+## This is an application.
+
+## The date format used by logging formatters for %(asctime)s
+#  Default: '%Y-%m-%d %H:%M:%S'
+# c.Application.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+## The Logging format template
+#  Default: '[%(name)s]%(highlevel)s %(message)s'
+# c.Application.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+## Set the log level by value or name.
+#  Choices: any of [0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL']
+#  Default: 30
+# c.Application.log_level = 30
+
+## Configure additional log handlers.
+#  
+#  The default stderr logs handler is configured by the log_level, log_datefmt
+#  and log_format settings.
+#  
+#  This configuration can be used to configure additional handlers (e.g. to
+#  output the log to a file) or for finer control over the default handlers.
+#  
+#  If provided this should be a logging configuration dictionary, for more
+#  information see:
+#  https://docs.python.org/3/library/logging.config.html#logging-config-
+#  dictschema
+#  
+#  This dictionary is merged with the base logging configuration which defines
+#  the following:
+#  
+#  * A logging formatter intended for interactive use called
+#    ``console``.
+#  * A logging handler that writes to stderr called
+#    ``console`` which uses the formatter ``console``.
+#  * A logger with the name of this application set to ``DEBUG``
+#    level.
+#  
+#  This example adds a new handler that writes to a file:
+#  
+#  .. code-block:: python
+#  
+#     c.Application.logging_config = {
+#         "handlers": {
+#             "file": {
+#                 "class": "logging.FileHandler",
+#                 "level": "DEBUG",
+#                 "filename": "<path/to/file>",
+#             }
+#         },
+#         "loggers": {
+#             "<application-name>": {
+#                 "level": "DEBUG",
+#                 # NOTE: if you don't list the default "console"
+#                 # handler here then it will be disabled
+#                 "handlers": ["console", "file"],
+#             },
+#         },
+#     }
+#  Default: {}
+# c.Application.logging_config = {}
+
+## Instead of starting the Application, dump configuration to stdout
+#  Default: False
+# c.Application.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  Default: False
+# c.Application.show_config_json = False
+
+#------------------------------------------------------------------------------
+# JupyterApp(Application) configuration
+#------------------------------------------------------------------------------
+## Base class for Jupyter applications
+
+## Answer yes to any prompts.
+#  Default: False
+# c.JupyterApp.answer_yes = False
+
+## Full path of a config file.
+#  Default: ''
+# c.JupyterApp.config_file = ''
+
+## Specify a config file to load.
+#  Default: ''
+# c.JupyterApp.config_file_name = ''
+
+## Generate default config file.
+#  Default: False
+# c.JupyterApp.generate_config = False
+
+## The date format used by logging formatters for %(asctime)s
+#  See also: Application.log_datefmt
+# c.JupyterApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+## The Logging format template
+#  See also: Application.log_format
+# c.JupyterApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+## Set the log level by value or name.
+#  See also: Application.log_level
+# c.JupyterApp.log_level = 30
+
+## 
+#  See also: Application.logging_config
+# c.JupyterApp.logging_config = {}
+
+## Instead of starting the Application, dump configuration to stdout
+#  See also: Application.show_config
+# c.JupyterApp.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  See also: Application.show_config_json
+# c.JupyterApp.show_config_json = False
+
+#------------------------------------------------------------------------------
+# ExtensionApp(JupyterApp) configuration
+#------------------------------------------------------------------------------
+## Base class for configurable Jupyter Server Extension Applications.
+#  
+#      ExtensionApp subclasses can be initialized two ways:
+#  
+#      - Extension is listed as a jpserver_extension, and ServerApp calls
+#        its load_jupyter_server_extension classmethod. This is the
+#        classic way of loading a server extension.
+#  
+#      - Extension is launched directly by calling its `launch_instance`
+#        class method. This method can be set as a entry_point in
+#        the extensions setup.py.
+
+## Answer yes to any prompts.
+#  See also: JupyterApp.answer_yes
+# c.ExtensionApp.answer_yes = False
+
+## Full path of a config file.
+#  See also: JupyterApp.config_file
+# c.ExtensionApp.config_file = ''
+
+## Specify a config file to load.
+#  See also: JupyterApp.config_file_name
+# c.ExtensionApp.config_file_name = ''
+
+#  Default: ''
+# c.ExtensionApp.default_url = ''
+
+## Generate default config file.
+#  See also: JupyterApp.generate_config
+# c.ExtensionApp.generate_config = False
+
+## Handlers appended to the server.
+#  Default: []
+# c.ExtensionApp.handlers = []
+
+## The date format used by logging formatters for %(asctime)s
+#  See also: Application.log_datefmt
+# c.ExtensionApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+## The Logging format template
+#  See also: Application.log_format
+# c.ExtensionApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+## Set the log level by value or name.
+#  See also: Application.log_level
+# c.ExtensionApp.log_level = 30
+
+## 
+#  See also: Application.logging_config
+# c.ExtensionApp.logging_config = {}
+
+## Whether to open in a browser after starting.
+#          The specific browser used is platform dependent and
+#          determined by the python standard library `webbrowser`
+#          module, unless it is overridden using the --browser
+#          (ServerApp.browser) configuration option.
+#  Default: False
+# c.ExtensionApp.open_browser = False
+
+## Settings that will passed to the server.
+#  Default: {}
+# c.ExtensionApp.settings = {}
+
+## Instead of starting the Application, dump configuration to stdout
+#  See also: Application.show_config
+# c.ExtensionApp.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  See also: Application.show_config_json
+# c.ExtensionApp.show_config_json = False
+
+## paths to search for serving static files.
+#  
+#          This allows adding javascript/css to be available from the notebook server machine,
+#          or overriding individual files in the IPython
+#  Default: []
+# c.ExtensionApp.static_paths = []
+
+## Url where the static assets for the extension are served.
+#  Default: ''
+# c.ExtensionApp.static_url_prefix = ''
+
+## Paths to search for serving jinja templates.
+#  
+#          Can be used to override templates from notebook.templates.
+#  Default: []
+# c.ExtensionApp.template_paths = []
+
+#------------------------------------------------------------------------------
+# LabServerApp(ExtensionApp) configuration
+#------------------------------------------------------------------------------
+## A Lab Server Application that runs out-of-the-box
+
+## "A list of comma-separated URIs to get the allowed extensions list
+#  
+#  .. versionchanged:: 2.0.0
+#      `LabServerApp.whitetlist_uris` renamed to `allowed_extensions_uris`
+#  Default: ''
+# c.LabServerApp.allowed_extensions_uris = ''
+
+## Answer yes to any prompts.
+#  See also: JupyterApp.answer_yes
+# c.LabServerApp.answer_yes = False
+
+## The application settings directory.
+#  Default: ''
+# c.LabServerApp.app_settings_dir = ''
+
+## The url path for the application.
+#  Default: '/lab'
+# c.LabServerApp.app_url = '/lab'
+
+## Deprecated, use `LabServerApp.blocked_extensions_uris`
+#  Default: ''
+# c.LabServerApp.blacklist_uris = ''
+
+## A list of comma-separated URIs to get the blocked extensions list
+#  
+#  .. versionchanged:: 2.0.0
+#      `LabServerApp.blacklist_uris` renamed to `blocked_extensions_uris`
+#  Default: ''
+# c.LabServerApp.blocked_extensions_uris = ''
+
+## Whether to cache files on the server. This should be `True` except in dev
+#  mode.
+#  Default: True
+# c.LabServerApp.cache_files = True
+
+## Full path of a config file.
+#  See also: JupyterApp.config_file
+# c.LabServerApp.config_file = ''
+
+## Specify a config file to load.
+#  See also: JupyterApp.config_file_name
+# c.LabServerApp.config_file_name = ''
+
+## Whether getting a relative (False) or absolute (True) path when copying a
+#  path.
+#  Default: False
+# c.LabServerApp.copy_absolute_path = False
+
+## Extra paths to look for federated JupyterLab extensions
+#  Default: []
+# c.LabServerApp.extra_labextensions_path = []
+
+## Generate default config file.
+#  See also: JupyterApp.generate_config
+# c.LabServerApp.generate_config = False
+
+## Handlers appended to the server.
+#  See also: ExtensionApp.handlers
+# c.LabServerApp.handlers = []
+
+## Options to pass to the jinja2 environment for this
+#  Default: {}
+# c.LabServerApp.jinja2_options = {}
+
+## The standard paths to look in for federated JupyterLab extensions
+#  Default: []
+# c.LabServerApp.labextensions_path = []
+
+## The url for federated JupyterLab extensions
+#  Default: ''
+# c.LabServerApp.labextensions_url = ''
+
+## The interval delay in seconds to refresh the lists
+#  Default: 3600
+# c.LabServerApp.listings_refresh_seconds = 3600
+
+## The optional kwargs to use for the listings HTTP requests             as
+#  described on https://2.python-requests.org/en/v2.7.0/api/#requests.request
+#  Default: {}
+# c.LabServerApp.listings_request_options = {}
+
+## The listings url.
+#  Default: ''
+# c.LabServerApp.listings_url = ''
+
+## The date format used by logging formatters for %(asctime)s
+#  See also: Application.log_datefmt
+# c.LabServerApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+## The Logging format template
+#  See also: Application.log_format
+# c.LabServerApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+## Set the log level by value or name.
+#  See also: Application.log_level
+# c.LabServerApp.log_level = 30
+
+## 
+#  See also: Application.logging_config
+# c.LabServerApp.logging_config = {}
+
+## Whether a notebook should start a kernel automatically.
+#  Default: True
+# c.LabServerApp.notebook_starts_kernel = True
+
+## Whether to open in a browser after starting.
+#  See also: ExtensionApp.open_browser
+# c.LabServerApp.open_browser = False
+
+## The optional location of the settings schemas directory. If given, a handler
+#  will be added for settings.
+#  Default: ''
+# c.LabServerApp.schemas_dir = ''
+
+## Settings that will passed to the server.
+#  See also: ExtensionApp.settings
+# c.LabServerApp.settings = {}
+
+## The url path of the settings handler.
+#  Default: ''
+# c.LabServerApp.settings_url = ''
+
+## Instead of starting the Application, dump configuration to stdout
+#  See also: Application.show_config
+# c.LabServerApp.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  See also: Application.show_config_json
+# c.LabServerApp.show_config_json = False
+
+## The optional location of local static files. If given, a static file handler
+#  will be added.
+#  Default: ''
+# c.LabServerApp.static_dir = ''
+
+## paths to search for serving static files.
+#  See also: ExtensionApp.static_paths
+# c.LabServerApp.static_paths = []
+
+## Url where the static assets for the extension are served.
+#  See also: ExtensionApp.static_url_prefix
+# c.LabServerApp.static_url_prefix = ''
+
+## Paths to search for serving jinja templates.
+#  See also: ExtensionApp.template_paths
+# c.LabServerApp.template_paths = []
+
+## The application templates directory.
+#  Default: ''
+# c.LabServerApp.templates_dir = ''
+
+## The optional location of the themes directory. If given, a handler will be
+#  added for themes.
+#  Default: ''
+# c.LabServerApp.themes_dir = ''
+
+## The theme url.
+#  Default: ''
+# c.LabServerApp.themes_url = ''
+
+## The url path of the translations handler.
+#  Default: ''
+# c.LabServerApp.translations_api_url = ''
+
+## The url path of the tree handler.
+#  Default: ''
+# c.LabServerApp.tree_url = ''
+
+## The optional location of the user settings directory.
+#  Default: ''
+# c.LabServerApp.user_settings_dir = ''
+
+## Deprecated, use `LabServerApp.allowed_extensions_uris`
+#  Default: ''
+# c.LabServerApp.whitelist_uris = ''
+
+## The url path of the workspaces API.
+#  Default: ''
+# c.LabServerApp.workspaces_api_url = ''
+
+## The optional location of the saved workspaces directory. If given, a handler
+#  will be added for workspaces.
+#  Default: ''
+# c.LabServerApp.workspaces_dir = ''
+
+#------------------------------------------------------------------------------
+# JupyterNotebookApp(LabServerApp) configuration
+#------------------------------------------------------------------------------
+## The notebook server extension app.
+
+## 
+#  See also: LabServerApp.allowed_extensions_uris
+# c.JupyterNotebookApp.allowed_extensions_uris = ''
+
+## Answer yes to any prompts.
+#  See also: JupyterApp.answer_yes
+# c.JupyterNotebookApp.answer_yes = False
+
+## The application settings directory.
+#  Default: ''
+# c.JupyterNotebookApp.app_settings_dir = ''
+
+## The url path for the application.
+#  Default: '/lab'
+# c.JupyterNotebookApp.app_url = '/lab'
+
+## Deprecated, use `LabServerApp.blocked_extensions_uris`
+#  See also: LabServerApp.blacklist_uris
+# c.JupyterNotebookApp.blacklist_uris = ''
+
+## 
+#  See also: LabServerApp.blocked_extensions_uris
+# c.JupyterNotebookApp.blocked_extensions_uris = ''
+
+## Whether to cache files on the server. This should be `True` except in dev
+#  mode.
+#  Default: True
+# c.JupyterNotebookApp.cache_files = True
+
+## Full path of a config file.
+#  See also: JupyterApp.config_file
+# c.JupyterNotebookApp.config_file = ''
+
+## Specify a config file to load.
+#  See also: JupyterApp.config_file_name
+# c.JupyterNotebookApp.config_file_name = ''
+
+## Whether getting a relative (False) or absolute (True) path when copying a
+#  path.
+#  Default: False
+# c.JupyterNotebookApp.copy_absolute_path = False
+
+## Whether custom CSS is loaded on the page.
+#          Defaults to True and custom CSS is loaded.
+#  Default: True
+# c.JupyterNotebookApp.custom_css = True
+
+## The default URL to redirect to from `/`
+#  Default: '/tree'
+# c.JupyterNotebookApp.default_url = '/tree'
+
+## Whether to expose the global app instance to browser via window.jupyterapp
+#  Default: False
+# c.JupyterNotebookApp.expose_app_in_browser = False
+
+## Extra paths to look for federated JupyterLab extensions
+#  Default: []
+# c.JupyterNotebookApp.extra_labextensions_path = []
+
+## Generate default config file.
+#  See also: JupyterApp.generate_config
+# c.JupyterNotebookApp.generate_config = False
+
+## Handlers appended to the server.
+#  See also: ExtensionApp.handlers
+# c.JupyterNotebookApp.handlers = []
+
+## Options to pass to the jinja2 environment for this
+#  Default: {}
+# c.JupyterNotebookApp.jinja2_options = {}
+
+## The standard paths to look in for federated JupyterLab extensions
+#  Default: []
+# c.JupyterNotebookApp.labextensions_path = []
+
+## The url for federated JupyterLab extensions
+#  Default: ''
+# c.JupyterNotebookApp.labextensions_url = ''
+
+## The interval delay in seconds to refresh the lists
+#  See also: LabServerApp.listings_refresh_seconds
+# c.JupyterNotebookApp.listings_refresh_seconds = 3600
+
+## The optional kwargs to use for the listings HTTP requests             as
+#  described on https://2.python-requests.org/en/v2.7.0/api/#requests.request
+#  See also: LabServerApp.listings_request_options
+# c.JupyterNotebookApp.listings_request_options = {}
+
+## The listings url.
+#  Default: ''
+# c.JupyterNotebookApp.listings_url = ''
+
+## The date format used by logging formatters for %(asctime)s
+#  See also: Application.log_datefmt
+# c.JupyterNotebookApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+## The Logging format template
+#  See also: Application.log_format
+# c.JupyterNotebookApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+## Set the log level by value or name.
+#  See also: Application.log_level
+# c.JupyterNotebookApp.log_level = 30
+
+## 
+#  See also: Application.logging_config
+# c.JupyterNotebookApp.logging_config = {}
+
+## Whether a notebook should start a kernel automatically.
+#  Default: True
+# c.JupyterNotebookApp.notebook_starts_kernel = True
+
+## Whether to open in a browser after starting.
+#  See also: ExtensionApp.open_browser
+# c.JupyterNotebookApp.open_browser = False
+
+## The optional location of the settings schemas directory. If given, a handler
+#  will be added for settings.
+#  Default: ''
+# c.JupyterNotebookApp.schemas_dir = ''
+
+## Settings that will passed to the server.
+#  See also: ExtensionApp.settings
+# c.JupyterNotebookApp.settings = {}
+
+## The url path of the settings handler.
+#  Default: ''
+# c.JupyterNotebookApp.settings_url = ''
+
+## Instead of starting the Application, dump configuration to stdout
+#  See also: Application.show_config
+# c.JupyterNotebookApp.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  See also: Application.show_config_json
+# c.JupyterNotebookApp.show_config_json = False
+
+## The optional location of local static files. If given, a static file handler
+#  will be added.
+#  Default: ''
+# c.JupyterNotebookApp.static_dir = ''
+
+## paths to search for serving static files.
+#  See also: ExtensionApp.static_paths
+# c.JupyterNotebookApp.static_paths = []
+
+## Url where the static assets for the extension are served.
+#  See also: ExtensionApp.static_url_prefix
+# c.JupyterNotebookApp.static_url_prefix = ''
+
+## Paths to search for serving jinja templates.
+#  See also: ExtensionApp.template_paths
+# c.JupyterNotebookApp.template_paths = []
+
+## The application templates directory.
+#  Default: ''
+# c.JupyterNotebookApp.templates_dir = ''
+
+## The optional location of the themes directory. If given, a handler will be
+#  added for themes.
+#  Default: ''
+# c.JupyterNotebookApp.themes_dir = ''
+
+## The theme url.
+#  Default: ''
+# c.JupyterNotebookApp.themes_url = ''
+
+## The url path of the translations handler.
+#  Default: ''
+# c.JupyterNotebookApp.translations_api_url = ''
+
+## The url path of the tree handler.
+#  Default: ''
+# c.JupyterNotebookApp.tree_url = ''
+
+## The optional location of the user settings directory.
+#  Default: ''
+# c.JupyterNotebookApp.user_settings_dir = ''
+
+## Deprecated, use `LabServerApp.allowed_extensions_uris`
+#  See also: LabServerApp.whitelist_uris
+# c.JupyterNotebookApp.whitelist_uris = ''
+
+## The url path of the workspaces API.
+#  Default: ''
+# c.JupyterNotebookApp.workspaces_api_url = ''
+
+## The optional location of the saved workspaces directory. If given, a handler
+#  will be added for workspaces.
+#  Default: ''
+# c.JupyterNotebookApp.workspaces_dir = ''
+
+#------------------------------------------------------------------------------
+# ServerApp(JupyterApp) configuration
+#------------------------------------------------------------------------------
+## The Jupyter Server application class.
+
+## Set the Access-Control-Allow-Credentials: true header
+#  Default: False
+# c.ServerApp.allow_credentials = False
+
+## Whether or not to allow external kernels, whose connection files are placed in
+#  external_connection_dir.
+#  Default: False
+# c.ServerApp.allow_external_kernels = False
+
+## Set the Access-Control-Allow-Origin header
+#  
+#          Use '*' to allow any origin to access your server.
+#  
+#          Takes precedence over allow_origin_pat.
+#  Default: ''
+# c.ServerApp.allow_origin = ''
+
+## Use a regular expression for the Access-Control-Allow-Origin header
+#  
+#          Requests from an origin matching the expression will get replies with:
+#  
+#              Access-Control-Allow-Origin: origin
+#  
+#          where `origin` is the origin of the request.
+#  
+#          Ignored if allow_origin is set.
+#  Default: ''
+# c.ServerApp.allow_origin_pat = ''
+
+## DEPRECATED in 2.0. Use PasswordIdentityProvider.allow_password_change
+#  Default: True
+# c.ServerApp.allow_password_change = True
+
+## Allow requests where the Host header doesn't point to a local server
+#  
+#         By default, requests get a 403 forbidden response if the 'Host' header
+#         shows that the browser thinks it's on a non-local domain.
+#         Setting this option to True disables this check.
+#  
+#         This protects against 'DNS rebinding' attacks, where a remote web server
+#         serves you a page and then changes its DNS to send later requests to a
+#         local IP, bypassing same-origin checks.
+#  
+#         Local IP addresses (such as 127.0.0.1 and ::1) are allowed as local,
+#         along with hostnames configured in local_hostnames.
+#  Default: False
+# c.ServerApp.allow_remote_access = False
+
+## Whether to allow the user to run the server as root.
+#  Default: False
+# c.ServerApp.allow_root = False
+
+## Answer yes to any prompts.
+#  See also: JupyterApp.answer_yes
+# c.ServerApp.answer_yes = False
+
+## "
+#          Require authentication to access prometheus metrics.
+#  Default: True
+# c.ServerApp.authenticate_prometheus = True
+
+## The authorizer class to use.
+#  Default: 'jupyter_server.auth.authorizer.AllowAllAuthorizer'
+# c.ServerApp.authorizer_class = 'jupyter_server.auth.authorizer.AllowAllAuthorizer'
+
+## Reload the webapp when changes are made to any Python src files.
+#  Default: False
+# c.ServerApp.autoreload = False
+
+## The base URL for the Jupyter server.
+#  
+#                         Leading and trailing slashes can be omitted,
+#                         and will automatically be added.
+#  Default: '/'
+# c.ServerApp.base_url = '/'
+
+## Specify what command to use to invoke a web
+#                        browser when starting the server. If not specified, the
+#                        default browser will be determined by the `webbrowser`
+#                        standard library module, which allows setting of the
+#                        BROWSER environment variable to override it.
+#  Default: ''
+# c.ServerApp.browser = ''
+
+## The full path to an SSL/TLS certificate file.
+#  Default: ''
+# c.ServerApp.certfile = ''
+
+## The full path to a certificate authority certificate for SSL/TLS client
+#  authentication.
+#  Default: ''
+# c.ServerApp.client_ca = ''
+
+## Full path of a config file.
+#  See also: JupyterApp.config_file
+# c.ServerApp.config_file = ''
+
+## Specify a config file to load.
+#  See also: JupyterApp.config_file_name
+# c.ServerApp.config_file_name = ''
+
+## The config manager class to use
+#  Default: 'jupyter_server.services.config.manager.ConfigManager'
+# c.ServerApp.config_manager_class = 'jupyter_server.services.config.manager.ConfigManager'
+
+## The content manager class to use.
+#  Default: 'jupyter_server.services.contents.largefilemanager.AsyncLargeFileManager'
+# c.ServerApp.contents_manager_class = 'jupyter_server.services.contents.largefilemanager.AsyncLargeFileManager'
+
+## DEPRECATED. Use IdentityProvider.cookie_options
+#  Default: {}
+# c.ServerApp.cookie_options = {}
+
+## The random bytes used to secure cookies.
+#          By default this is a new random number every time you start the server.
+#          Set it to a value in a config file to enable logins to persist across server sessions.
+#  
+#          Note: Cookie secrets should be kept private, do not share config files with
+#          cookie_secret stored in plaintext (you can read the value from a file).
+#  Default: b''
+# c.ServerApp.cookie_secret = b''
+
+## The file where the cookie secret is stored.
+#  Default: ''
+# c.ServerApp.cookie_secret_file = ''
+
+## Override URL shown to users.
+#  
+#          Replace actual URL, including protocol, address, port and base URL,
+#          with the given value when displaying URL to the users. Do not change
+#          the actual connection URL. If authentication token is enabled, the
+#          token is added to the custom URL automatically.
+#  
+#          This option is intended to be used when the URL to display to the user
+#          cannot be determined reliably by the Jupyter server (proxified
+#          or containerized setups for example).
+#  Default: ''
+# c.ServerApp.custom_display_url = ''
+
+## The default URL to redirect to from `/`
+#  Default: '/'
+# c.ServerApp.default_url = '/'
+
+## Disable cross-site-request-forgery protection
+#  
+#          Jupyter server includes protection from cross-site request forgeries,
+#          requiring API requests to either:
+#  
+#          - originate from pages served by this server (validated with XSRF cookie and token), or
+#          - authenticate with a token
+#  
+#          Some anonymous compute resources still desire the ability to run code,
+#          completely without authentication.
+#          These services can disable all authentication and security checks,
+#          with the full knowledge of what that implies.
+#  Default: False
+# c.ServerApp.disable_check_xsrf = False
+
+## The directory to look at for external kernel connection files, if
+#  allow_external_kernels is True. Defaults to Jupyter
+#  runtime_dir/external_kernels. Make sure that this directory is not filled with
+#  left-over connection files, that could result in unnecessary kernel manager
+#  creations.
+#  Default: None
+# c.ServerApp.external_connection_dir = None
+
+## handlers that should be loaded at higher priority than the default services
+#  Default: []
+# c.ServerApp.extra_services = []
+
+## Extra paths to search for serving static files.
+#  
+#          This allows adding javascript/css to be available from the Jupyter server machine,
+#          or overriding individual files in the IPython
+#  Default: []
+# c.ServerApp.extra_static_paths = []
+
+## Extra paths to search for serving jinja templates.
+#  
+#          Can be used to override templates from jupyter_server.templates.
+#  Default: []
+# c.ServerApp.extra_template_paths = []
+
+## Open the named file when the application is launched.
+#  Default: ''
+# c.ServerApp.file_to_run = ''
+
+## The URL prefix where files are opened directly.
+#  Default: 'notebooks'
+# c.ServerApp.file_url_prefix = 'notebooks'
+
+## Generate default config file.
+#  See also: JupyterApp.generate_config
+# c.ServerApp.generate_config = False
+
+## DEPRECATED. Use IdentityProvider.get_secure_cookie_kwargs
+#  Default: {}
+# c.ServerApp.get_secure_cookie_kwargs = {}
+
+## The identity provider class to use.
+#  Default: 'jupyter_server.auth.identity.PasswordIdentityProvider'
+# c.ServerApp.identity_provider_class = 'jupyter_server.auth.identity.PasswordIdentityProvider'
+
+## DEPRECATED. Use ZMQChannelsWebsocketConnection.iopub_data_rate_limit
+#  Default: 0.0
+# c.ServerApp.iopub_data_rate_limit = 0.0
+
+## DEPRECATED. Use ZMQChannelsWebsocketConnection.iopub_msg_rate_limit
+#  Default: 0.0
+# c.ServerApp.iopub_msg_rate_limit = 0.0
+
+## The IP address the Jupyter server will listen on.
+#  Default: 'localhost'
+# c.ServerApp.ip = 'localhost'
+
+## Supply extra arguments that will be passed to Jinja environment.
+#  Default: {}
+# c.ServerApp.jinja_environment_options = {}
+
+## Extra variables to supply to jinja templates when rendering.
+#  Default: {}
+# c.ServerApp.jinja_template_vars = {}
+
+## Dict of Python modules to load as Jupyter server extensions.Entry values can
+#  be used to enable and disable the loading ofthe extensions. The extensions
+#  will be loaded in alphabetical order.
+#  Default: {}
+# c.ServerApp.jpserver_extensions = {}
+
+## The kernel manager class to use.
+#  Default: 'jupyter_server.services.kernels.kernelmanager.MappingKernelManager'
+# c.ServerApp.kernel_manager_class = 'jupyter_server.services.kernels.kernelmanager.MappingKernelManager'
+
+## The kernel spec manager class to use. Should be a subclass of
+#  `jupyter_client.kernelspec.KernelSpecManager`.
+#  
+#  The Api of KernelSpecManager is provisional and might change without warning
+#  between this version of Jupyter and the next stable one.
+#  Default: 'builtins.object'
+# c.ServerApp.kernel_spec_manager_class = 'builtins.object'
+
+## The kernel websocket connection class to use.
+#  Default: 'jupyter_server.services.kernels.connection.base.BaseKernelWebsocketConnection'
+# c.ServerApp.kernel_websocket_connection_class = 'jupyter_server.services.kernels.connection.base.BaseKernelWebsocketConnection'
+
+## DEPRECATED. Use ZMQChannelsWebsocketConnection.kernel_ws_protocol
+#  Default: ''
+# c.ServerApp.kernel_ws_protocol = ''
+
+## The full path to a private key file for usage with SSL/TLS.
+#  Default: ''
+# c.ServerApp.keyfile = ''
+
+## DEPRECATED. Use ZMQChannelsWebsocketConnection.limit_rate
+#  Default: False
+# c.ServerApp.limit_rate = False
+
+## Hostnames to allow as local when allow_remote_access is False.
+#  
+#         Local IP addresses (such as 127.0.0.1 and ::1) are automatically accepted
+#         as local as well.
+#  Default: ['localhost']
+# c.ServerApp.local_hostnames = ['localhost']
+
+## The date format used by logging formatters for %(asctime)s
+#  See also: Application.log_datefmt
+# c.ServerApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+## The Logging format template
+#  See also: Application.log_format
+# c.ServerApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+## Set the log level by value or name.
+#  See also: Application.log_level
+# c.ServerApp.log_level = 30
+
+## 
+#  See also: Application.logging_config
+# c.ServerApp.logging_config = {}
+
+## The login handler class to use.
+#  Default: 'jupyter_server.auth.login.LegacyLoginHandler'
+# c.ServerApp.login_handler_class = 'jupyter_server.auth.login.LegacyLoginHandler'
+
+## The logout handler class to use.
+#  Default: 'jupyter_server.auth.logout.LogoutHandler'
+# c.ServerApp.logout_handler_class = 'jupyter_server.auth.logout.LogoutHandler'
+
+## Sets the maximum allowed size of the client request body, specified in the
+#  Content-Length request header field. If the size in a request exceeds the
+#  configured value, a malformed HTTP message is returned to the client.
+#  
+#  Note: max_body_size is applied even in streaming mode.
+#  Default: 536870912
+# c.ServerApp.max_body_size = 536870912
+
+## Gets or sets the maximum amount of memory, in bytes, that is allocated for use
+#  by the buffer manager.
+#  Default: 536870912
+# c.ServerApp.max_buffer_size = 536870912
+
+## Gets or sets a lower bound on the open file handles process resource limit.
+#  This may need to be increased if you run into an OSError: [Errno 24] Too many
+#  open files. This is not applicable when running on Windows.
+#  Default: 0
+# c.ServerApp.min_open_files_limit = 0
+
+## DEPRECATED, use root_dir.
+#  Default: ''
+# c.ServerApp.notebook_dir = ''
+
+## Whether to open in a browser after starting.
+#                          The specific browser used is platform dependent and
+#                          determined by the python standard library `webbrowser`
+#                          module, unless it is overridden using the --browser
+#                          (ServerApp.browser) configuration option.
+#  Default: False
+# c.ServerApp.open_browser = False
+
+## DEPRECATED in 2.0. Use PasswordIdentityProvider.hashed_password
+#  Default: ''
+# c.ServerApp.password = ''
+
+## DEPRECATED in 2.0. Use PasswordIdentityProvider.password_required
+#  Default: False
+# c.ServerApp.password_required = False
+
+## The port the server will listen on (env: JUPYTER_PORT).
+#  Default: 0
+# c.ServerApp.port = 0
+
+## The number of additional ports to try if the specified port is not available
+#  (env: JUPYTER_PORT_RETRIES).
+#  Default: 50
+# c.ServerApp.port_retries = 50
+
+## Preferred starting directory to use for notebooks and kernels.
+#  Default: ''
+# c.ServerApp.preferred_dir = ''
+
+## DISABLED: use %pylab or %matplotlib in the notebook to enable matplotlib.
+#  Default: 'disabled'
+# c.ServerApp.pylab = 'disabled'
+
+## If True, display controls to shut down the Jupyter server, such as menu items
+#  or buttons.
+#  Default: True
+# c.ServerApp.quit_button = True
+
+## DEPRECATED. Use ZMQChannelsWebsocketConnection.rate_limit_window
+#  Default: 0.0
+# c.ServerApp.rate_limit_window = 0.0
+
+## Reraise exceptions encountered loading server extensions?
+#  Default: False
+# c.ServerApp.reraise_server_extension_failures = False
+
+## The directory to use for notebooks and kernels.
+#  Default: ''
+# c.ServerApp.root_dir = ''
+
+## The session manager class to use.
+#  Default: 'builtins.object'
+# c.ServerApp.session_manager_class = 'builtins.object'
+
+## Instead of starting the Application, dump configuration to stdout
+#  See also: Application.show_config
+# c.ServerApp.show_config = False
+
+## Instead of starting the Application, dump configuration to stdout (as JSON)
+#  See also: Application.show_config_json
+# c.ServerApp.show_config_json = False
+
+## Shut down the server after N seconds with no kernelsrunning and no activity.
+#  This can be used together with culling idle kernels
+#  (MappingKernelManager.cull_idle_timeout) to shutdown the Jupyter server when
+#  it's not in use. This is not precisely timed: it may shut down up to a minute
+#  later. 0 (the default) disables this automatic shutdown.
+#  Default: 0
+# c.ServerApp.shutdown_no_activity_timeout = 0
+
+## The UNIX socket the Jupyter server will listen on.
+#  Default: ''
+# c.ServerApp.sock = ''
+
+## The permissions mode for UNIX socket creation (default: 0600).
+#  Default: '0600'
+# c.ServerApp.sock_mode = '0600'
+
+## Supply SSL options for the tornado HTTPServer.
+#              See the tornado docs for details.
+#  Default: {}
+# c.ServerApp.ssl_options = {}
+
+## Paths to set up static files as immutable.
+#  
+#  This allow setting up the cache control of static files as immutable. It
+#  should be used for static file named with a hash for instance.
+#  Default: []
+# c.ServerApp.static_immutable_cache = []
+
+## Supply overrides for terminado. Currently only supports "shell_command".
+#  Default: {}
+# c.ServerApp.terminado_settings = {}
+
+## Set to False to disable terminals.
+#  
+#           This does *not* make the server more secure by itself.
+#           Anything the user can in a terminal, they can also do in a notebook.
+#  
+#           Terminals may also be automatically disabled if the terminado package
+#           is not available.
+#  Default: False
+# c.ServerApp.terminals_enabled = False
+
+## DEPRECATED. Use IdentityProvider.token
+#  Default: '<DEPRECATED>'
+# c.ServerApp.token = '<DEPRECATED>'
+
+## Supply overrides for the tornado.web.Application that the Jupyter server uses.
+#  Default: {}
+# c.ServerApp.tornado_settings = {}
+
+## Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-
+#  For headerssent by the upstream reverse proxy. Necessary if the proxy handles
+#  SSL
+#  Default: False
+# c.ServerApp.trust_xheaders = False
+
+## Disable launching browser by redirect file
+#       For versions of notebook > 5.7.2, a security feature measure was added that
+#       prevented the authentication token used to launch the browser from being visible.
+#       This feature makes it difficult for other users on a multi-user system from
+#       running code in your Jupyter session as you.
+#       However, some environments (like Windows Subsystem for Linux (WSL) and Chromebooks),
+#       launching a browser using a redirect file can lead the browser failing to load.
+#       This is because of the difference in file structures/paths between the runtime and
+#       the browser.
+#  
+#       Disabling this setting to False will disable this behavior, allowing the browser
+#       to launch by using a URL and visible token (as before).
+#  Default: True
+# c.ServerApp.use_redirect_file = True
+
+## Specify where to open the server on startup. This is the
+#          `new` argument passed to the standard library method `webbrowser.open`.
+#          The behaviour is not guaranteed, but depends on browser support. Valid
+#          values are:
+#  
+#           - 2 opens a new tab,
+#           - 1 opens a new window,
+#           - 0 opens in an existing window.
+#  
+#          See the `webbrowser.open` documentation for details.
+#  Default: 2
+# c.ServerApp.webbrowser_open_new = 2
+
+## Set the tornado compression options for websocket connections.
+#  
+#  This value will be returned from
+#  :meth:`WebSocketHandler.get_compression_options`. None (default) will disable
+#  compression. A dict (even an empty one) will enable compression.
+#  
+#  See the tornado docs for WebSocketHandler.get_compression_options for details.
+#  Default: None
+# c.ServerApp.websocket_compression_options = None
+
+## The base URL for websockets,
+#          if it differs from the HTTP server (hint: it almost certainly doesn't).
+#  
+#          Should be in the form of an HTTP origin: ws[s]://hostname[:port]
+#  Default: ''
+# c.ServerApp.websocket_url = ''
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep c.NotebookApp
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep "c.NotebookApp"
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep ip
+#          This allows adding javascript/css to be available from the notebook server machine,
+#          This allows adding javascript/css to be available from the Jupyter server machine,
+# c.ServerApp.ip = 'localhost'
+hmiwa@humgendiv:~$ 
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep Server
+## Base class for configurable Jupyter Server Extension Applications.
+#      - Extension is listed as a jpserver_extension, and ServerApp calls
+#          (ServerApp.browser) configuration option.
+# LabServerApp(ExtensionApp) configuration
+## A Lab Server Application that runs out-of-the-box
+#      `LabServerApp.whitetlist_uris` renamed to `allowed_extensions_uris`
+# c.LabServerApp.allowed_extensions_uris = ''
+# c.LabServerApp.answer_yes = False
+# c.LabServerApp.app_settings_dir = ''
+# c.LabServerApp.app_url = '/lab'
+## Deprecated, use `LabServerApp.blocked_extensions_uris`
+# c.LabServerApp.blacklist_uris = ''
+#      `LabServerApp.blacklist_uris` renamed to `blocked_extensions_uris`
+# c.LabServerApp.blocked_extensions_uris = ''
+# c.LabServerApp.cache_files = True
+# c.LabServerApp.config_file = ''
+# c.LabServerApp.config_file_name = ''
+# c.LabServerApp.copy_absolute_path = False
+# c.LabServerApp.extra_labextensions_path = []
+# c.LabServerApp.generate_config = False
+# c.LabServerApp.handlers = []
+# c.LabServerApp.jinja2_options = {}
+# c.LabServerApp.labextensions_path = []
+# c.LabServerApp.labextensions_url = ''
+# c.LabServerApp.listings_refresh_seconds = 3600
+# c.LabServerApp.listings_request_options = {}
+# c.LabServerApp.listings_url = ''
+# c.LabServerApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+# c.LabServerApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+# c.LabServerApp.log_level = 30
+# c.LabServerApp.logging_config = {}
+# c.LabServerApp.notebook_starts_kernel = True
+# c.LabServerApp.open_browser = False
+# c.LabServerApp.schemas_dir = ''
+# c.LabServerApp.settings = {}
+# c.LabServerApp.settings_url = ''
+# c.LabServerApp.show_config = False
+# c.LabServerApp.show_config_json = False
+# c.LabServerApp.static_dir = ''
+# c.LabServerApp.static_paths = []
+# c.LabServerApp.static_url_prefix = ''
+# c.LabServerApp.template_paths = []
+# c.LabServerApp.templates_dir = ''
+# c.LabServerApp.themes_dir = ''
+# c.LabServerApp.themes_url = ''
+# c.LabServerApp.translations_api_url = ''
+# c.LabServerApp.tree_url = ''
+# c.LabServerApp.user_settings_dir = ''
+## Deprecated, use `LabServerApp.allowed_extensions_uris`
+# c.LabServerApp.whitelist_uris = ''
+# c.LabServerApp.workspaces_api_url = ''
+# c.LabServerApp.workspaces_dir = ''
+# JupyterNotebookApp(LabServerApp) configuration
+#  See also: LabServerApp.allowed_extensions_uris
+## Deprecated, use `LabServerApp.blocked_extensions_uris`
+#  See also: LabServerApp.blacklist_uris
+#  See also: LabServerApp.blocked_extensions_uris
+#  See also: LabServerApp.listings_refresh_seconds
+#  See also: LabServerApp.listings_request_options
+## Deprecated, use `LabServerApp.allowed_extensions_uris`
+#  See also: LabServerApp.whitelist_uris
+# ServerApp(JupyterApp) configuration
+## The Jupyter Server application class.
+# c.ServerApp.allow_credentials = False
+# c.ServerApp.allow_external_kernels = False
+# c.ServerApp.allow_origin = ''
+# c.ServerApp.allow_origin_pat = ''
+# c.ServerApp.allow_password_change = True
+# c.ServerApp.allow_remote_access = False
+# c.ServerApp.allow_root = False
+# c.ServerApp.answer_yes = False
+# c.ServerApp.authenticate_prometheus = True
+# c.ServerApp.authorizer_class = 'jupyter_server.auth.authorizer.AllowAllAuthorizer'
+# c.ServerApp.autoreload = False
+# c.ServerApp.base_url = '/'
+# c.ServerApp.browser = ''
+# c.ServerApp.certfile = ''
+# c.ServerApp.client_ca = ''
+# c.ServerApp.config_file = ''
+# c.ServerApp.config_file_name = ''
+# c.ServerApp.config_manager_class = 'jupyter_server.services.config.manager.ConfigManager'
+# c.ServerApp.contents_manager_class = 'jupyter_server.services.contents.largefilemanager.AsyncLargeFileManager'
+# c.ServerApp.cookie_options = {}
+# c.ServerApp.cookie_secret = b''
+# c.ServerApp.cookie_secret_file = ''
+# c.ServerApp.custom_display_url = ''
+# c.ServerApp.default_url = '/'
+# c.ServerApp.disable_check_xsrf = False
+# c.ServerApp.external_connection_dir = None
+# c.ServerApp.extra_services = []
+# c.ServerApp.extra_static_paths = []
+# c.ServerApp.extra_template_paths = []
+# c.ServerApp.file_to_run = ''
+# c.ServerApp.file_url_prefix = 'notebooks'
+# c.ServerApp.generate_config = False
+# c.ServerApp.get_secure_cookie_kwargs = {}
+# c.ServerApp.identity_provider_class = 'jupyter_server.auth.identity.PasswordIdentityProvider'
+# c.ServerApp.iopub_data_rate_limit = 0.0
+# c.ServerApp.iopub_msg_rate_limit = 0.0
+# c.ServerApp.ip = 'localhost'
+# c.ServerApp.jinja_environment_options = {}
+# c.ServerApp.jinja_template_vars = {}
+# c.ServerApp.jpserver_extensions = {}
+# c.ServerApp.kernel_manager_class = 'jupyter_server.services.kernels.kernelmanager.MappingKernelManager'
+# c.ServerApp.kernel_spec_manager_class = 'builtins.object'
+# c.ServerApp.kernel_websocket_connection_class = 'jupyter_server.services.kernels.connection.base.BaseKernelWebsocketConnection'
+# c.ServerApp.kernel_ws_protocol = ''
+# c.ServerApp.keyfile = ''
+# c.ServerApp.limit_rate = False
+# c.ServerApp.local_hostnames = ['localhost']
+# c.ServerApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+# c.ServerApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+# c.ServerApp.log_level = 30
+# c.ServerApp.logging_config = {}
+# c.ServerApp.login_handler_class = 'jupyter_server.auth.login.LegacyLoginHandler'
+# c.ServerApp.logout_handler_class = 'jupyter_server.auth.logout.LogoutHandler'
+# c.ServerApp.max_body_size = 536870912
+# c.ServerApp.max_buffer_size = 536870912
+# c.ServerApp.min_open_files_limit = 0
+# c.ServerApp.notebook_dir = ''
+#                          (ServerApp.browser) configuration option.
+# c.ServerApp.open_browser = False
+# c.ServerApp.password = ''
+# c.ServerApp.password_required = False
+# c.ServerApp.port = 0
+# c.ServerApp.port_retries = 50
+# c.ServerApp.preferred_dir = ''
+# c.ServerApp.pylab = 'disabled'
+# c.ServerApp.quit_button = True
+# c.ServerApp.rate_limit_window = 0.0
+# c.ServerApp.reraise_server_extension_failures = False
+# c.ServerApp.root_dir = ''
+# c.ServerApp.session_manager_class = 'builtins.object'
+# c.ServerApp.show_config = False
+# c.ServerApp.show_config_json = False
+# c.ServerApp.shutdown_no_activity_timeout = 0
+# c.ServerApp.sock = ''
+# c.ServerApp.sock_mode = '0600'
+## Supply SSL options for the tornado HTTPServer.
+# c.ServerApp.ssl_options = {}
+# c.ServerApp.static_immutable_cache = []
+# c.ServerApp.terminado_settings = {}
+# c.ServerApp.terminals_enabled = False
+# c.ServerApp.token = '<DEPRECATED>'
+# c.ServerApp.tornado_settings = {}
+# c.ServerApp.trust_xheaders = False
+# c.ServerApp.use_redirect_file = True
+# c.ServerApp.webbrowser_open_new = 2
+# c.ServerApp.websocket_compression_options = None
+# c.ServerApp.websocket_url = ''
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep open_browser
+# c.ExtensionApp.open_browser = False
+#  See also: ExtensionApp.open_browser
+# c.LabServerApp.open_browser = False
+#  See also: ExtensionApp.open_browser
+# c.JupyterNotebookApp.open_browser = False
+# c.ServerApp.open_browser = False
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep App.port
+# c.ServerApp.port = 0
+# c.ServerApp.port_retries = 50
+hmiwa@humgendiv:~$ vim ~/.jupyter/jupyter_notebook_config.py
+hmiwa@humgendiv:~$ vim ~/.jupyter/jupyter_notebook_config.py
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep Server
+## Base class for configurable Jupyter Server Extension Applications.
+#      - Extension is listed as a jpserver_extension, and ServerApp calls
+#          (ServerApp.browser) configuration option.
+# LabServerApp(ExtensionApp) configuration
+## A Lab Server Application that runs out-of-the-box
+#      `LabServerApp.whitetlist_uris` renamed to `allowed_extensions_uris`
+# c.LabServerApp.allowed_extensions_uris = ''
+# c.LabServerApp.answer_yes = False
+# c.LabServerApp.app_settings_dir = ''
+# c.LabServerApp.app_url = '/lab'
+## Deprecated, use `LabServerApp.blocked_extensions_uris`
+# c.LabServerApp.blacklist_uris = ''
+#      `LabServerApp.blacklist_uris` renamed to `blocked_extensions_uris`
+# c.LabServerApp.blocked_extensions_uris = ''
+# c.LabServerApp.cache_files = True
+# c.LabServerApp.config_file = ''
+# c.LabServerApp.config_file_name = ''
+# c.LabServerApp.copy_absolute_path = False
+# c.LabServerApp.extra_labextensions_path = []
+# c.LabServerApp.generate_config = False
+# c.LabServerApp.handlers = []
+# c.LabServerApp.jinja2_options = {}
+# c.LabServerApp.labextensions_path = []
+# c.LabServerApp.labextensions_url = ''
+# c.LabServerApp.listings_refresh_seconds = 3600
+# c.LabServerApp.listings_request_options = {}
+# c.LabServerApp.listings_url = ''
+# c.LabServerApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+# c.LabServerApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+# c.LabServerApp.log_level = 30
+# c.LabServerApp.logging_config = {}
+# c.LabServerApp.notebook_starts_kernel = True
+# c.LabServerApp.open_browser = False
+# c.LabServerApp.schemas_dir = ''
+# c.LabServerApp.settings = {}
+# c.LabServerApp.settings_url = ''
+# c.LabServerApp.show_config = False
+# c.LabServerApp.show_config_json = False
+# c.LabServerApp.static_dir = ''
+# c.LabServerApp.static_paths = []
+# c.LabServerApp.static_url_prefix = ''
+# c.LabServerApp.template_paths = []
+# c.LabServerApp.templates_dir = ''
+# c.LabServerApp.themes_dir = ''
+# c.LabServerApp.themes_url = ''
+# c.LabServerApp.translations_api_url = ''
+# c.LabServerApp.tree_url = ''
+# c.LabServerApp.user_settings_dir = ''
+## Deprecated, use `LabServerApp.allowed_extensions_uris`
+# c.LabServerApp.whitelist_uris = ''
+# c.LabServerApp.workspaces_api_url = ''
+# c.LabServerApp.workspaces_dir = ''
+# JupyterNotebookApp(LabServerApp) configuration
+#  See also: LabServerApp.allowed_extensions_uris
+## Deprecated, use `LabServerApp.blocked_extensions_uris`
+#  See also: LabServerApp.blacklist_uris
+#  See also: LabServerApp.blocked_extensions_uris
+#  See also: LabServerApp.listings_refresh_seconds
+#  See also: LabServerApp.listings_request_options
+## Deprecated, use `LabServerApp.allowed_extensions_uris`
+#  See also: LabServerApp.whitelist_uris
+# ServerApp(JupyterApp) configuration
+## The Jupyter Server application class.
+# c.ServerApp.allow_credentials = False
+# c.ServerApp.allow_external_kernels = False
+# c.ServerApp.allow_origin = ''
+# c.ServerApp.allow_origin_pat = ''
+# c.ServerApp.allow_password_change = True
+# c.ServerApp.allow_remote_access = False
+# c.ServerApp.allow_root = False
+# c.ServerApp.answer_yes = False
+# c.ServerApp.authenticate_prometheus = True
+# c.ServerApp.authorizer_class = 'jupyter_server.auth.authorizer.AllowAllAuthorizer'
+# c.ServerApp.autoreload = False
+# c.ServerApp.base_url = '/'
+# c.ServerApp.browser = ''
+# c.ServerApp.certfile = ''
+# c.ServerApp.client_ca = ''
+# c.ServerApp.config_file = ''
+# c.ServerApp.config_file_name = ''
+# c.ServerApp.config_manager_class = 'jupyter_server.services.config.manager.ConfigManager'
+# c.ServerApp.contents_manager_class = 'jupyter_server.services.contents.largefilemanager.AsyncLargeFileManager'
+# c.ServerApp.cookie_options = {}
+# c.ServerApp.cookie_secret = b''
+# c.ServerApp.cookie_secret_file = ''
+# c.ServerApp.custom_display_url = ''
+# c.ServerApp.default_url = '/'
+# c.ServerApp.disable_check_xsrf = False
+# c.ServerApp.external_connection_dir = None
+# c.ServerApp.extra_services = []
+# c.ServerApp.extra_static_paths = []
+# c.ServerApp.extra_template_paths = []
+# c.ServerApp.file_to_run = ''
+# c.ServerApp.file_url_prefix = 'notebooks'
+# c.ServerApp.generate_config = False
+# c.ServerApp.get_secure_cookie_kwargs = {}
+# c.ServerApp.identity_provider_class = 'jupyter_server.auth.identity.PasswordIdentityProvider'
+# c.ServerApp.iopub_data_rate_limit = 0.0
+# c.ServerApp.iopub_msg_rate_limit = 0.0
+# c.ServerApp.ip = 'localhost'
+# c.ServerApp.jinja_environment_options = {}
+# c.ServerApp.jinja_template_vars = {}
+# c.ServerApp.jpserver_extensions = {}
+# c.ServerApp.kernel_manager_class = 'jupyter_server.services.kernels.kernelmanager.MappingKernelManager'
+# c.ServerApp.kernel_spec_manager_class = 'builtins.object'
+# c.ServerApp.kernel_websocket_connection_class = 'jupyter_server.services.kernels.connection.base.BaseKernelWebsocketConnection'
+# c.ServerApp.kernel_ws_protocol = ''
+# c.ServerApp.keyfile = ''
+# c.ServerApp.limit_rate = False
+# c.ServerApp.local_hostnames = ['localhost']
+# c.ServerApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+# c.ServerApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+# c.ServerApp.log_level = 30
+# c.ServerApp.logging_config = {}
+# c.ServerApp.login_handler_class = 'jupyter_server.auth.login.LegacyLoginHandler'
+# c.ServerApp.logout_handler_class = 'jupyter_server.auth.logout.LogoutHandler'
+# c.ServerApp.max_body_size = 536870912
+# c.ServerApp.max_buffer_size = 536870912
+# c.ServerApp.min_open_files_limit = 0
+# c.ServerApp.notebook_dir = ''
+#                          (ServerApp.browser) configuration option.
+# c.ServerApp.open_browser = False
+# c.ServerApp.password = ''
+# c.ServerApp.password_required = False
+# c.ServerApp.port = 0
+# c.ServerApp.port_retries = 50
+# c.ServerApp.preferred_dir = ''
+# c.ServerApp.pylab = 'disabled'
+# c.ServerApp.quit_button = True
+# c.ServerApp.rate_limit_window = 0.0
+# c.ServerApp.reraise_server_extension_failures = False
+# c.ServerApp.root_dir = ''
+# c.ServerApp.session_manager_class = 'builtins.object'
+# c.ServerApp.show_config = False
+# c.ServerApp.show_config_json = False
+# c.ServerApp.shutdown_no_activity_timeout = 0
+# c.ServerApp.sock = ''
+# c.ServerApp.sock_mode = '0600'
+## Supply SSL options for the tornado HTTPServer.
+# c.ServerApp.ssl_options = {}
+# c.ServerApp.static_immutable_cache = []
+# c.ServerApp.terminado_settings = {}
+# c.ServerApp.terminals_enabled = False
+# c.ServerApp.token = '<DEPRECATED>'
+# c.ServerApp.tornado_settings = {}
+# c.ServerApp.trust_xheaders = False
+# c.ServerApp.use_redirect_file = True
+# c.ServerApp.webbrowser_open_new = 2
+# c.ServerApp.websocket_compression_options = None
+# c.ServerApp.websocket_url = ''
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep Server.ip
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep App.ip
+# c.ServerApp.ip = 'localhost'
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep App.ip -n
+819:# c.ServerApp.ip = 'localhost'
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep App.port -n
+935:# c.ServerApp.port = 0
+940:# c.ServerApp.port_retries = 50
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep open_browser -n
+183:# c.ExtensionApp.open_browser = False
+325:#  See also: ExtensionApp.open_browser
+326:# c.LabServerApp.open_browser = False
+522:#  See also: ExtensionApp.open_browser
+523:# c.JupyterNotebookApp.open_browser = False
+923:# c.ServerApp.open_browser = False
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep c.JupyterNotebookApp
+# c.JupyterNotebookApp.allowed_extensions_uris = ''
+# c.JupyterNotebookApp.answer_yes = False
+# c.JupyterNotebookApp.app_settings_dir = ''
+# c.JupyterNotebookApp.app_url = '/lab'
+# c.JupyterNotebookApp.blacklist_uris = ''
+# c.JupyterNotebookApp.blocked_extensions_uris = ''
+# c.JupyterNotebookApp.cache_files = True
+# c.JupyterNotebookApp.config_file = ''
+# c.JupyterNotebookApp.config_file_name = ''
+# c.JupyterNotebookApp.copy_absolute_path = False
+# c.JupyterNotebookApp.custom_css = True
+# c.JupyterNotebookApp.default_url = '/tree'
+# c.JupyterNotebookApp.expose_app_in_browser = False
+# c.JupyterNotebookApp.extra_labextensions_path = []
+# c.JupyterNotebookApp.generate_config = False
+# c.JupyterNotebookApp.handlers = []
+# c.JupyterNotebookApp.jinja2_options = {}
+# c.JupyterNotebookApp.labextensions_path = []
+# c.JupyterNotebookApp.labextensions_url = ''
+# c.JupyterNotebookApp.listings_refresh_seconds = 3600
+# c.JupyterNotebookApp.listings_request_options = {}
+# c.JupyterNotebookApp.listings_url = ''
+# c.JupyterNotebookApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+# c.JupyterNotebookApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+# c.JupyterNotebookApp.log_level = 30
+# c.JupyterNotebookApp.logging_config = {}
+# c.JupyterNotebookApp.notebook_starts_kernel = True
+# c.JupyterNotebookApp.open_browser = False
+# c.JupyterNotebookApp.schemas_dir = ''
+# c.JupyterNotebookApp.settings = {}
+# c.JupyterNotebookApp.settings_url = ''
+# c.JupyterNotebookApp.show_config = False
+# c.JupyterNotebookApp.show_config_json = False
+# c.JupyterNotebookApp.static_dir = ''
+# c.JupyterNotebookApp.static_paths = []
+# c.JupyterNotebookApp.static_url_prefix = ''
+# c.JupyterNotebookApp.template_paths = []
+# c.JupyterNotebookApp.templates_dir = ''
+# c.JupyterNotebookApp.themes_dir = ''
+# c.JupyterNotebookApp.themes_url = ''
+# c.JupyterNotebookApp.translations_api_url = ''
+# c.JupyterNotebookApp.tree_url = ''
+# c.JupyterNotebookApp.user_settings_dir = ''
+# c.JupyterNotebookApp.whitelist_uris = ''
+# c.JupyterNotebookApp.workspaces_api_url = ''
+# c.JupyterNotebookApp.workspaces_dir = ''
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep c.JupyterNotebookApp.port
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep c.NotebookApp
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep .ip
+#          This allows adding javascript/css to be available from the notebook server machine,
+#          This allows adding javascript/css to be available from the Jupyter server machine,
+# c.ServerApp.ip = 'localhost'
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep .port
+#          Replace actual URL, including protocol, address, port and base URL,
+## The port the server will listen on (env: JUPYTER_PORT).
+# c.ServerApp.port = 0
+## The number of additional ports to try if the specified port is not available
+# c.ServerApp.port_retries = 50
+## Supply overrides for terminado. Currently only supports "shell_command".
+#          The behaviour is not guaranteed, but depends on browser support. Valid
+#          Should be in the form of an HTTP origin: ws[s]://hostname[:port]
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep .ip
+#          This allows adding javascript/css to be available from the notebook server machine,
+#          This allows adding javascript/css to be available from the Jupyter server machine,
+# c.ServerApp.ip = 'localhost'
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep .ip -n
+199:#          This allows adding javascript/css to be available from the notebook server machine,
+778:#          This allows adding javascript/css to be available from the Jupyter server machine,
+819:# c.ServerApp.ip = 'localhost'
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep .port -n
+734:#          Replace actual URL, including protocol, address, port and base URL,
+933:## The port the server will listen on (env: JUPYTER_PORT).
+935:# c.ServerApp.port = 0
+937:## The number of additional ports to try if the specified port is not available
+940:# c.ServerApp.port_retries = 50
+1007:## Supply overrides for terminado. Currently only supports "shell_command".
+1052:#          The behaviour is not guaranteed, but depends on browser support. Valid
+1076:#          Should be in the form of an HTTP origin: ws[s]://hostname[:port]
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep open_browser -n
+183:# c.ExtensionApp.open_browser = False
+325:#  See also: ExtensionApp.open_browser
+326:# c.LabServerApp.open_browser = False
+522:#  See also: ExtensionApp.open_browser
+523:# c.JupyterNotebookApp.open_browser = False
+923:# c.ServerApp.open_browser = False
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep .port -n
+734:#          Replace actual URL, including protocol, address, port and base URL,
+933:## The port the server will listen on (env: JUPYTER_PORT).
+935:# c.ServerApp.port = 0
+937:## The number of additional ports to try if the specified port is not available
+940:# c.ServerApp.port_retries = 50
+1007:## Supply overrides for terminado. Currently only supports "shell_command".
+1052:#          The behaviour is not guaranteed, but depends on browser support. Valid
+1076:#          Should be in the form of an HTTP origin: ws[s]://hostname[:port]
+hmiwa@humgendiv:~$ vim ~/.jupyter/jupyter_notebook_config.py
+hmiwa@humgendiv:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep .port -n
+734:#          Replace actual URL, including protocol, address, port and base URL,
+933:## The port the server will listen on (env: JUPYTER_PORT).
+935:# c.ServerApp.port = 8888
+937:## The number of additional ports to try if the specified port is not available
+940:# c.ServerApp.port_retries = 50
+1007:## Supply overrides for terminado. Currently only supports "shell_command".
+1052:#          The behaviour is not guaranteed, but depends on browser support. Valid
+1076:#          Should be in the form of an HTTP origin: ws[s]://hostname[:port]
+hmiwa@humgendiv:~$ jupyter notebook
+[I 2023-11-03 23:47:32.756 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-03 23:47:32.763 ServerApp] Package jupyter_lsp took 0.0065s to import
+[W 2023-11-03 23:47:32.763 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-03 23:47:32.767 ServerApp] Package jupyter_server_terminals took 0.0041s to import
+[I 2023-11-03 23:47:32.767 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-03 23:47:32.789 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-03 23:47:32.789 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-03 23:47:32.790 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-03 23:47:32.793 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-03 23:47:32.796 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-03 23:47:32.800 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-03 23:47:32.800 ServerApp] Writing Jupyter server cookie secret to /home/hmiwa/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2023-11-03 23:47:32.956 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-03 23:47:32.968 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-03 23:47:32.970 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-03 23:47:32.971 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-03 23:47:32.971 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-03 23:47:32.972 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-03 23:47:32.972 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-03 23:47:32.974 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-03 23:47:32.976 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-03 23:47:32.976 ServerApp] Serving notebooks from local directory: /home/hmiwa
+[I 2023-11-03 23:47:32.976 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-03 23:47:32.976 ServerApp] http://localhost:8888/tree?token=a51f37f2713ea60617fc27cf2d362a771e0b98c3f15af800
+[I 2023-11-03 23:47:32.976 ServerApp]     http://127.0.0.1:8888/tree?token=a51f37f2713ea60617fc27cf2d362a771e0b98c3f15af800
+[I 2023-11-03 23:47:32.976 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-03 23:47:32.978 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-03 23:47:32.978 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1102409-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=a51f37f2713ea60617fc27cf2d362a771e0b98c3f15af800
+        http://127.0.0.1:8888/tree?token=a51f37f2713ea60617fc27cf2d362a771e0b98c3f15af800
+[I 2023-11-03 23:47:33.201 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+^C[I 2023-11-03 23:48:50.324 ServerApp] interrupted
+[I 2023-11-03 23:48:50.325 ServerApp] Serving notebooks from local directory: /home/hmiwa
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=a51f37f2713ea60617fc27cf2d362a771e0b98c3f15af800
+        http://127.0.0.1:8888/tree?token=a51f37f2713ea60617fc27cf2d362a771e0b98c3f15af800
+Shutdown this Jupyter server (y/[n])? [I 2023-11-03 23:48:55.330 ServerApp] No answer for 5s:
+[I 2023-11-03 23:48:55.330 ServerApp] resuming operation...
+^C[I 2023-11-03 23:48:59.790 ServerApp] interrupted
+[I 2023-11-03 23:48:59.791 ServerApp] Serving notebooks from local directory: /home/hmiwa
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=a51f37f2713ea60617fc27cf2d362a771e0b98c3f15af800
+        http://127.0.0.1:8888/tree?token=a51f37f2713ea60617fc27cf2d362a771e0b98c3f15af800
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-03 23:49:01.486 ServerApp] Shutdown confirmed
+[I 2023-11-03 23:49:01.487 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~$ client_loop: send disconnect: Broken pipe
+hmiwa@hanakonoMacBook-Air hmiwa % 

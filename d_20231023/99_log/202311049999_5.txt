@@ -1,0 +1,30 @@
+Last login: Fri Nov  3 23:35:20 on ttys001
+hmiwa@dhcp3-174 hmiwa % ssh hmiwa-lab
+^C
+hmiwa@dhcp3-174 hmiwa % ssh hmiwa-lab
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Fri Nov  3 23:49:34 2023 from 133.11.3.174
+hmiwa@humgendiv:~$ exit
+logout
+Connection to 133.11.2.58 closed.
+hmiwa@dhcp3-174 hmiwa % 
+
+
+
+
+
+
+
+
+
+
+
+
+

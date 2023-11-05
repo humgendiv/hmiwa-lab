@@ -1,0 +1,241 @@
+Last login: Fri Nov  3 22:03:21 on ttys000
+hmiwa@hanakonoMacBook-Air ~ % pandoc
+zsh: command not found: pandoc
+hmiwa@hanakonoMacBook-Air ~ % brew install pandoc 
+Running `brew update --auto-update`...
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core and homebrew/cask).
+==> New Formulae
+abi3audit                crunchy-cli              gotpm                    modsecurity              python-argcomplete       squiid
+auditwheel               csprecon                 gptline                  modsurfer                python-gdbm@3.12         ssh-mitm
+badkeys                  daktilo                  haiti                    mtbl                     python-psutil            sshportal
+bandicoot                dcp                      helidon                  netlistsvg               python-setuptools        tailspin
+bashunit                 der-ascii                immer                    node@20                  python-tk@3.12           tailwindcss
+biome                    dezoomify-rs             incus                    numbat                   python@3.12              three-body
+blake3                   diffoci                  iocextract               nvimpager                qalculate-qt             tlrc
+bob                      dockly                   jprq                     onionprobe               raven                    trafilatura
+bozohttpd                dovi_tool                jupyter-r                opentofu                 recoverpy                uffizzi
+build2                   eatmemory                karmadactl               orcania                  rekor-cli                uvicorn
+caracal                  favirecon                lager                    orogene                  saf-cli                  vulsio-gost
+cariddi                  ggshield                 ldeep                    pan                      scilla                   web-ext
+cf2tf                    ghc@9.4                  libdicom                 patch-package            scoutsuite               whisper-cpp
+chainloop-cli            git-mediate              libimobiledevice-glue    pciutils                 sigma-cli                wormhole-william
+changie                  gitsign                  libmapper                perl-xml-parser          sigstore                 xeol
+checkdmarc               gittuf                   libnghttp3               pmix                     smlfmt                   yder
+cloudsplaining           gossip                   llvm@16                  postgresql@16            snyk-cli                 zix
+colmap                   gotestwaf                mentat                   pter                     sqlsmith                 zug
+==> New Casks
+affine                        deveco-studio                 gstreamer-runtime             nvs                           space-capsule
+akuity                        devtunnel                     hp-easy-admin                 paulxstretch                  spacedrive
+ava                           dropbox-dash                  kuaitie                       playdate-mirror               spundle
+batchoutput-pdf               dropshelf                     low-profile                   proxy-audio-device            telegram-a
+batteryboi                    ecodms-client                 meld-studio                   reqable                       to-audio-converter
+brickstore                    expo-orbit                    metamer                       routine                       twelite-stage
+chainner                      finbar                        modrinth                      rustrover                     wetype
+clinq                         fossa                         music-decoy                   sf                            writerside
+cloudnet                      free-podcast-transcription    mutedeck                      simplex                       xsplit-vcam
+commandpost                   gstreamer-development         muyu                          songkong
+
+You have 4 outdated formulae installed.
+
+==> Downloading https://ghcr.io/v2/homebrew/core/pandoc/manifests/3.1.9
+############################################################################################################################################### 100.0%
+==> Fetching pandoc
+==> Downloading https://ghcr.io/v2/homebrew/core/pandoc/blobs/sha256:881cebbe75b9f13288d7c5b1102a963d4878e726412618b470dc59242e2d5d6d
+############################################################################################################################################### 100.0%
+==> Pouring pandoc--3.1.9.arm64_sonoma.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/pandoc/3.1.9: 10 files, 247.1MB
+==> Running `brew cleanup pandoc`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> `brew cleanup` has not been run in the last 30 days, running now...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+hmiwa@hanakonoMacBook-Air ~ % pip install nbconvert
+Requirement already satisfied: nbconvert in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (7.10.0)
+Requirement already satisfied: beautifulsoup4 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (4.12.2)
+Requirement already satisfied: bleach!=5.0.0 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (6.1.0)
+Requirement already satisfied: defusedxml in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (0.7.1)
+Requirement already satisfied: jinja2>=3.0 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (3.1.2)
+Requirement already satisfied: jupyter-core>=4.7 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (5.5.0)
+Requirement already satisfied: jupyterlab-pygments in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (0.2.2)
+Requirement already satisfied: markupsafe>=2.0 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (2.1.3)
+Requirement already satisfied: mistune<4,>=2.0.3 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (3.0.2)
+Requirement already satisfied: nbclient>=0.5.0 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (0.8.0)
+Requirement already satisfied: nbformat>=5.7 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (5.9.2)
+Requirement already satisfied: packaging in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (23.1)
+Requirement already satisfied: pandocfilters>=1.4.1 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (1.5.0)
+Requirement already satisfied: pygments>=2.4.1 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (2.16.1)
+Requirement already satisfied: tinycss2 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (1.2.1)
+Requirement already satisfied: traitlets>=5.1 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbconvert) (5.13.0)
+Requirement already satisfied: six>=1.9.0 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from bleach!=5.0.0->nbconvert) (1.16.0)
+Requirement already satisfied: webencodings in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from bleach!=5.0.0->nbconvert) (0.5.1)
+Requirement already satisfied: platformdirs>=2.5 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from jupyter-core>=4.7->nbconvert) (3.11.0)
+Requirement already satisfied: jupyter-client>=6.1.12 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbclient>=0.5.0->nbconvert) (8.5.0)
+Requirement already satisfied: fastjsonschema in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbformat>=5.7->nbconvert) (2.18.1)
+Requirement already satisfied: jsonschema>=2.6 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from nbformat>=5.7->nbconvert) (4.19.2)
+Requirement already satisfied: soupsieve>1.2 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from beautifulsoup4->nbconvert) (2.5)
+Requirement already satisfied: attrs>=22.2.0 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert) (23.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert) (2023.7.1)
+Requirement already satisfied: referencing>=0.28.4 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert) (0.30.2)
+Requirement already satisfied: rpds-py>=0.7.1 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat>=5.7->nbconvert) (0.10.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert) (2.8.2)
+Requirement already satisfied: pyzmq>=23.0 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert) (25.1.1)
+Requirement already satisfied: tornado>=6.2 in ./.pyenv/versions/3.11.4/lib/python3.11/site-packages (from jupyter-client>=6.1.12->nbclient>=0.5.0->nbconvert) (6.3.3)
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
+hmiwa@hanakonoMacBook-Air ~ % conda install nbconvert
+pyenv: conda: command not found
+
+The `conda' command exists in these Python versions:
+  miniconda3-4.7.12
+
+Note: See 'pyenv help global' for tips on allowing both
+      python2 and python3 to be found.
+hmiwa@hanakonoMacBook-Air ~ % brew cask install basictex
+Error: `brew cask` is no longer a `brew` command. Use `brew <command> --cask` instead.
+hmiwa@hanakonoMacBook-Air ~ % xelatex
+zsh: command not found: xelatex
+hmiwa@hanakonoMacBook-Air ~ % cd /Library/TeX/texbin
+hmiwa@hanakonoMacBook-Air texbin % ls
+a2ping				e2pall				mflua-nowin			sjislatex
+a5toa4				ebb				mfluajit			sjispdflatex
+adhocfilelist			ebong				mfluajit-nowin			spix
+afm2afm				eplain				mfplain				splitindex
+afm2pl				epsffit				mft				srcredact
+afm2tfm				epspdf				mk4ht				sty2dtx
+albatross			epspdftk			mkgrkindex			svn-multi
+aleph				epstopdf			mkindex				synctex
+allcm				eptex				mkjobtexmf			t1ascii
+allec				etex				mkocp				t1asm
+allneeded			euptex				mkofm				t1binary
+amstex				exceltex			mkpic				t1disasm
+arara				extconv				mkt1font			t1dotlessj
+arlatex				extractbb			mktexfmt			t1lint
+asy				extractres			mktexlsr			t1mac
+authorindex			fig4latex			mktexmf				t1rawafm
+autoinst			findhyph			mktexpk				t1reencode
+autosp				fmtutil				mktextfm			t1testpage
+axohelp				fmtutil-sys			mllatex				t1unmac
+bbl2bib				fmtutil-user			mltex				t4ht
+bbox				fontinst			mmafm				tangle
+bg5+latex			fragmaster			mmpfb				teckit_compile
+bg5+pdflatex			gbklatex			mpost				tex
+bg5conv				gbkpdflatex			mptopdf				tex2aspc
+bg5latex			getmapdl			msxlint				tex2xindy
+bg5pdflatex			gftodvi				mtxrun				tex4ebook
+bib2gls				gftopk				mtxrun.lua			tex4ht
+bibcop				gftype				multibibliography		texaccents
+bibdoiadd			git-latexdiff			musixflx			texconfig
+biber				gregorio			musixtex			texconfig-dialog
+biber-ms			gsftopk				odvicopy			texconfig-sys
+bibexport			hbf2gf				odvitype			texcount
+bibmradd			hilatex				ofm2opl				texdef
+bibtex				hishrink			omfonts				texdiff
+bibtex8				histretch			opl2ofm				texdirflatten
+bibtexu				hitex				optex				texdoc
+biburl2doi			ht				optexcount			texdoctk
+bibzbladd			htcontext			ot2kpx				texfot
+bundledoc			htlatex				otangle				texhash
+cachepic			htmex				otfinfo				texindy
+cef5conv			httex				otftotfm			texlinks
+cef5latex			httexi				otp2ocp				texliveonfly
+cef5pdflatex			htxelatex			outocp				texloganalyser
+cefconv				htxetex				ovf2ovp				texlogfilter
+ceflatex			hyperxmp-add-bytecount		ovp2ovf				texlogsieve
+cefpdflatex			includeres			pagelayoutapi			texlua
+cefsconv			inimf				pamphletangler			texluac
+cefslatex			initex				patgen				texluajit
+cefspdflatex			installfont-tl			pbibtex				texluajitc
+cfftot1				jadetex				pdfannotextractor		texosquery
+checkcites			jamo-normalize			pdfatfi				texosquery-jre5
+checklistings			jfmutil				pdfbook2			texosquery-jre8
+chkdvifont			kanji-config-updmap		pdfclose			texplate
+chklref				kanji-config-updmap-sys		pdfcrop				texsis
+chktex				kanji-config-updmap-user	pdfcslatex			textestvis
+chkweb				kanji-fontmap-creator		pdfcsplain			tftopl
+citeproc-lua			ketcindy			pdfetex				thumbpdf
+cjk-gs-integrate		komkindex			pdfjadetex			tie
+cllualatex			kpseaccess			pdfjam				tikztosvg
+cluttex				kpsepath			pdflatex			tlcockpit
+clxelatex			kpsereadlink			pdflatex-dev			tlmgr
+context				kpsestat			pdflatexpicscale		tlshell
+context.lua			kpsetool			pdfmex				tpic2pdftex
+convbkmk			kpsewhere			pdfopen				ttf2afm
+convertgls2bib			kpsewhich			pdftex				ttf2kotexfont
+cslatex				kpsexpand			pdftex-quiet			ttf2pk
+csplain				l3build				pdftosrc			ttf2tfm
+ctan-o-mat			lacheck				pdfxmltex			ttfdump
+ctanbib				latex				pdfxup				ttftotype42
+ctangle				latex-dev			pdvitomp			twill
+ctanify				latex-git-log			pdvitype			typeoutfileinfo
+ctanupload			latex-papersize			pedigree			ulqda
+ctie				latex2man			perltex				upbibtex
+ctwill				latex2nemeth			pfarrei				updmap
+ctwill-refsort			latexdef			pfb2pfa				updmap-sys
+ctwill-twinx			latexdiff			pk2bm				updmap-user
+cweave				latexdiff-vc			pkfix				updvitomp
+de-macro			latexfileversion		pkfix-helper			updvitype
+depythontex			latexindent			pktogf				uplatex
+detex				latexmk				pktype				uplatex-dev
+devnag				latexpand			platex				upmendex
+deweb				latexrevise			platex-dev			upmpost
+diadia				lily-glyph-commands		pltotf				uppltotf
+digestif			lily-image-commands		pmpost				uptex
+disdvi				lily-rebuild-pdfs		pmxab				uptftopl
+dosepsbin			listbib				pmxchords			urlbst
+dt2dv				listings-ext.sh			pn2pdf				utf8mex
+dtxgen				llmk				pooltype			vftovp
+dv2dt				lollipop			ppltotf				vlna
+dvi2fax				ltx2crossrefxml			prepmx				vpe
+dvi2tty				ltxfileinfo			ps2eps				vpl2ovp
+dviasm				ltximg				ps2frag				vpl2vpl
+dvibook				luacsplain			ps2pk				vptovf
+dviconcat			luafindfont			ps4pdf				weave
+dvicopy				luahbtex			psbook				webquiz
+dvidvi				luajithbtex			psjoin				wofm2opl
+dvigif				luajittex			pslatex				wopl2ofm
+dvihp				lualatex			psnup				wordcount
+dviinfox			lualatex-dev			psresize			wovf2ovp
+dvilj				luametatex			psselect			wovp2ovf
+dvilj2p				luaotfload-tool			pst2pdf				xasy
+dvilj4				luatex				pstops				xdvi
+dvilj4l				lwarpmk				ptex				xdvi-xaw
+dvilj6				m-tx				ptex2pdf			xdvipdfmx
+dvilualatex			mag				ptftopl				xelatex
+dvilualatex-dev			make4ht				purifyeps			xelatex-dev
+dviluatex			makedtx				pygmentex			xelatex-unsafe
+dvipdfm				makeglossaries			pythontex			xetex
+dvipdfmx			makeglossaries-lite		r-mpost				xetex-unsafe
+dvipdft				makeindex			r-pmpost			xhlatex
+dvipng				makejvf				r-upmpost			xindex
+dvipos				man				repstopdf			xindy
+dvips				match_parens			rpdfcrop			xindy-arm64.mem
+dvired				mathspic			rubibtex			xindy-x86_64.mem
+dviselect			mendex				rubikrotation			xindy.run
+dvispc				mex				rumakeindex			xml2pmx
+dvisvgm				mf				rungs				xmltex
+dvitodvi			mf-nowin			scor2prt			yplan
+dvitomp				mf2pt1				simpdftex
+dvitype				mflua				sjisconv
+hmiwa@hanakonoMacBook-Air texbin % cd
+hmiwa@hanakonoMacBook-Air ~ % echo "export PATH=/Library/TeX/texbin:$PATH"
+export PATH=/Library/TeX/texbin:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:/Users/hmiwa/.pyenv/shims:/Users/hmiwa/.pyenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+hmiwa@hanakonoMacBook-Air ~ % echo "export PATH=/Library/TeX/texbin:$PATH"
+export PATH=/Library/TeX/texbin:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:/Users/hmiwa/.pyenv/shims:/Users/hmiwa/.pyenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+hmiwa@hanakonoMacBook-Air ~ % cat ~/.zshrc
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home"
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=/Library/TeX/texbin:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:/Users/hmiwa/.pyenv/shims:/Users/hmiwa/.pyenv/bin:/Library/TeX/texbin:/Library/TeX/texbin:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:/Users/hmiwa/.pyenv/bin:/Library/TeX/texbin:/Library/TeX/texbin:/Users/hmiwa/.pyenv/versions/3.11.4/bin:/opt/homebrew/Cellar/pyenv/2.3.23/libexec:/opt/homebrew/Cellar/pyenv/2.3.23/plugins/python-build/bin:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:/Users/hmiwa/.pyenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+hmiwa@hanakonoMacBook-Air ~ % cat ~/.zshrc       
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home"
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=/Library/TeX/texbin:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:/Users/hmiwa/.pyenv/shims:/Users/hmiwa/.pyenv/bin:/Library/TeX/texbin:/Library/TeX/texbin:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:/Users/hmiwa/.pyenv/bin:/Library/TeX/texbin:/Library/TeX/texbin:/Users/hmiwa/.pyenv/versions/3.11.4/bin:/opt/homebrew/Cellar/pyenv/2.3.23/libexec:/opt/homebrew/Cellar/pyenv/2.3.23/plugins/python-build/bin:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin:/Users/hmiwa/.pyenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+hmiwa@hanakonoMacBook-Air ~ % 
