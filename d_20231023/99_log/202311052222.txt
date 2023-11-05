@@ -1,0 +1,1508 @@
+Last login: Sat Nov  4 00:05:52 on ttys001
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	hmiwa-labserver	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % 
+hmiwa@hanakonoMacBook-Air hmiwa % 
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	hmiwa-labserver	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % mkdir gitmerge
+hmiwa@hanakonoMacBook-Air hmiwa % cd gitmerge
+hmiwa@hanakonoMacBook-Air gitmerge % git clone git@github.com:humgendiv/hmiwa-lab.git
+Cloning into 'hmiwa-lab'...
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+hmiwa@hanakonoMacBook-Air gitmerge % git clone git@github.com:hmiwa30/d_20231023.git
+Cloning into 'd_20231023'...
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 74, done.
+remote: Counting objects: 100% (30/30), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 74 (delta 3), reused 29 (delta 3), pack-reused 44
+Receiving objects: 100% (74/74), 76.65 MiB | 10.02 MiB/s, done.
+Resolving deltas: 100% (6/6), done.
+hmiwa@hanakonoMacBook-Air gitmerge % cd hmiwa-lab
+hmiwa@hanakonoMacBook-Air hmiwa-lab % ls
+README.md
+hmiwa@hanakonoMacBook-Air hmiwa-lab % mkdir d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % touch d_20231023/.gitkeep  
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add -A d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "create d_20231023 dir"
+[main f3b89ce] create d_20231023 dir
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git remote add d_20231023 ~/hmiwa/gitmerge/d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch d_20231023
+remote: Enumerating objects: 74, done.
+remote: Counting objects: 100% (74/74), done.
+remote: Compressing objects: 100% (61/61), done.
+remote: Total 74 (delta 6), reused 74 (delta 6), pack-reused 0
+Unpacking objects: 100% (74/74), 76.65 MiB | 36.85 MiB/s, done.
+From /Users/hmiwa/hmiwa/gitmerge/d_20231023
+ * [new branch]      main       -> d_20231023/main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+Merge made by the 'ort' strategy.
+ d_20231023/.gitignore                                                                          |       1 +
+ d_20231023/01_231025_TutorialPRS/.gitkeep                                                      |       1 +
+ d_20231023/01_231025_TutorialPRS/Documents/000002358.pdf                                       |     Bin 0 -> 835762 bytes
+ d_20231023/01_231025_TutorialPRS/Documents/235.pdf                                             |     Bin 0 -> 1618129 bytes
+ d_20231023/01_231025_TutorialPRS/Documents/4_PRS.doc                                           |     Bin 0 -> 636416 bytes
+ d_20231023/01_231025_TutorialPRS/Documents/4_PRS.pdf                                           |     Bin 0 -> 738267 bytes
+ ...tutorial on conducting genome\342\200\220wide association studies  Quality control and.pdf" |     Bin 0 -> 994876 bytes
+ d_20231023/01_231025_TutorialPRS/Documents/s00439-021-02281-4.pdf                              |     Bin 0 -> 2821757 bytes
+ d_20231023/01_231025_TutorialPRS/Documents/s10038-020-0816-9.pdf                               |     Bin 0 -> 1258344 bytes
+ d_20231023/01_231025_TutorialPRS/Documents/s12862-021-01900-y.pdf                              |   10448 +
+ d_20231023/01_231025_TutorialPRS/Documents/s41467-020-15194-z.pdf                              |   29119 +
+ d_20231023/01_231025_TutorialPRS/Documents/s41596-020-0353-1.pdf                               |     Bin 0 -> 1196492 bytes
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS.zip                              |     Bin 0 -> 32483812 bytes
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/1_Main_script_QC_GWAS.txt        |     198 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.bed                |  120985 ++++
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.bim                | 1457897 +++++++++++++++++++++++++++++++++++++++++++
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.fam                |     165 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/MAF_check.R                      |       6 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/Relatedness.R                    |      21 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/check_heterozygosity_rate.R      |       5 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/gender_check.R                   |      16 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/heterozygosity_outliers_list.R   |       5 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/hist_miss.R                      |      10 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/hwe.R                            |       9 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/inversion.txt                    |       3 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/pops_HapMap_3_r3                 |    1398 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification.zip            |     Bin 0 -> 8608 bytes
+ .../GWA_tutorial_clone/2_Population_stratification/1_Main_script_QC_GWAS.txt                   |     190 +
+ .../01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification/2_Main_script_MDS.txt |     180 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification/MDS_merged.R   |      23 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS.zip                     |     Bin 0 -> 3431 bytes
+ .../GWA_tutorial_clone/3_Association_GWAS/3_Main_script_association_GWAS.txt                   |      92 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS/Manhattan_plot.R        |      15 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS/QQ_plot.R               |      12 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/4_PRS.doc                                  |     Bin 0 -> 636416 bytes
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.html                                |     514 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.jpeg                                |     Bin 0 -> 959982 bytes
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.md                                  |     132 +
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.pdf                                 |     Bin 0 -> 150799 bytes
+ d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.png                                 |     Bin 0 -> 676323 bytes
+ d_20231023/01_231025_TutorialPRS/Note/LearningPRS.html                                         |     392 +
+ d_20231023/01_231025_TutorialPRS/Note/LearningPRS.jpeg                                         |     Bin 0 -> 1135604 bytes
+ d_20231023/01_231025_TutorialPRS/Note/LearningPRS.md                                           |      37 +
+ d_20231023/01_231025_TutorialPRS/Note/LearningPRS.pdf                                          |     Bin 0 -> 386728 bytes
+ d_20231023/01_231025_TutorialPRS/Note/LearningPRS.png                                          |     Bin 0 -> 934350 bytes
+ d_20231023/README.md                                                                           |      11 +
+ 46 files changed, 1621885 insertions(+)
+ create mode 100644 d_20231023/.gitignore
+ create mode 100644 d_20231023/01_231025_TutorialPRS/.gitkeep
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/000002358.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/235.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/4_PRS.doc
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/4_PRS.pdf
+ create mode 100644 "d_20231023/01_231025_TutorialPRS/Documents/Int J Methods Psych Res - 2018 - Marees - A tutorial on conducting genome\342\200\220wide association studies  Quality control and.pdf"
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s00439-021-02281-4.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s10038-020-0816-9.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s12862-021-01900-y.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s41467-020-15194-z.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s41596-020-0353-1.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS.zip
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/1_Main_script_QC_GWAS.txt
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.bed
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.bim
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.fam
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/MAF_check.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/Relatedness.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/check_heterozygosity_rate.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/gender_check.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/heterozygosity_outliers_list.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/hist_miss.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/hwe.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/inversion.txt
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/pops_HapMap_3_r3
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification.zip
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification/1_Main_script_QC_GWAS.txt
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification/2_Main_script_MDS.txt
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification/MDS_merged.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS.zip
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS/3_Main_script_association_GWAS.txt
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS/Manhattan_plot.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS/QQ_plot.R
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/4_PRS.doc
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.html
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.jpeg
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.md
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.png
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.html
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.jpeg
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.md
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.png
+ create mode 100644 d_20231023/README.md
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 83, done.
+Counting objects: 100% (83/83), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (72/72), done.
+Writing objects: 100% (81/81), 76.65 MiB | 1.09 MiB/s, done.
+Total 81 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+remote: warning: See https://gh.io/lfs for more information.
+remote: warning: File d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.bed is 58.40 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To github.com:humgendiv/hmiwa-lab.git
+   382b481..039ce74  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % ls
+README.md	d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % rm -r d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add /                                      
+fatal: /: '/' is outside repository at '/Users/hmiwa/hmiwa/gitmerge/hmiwa-lab'
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "一旦消して再度やり直します"
+[main 4595339] 一旦消して再度やり直します
+ 47 files changed, 1621885 deletions(-)
+ delete mode 100644 d_20231023/.gitignore
+ delete mode 100644 d_20231023/.gitkeep
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/.gitkeep
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/000002358.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/235.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/4_PRS.doc
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/4_PRS.pdf
+ delete mode 100644 "d_20231023/01_231025_TutorialPRS/Documents/Int J Methods Psych Res - 2018 - Marees - A tutorial on conducting genome\342\200\220wide association studies  Quality control and.pdf"
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s00439-021-02281-4.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s10038-020-0816-9.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s12862-021-01900-y.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s41467-020-15194-z.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s41596-020-0353-1.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS.zip
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/1_Main_script_QC_GWAS.txt
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.bed
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.bim
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/HapMap_3_r3_1.fam
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/MAF_check.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/Relatedness.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/check_heterozygosity_rate.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/gender_check.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/heterozygosity_outliers_list.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/hist_miss.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/hwe.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/inversion.txt
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS/pops_HapMap_3_r3
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification.zip
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification/1_Main_script_QC_GWAS.txt
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification/2_Main_script_MDS.txt
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification/MDS_merged.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS.zip
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS/3_Main_script_association_GWAS.txt
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS/Manhattan_plot.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS/QQ_plot.R
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/4_PRS.doc
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.html
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.jpeg
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.md
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.png
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.html
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.jpeg
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.md
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.pdf
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.png
+ delete mode 100644 d_20231023/README.md
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 282 bytes | 282.00 KiB/s, done.
+Total 2 (delta 0), reused 1 (delta 0), pack-reused 0
+To github.com:humgendiv/hmiwa-lab.git
+   039ce74..4595339  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cd
+hmiwa@hanakonoMacBook-Air ~ % cd hmiwa
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	gitmerge	hmiwa-labserver	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % cd gitmerge
+hmiwa@hanakonoMacBook-Air gitmerge % ls
+d_20231023	hmiwa-lab
+hmiwa@hanakonoMacBook-Air gitmerge % rm -r d_20231023
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/pack/pack-4306043ae6079295b21c2680b654ed8f42e4f882.idx? yer
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/pack/pack-4306043ae6079295b21c2680b654ed8f42e4f882.pack? yes
+hmiwa@hanakonoMacBook-Air gitmerge % ls
+hmiwa-lab
+hmiwa@hanakonoMacBook-Air gitmerge % 
+hmiwa@hanakonoMacBook-Air gitmerge % 
+hmiwa@hanakonoMacBook-Air gitmerge % 
+hmiwa@hanakonoMacBook-Air gitmerge % 
+hmiwa@hanakonoMacBook-Air gitmerge % 
+hmiwa@hanakonoMacBook-Air gitmerge % cd
+hmiwa@hanakonoMacBook-Air ~ % cd hmiwa
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	gitmerge	hmiwa-labserver	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % cd d_20231023
+hmiwa@hanakonoMacBook-Air d_20231023 % ls
+01_231025_TutorialPRS	README.md
+hmiwa@hanakonoMacBook-Air d_20231023 % cd 01_231025_TutorialPRS
+hmiwa@hanakonoMacBook-Air 01_231025_TutorialPRS % ls
+Documents		GWA_tutorial_clone	Jupyter-Test		Note
+hmiwa@hanakonoMacBook-Air 01_231025_TutorialPRS % cd GWA_tutorial_clone
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % ls
+1_QC_GWAS			2_Population_stratification.zip	4_PRS.doc			README.md
+1_QC_GWAS.zip			3_Association_GWAS		README.html			README.pdf
+2_Population_stratification	3_Association_GWAS.zip		README.jpeg			README.png
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % ls -a
+.				1_QC_GWAS.zip			3_Association_GWAS.zip		README.md
+..				2_Population_stratification	4_PRS.doc			README.pdf
+.DS_Store			2_Population_stratification.zip	README.html			README.png
+1_QC_GWAS			3_Association_GWAS		README.jpeg
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % echo "*/" > .gitignore
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % ls
+1_QC_GWAS			2_Population_stratification.zip	4_PRS.doc			README.md
+1_QC_GWAS.zip			3_Association_GWAS		README.html			README.pdf
+2_Population_stratification	3_Association_GWAS.zip		README.jpeg			README.png
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % git add .gitignore
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % git commit -m "create .gitignore"
+[main c2843c9] create .gitignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 01_231025_TutorialPRS/GWA_tutorial_clone/.gitignore
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % git push git@github.com:hmiwa30/d_20231023.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 473 bytes | 473.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:hmiwa30/d_20231023.git
+   3f0559f..c2843c9  main -> main
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % cd hmiwa
+cd: no such file or directory: hmiwa
+hmiwa@hanakonoMacBook-Air GWA_tutorial_clone % cd
+hmiwa@hanakonoMacBook-Air ~ % cd hmiwa
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	gitmerge	hmiwa-labserver	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % rm -r gitmerge
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/92/ba275ddb8952e29f3c7290b67cf2852ec425dc? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/0c/fac86879d0c01516bb57b121b43b77c7b0e1d7? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/50/a8e85975fde2ef8c5a04f966e58011588eda33? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/3b/31737cb92a9d5e1b5293ae95b6ccbefce0e738? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/03/9ce749ed97e7c50b64bab4f5ab7ce3bd7e6c7e? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/9e/8b57f9c395d39e802c7fd6243d25c5f2283c6c? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/04/baf0711a0747467045c13fd33a33c8ebd49954? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/93/b4b29dda451089503a83592fc4f8d20c5c50f7? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/34/ca1f6d0bacf3bc402e4314bdf273540a8cbeaa? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/5a/dcbac8617bfa3d3efc2e4f52fd0e765d69bf45? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/9d/42515d51513ae8458244e3f65c588a482c64a5? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/a4/a3bfb1a907e0418e1c44c2f219f4d936200db2? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/a4/9bab3f01e6ed3e99f8345116edcb32cb2c7b15? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/b5/ca559b44a69c287f48d31654ee2b7016a74d9a? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/ac/efd56ebb0a8a4da3354f79a3f46ed9fc26af53? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/bb/21b2f7d03e5d97390794c2627aa862cd52480f? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/bb/b108037eceded3fb0494702e260d1a9d159ff9? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/bb/590f1ed0f4d2048abe9d8fa07a7fda85450cc5? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/d7/26c588bd74994a022ee8a818257dd7be978dc3? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/b3/e1b5504c9c016d22b50cae8c7db59df34402f9? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/b4/1579ca7891c3ddf882346eb97dfb3e585ceece? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/bd/cf456f8484f097487a676a773c8b9231a73cc1? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/ae/a1dbb871dc39801bbc4643f804f83e8b5f414b? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/f3/b89ce51a8092c956b64de2010bc0c7886a984a? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/c7/d9c04c9cdb9a2b7c4567719d8cc78e7c9d3bb9? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/c0/3c323e1eeddf04480dd91819cc1df28ebc69c6? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/e4/3b0f988953ae3a84b00331d0ccf5f7d51cb3cf? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/fb/56f8f4f97c567206fa8a5b399244b940c44a9f? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/18/e8bbe2de6279690b2773bd616783ed0f068976? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/4b/99ab5fb71dafa683dbe97402e9d2a3dca9d2c0? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/pack/pack-1b49d6592f7ae032a724a6e266f5a4ae558db0c3.idx? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/pack/pack-1b49d6592f7ae032a724a6e266f5a4ae558db0c3.pack? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/29/206f8eb216ccba799495b946e1bbf27160f937? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/16/038394d96777cb7bd1b834491c75b66e37ca58? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/45/953390659661aca0748575b785f653249a3592? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/74/32303b53bbd422d3f3de8039383fec0d8fc789? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/17/298eb2f6fd4f7c1a16b47656d103388eea237b? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/7e/b63c3e5e46c5e6d1499f73a24ae95761ca9758? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/81/c4ceb48ebf5e0cd6d237f9278f9cf6e2e69ba4? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/72/2b0e2835359165bc8d25288860bd08eeee4e1d? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/72/42968e623dae3937fb88324fa740e32eff1ab6? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/44/6940852ca65e4cfff8aeef867a5258f5ef74bb? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/43/a67405e3be2576355f71d2f85cc20e72be1a9c? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/38/57289d2b1970261814b7741d949cdf711b0aba? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/5c/1ef893b407fbb05d911ccd6286181aeac539f6? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/3f/0559ffa5668e9336e17e346a66efaa462354d6? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/30/14167ed9186519d6b4c2b1b797d3380fdc8b15? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/5b/fad2b3f8e483b6b173d8aaff19597e84626f15? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/37/c9b8d3e9dcd46cff7f8537150682eca637f127? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/01/6f8ca9daa70d8794b4813123964d6db943f1fb? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/01/b1b47b25e3dc51b78dd3f832c309bf38a20c7c? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/99/9f87a1651a167fd20877946fe36b13936940b6? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/97/8fca2f1120166c296b53e8f90eaee494d35b2b? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/d3/6a7e7eb660384e084965a46b33fd774f8a8e19? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/d4/42824f9e9d1fbe0024213de6a5c8f02c39af61? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/d4/7764338549bc260950bb52d3df2072bb03b771? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/ba/31aba850550ae45c0dbbce5563e136274afed2? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/b1/df6a220abe6cdc7538cca1b829459a549e4e1c? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/dc/d9a95d939c59d873cbb6d4a211a3ff2dcbec2e? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/a9/3142315966ca2ff7c1cae3711ad157fc0d76c7? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/d5/64d0bc3dd917926892c55e3706cc116d5b165e? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/a8/9b3d06e0d809f81e17c95b2154f41c45759cd9? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/a1/63b7b382cad140ade59ab04c7ae2382eadea48? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/ea/3133501c12089dee7a45321409582b5a53075c? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/cd/d8bc845199e9aea8fe917d2e7a96fc18eb9216? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/f9/1cfaa0d303ebe16f56043917d9a3a1f4fbad8f? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/f0/23bc2e5cc0d5347ae5f34a3b30b83bf2825eb8? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/e8/d7bee63e2d4c3113b1444c819b19c4d122f45a? y 
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/ff/b8821a4839f0cd90e7ccd5b044668902817252? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/c5/1f4ba5ac4a67be74bb6e98516d07b3e36c7bd9? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/c2/e2f4c7831fbaabf177acac59db2e5e19a5ed84? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/77/3751c9a67c3f680fea3582697c2824580cb6a7? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/48/7a7b91ba04832956772068aec1e16f2f494d57? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/48/68dc3ed9f74c1819c7d5e7c5e640c1d9eaa3df? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/1e/687c0ddc515c488af2932d6fc6e8de5a650039? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/84/c59f6d8fcacbf46e9c22f3959fb94ab472aed2? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/24/14937446f696012122094af61e46440c9290c7? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/23/fa000bd915f1c4736e549f2fe01f761364bb64? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/12/946e919c9f0dafa267d83cfcee4971b4dca1d2? 
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/12/8de0eb62ab34a9c6749c1872064c6e6e3f6707? y   
+rm: gitmerge/hmiwa-lab/.git/objects/12: Permission denied
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/8c/53e52b5bb9b56ffba747df52360169841e0dbf? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/1c/faa08d2ac612c8e4e507c64f687fbcc0a927a2? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/1c/661651de672569c8f6cb59c17dc9fc8eab519f? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/49/034ac2bdeb6b97098f862361fa89ec8269dcfa? y
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/8b/137891791fe96927ad78e64b0aad7bded08bdc? y
+rm: gitmerge/hmiwa-lab/.git/objects: Permission denied
+rm: gitmerge/hmiwa-lab/.git: Permission denied
+rm: gitmerge/hmiwa-lab: Permission denied
+rm: gitmerge: Permission denied
+hmiwa@hanakonoMacBook-Air hmiwa % y
+zsh: command not found: y
+hmiwa@hanakonoMacBook-Air hmiwa % rm -r gitmerge
+override r--r--r-- hmiwa/staff for gitmerge/hmiwa-lab/.git/objects/12/946e919c9f0dafa267d83cfcee4971b4dca1d2? y
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	hmiwa-labserver	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % cd /Users/hmiwa/Documents
+hmiwa@hanakonoMacBook-Air Documents % ls
+GitHub		Goodnotes	OneDrive	Screenshots	Zoom
+hmiwa@hanakonoMacBook-Air Documents % cd /Users/hmiwa/Documents/GitHub
+hmiwa@hanakonoMacBook-Air GitHub % ls
+d_20231023	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % git pull git@github.com:hmiwa30/d_20231023.git
+fatal: not a git repository (or any of the parent directories): .git
+hmiwa@hanakonoMacBook-Air GitHub %                                               
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % cd /Users/hmiwa/Documents/GitHub              
+hmiwa@hanakonoMacBook-Air GitHub % cd d_20231023
+hmiwa@hanakonoMacBook-Air d_20231023 % git pull git@github.com:hmiwa30/d_20231023.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 665 bytes | 133.00 KiB/s, done.
+From github.com:hmiwa30/d_20231023
+ * branch            HEAD       -> FETCH_HEAD
+Updating f337c9e..5da5e5e
+Fast-forward
+ README.md | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+hmiwa@hanakonoMacBook-Air d_20231023 % git fetch                                     
+From https://github.com/hmiwa30/d_20231023
+   f337c9e..5da5e5e  main       -> origin/main
+hmiwa@hanakonoMacBook-Air d_20231023 % cd /Users/hmiwa/Documents/GitHub              
+hmiwa@hanakonoMacBook-Air GitHub % git clone git@github.com:humgendiv/hmiwa-lab.git
+Cloning into 'hmiwa-lab'...
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 85, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 85 (delta 0), reused 4 (delta 0), pack-reused 81
+Receiving objects: 100% (85/85), 76.66 MiB | 8.53 MiB/s, done.
+Resolving deltas: 100% (7/7), done.
+hmiwa@hanakonoMacBook-Air GitHub % ls
+d_20231023	hmiwa-lab	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % cd hmiwa-lab
+hmiwa@hanakonoMacBook-Air hmiwa-lab % mkdir d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % touch d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add -A d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "create d_20231023 dir"
+[main 62c4b24] create d_20231023 dir
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git remote add d_20231023 /Users/hmiwa/Documents/GitHub/d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch d_20231023
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (25/25), done.
+remote: Total 27 (delta 10), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (27/27), 79.67 KiB | 5.69 MiB/s, done.
+From /Users/hmiwa/Documents/GitHub/d_20231023
+ * [new branch]      main       -> d_20231023/main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+CONFLICT (modify/delete): d_20231023/README.md deleted in HEAD and modified in d_20231023/main.  Version d_20231023/main of d_20231023/README.md left in tree.
+Automatic merge failed; fix conflicts and then commit the result.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git                            
+
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 334 bytes | 334.00 KiB/s, done.
+Total 4 (delta 0), reused 3 (delta 0), pack-reused 0
+To github.com:humgendiv/hmiwa-lab.git
+   4595339..62c4b24  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "[update] README"
+[main 8f055cc] [update] README
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git                            
+
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 39, done.
+Counting objects: 100% (39/39), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (34/34), 81.50 KiB | 5.43 MiB/s, done.
+Total 34 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To github.com:humgendiv/hmiwa-lab.git
+   62c4b24..8f055cc  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+Already up to date.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .                                                                  
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "[update] README"                                            
+[main b8dc2e6] [update] README
+ 2 files changed, 14 insertions(+), 14 deletions(-)
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git                            
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 546 bytes | 546.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   8f055cc..b8dc2e6  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .                                      
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "[add] .gitignore"               
+[main da81a40] [add] .gitignore
+ 2 files changed, 1 insertion(+)
+ create mode 100644 .gitignore
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 457 bytes | 457.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:humgendiv/hmiwa-lab.git
+   b8dc2e6..da81a40  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cd /Users/hmiwa/Documents/GitHub                  
+hmiwa@hanakonoMacBook-Air GitHub % ls
+d_20231023	hmiwa-lab	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % cd hmiwa-labserver                             
+hmiwa@hanakonoMacBook-Air hmiwa-labserver % ls
+01_DataDL	02_qtest	99_log		README.md
+hmiwa@hanakonoMacBook-Air hmiwa-labserver % git pull git@github.com:humgendiv/hmiwa-labserver.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+From github.com:humgendiv/hmiwa-labserver
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+hmiwa@hanakonoMacBook-Air hmiwa-labserver % git fetch                                            
+hmiwa@hanakonoMacBook-Air hmiwa-labserver % cd /Users/hmiwa/Documents/GitHub                     
+hmiwa@hanakonoMacBook-Air GitHub % cd hmiwa-lab                                      
+hmiwa@hanakonoMacBook-Air hmiwa-lab % mkdir hmiwa-labserver           
+hmiwa@hanakonoMacBook-Air hmiwa-lab % touch hmiwa-labserver/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add -A hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "create hmiwa-labserver dir"
+[main 2a6913a] create hmiwa-labserver dir
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hmiwa-labserver/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git remote add hmiwa-labserver /Users/hmiwa/Documents/GitHub/hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch hmiwa-labserver
+remote: Enumerating objects: 134, done.
+remote: Counting objects: 100% (134/134), done.
+remote: Compressing objects: 100% (121/121), done.
+remote: Total 134 (delta 63), reused 14 (delta 1), pack-reused 0
+Receiving objects: 100% (134/134), 14.00 KiB | 14.00 MiB/s, done.
+Resolving deltas: 100% (63/63), done.
+From /Users/hmiwa/Documents/GitHub/hmiwa-labserver
+ * [new branch]      main       -> hmiwa-labserver/main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=hmiwa-labserver hmiwa-labserver/main
+Merge made by the 'ort' strategy.
+ hmiwa-labserver/.gitignore                |  1 +
+ hmiwa-labserver/01_DataDL/nigsc231023.sh  | 11 +++++++++++
+ hmiwa-labserver/02_qtest/.gitkeep         |  1 +
+ hmiwa-labserver/02_qtest/output.txt       | 24 ++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/output3.txt      | 24 ++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest01.e        | 25 +++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest01.log      |  0
+ hmiwa-labserver/02_qtest/qtest01.o        |  1 +
+ hmiwa-labserver/02_qtest/qtest01.sh       | 16 ++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest01.sh.e2108 |  0
+ hmiwa-labserver/02_qtest/qtest01.sh.o2108 |  0
+ hmiwa-labserver/02_qtest/qtest02.e        |  0
+ hmiwa-labserver/02_qtest/qtest02.o        |  4 ++++
+ hmiwa-labserver/02_qtest/qtest02.sh       | 15 +++++++++++++++
+ hmiwa-labserver/02_qtest/qtest03.e        |  0
+ hmiwa-labserver/02_qtest/qtest03.o        | 25 +++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest03.sh       | 19 +++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest04.log      |  6 ++++++
+ hmiwa-labserver/02_qtest/qtest04.sh       | 20 ++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest05.sh       | 20 ++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest06.sh       | 27 +++++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/tmp.sh           | 12 ++++++++++++
+ hmiwa-labserver/99_log/.gitkeep           |  0
+ hmiwa-labserver/99_log/qtest05.log        |  6 ++++++
+ hmiwa-labserver/99_log/qtest06.log        |  1 +
+ hmiwa-labserver/README.md                 |  4 ++++
+ 26 files changed, 262 insertions(+)
+ create mode 100644 hmiwa-labserver/.gitignore
+ create mode 100644 hmiwa-labserver/01_DataDL/nigsc231023.sh
+ create mode 100644 hmiwa-labserver/02_qtest/.gitkeep
+ create mode 100644 hmiwa-labserver/02_qtest/output.txt
+ create mode 100644 hmiwa-labserver/02_qtest/output3.txt
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.e
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.log
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.o
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.sh.e2108
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.sh.o2108
+ create mode 100644 hmiwa-labserver/02_qtest/qtest02.e
+ create mode 100644 hmiwa-labserver/02_qtest/qtest02.o
+ create mode 100644 hmiwa-labserver/02_qtest/qtest02.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest03.e
+ create mode 100644 hmiwa-labserver/02_qtest/qtest03.o
+ create mode 100644 hmiwa-labserver/02_qtest/qtest03.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest04.log
+ create mode 100644 hmiwa-labserver/02_qtest/qtest04.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest05.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest06.sh
+ create mode 100644 hmiwa-labserver/02_qtest/tmp.sh
+ create mode 100644 hmiwa-labserver/99_log/.gitkeep
+ create mode 100644 hmiwa-labserver/99_log/qtest05.log
+ create mode 100644 hmiwa-labserver/99_log/qtest06.log
+ create mode 100644 hmiwa-labserver/README.md
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+To github.com:humgendiv/hmiwa-lab.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:humgendiv/hmiwa-lab.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git pull git@github.com:humgendiv/hmiwa-lab.git                                    
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 598 bytes | 199.00 KiB/s, done.
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % ls
+README.md	d_20231023	hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % rm -r hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+To github.com:humgendiv/hmiwa-lab.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:humgendiv/hmiwa-lab.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+From github.com:humgendiv/hmiwa-lab
+   4595339..16d1dd3  main       -> origin/main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git config pull.rebase false                   
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git config pull.rebase true
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git config pull.ff only
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git pull git@github.com:humgendiv/hmiwa-lab.git
+error: cannot pull with rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: please commit or stash them.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch                                      
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+To github.com:humgendiv/hmiwa-lab.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:humgendiv/hmiwa-lab.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch                                      
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+To github.com:humgendiv/hmiwa-lab.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:humgendiv/hmiwa-lab.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+To github.com:humgendiv/hmiwa-lab.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:humgendiv/hmiwa-lab.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git pull git@github.com:humgendiv/hmiwa-lab.git
+error: cannot pull with rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: please commit or stash them.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m ""                               
+Aborting commit due to empty commit message.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit      
+Aborting commit due to empty commit message.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "トラブルに遭遇中。とりあえずhmiwa-labserverのぶんを消去"
+[main 6c449dd] トラブルに遭遇中。とりあえずhmiwa-labserverのぶんを消去
+ 28 files changed, 262 deletions(-)
+ delete mode 100644 hmiwa-labserver/.gitignore
+ delete mode 100644 hmiwa-labserver/.gitkeep
+ delete mode 100644 hmiwa-labserver/01_DataDL/nigsc231023.sh
+ delete mode 100644 hmiwa-labserver/02_qtest/.gitkeep
+ delete mode 100644 hmiwa-labserver/02_qtest/output.txt
+ delete mode 100644 hmiwa-labserver/02_qtest/output3.txt
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest01.e
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest01.log
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest01.o
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest01.sh
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest01.sh.e2108
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest01.sh.o2108
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest02.e
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest02.o
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest02.sh
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest03.e
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest03.o
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest03.sh
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest04.log
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest04.sh
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest05.sh
+ delete mode 100644 hmiwa-labserver/02_qtest/qtest06.sh
+ delete mode 100644 hmiwa-labserver/02_qtest/tmp.sh
+ delete mode 100644 hmiwa-labserver/99_log/.gitkeep
+ delete mode 100644 hmiwa-labserver/99_log/qtest05.log
+ delete mode 100644 hmiwa-labserver/99_log/qtest06.log
+ delete mode 100644 hmiwa-labserver/README.md
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git                        
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+To github.com:humgendiv/hmiwa-lab.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:humgendiv/hmiwa-lab.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git pull git@github.com:humgendiv/hmiwa-lab.git                        
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "トラブルに遭遇中。とりあえずhmiwa-labserverのぶんを消去"
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 35 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git pull git@github.com:humgendiv/hmiwa-lab.git                        
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cd /Users/hmiwa/Documents/GitHub                         
+hmiwa@hanakonoMacBook-Air GitHub % ls
+d_20231023	hmiwa-lab	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % ls hmiwa-labserber
+ls: hmiwa-labserber: No such file or directory
+hmiwa@hanakonoMacBook-Air GitHub % ls hmiwa-labserver
+01_DataDL	02_qtest	99_log		README.md
+hmiwa@hanakonoMacBook-Air GitHub % rm -r hmiwa-lab
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/61/2686679cc400090c66279d4511e3525289ce38? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/50/a0bd26458760d7a015204d0c7a052cab014ed0? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/68/0fcc968574bc8d546f64719afd68d8890fb3ca? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/57/c72a761eae851a9c69dea2deabe6350801db39? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/6a/910fcef55f621060e65cb572c1786860afd10f? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/32/481b2c39f821c691877de963cbb851f3e2dd88? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/35/5164c126511e7d9f9896171414647f098dd30e? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/67/f78b69f37e5347263fdb1b7368c49494c7a464? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/b5/5595db0f4dce2cd751f906fa6a8465a452f02c? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/b5/ca559b44a69c287f48d31654ee2b7016a74d9a? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/d7/8f5f6876124e53b1cfa36f78539386e68fe8bd? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/da/81a40fc766fea941eef107d0543b94dec90800? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/bd/f8a43a67337a7091cc6b92e68341e4a36b2bf8? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/d8/7edb9b4f4135f8f08fa1a954515dc6a2ad89be? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/ab/f92f80742fcdb705af501cfc68f8dc10a1b243? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/f3/37c9e0e402308a9b6bc220df350a8ce3eb5124? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/f3/2417e2eb27943bc587e9da0eef354525991584? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/c7/547a81aa61b550eb43c90f48e5173e65210bbd? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/f2/4d510eb55b0a04cfe2ad4f3ab5908a8b62b038? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/ca/a55a2d9325b50c54cee70572666330003e5346? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/ca/6d28e084ab468e0c4ad8878d4f67a281fff657? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/20/81271a26b2e937542fc8c9517dbc1d4749f707? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/pack/pack-78352142b7f6e0f2ff325f17c2b9ac20c43fb831.pack? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/pack/pack-78352142b7f6e0f2ff325f17c2b9ac20c43fb831.idx? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/pack/pack-cce9980750039f6eff0e136606fa49c64c1c7c6c.idx? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/pack/pack-cce9980750039f6eff0e136606fa49c64c1c7c6c.pack? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/16/d1dd3cd8567091cd97b6d2b64bd5df8eaea5dd? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/80/94fd20073ffcf259add8fde0509287f1096642? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/74/52565492e97e270e3e5dc3281cb2bbe520fa17? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/28/d5e7336c967f6dbb10b077568d3ed626b3f1ea? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/8f/055cc1519b594442c1acc36d65c3de96190273? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/19/c89848a7f4c78a8ab70dcdfef23d3e120c33b5? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/81/850d373570927f6337c5653bd5cd5764141c7a? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/2a/6913affa178b1b5b1356b553469aba95b6f0ed? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/36/cff56451244253f23bb560c008cf4ee1f251c0? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/5d/a5e5ee2295856b19f24d863c50beb9d7a250fc? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/62/c4b241da158c484474737dfa9b986f3c376f35? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/3a/8d6d5a17570028e99bbec49486ee4dc8f68ddf? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/54/7b2c789cf3d520be968e8d6c57876540c0580d? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/53/03a80b9417a5c0fc8c02e140a43ab5274e77a6? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/3f/3469ede8f5f625ee38e29a82040c7a31378adf? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/6c/449dd73841ac23060f407ba9be445aac4105ed? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/6c/39e5c81b3c3f61497f8b1b5fb9fe9b5b07c983? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/99/df49da577c70c764704d50ea52b636a342a929? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/55/c4c3d127c8577c4dd309dde3754da9e0a867a3? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/97/615db97ddb050cbd4b3bf07218000914818b33? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/0f/ea1df0777d73870cdd285ae495495f954ca60d? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/0a/80bffde17fd1ac80a1abd767fdd382178aa500? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/b8/dc2e6b5b9be4ad5439b65dd7c50c6b11585dbf? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/aa/cc5bf89cd06f544dc288638375728b54b69800? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/de/595a9b71781fd6c185bb103c4c2b9a0cd4ec26? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/c3/2496a24384e77d0e180050a8d135b5ae55e214? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/e6/4fb991d46f63ebd9d485481ff6b0088f54232e? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/f7/4d57b4212f416de6b164a584004ae8c823a29d? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/fa/572d738bf8c1d73068d3e5e294e4913bd454e8? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/c2/d4eb59cdff0ddade36aa1f1bcad0db647c18fb? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/c2/843c9f267eb3bb30cc330a58b41717b94229b5? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/2d/4f201e15285d57e86782071c7fab0416bee75f? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/2d/0593aec691538ac1d7e3967edbe6e06c22eb64? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/77/821b4a2c497adcf2cd10bbf0c9e927c9d6e2e6? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/77/7f02eafc43ed8748d631600e0ccd9c77fa0461? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/8c/6288da7336d40bb479f11c9f421a2d7a30db27? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/49/6ee2ca6a2f08396a4076fe43dedf3dc0da8b6d? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/2e/821200b3687e3af2bc1d0d0f74606f0717b17a? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/2e/edf187fe53feb0deab192febf1f35fc9d6a7ea? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/78/5877dddbf35b678dec006501b774f6239dd05d? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/8b/5ed2969ae4ee7c6487577a5056355b296f3109? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/7a/4c7f0f6c8a0d7d0f1342fcfebd9fd6e333b8c6? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/14/9e979dcb543e52ca23b97508412b4a8d7831f1? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/8e/c60ab2388fb9b49dcbe8554de7519680cf2098? y
+rm: hmiwa-lab/.git: Permission denied
+rm: hmiwa-lab: Permission denied
+hmiwa@hanakonoMacBook-Air GitHub % ls             
+d_20231023	hmiwa-lab	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % rm -r hmiwa-lab
+hmiwa@hanakonoMacBook-Air GitHub % ls
+d_20231023	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % git clone git@github.com:humgendiv/hmiwa-lab.git
+Cloning into 'hmiwa-lab'...
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 130, done.
+remote: Counting objects: 100% (49/49), done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 130 (delta 13), reused 46 (delta 11), pack-reused 81
+Receiving objects: 100% (130/130), 76.74 MiB | 9.80 MiB/s, done.
+Resolving deltas: 100% (20/20), done.
+hmiwa@hanakonoMacBook-Air GitHub % cd hmiwa-lab
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git pull git@github.com:humgendiv/hmiwa-lab.git                        
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .                                      
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "[update] README"
+[main 28f47e6] [update] README
+ 1 file changed, 6 insertions(+)
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 483 bytes | 483.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:humgendiv/hmiwa-lab.git
+   16d1dd3..28f47e6  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % ls
+README.md	d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cd /Users/hmiwa/Documents/GitHub             
+hmiwa@hanakonoMacBook-Air GitHub % git fetch hmiwa-labserver                                                            
+fatal: not a git repository (or any of the parent directories): .git
+hmiwa@hanakonoMacBook-Air GitHub % cd hmiwa-labserver                                   
+hmiwa@hanakonoMacBook-Air hmiwa-labserver % git fetch
+hmiwa@hanakonoMacBook-Air hmiwa-labserver % git pull git@github.com:humgendiv/hmiwa-labserver.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+From github.com:humgendiv/hmiwa-labserver
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+hmiwa@hanakonoMacBook-Air hmiwa-labserver % cd /Users/hmiwa/Documents/GitHub
+hmiwa@hanakonoMacBook-Air GitHub % cd hmiwa-lab
+hmiwa@hanakonoMacBook-Air hmiwa-lab % mkdir hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % touch hmiwa-labserver/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add -A hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "create hmiwa-labserver dir"
+[main 7feee15] create hmiwa-labserver dir
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hmiwa-labserver/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git remote add hmiwa-labserver /Users/hmiwa/Documents/GitHub/hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch hmiwa-labserver
+remote: Enumerating objects: 134, done.
+remote: Counting objects: 100% (134/134), done.
+remote: Compressing objects: 100% (121/121), done.
+remote: Total 134 (delta 63), reused 14 (delta 1), pack-reused 0
+Receiving objects: 100% (134/134), 14.00 KiB | 14.00 MiB/s, done.
+Resolving deltas: 100% (63/63), done.
+From /Users/hmiwa/Documents/GitHub/hmiwa-labserver
+ * [new branch]      main       -> hmiwa-labserver/main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=hmiwa-labserver hmiwa-labserver/main
+Merge made by the 'ort' strategy.
+ hmiwa-labserver/.gitignore                |  1 +
+ hmiwa-labserver/01_DataDL/nigsc231023.sh  | 11 +++++++++++
+ hmiwa-labserver/02_qtest/.gitkeep         |  1 +
+ hmiwa-labserver/02_qtest/output.txt       | 24 ++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/output3.txt      | 24 ++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest01.e        | 25 +++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest01.log      |  0
+ hmiwa-labserver/02_qtest/qtest01.o        |  1 +
+ hmiwa-labserver/02_qtest/qtest01.sh       | 16 ++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest01.sh.e2108 |  0
+ hmiwa-labserver/02_qtest/qtest01.sh.o2108 |  0
+ hmiwa-labserver/02_qtest/qtest02.e        |  0
+ hmiwa-labserver/02_qtest/qtest02.o        |  4 ++++
+ hmiwa-labserver/02_qtest/qtest02.sh       | 15 +++++++++++++++
+ hmiwa-labserver/02_qtest/qtest03.e        |  0
+ hmiwa-labserver/02_qtest/qtest03.o        | 25 +++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest03.sh       | 19 +++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest04.log      |  6 ++++++
+ hmiwa-labserver/02_qtest/qtest04.sh       | 20 ++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest05.sh       | 20 ++++++++++++++++++++
+ hmiwa-labserver/02_qtest/qtest06.sh       | 27 +++++++++++++++++++++++++++
+ hmiwa-labserver/02_qtest/tmp.sh           | 12 ++++++++++++
+ hmiwa-labserver/99_log/.gitkeep           |  0
+ hmiwa-labserver/99_log/qtest05.log        |  6 ++++++
+ hmiwa-labserver/99_log/qtest06.log        |  1 +
+ hmiwa-labserver/README.md                 |  4 ++++
+ 26 files changed, 262 insertions(+)
+ create mode 100644 hmiwa-labserver/.gitignore
+ create mode 100644 hmiwa-labserver/01_DataDL/nigsc231023.sh
+ create mode 100644 hmiwa-labserver/02_qtest/.gitkeep
+ create mode 100644 hmiwa-labserver/02_qtest/output.txt
+ create mode 100644 hmiwa-labserver/02_qtest/output3.txt
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.e
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.log
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.o
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.sh.e2108
+ create mode 100644 hmiwa-labserver/02_qtest/qtest01.sh.o2108
+ create mode 100644 hmiwa-labserver/02_qtest/qtest02.e
+ create mode 100644 hmiwa-labserver/02_qtest/qtest02.o
+ create mode 100644 hmiwa-labserver/02_qtest/qtest02.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest03.e
+ create mode 100644 hmiwa-labserver/02_qtest/qtest03.o
+ create mode 100644 hmiwa-labserver/02_qtest/qtest03.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest04.log
+ create mode 100644 hmiwa-labserver/02_qtest/qtest04.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest05.sh
+ create mode 100644 hmiwa-labserver/02_qtest/qtest06.sh
+ create mode 100644 hmiwa-labserver/02_qtest/tmp.sh
+ create mode 100644 hmiwa-labserver/99_log/.gitkeep
+ create mode 100644 hmiwa-labserver/99_log/qtest05.log
+ create mode 100644 hmiwa-labserver/99_log/qtest06.log
+ create mode 100644 hmiwa-labserver/README.md
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 140, done.
+Counting objects: 100% (140/140), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (64/64), done.
+Writing objects: 100% (138/138), 14.51 KiB | 14.51 MiB/s, done.
+Total 138 (delta 66), reused 132 (delta 63), pack-reused 0
+remote: Resolving deltas: 100% (66/66), completed with 1 local object.
+To github.com:humgendiv/hmiwa-lab.git
+   28f47e6..fcee057  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "[update] README" 
+[main 0bc24cb] [update] README
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 430 bytes | 430.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   fcee057..0bc24cb  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .                                      
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "[update] README"                
+[main e9659ba] [update] README
+ 1 file changed, 5 insertions(+)
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 434 bytes | 434.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   0bc24cb..e9659ba  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cd
+hmiwa@hanakonoMacBook-Air ~ % cd hmiwa
+hmiwa@hanakonoMacBook-Air hmiwa % cd /Users/hmiwa/Documents/GitHub                         
+hmiwa@hanakonoMacBook-Air GitHub % ls
+d_20231023	hmiwa-lab	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % rm -r d_20231023.
+rm: d_20231023.: No such file or directory
+hmiwa@hanakonoMacBook-Air GitHub % rm -r d_20231023 
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/61/2686679cc400090c66279d4511e3525289ce38? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/92/ba275ddb8952e29f3c7290b67cf2852ec425dc? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/0c/fac86879d0c01516bb57b121b43b77c7b0e1d7? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/50/a0bd26458760d7a015204d0c7a052cab014ed0? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/50/a8e85975fde2ef8c5a04f966e58011588eda33? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/68/0fcc968574bc8d546f64719afd68d8890fb3ca? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/3b/31737cb92a9d5e1b5293ae95b6ccbefce0e738? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/9e/8b57f9c395d39e802c7fd6243d25c5f2283c6c? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/35/5164c126511e7d9f9896171414647f098dd30e? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/67/f78b69f37e5347263fdb1b7368c49494c7a464? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/93/b4b29dda451089503a83592fc4f8d20c5c50f7? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/34/ca1f6d0bacf3bc402e4314bdf273540a8cbeaa? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/5a/dcbac8617bfa3d3efc2e4f52fd0e765d69bf45? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/9d/42515d51513ae8458244e3f65c588a482c64a5? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/a4/a3bfb1a907e0418e1c44c2f219f4d936200db2? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/a4/9bab3f01e6ed3e99f8345116edcb32cb2c7b15? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/bb/21b2f7d03e5d97390794c2627aa862cd52480f? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/bb/b108037eceded3fb0494702e260d1a9d159ff9? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/bb/590f1ed0f4d2048abe9d8fa07a7fda85450cc5? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/d7/8f5f6876124e53b1cfa36f78539386e68fe8bd? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/b4/1579ca7891c3ddf882346eb97dfb3e585ceece? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/bd/cf456f8484f097487a676a773c8b9231a73cc1? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/ae/a1dbb871dc39801bbc4643f804f83e8b5f414b? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/d8/7edb9b4f4135f8f08fa1a954515dc6a2ad89be? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/f3/37c9e0e402308a9b6bc220df350a8ce3eb5124? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/f3/2417e2eb27943bc587e9da0eef354525991584? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/c7/d9c04c9cdb9a2b7c4567719d8cc78e7c9d3bb9? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/c0/3c323e1eeddf04480dd91819cc1df28ebc69c6? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/ca/a55a2d9325b50c54cee70572666330003e5346? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/e4/3b0f988953ae3a84b00331d0ccf5f7d51cb3cf? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/18/e8bbe2de6279690b2773bd616783ed0f068976? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/pack/pack-ab3b1e34f63b1b73d06bee5d93f4e8a204d23e24.idx? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/pack/pack-ab3b1e34f63b1b73d06bee5d93f4e8a204d23e24.pack? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/29/206f8eb216ccba799495b946e1bbf27160f937? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/16/038394d96777cb7bd1b834491c75b66e37ca58? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/80/94fd20073ffcf259add8fde0509287f1096642? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/74/32303b53bbd422d3f3de8039383fec0d8fc789? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/28/d5e7336c967f6dbb10b077568d3ed626b3f1ea? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/17/298eb2f6fd4f7c1a16b47656d103388eea237b? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/81/c4ceb48ebf5e0cd6d237f9278f9cf6e2e69ba4? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/72/2b0e2835359165bc8d25288860bd08eeee4e1d? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/72/42968e623dae3937fb88324fa740e32eff1ab6? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/44/6940852ca65e4cfff8aeef867a5258f5ef74bb? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/43/a67405e3be2576355f71d2f85cc20e72be1a9c? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/38/57289d2b1970261814b7741d949cdf711b0aba? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/5c/1ef893b407fbb05d911ccd6286181aeac539f6? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/5d/a5e5ee2295856b19f24d863c50beb9d7a250fc? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/53/03a80b9417a5c0fc8c02e140a43ab5274e77a6? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/3f/3469ede8f5f625ee38e29a82040c7a31378adf? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/3f/0559ffa5668e9336e17e346a66efaa462354d6? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/30/14167ed9186519d6b4c2b1b797d3380fdc8b15? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/5b/fad2b3f8e483b6b173d8aaff19597e84626f15? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/01/6f8ca9daa70d8794b4813123964d6db943f1fb? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/01/b1b47b25e3dc51b78dd3f832c309bf38a20c7c? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/99/9f87a1651a167fd20877946fe36b13936940b6? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/55/c4c3d127c8577c4dd309dde3754da9e0a867a3? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/97/8fca2f1120166c296b53e8f90eaee494d35b2b? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/0a/80bffde17fd1ac80a1abd767fdd382178aa500? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/d4/42824f9e9d1fbe0024213de6a5c8f02c39af61? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/d4/7764338549bc260950bb52d3df2072bb03b771? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/b1/df6a220abe6cdc7538cca1b829459a549e4e1c? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/dc/d9a95d939c59d873cbb6d4a211a3ff2dcbec2e? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/a9/3142315966ca2ff7c1cae3711ad157fc0d76c7? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/aa/cc5bf89cd06f544dc288638375728b54b69800? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/a8/9b3d06e0d809f81e17c95b2154f41c45759cd9? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/a1/63b7b382cad140ade59ab04c7ae2382eadea48? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/ea/3133501c12089dee7a45321409582b5a53075c? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/cd/d8bc845199e9aea8fe917d2e7a96fc18eb9216? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/f9/1cfaa0d303ebe16f56043917d9a3a1f4fbad8f? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/e8/d7bee63e2d4c3113b1444c819b19c4d122f45a? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/fa/572d738bf8c1d73068d3e5e294e4913bd454e8? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/ff/b8821a4839f0cd90e7ccd5b044668902817252? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/c2/e2f4c7831fbaabf177acac59db2e5e19a5ed84? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/c2/843c9f267eb3bb30cc330a58b41717b94229b5? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/2d/4f201e15285d57e86782071c7fab0416bee75f? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/77/821b4a2c497adcf2cd10bbf0c9e927c9d6e2e6? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/48/7a7b91ba04832956772068aec1e16f2f494d57? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/48/68dc3ed9f74c1819c7d5e7c5e640c1d9eaa3df? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/1e/687c0ddc515c488af2932d6fc6e8de5a650039? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/84/c59f6d8fcacbf46e9c22f3959fb94ab472aed2? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/23/fa000bd915f1c4736e549f2fe01f761364bb64? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/12/8de0eb62ab34a9c6749c1872064c6e6e3f6707? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/8c/53e52b5bb9b56ffba747df52360169841e0dbf? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/8c/6288da7336d40bb479f11c9f421a2d7a30db27? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/1c/661651de672569c8f6cb59c17dc9fc8eab519f? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/49/034ac2bdeb6b97098f862361fa89ec8269dcfa? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/2e/821200b3687e3af2bc1d0d0f74606f0717b17a? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/2e/edf187fe53feb0deab192febf1f35fc9d6a7ea? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/8b/137891791fe96927ad78e64b0aad7bded08bdc? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/8b/5ed2969ae4ee7c6487577a5056355b296f3109? y
+override r--r--r-- hmiwa/staff for d_20231023/.git/objects/14/9e979dcb543e52ca23b97508412b4a8d7831f1? y
+rm: d_20231023/.git: Permission denied
+rm: d_20231023: Permission denied
+hmiwa@hanakonoMacBook-Air GitHub % ls
+d_20231023	hmiwa-lab	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % rm -r d_20231023
+hmiwa@hanakonoMacBook-Air GitHub % ls              
+hmiwa-lab	hmiwa-labserver	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % rm -r hmiwa-labserver
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/59/fa0f69a73dcc214a2bb57c14f7cf026739e741? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/92/baef7ebb689963b4e8692bcba355da55cec23f? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/0c/046416e058cc4848d088945f443141832415ed? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/3e/b68559eb7c057bd52dd6f20d4ea0dba7ec2373? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/3b/a75824ae29203149155df16ef4be738bd38651? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/6a/6e7546bd394a8c711080f4c888eb9744a54efb? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/35/d345d8a0131156c2b87c17ccfe1d70044f6b2a? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/35/4b55aae2447f3afe3e17bc97f35e86a37641ab? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/3c/0d047a37879f5835d205a7fc5b45df08d39663? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/56/5f6cf73107d5d47dca719a735aa32d081241da? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/60/72157125008aa30b1fdeebf32f4531bab8e4d7? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/34/3269b479920621cb0a57af6a38cb56f65fc0db? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/5f/87a03e5e80e79bbf76a4ee0b582e15466dc3b1? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/9c/191c3a73ff6b20091542aceb282785c2b2634c? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/02/7c17da0ec28f764a178cc2efa8a47f64a96e18? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/a3/53c360ba81ec366b088965209b415b3964979d? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/b5/e0b3cd9283a120eb149c10211634df7923755d? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/d7/238d024791f00408179012237bef4f5971e751? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/be/67e57df44ef41471da3bd1670bd20c3f360f73? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/da/cc65f938fde207c4e1926f7a700ff15b8ab38c? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/eb/7dc623eb494b3942e8fd7dae50a15eed92bdd9? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/c0/64689298f69e7d65514eb43bc944fdc4a60836? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/f2/d7ddd8312ad9eaa25f83bf366d786bff0178bc? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/c8/d17c5c6985554f19b850f55684ab9b94ba2fe6? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/c8/0dd59311e25d1c1cb7f2ec43ef01b5f18e2f89? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/ed/24296a92f6dbaf97a0a9a81a38647ba09fdad2? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/ec/eadca5a263bd09f26154630ae7dee4058a7efd? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/27/a5f1f89bfb6923a5ffb751e65c3f9cd683b291? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/pack/pack-41a5cec766930653907dab49374dcd4294dc207a.pack? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/pack/pack-41a5cec766930653907dab49374dcd4294dc207a.idx? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/7c/07fcb4da6327a4191b620ebbae819b5422796c? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/42/90174b1ce2f75aba8a3240fefb3961804aaaa0? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/42/5b6e971812391ed72fd80cfb2875afddfd6a8f? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/45/c781a3efa9d0ddccd593bb8c7701848bc26ea7? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/1f/7761370d798dfc77e78f48c9bf8609540d6228? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/74/b1e687a1e6ea46ed132492d8b408fa2ea54b6a? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/1a/a811e5326a10580627aff9ca81865f5496abca? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/1a/5d9b05d5469d793155fa4962b779d01367b40b? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/8a/3a28c1341ffff7a98b05eaa9df526debeb6678? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/19/1158b38b7e13044bcbe9ffafc9c1089f9ef9d7? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/19/e84236056903b1c3bad067971a44b8a19d10cb? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/81/cd9d6df8fedd36ee485f946fe032407eac720f? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/86/dd8644526ba20fbf7d76a2426ba366a15a9602? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/86/69cd377eef98d25d99d3c6ee0f062db060b0fd? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/72/e8678027dd5804363c1877caef3ceb3a653eb3? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/72/ff268a5475c8f307dc73218fbd2451caa331fe? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/2a/65dc8c379043c392b977aba0e2329c1b9d9274? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/07/0db16d6f18e29b597d1eba9826f161dd723f2e? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/00/594960ef6df56138a7bb2df6133ac56789d8ee? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/00/4bfcfd92258072a611220ebfe6ca5258d79e74? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/6e/6cac2acccf7f1b0e655f28ffff07619aa60160? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/09/47f3b6d3413065250c217d7af9c394096a1fc0? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/91/4267f77d72ae987d499ed1dd9c1359fb102137? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/65/714d84ed8d26fc006916290bd67497a3f2d80f? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/53/66aa3da627e4a7227b8d3d5fcf0d5f2c56dbe7? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/3f/1ec164eea39f26e699a24d9c0215ceb23f2730? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/5b/52ae0bac090e3c1a6f56944f43566090712972? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/37/2f157eec442242e37c2d20098a84cd013c376d? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/6d/47ddc6b4102171daab4f47833e3c788207d8df? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/01/5ff51d0ca267917b4e648eaa90295060aebb5d? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/06/7601c8b773c12a75241be9f0ef8a8858cb94ed? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/6c/f3be2f2cacec8018ad3b33a3379c5ad74f868f? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/0a/e05ec6cbf07635a6e02b968af61971b68d584f? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/64/2ff1e401acac604f6e17c7ddc4b76cfae9ad3a? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/d3/063556c87a5b763e43057f5e0b91d5e150f970? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/a0/f270c75a25e1800b9cd702967ac332f439cc24? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/a7/66167ac14a34a116abc8e4667d20465a0c88a4? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/a7/65001a5d2ca2d07f75f941c1d3f19224217240? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/b1/76e8000526b6bd840b15cbbbec1ede2a2f86e9? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/dd/ee58cf6c2e7d314849ad8b7a220c9f6af5f790? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/dc/adc91bc38a3bc6d3f2753a35ef2bc42a62fe20? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/d5/f1b7a523b263b1e696bbedd553de37fb1aa945? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/d5/64d0bc3dd917926892c55e3706cc116d5b165e? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/d5/56167ac35565054c0e47c521bb17d562d3fb3a? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/de/e904f2bd629b92370a4954995274dbbb0bc7e6? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/a6/2287a46516e136a15e45931b9b524a6011ff6a? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/b9/97c7d929e313a61821eef6c5519695f2ddc0ae? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/b9/20d94352bec2618d380f6a0984efab222ac1ee? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/b9/32fa67c218a94abd2c7cc3f123b01622bba62d? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/a1/fa8c12b5907d233e8135b949236a68bd51b999? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/a1/67df5c6984d21682d1dee7efdf056bc262f5c4? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/ef/60d0b8379d756bf8ad50ccb6dea8b6043624b1? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/cc/fdb1425ad40195bdc7c473f25533cbb4dce19a? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/e6/efb5739c87d81139482d12fd78218e78badf03? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/f0/94ba6eb731a9047b275f3c2c0966894a812ce9? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/ff/156d1e0ef978ea969dc1289683239b0f5a1a02? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/c5/74673b5d1eb04e9ecb144671dcb79c2ceba79b? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/f6/493c92f8868468ca6bce3bd36a540fdb54952b? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/f6/fffe1aee8e318cd35dbfb93a3886e21e0472dc? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/e9/25b802ad20083ed79e5ffad5ee7074bf21e735? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/e0/999728ecea3edbd2e61e48b53e751f14a6dcfd? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/2d/d98469e47500ccc61fea4513a66b1cafa5b500? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/2d/ddb96ce06687cec7f5d6b43b31c4cc4c2bc0da? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/41/bbf693c479a8643e00335bec11d89cea7a0435? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/70/65ec033d669784f4ec976c769e2a6e9ecb4ff0? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/70/5435e4537404c94894f898f0b94741c4dc518d? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/70/a28d35682a45461658230f98a7082e043c46a2? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/4a/afdaa62080807dc3019bd1a7c27fbd4dc7e211? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/4a/df0711ea0a72875751704b40c3be973ded3afa? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/23/e1e07f0e497a7578a5ceb49278ecc7ba6cd504? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/4f/b22ef55d2703772e63f9e8ea30cd6ff82968bd? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/4f/4f406b6d04f8a77118c97efd5bc5b395bfb8c1? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/12/bb49c2ac9c1d2f59e8ef14025beceba02b3761? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/8c/37a78ee39c73072549a589a37e6f1e1fb4bec7? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/8c/ce517f8e4891501c08b02e15bc57821317c8db? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/71/6692eabe3e60811aae6565917eff088a21b308? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/71/ae483d3d00060773897b0f8205ff7a59e3f6f3? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/1c/05ffa2c1b8defd3b2bebaf5bd1965257c02213? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/49/caeb31b2996c52f84648d04c2698ebebea6ee6? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/49/04040f208092de210a0678fb956339acceb2bf? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/49/6ee2ca6a2f08396a4076fe43dedf3dc0da8b6d? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/40/da1b7b7cf51d038bb995ca8d5fe923631be583? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/40/6dd0948faea1ad0c4391d198c38935fc75d24e? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/78/fc3d27f0e7d962d3c9b6e24e896cb6960ee8ea? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/78/1ab24ea7a658f45420b3556122c6fa906857d3? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/78/59b24c466810d8da451c9a002161c4a48dc0ba? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/8b/b2edef03039283404184aa392be0b756159177? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/8b/3788f466df347a2bada35f5435593f7f4a192f? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/8b/5e3a86786359a992fbebf91ba74f9f85f4926c? y
+override r--r--r-- hmiwa/staff for hmiwa-labserver/.git/objects/14/0ee06d017c65aa3ad36d342127d964e14624f9? y
+rm: hmiwa-labserver/.git: Permission denied
+rm: hmiwa-labserver: Permission denied
+hmiwa@hanakonoMacBook-Air GitHub % rm -r hmiwa-labserver
+hmiwa@hanakonoMacBook-Air GitHub % cd
+hmiwa@hanakonoMacBook-Air ~ % hmiwa
+zsh: command not found: hmiwa
+hmiwa@hanakonoMacBook-Air ~ % cd hmiwa
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	hmiwa-labserver	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % rm d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa % rm hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % ln -s hmiwa-lab /Users/hmiwa/Documents/GitHub/hmiwa-lab
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % ln -s /Users/hmiwa/Documents/GitHub/hmiwa-lab hmiwa-lab
+hmiwa@hanakonoMacBook-Air hmiwa % git clone git@github.com:humgendiv/hmiwa-lab.git
+fatal: destination path 'hmiwa-lab' already exists and is not an empty directory.
+hmiwa@hanakonoMacBook-Air hmiwa % git clone git@github.com:hmiwa30/d_20231023.git 
+Cloning into 'd_20231023'...
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 101, done.
+remote: Counting objects: 100% (57/57), done.
+remote: Compressing objects: 100% (38/38), done.
+remote: Total 101 (delta 12), reused 49 (delta 10), pack-reused 44
+Receiving objects: 100% (101/101), 76.73 MiB | 8.77 MiB/s, done.
+Resolving deltas: 100% (15/15), done.
+hmiwa@hanakonoMacBook-Air hmiwa % cd hmiwa-lab                                           
+hmiwa@hanakonoMacBook-Air hmiwa-lab % ls
+README.md	d_20231023	hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % rm -r d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % ls
+README.md	hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "[delete] トラブル発生のため再度統合"
+[main 5a21887] [delete] トラブル発生のため再度統合
+ 7 files changed, 9467 deletions(-)
+ delete mode 100644 d_20231023/.gitkeep
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/01_231025_TutorialPRS.md
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/.gitignore
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Jupyter-Test/.ipynb_checkpoints/test-checkpoint.ipynb
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.html
+ delete mode 100644 d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+ delete mode 100644 d_20231023/README.md
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git        
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 282 bytes | 282.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:humgendiv/hmiwa-lab.git
+   e9659ba..5a21887  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % mkdir d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % touch d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add -A d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "create d_20231023 dir"
+[main 03484d5] create d_20231023 dir
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git remote add d_20231023 ~/hmiwa/d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch d_20231023
+From /Users/hmiwa/hmiwa/d_20231023
+ * [new branch]      main       -> d_20231023/main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+Already up to date.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 404 bytes | 404.00 KiB/s, done.
+Total 4 (delta 0), reused 2 (delta 0), pack-reused 0
+To github.com:humgendiv/hmiwa-lab.git
+   5a21887..03484d5  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git remote add d_20231023 /Users/hmiwa/hmiwa/d_20231023
+error: remote d_20231023 already exists.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % rm -r d_20231023                                   
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+From github.com:humgendiv/hmiwa-lab
+   16d1dd3..03484d5  main       -> origin/main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git                            
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Everything up-to-date
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "[delete]"
+[main 1bac362] [delete]
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 223 bytes | 223.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:humgendiv/hmiwa-lab.git
+   03484d5..1bac362  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % mkdir d_20231023 
+hmiwa@hanakonoMacBook-Air hmiwa-lab % touch d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add -A d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "create d_20231023 dir"
+[main 8520661] create d_20231023 dir
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git remote add d_20231023 /Users/hmiwa/hmiwa/d_20231023
+error: remote d_20231023 already exists.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cd /Users/hmiwa/Documents/GitHub/
+hmiwa@hanakonoMacBook-Air GitHub % ls
+hmiwa-lab	hmiwa-shared	m_20211215	private
+hmiwa@hanakonoMacBook-Air GitHub % rm -r hmiwa-lab
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/03/484d502d0e6228c9924d39a19719e942b506d7? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/9b/28d5580ac83e79d5b8389d70a179d384c0fe11? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/0b/c24cb1fd27173e76dbb68f0536193592184972? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/34/954a1816c28f28f9912c5c026be3f58db2acf7? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/5a/21887188840a695e97d4a6d11ccee8a70035f5? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/a3/564052beb61e533cc11bc9b9224f7d14ddb8da? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/fc/ee057fd7eb34aa036c3fb0cbbe2a632fb46332? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/f5/a0bf07b9d2166492fa99ffe2e41754df9d06c1? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/20/81271a26b2e937542fc8c9517dbc1d4749f707? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/pack/pack-bbab99b9f9b6c4cf3b3eafd0e9af991f6bba4eeb.idx? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/pack/pack-78352142b7f6e0f2ff325f17c2b9ac20c43fb831.pack? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/pack/pack-78352142b7f6e0f2ff325f17c2b9ac20c43fb831.idx? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/pack/pack-bbab99b9f9b6c4cf3b3eafd0e9af991f6bba4eeb.pack? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/80/8e76a409dbc74a31003fe3f89f0857727d6e6a? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/28/f47e6afe944fef0d4d013e94696ec90d6c4b4d? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/26/6ebb4123057f29547b649f434925b8f85b46ea? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/26/e91aba54b1f28ace6b960bc0381a70f55d1a8f? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/3f/5f553afa7d9132ac8e14fa4c07cb94787fc863? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/64/2eb97610f5d48100f053ac6644894ee9290301? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/e9/659badda51682d4ad1f1d81c0593f9f9e1712c? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/2d/5aa952265fb4c63b79fbf661965cc01d0eecd5? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/1b/ac3622ebc067b2480400cbdf8360f814096b96? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/4a/c44f4c2be6e2286e6dcedbef05598afc2bb49d? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/85/206614a9834cf3661a1506a14870b0616034a1? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/7f/eee1563ed2bd80f7b7790be6d25b11708bbe4b? y
+override r--r--r-- hmiwa/staff for hmiwa-lab/.git/objects/14/536f759db11fe68be888a2b46f15ec4571e870? y
+rm: hmiwa-lab/.git: Permission denied
+rm: hmiwa-lab: Permission denied
+hmiwa@hanakonoMacBook-Air GitHub % y
+zsh: command not found: y
+hmiwa@hanakonoMacBook-Air GitHub % y
+zsh: command not found: y
+hmiwa@hanakonoMacBook-Air GitHub % y
+zsh: command not found: y
+hmiwa@hanakonoMacBook-Air GitHub % y
+zsh: command not found: y
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % 
+hmiwa@hanakonoMacBook-Air GitHub % rm -r hmiwa-lab                  
+hmiwa@hanakonoMacBook-Air GitHub % git clone git@github.com:humgendiv/hmiwa-lab.git
+Cloning into 'hmiwa-lab'...
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 278, done.
+remote: Counting objects: 100% (197/197), done.
+remote: Compressing objects: 100% (105/105), done.
+remote: Total 278 (delta 84), reused 192 (delta 80), pack-reused 81
+Receiving objects: 100% (278/278), 76.75 MiB | 9.14 MiB/s, done.
+Resolving deltas: 100% (91/91), done.
+hmiwa@hanakonoMacBook-Air GitHub % cd
+hmiwa@hanakonoMacBook-Air ~ % cd hmiwa
+hmiwa@hanakonoMacBook-Air hmiwa % ls
+alias.sh	d_20231023	hmiwa-lab	hmiwa-shared	m_20211215	private		rawdata
+hmiwa@hanakonoMacBook-Air hmiwa % cd hmiwa-lab
+hmiwa@hanakonoMacBook-Air hmiwa-lab % ls
+README.md	hmiwa-labserver
+hmiwa@hanakonoMacBook-Air hmiwa-lab % mkdir d_20231023                                
+hmiwa@hanakonoMacBook-Air hmiwa-lab % touch d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add -A d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "create d_20231023 dir"
+[main 5e9a486] create d_20231023 dir
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d_20231023/.gitkeep
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git remote add d_20231023 ~/hmiwa/d_20231023
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git fetch d_20231023
+From /Users/hmiwa/hmiwa/d_20231023
+ * [new branch]      main       -> d_20231023/main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+Already up to date.
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cp ~/hmiwa/d_20231023/* d_20231023/
+cp: /Users/hmiwa/hmiwa/d_20231023/01_231025_TutorialPRS is a directory (not copied).
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cp -r ~/hmiwa/d_20231023/* d_20231023/
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git add .
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git commit -m "統合トラブルがあったため単純コピーした。変更履歴は残っているはず。"
+[main a25cd33] 統合トラブルがあったため単純コピーした。変更履歴は残っているはず。
+ 32 files changed, 50111 insertions(+)
+ create mode 100644 d_20231023/.gitignore
+ create mode 100644 d_20231023/01_231025_TutorialPRS/.gitkeep
+ create mode 100644 d_20231023/01_231025_TutorialPRS/01_231025_TutorialPRS.md
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/000002358.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/235.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/4_PRS.doc
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/4_PRS.pdf
+ create mode 100644 "d_20231023/01_231025_TutorialPRS/Documents/Int J Methods Psych Res - 2018 - Marees - A tutorial on conducting genome\342\200\220wide association studies  Quality control and.pdf"
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s00439-021-02281-4.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s10038-020-0816-9.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s12862-021-01900-y.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s41467-020-15194-z.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Documents/s41596-020-0353-1.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/.gitignore
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/1_QC_GWAS.zip
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/2_Population_stratification.zip
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/3_Association_GWAS.zip
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/4_PRS.doc
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.html
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.jpeg
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.md
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/GWA_tutorial_clone/README.png
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Jupyter-Test/.ipynb_checkpoints/test-checkpoint.ipynb
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.html
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Jupyter-Test/test.ipynb
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.html
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.jpeg
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.md
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/Note/LearningPRS.png
+ create mode 100644 d_20231023/README.md
+hmiwa@hanakonoMacBook-Air hmiwa-lab % git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 45, done.
+Counting objects: 100% (45/45), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (44/44), 46.29 MiB | 1.17 MiB/s, done.
+Total 44 (delta 3), reused 38 (delta 2), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:humgendiv/hmiwa-lab.git
+   1bac362..a25cd33  main -> main
+hmiwa@hanakonoMacBook-Air hmiwa-lab % cd d_20231023                                  
+hmiwa@hanakonoMacBook-Air d_20231023 % ls
+01_231025_TutorialPRS	README.md
+hmiwa@hanakonoMacBook-Air d_20231023 % mkdir 99_log
+hmiwa@hanakonoMacBook-Air d_20231023 % touch 99_log/.gitkeep
+hmiwa@hanakonoMacBook-Air d_20231023 % 
