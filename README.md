@@ -20,11 +20,24 @@
 
     git remote add d_20231023 /Users/hmiwa/Documents/GitHub/d_20231023
     git fetch d_20231023
-
     git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+    git push git@github.com:humgendiv/hmiwa-lab.git
 
     cd /Users/hmiwa/Documents/GitHub
     rm -r hmiwa-lab #トラブルを起こしたので一旦消去（ここまでの分は既にすべてupdate済み）
     git clone git@github.com:humgendiv/hmiwa-lab.git
 
+    cd /Users/hmiwa/Documents/GitHub
+    cd hmiwa-labserver
+    git pull git@github.com:humgendiv/hmiwa-labserver.git
+
     cd hmiwa-lab
+    mkdir hmiwa-labserver
+    touch hmiwa-labserver/.gitkeep
+    git add -A hmiwa-labserver
+    git commit -m "create hmiwa-labserver dir"
+
+    git remote add hmiwa-labserver /Users/hmiwa/Documents/GitHub/hmiwa-labserver
+    git fetch hmiwa-labserver
+    git merge --allow-unrelated-histories -X subtree=hmiwa-labserver hmiwa-labserver/main
+    git push git@github.com:humgendiv/hmiwa-lab.git
