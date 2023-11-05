@@ -22,3 +22,9 @@
     git fetch d_20231023
 
     git merge --allow-unrelated-histories -X subtree=d_20231023 d_20231023/main
+
+    cd /Users/hmiwa/Documents/GitHub
+    rm -r hmiwa-lab #トラブルを起こしたので一旦消去（ここまでの分は既にすべてupdate済み）
+    git clone git@github.com:humgendiv/hmiwa-lab.git
+
+    cd hmiwa-lab
