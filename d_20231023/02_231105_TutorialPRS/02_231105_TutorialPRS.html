@@ -7482,6 +7482,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="02_231105_TutorialPRS">02_231105_TutorialPRS<a class="anchor-link" href="#02_231105_TutorialPRS">¶</a></h1><p>Polygenic Risk Scoreの計算実習をしてみましょう</p>
+<h2 id="%E4%BD%BF%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%B1%95%E9%96%8B">使用データの展開<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%B1%95%E9%96%8B">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7652,6 +7653,17 @@ Archive:  3_Association_GWAS.zip
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a9321c87-eb0a-48a0-b4e7-f65b3fd5fa67">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="1.GWAS%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AAQC">1.GWASに必要なQC<a class="anchor-link" href="#1.GWAS%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AAQC">¶</a></h2><p>まずディレクトリに移動します。</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9bcf8a9d-03d7-44df-9c0c-d3d341f57169">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7681,6 +7693,17 @@ HapMap_3_r3_1.bed            hwe.R
 HapMap_3_r3_1.bim            inversion.txt
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d1715073-9116-4238-b9f8-af63c3b93aab">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>これからやるスクリプトはこんな感じ。</p>
 </div>
 </div>
 </div>
@@ -7908,12 +7931,23 @@ plink --bfile HapMap_3_r3_11 --remove 0.2_low_call_rate_pihat.txt --make-bed --o
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=35b08337-83ef-418d-842b-1d094f9591b1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>主に使うのはplinkなので起動チェックしておく</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f7f50342-a55a-41c5-afa8-fce3debd0151">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1">#plinkのアドレスのチェック</span>
@@ -7930,13 +7964,13 @@ plink --bfile HapMap_3_r3_11 --remove 0.2_low_call_rate_pihat.txt --make-bed --o
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Step-1">Step 1<a class="anchor-link" href="#Step-1">¶</a></h3><p>Investigate missingness per individual and per SNP and make histograms.</p>
+<h3 id="Step-1%EF%BC%9A%E6%AC%A0%E6%90%8D%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">Step 1：欠損データのチェック<a class="anchor-link" href="#Step-1%EF%BC%9A%E6%AC%A0%E6%90%8D%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">¶</a></h3><p>Investigate missingness per individual and per SNP and make histograms.<em>個体ごと、SNPごとの欠損度を調査し、ヒストグラムを作成する。</em></p>
 <pre><code>plink --bfile HapMap_3_r3_1 --missing    </code></pre>
-<p>output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.</p>
-<p>Generate plots to visualize the missingness results.</p>
+<p>output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.<em>これらのファイルはそれぞれ、個体ごとの欠損SNPの割合と、SNPごとの欠損個体の割合を示している。</em>　</p>
+<p>Generate plots to visualize the missingness results.<em>missingness（欠損）の結果を可視化するプロットを作成する。</em>　　</p>
 <pre><code>Rscript --no-save hist_miss.R</code></pre>
-<p>Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.</p>
-<p>The following two QC commands will not remove any SNPs or individuals. However, it is good practice to start the QC with these non-stringent thresholds.</p>
+<p>Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.<em>欠損の多いSNPと個体を削除する。このステップとそれに続くすべてのステップの説明は、このスクリプトのコメントに記載されている論文のbox 1とtable 1にあります。</em></p>
+<p>The following two QC commands will not remove any SNPs or individuals. However, it is good practice to start the QC with these non-stringent thresholds.<em>以下の2つのQCコマンドでは、SNPや個体は削除されない。しかし、これらの厳しくないしきい値でQCを開始するのは良い習慣である。</em></p>
 <p>Delete SNPs with missingness &gt;0.2.</p>
 <pre><code>plink --bfile HapMap_3_r3_1 --geno 0.2 --make-bed --out HapMap_3_r3_2</code></pre>
 <p>Delete individuals with missingness &gt;0.2.</p>
@@ -7953,10 +7987,12 @@ plink --bfile HapMap_3_r3_11 --remove 0.2_low_call_rate_pihat.txt --make-bed --o
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Investigate missingness per individual and per SNP and make histograms.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#欠損値調査</span>
+<span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
+<span class="c1"># Investigate missingness per individual and per SNP and make histograms.</span>
 <span class="nv">$plink</span> --bfile HapMap_3_r3_1 --missing    
 <span class="c1"># output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.</span>
 </pre></div>
@@ -8000,12 +8036,28 @@ missing data report written to plink.lmiss.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Generate plots to visualize the missingness results.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#欠損値チェックの結果出力</span>
+<span class="c1"># Generate plots to visualize the missingness results.</span>
+<span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
 cat hist_miss.R
-Rscript --no-save hist_miss.R
+<span class="c1">#Rscript --no-save hist_miss.R #dev.off()はまめにした方が良い</span>
+
+<span class="nb">echo</span> <span class="s1">'#change file name and plot'</span> &gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'indmiss&lt;-read.table(file="plink.imiss", header=TRUE)'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'snpmiss&lt;-read.table(file="plink.lmiss", header=TRUE)'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'# read data into R'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">''</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'pdf("histimiss.pdf") #indicates pdf format and gives title to file'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'hist(indmiss[,6],main="Histogram individual missingness") #selects column 6, names header of file'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'dev.off() # shuts down the current device'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">''</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'pdf("histlmiss.pdf") #indicates pdf format and gives title to file'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'hist(snpmiss[,5],main="Histogram SNP missingness")'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'dev.off() # shuts down the current device'</span> &gt;&gt; hist_miss_HM.R
+Rscript --no-save hist_miss_HM.R
 </pre></div>
 </div>
 </div>
@@ -8028,10 +8080,197 @@ hist(indmiss[,6],main="Histogram individual missingness") #selects column 6, nam
 pdf("histlmiss.pdf") 
 hist(snpmiss[,5],main="Histogram SNP missingness")  
 dev.off() # shuts down the current device
-pdf 
-  2 
+null device 
+          1 
+null device 
+          1 
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a113f8c0-d327-4b7a-8663-108fc8cb1fd4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>【ここから少々話がそれる】</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d5b1010c-f3fd-47b2-a10f-22b657bddaf5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#画像表示のためのアプリケーションをインストールしてみる</span>
+<span class="nb">cd</span> 
+<span class="nv">brew</span><span class="o">=</span>~/homebrew/bin/brew
+<span class="nv">$brew</span> install libsixel
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Running `brew update --auto-update`...
+Installing from the API is now the default behaviour!
+You can save space and time by running:
+  brew untap homebrew/core
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libsixel/manifests/1.10.3_1</span>
+#=#=#                                                                          ######################################################################### 100.0%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Fetching dependencies for libsixel: </span><span class="ansi-green-intense-fg ansi-bold">jpeg-turbo</span><span class="ansi-bold"> and </span><span class="ansi-green-intense-fg ansi-bold">libpng</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/manifests/3.0.0</span>
+######################################################################### 100.0%####################################################################      94.7%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Fetching </span><span class="ansi-green-intense-fg ansi-bold">jpeg-turbo</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/blobs/sha256:44943f3</span>
+######################################################################### 100.0%                                                                           0.1%
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libpng/manifests/1.6.40</span>
+#=#=#                                                                          ######################################################################### 100.0%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Fetching </span><span class="ansi-green-intense-fg ansi-bold">libpng</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libpng/blobs/sha256:71da4cbafaa</span>
+######################################################################### 100.0%                                                                           1.7%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Fetching </span><span class="ansi-green-intense-fg ansi-bold">libsixel</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:f496efefb</span>
+######################################################################### 100.0%#                                                                          2.9%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Installing dependencies for libsixel: </span><span class="ansi-green-intense-fg ansi-bold">jpeg-turbo</span><span class="ansi-bold"> and </span><span class="ansi-green-intense-fg ansi-bold">libpng</span>
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Installing libsixel dependency: </span><span class="ansi-green-intense-fg ansi-bold">jpeg-turbo</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/manifests/3.0.0</span>
+Already downloaded: /home/hmiwa/.cache/Homebrew/downloads/325e745bcb7840d6a83df7bfcafaa4dbc30b29140f252fb82b7714493df29d6d--jpeg-turbo-3.0.0.bottle_manifest.json
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Pouring jpeg-turbo--3.0.0.x86_64_linux.bottle.tar.gz</span>
+🍺  /home/hmiwa/homebrew/Cellar/jpeg-turbo/3.0.0: 44 files, 5.2MB
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Installing libsixel dependency: </span><span class="ansi-green-intense-fg ansi-bold">libpng</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libpng/manifests/1.6.40</span>
+Already downloaded: /home/hmiwa/.cache/Homebrew/downloads/d2caacc64e32be045b902fa78d2bb4aea7fba8f088cef85cd34b1beab15b755a--libpng-1.6.40.bottle_manifest.json
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Pouring libpng--1.6.40.x86_64_linux.bottle.tar.gz</span>
+🍺  /home/hmiwa/homebrew/Cellar/libpng/1.6.40: 28 files, 1.5MB
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Installing </span><span class="ansi-green-intense-fg ansi-bold">libsixel</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Pouring libsixel--1.10.3_1.x86_64_linux.bottle.tar.gz</span>
+🍺  /home/hmiwa/homebrew/Cellar/libsixel/1.10.3_1: 19 files, 1.1MB
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Running `brew cleanup libsixel`...</span>
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e0aca6fb-f532-4cf7-a6c8-ba05bbcf5ca3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
+<span class="nv">img2sixel</span><span class="o">=</span>~/homebrew/bin/img2sixel
+pdftoppm -png histlmiss.pdf histlmiss
+<span class="c1">#$img2sixel histlmiss-1.png #環境には合わなかったようだ</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=019c16cf-4403-4789-a280-ed34af184c31">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#Rのパッケージでもやってみようかと思ったけど難しそうだった</span>
+<span class="c1">#Rscript 'install.packages("imager")'</span>
+<span class="c1">#Rscript -e 'library("imager");img = load.image("myimage.png");plot(img)'</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8ee837ad-9f2b-4ca3-813e-cc716b02093a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
+<span class="nv">img2sixel</span><span class="o">=</span>~/homebrew/bin/img2sixel
+<span class="c1">#eog histlmiss-1.png #eogも難しそう</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=86604414-6756-43d3-b64c-00ecbbf311a6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>pdftoppm -png histlmiss.pdf histlmiss
+pdftoppm -png histimiss.pdf histimiss
+<span class="nv">histlmiss</span><span class="o">=</span><span class="sb">`</span>base64 histlmiss-1.png<span class="sb">`</span>
+<span class="nv">histimiss</span><span class="o">=</span><span class="sb">`</span>base64 histimiss-1.png<span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$histlmiss</span>　&gt; histlmiss-1.txt
+<span class="nb">echo</span> <span class="nv">$histimiss</span>　&gt; histimiss-1.txt
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=13e4883a-6444-4459-8195-488c4ba5bb30">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>mkdir -p ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+<span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
+cp histlmiss-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+cp histimiss-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=57df2e58-2d22-40c2-8abc-85e856a22b17">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>最初からマークダウンで処理すればよかったのでは【解決！】</p>
+<p><img alt="No description has been provided for this image" src="pic/histlmiss-1.png" width="45%"/>　<img alt="No description has been provided for this image" src="pic/histimiss-1.png" width="45%"/></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f16cd6e9-76b5-4334-80ae-a6b3c4be5f00">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>【画像表示問題は解決したのでここから本題に戻ります。】</p>
 </div>
 </div>
 </div>
@@ -8040,10 +8279,11 @@ pdf
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1"># QC処理</span>
+<span class="c1"># Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.</span>
 <span class="c1"># The following two QC commands will not remove any SNPs or individuals. However, it is good practice to start the QC with these non-stringent thresholds.  </span>
 <span class="c1"># Delete SNPs with missingness &gt;0.2.</span>
 <span class="nv">$plink</span> --bfile HapMap_3_r3_1 --geno <span class="m">0</span>.2 --make-bed --out HapMap_3_r3_2
@@ -8180,15 +8420,15 @@ are missing.)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Step2">Step2<a class="anchor-link" href="#Step2">¶</a></h3><p>Check for sex discrepancy.</p>
-<p>Subjects who were a priori determined as females must have a F value of &lt;0.2, and subjects who were a priori determined as males must have a F value &gt;0.8. This F value is based on the X chromosome inbreeding (homozygosity) estimate.</p>
-<p>Subjects who do not fulfil these requirements are flagged "PROBLEM" by PLINK.</p>
+<h3 id="Step2%EF%BC%9A%E6%80%A7%E5%88%A5%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">Step2：性別チェック<a class="anchor-link" href="#Step2%EF%BC%9A%E6%80%A7%E5%88%A5%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">¶</a></h3><p>Check for sex discrepancy.<em>性別の不一致をチェックする。</em></p>
+<p>Subjects who were a priori determined as females must have a F value of &lt;0.2, and subjects who were a priori determined as males must have a F value &gt;0.8. This F value is based on the X chromosome inbreeding (homozygosity) estimate.<em>先験的に女性と判定された被験者はF値が&lt;0.2でなければならず、先験的に男性と判定された被験者はF値が&gt;0.8でなければならない。このF値はX染色体の近親交配（ホモ接合性）の推定値に基づいている。</em></p>
+<p>Subjects who do not fulfil these requirements are flagged "PROBLEM" by PLINK.<em>これらの条件を満たさない被験者は、PLINKによって "PROBLEM "のフラグが立てられます。</em></p>
 <pre><code>plink --bfile HapMap_3_r3_5 --check-sex </code></pre>
-<p>Generate plots to visualize the sex-check results.</p>
+<p>Generate plots to visualize the sex-check results.<em>性チェック結果を可視化するプロットを作成します。</em></p>
 <pre><code>Rscript --no-save gender_check.R</code></pre>
-<p>These checks indicate that there is one woman with a sex discrepancy, F value of 0.99. (When using other datasets often a few discrepancies will be found).</p>
-<p>The following two scripts can be used to deal with individuals with a sex discrepancy.</p>
-<p>Note, please use one of the two options below to generate the bfile hapmap_r23a_6, this file we will use in the next step of this tutorial.</p>
+<p>These checks indicate that there is one woman with a sex discrepancy, F value of 0.99. (When using other datasets often a few discrepancies will be found). <em>これらのチェックは、F値が0.99の雌雄不一致の女性が1人いることを示している。(他のデータセットを使用する場合、しばしば数個の不一致が見つかる)。</em></p>
+<p>The following two scripts can be used to deal with individuals with a sex discrepancy.<em>以下の2つのスクリプトは、性別の不一致がある個人を処理するのに使える。</em></p>
+<p>Note, please use one of the two options below to generate the bfile hapmap_r23a_6, this file we will use in the next step of this tutorial.<em>このチュートリアルの次のステップで使用するファイル haap_r23a_6 を生成するために、以下の2つのオプションのどちらかを使用してください。</em></p>
 <ol>
 <li><p>Delete individuals with sex discrepancy.</p>
 <pre><code> grep "PROBLEM" plink.sexcheck| awk '{print$1,$2}'&gt; sex_discrepancy.txt</code></pre>
@@ -8209,10 +8449,11 @@ are missing.)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Check for sex discrepancy.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1"># サンプルの性別チェック</span>
+<span class="c1"># Check for sex discrepancy.</span>
 <span class="c1"># Subjects who were a priori determined as females must have a F value of &lt;0.2, and subjects who were a priori determined as males must have a F value &gt;0.8. This F value is based on the X chromosome inbreeding (homozygosity) estimate.</span>
 <span class="c1"># Subjects who do not fulfil these requirements are flagged "PROBLEM" by PLINK.</span>
 <span class="nv">$plink</span> --bfile HapMap_3_r3_5 --check-sex
@@ -8260,10 +8501,11 @@ Report written to plink.sexcheck .
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Generate plots to visualize the sex-check results.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#性別チェック結果の表示</span>
+<span class="c1"># Generate plots to visualize the sex-check results.</span>
 cat gender_check.R
 Rscript --no-save gender_check.R
 <span class="c1"># These checks indicate that there is one woman with a sex discrepancy, F value of 0.99. (When using other datasets often a few discrepancies will be found).</span>
@@ -8306,6 +8548,49 @@ null device
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=de2d1354-08af-467a-86f4-f0259e4474ef">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>pdftoppm -png Gender_check.pdf Gender_check
+pdftoppm -png Men_check.pdf Men_check
+pdftoppm -png Women_check.pdf Women_check
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e9685e8d-2b27-4c09-9e83-910a6c081383">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cp Gender_check-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+cp Men_check-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+cp Women_check-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d10cfbdf-42d3-4059-8b14-0500fb2e281d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="No description has been provided for this image" src="pic/Gender_check-1.png" width="33%"/><img alt="No description has been provided for this image" src="pic/Men_check-1.png" width="33%"/><img alt="No description has been provided for this image" src="pic/Women_check-1.png" width="33%"/></p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ba12b07a-0401-4031-b1cf-49b9238f0202">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8314,7 +8599,8 @@ null device
 <div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># The following two scripts can be used to deal with individuals with a sex discrepancy.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1"># 問題のあるサンプルの除去／修正</span>
+<span class="c1"># The following two scripts can be used to deal with individuals with a sex discrepancy.</span>
 <span class="c1"># Note, please use one of the two options below to generate the bfile hapmap_r23a_6, this file we will use in the next step of this tutorial.</span>
 
 <span class="c1"># 1) Delete individuals with sex discrepancy.</span>
@@ -8364,6 +8650,1230 @@ are missing.)
 --make-bed to HapMap_3_r3_6.bed + HapMap_3_r3_6.bim + HapMap_3_r3_6.fam ...
 101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
 </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8a9a2e8c-0c0e-4299-93a5-7d0dbe62b49f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Step-3%EF%BC%9A%E5%B8%B8%E6%9F%93%E8%89%B2%E4%BD%93SNP%E9%81%B8%E6%8A%9E%E3%83%BB%E3%83%AC%E3%82%A2%E3%82%A2%E3%83%AA%E3%83%AB%E5%89%8A%E9%99%A4">Step 3：常染色体SNP選択・レアアリル削除<a class="anchor-link" href="#Step-3%EF%BC%9A%E5%B8%B8%E6%9F%93%E8%89%B2%E4%BD%93SNP%E9%81%B8%E6%8A%9E%E3%83%BB%E3%83%AC%E3%82%A2%E3%82%A2%E3%83%AA%E3%83%AB%E5%89%8A%E9%99%A4">¶</a></h3><p>Generate a bfile with autosomal SNPs only and delete SNPs with a low minor allele frequency (MAF).  <em>常染色体のSNPのみを含むbfileを作成し、マイナーアレル頻度（MAF）の低いSNPを削除する。</em></p>
+<p>Select autosomal SNPs only (i.e., from chromosomes 1 to 22).  <em>常染色体のSNPのみ（つまり1番から22番までのSNP）を選択します。</em></p>
+<pre><code>awk '{ if ($1 &gt;= 1 &amp;&amp; $1 &lt;= 22) print $2 }' HapMap_3_r3_6.bim &gt; snp_1_22.txt
+plink --bfile HapMap_3_r3_6 --extract snp_1_22.txt --make-bed --out HapMap_3_r3_7</code></pre>
+<p>Generate a plot of the MAF distribution.  <em>MAF分布のプロットを作成する。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_7 --freq --out MAF_check
+Rscript --no-save MAF_check.R</code></pre>
+<p>Remove SNPs with a low MAF frequency.<em>MAF頻度の低いSNPを削除する。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_7 --maf 0.05 --make-bed --out HapMap_3_r3_8</code></pre>
+<p>1073226 SNPs are left  <em>1073226SNPが残っている</em></p>
+<p>A conventional MAF threshold for a regular GWAS is between 0.01 or 0.05, depending on sample size.  <em>通常のGWASのMAF閾値は、サンプルサイズにもよるが、0.01か0.05の間である。</em></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=18690481-c54c-472f-9680-2f5cf4884e91">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#常染色体SNP選択</span>
+awk <span class="s1">'{ if ($1 &gt;= 1 &amp;&amp; $1 &lt;= 22) print $2 }'</span> HapMap_3_r3_6.bim &gt; snp_1_22.txt
+plink --bfile HapMap_3_r3_6 --extract snp_1_22.txt --make-bed --out HapMap_3_r3_7
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to HapMap_3_r3_7.log.
+Options in effect:
+  --bfile HapMap_3_r3_6
+  --extract snp_1_22.txt
+  --make-bed
+  --out HapMap_3_r3_7
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1430443 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+--extract: 1398544 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 112 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998052.
+1398544 variants and 164 people pass filters and QC.
+Among remaining phenotypes, 56 are cases and 56 are controls.  (52 phenotypes
+are missing.)
+--make-bed to HapMap_3_r3_7.bed + HapMap_3_r3_7.bim + HapMap_3_r3_7.fam ...
+101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a972b08b-a68b-4a6e-be8e-243db4ffbf06">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#MAF分布のプロットを作成する。</span>
+plink --bfile HapMap_3_r3_7 --freq --out MAF_check
+cat MAF_check.R
+Rscript --no-save MAF_check.R
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to MAF_check.log.
+Options in effect:
+  --bfile HapMap_3_r3_7
+  --freq
+  --out MAF_check
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1398544 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 112 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998052.
+--freq: Allele frequencies (founders only) written to MAF_check.frq .
+maf_freq &lt;- read.table("MAF_check.frq", header =TRUE, as.is=T)
+pdf("MAF_distribution.pdf")
+hist(maf_freq[,5],main = "MAF distribution", xlab = "MAF")
+dev.off()
+
+
+null device 
+          1 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=30ae344e-5016-4385-a1d5-149aa633fe48">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>pdftoppm -png MAF_distribution.pdf MAF_distribution
+cp MAF_distribution-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b9e2c626-fb84-480c-9947-76e31a4318c2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<img alt="No description has been provided for this image" src="pic/MAF_distribution-1.png" width="50%"/>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=08825e30-24ae-47d5-8a63-45439cf5afcf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#MAF頻度の低いSNPを削除する。</span>
+plink --bfile HapMap_3_r3_7 --maf <span class="m">0</span>.05 --make-bed --out HapMap_3_r3_8
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to HapMap_3_r3_8.log.
+Options in effect:
+  --bfile HapMap_3_r3_7
+  --maf 0.05
+  --make-bed
+  --out HapMap_3_r3_8
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1398544 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 112 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998052.
+325318 variants removed due to minor allele threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+1073226 variants and 164 people pass filters and QC.
+Among remaining phenotypes, 56 are cases and 56 are controls.  (52 phenotypes
+are missing.)
+--make-bed to HapMap_3_r3_8.bed + HapMap_3_r3_8.bim + HapMap_3_r3_8.fam ...
+101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1443ffc9-28ee-4ff4-b571-970b5b01f661">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Step-4%EF%BC%9A%E3%83%8F%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC%E3%83%AF%E3%82%A4%E3%83%B3%E3%83%99%E3%83%AB%E3%82%B0%E5%B9%B3%E8%A1%A1(HWE)%E3%81%AB%E3%81%AA%E3%81%84SNP%E3%82%92%E5%89%8A%E9%99%A4">Step 4：ハーディーワインベルグ平衡(HWE)にないSNPを削除<a class="anchor-link" href="#Step-4%EF%BC%9A%E3%83%8F%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC%E3%83%AF%E3%82%A4%E3%83%B3%E3%83%99%E3%83%AB%E3%82%B0%E5%B9%B3%E8%A1%A1(HWE)%E3%81%AB%E3%81%AA%E3%81%84SNP%E3%82%92%E5%89%8A%E9%99%A4">¶</a></h3><p>Delete SNPs which are not in Hardy-Weinberg equilibrium (HWE).  <em>ハーディーワインベルグ平衡(HWE)にないSNPを削除する。</em></p>
+<p>Check the distribution of HWE p-values of all SNPs.  <em>すべてのSNPのHWE p値の分布をチェックする。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_8 --hardy</code></pre>
+<p>Selecting SNPs with HWE p-value below 0.00001, required for one of the two plot generated by the next Rscript, allows to zoom in on strongly deviating SNPs.   <em>HWE p値が0.00001以下のSNPを選択すると強く乖離したSNPにズームインできる。（次のRscriptで生成される2つのプロットのうちの1つに必要）</em></p>
+<pre><code>awk '{ if ($9 &lt;0.00001) print $0 }' plink.hwe&gt;plinkzoomhwe.hwe
+Rscript --no-save hwe.R</code></pre>
+<p>By default the --hwe option in plink only filters for controls.  <em>デフォルトでは、plinkの--hweオプションはコントロールだけをフィルターする。</em></p>
+<p>Therefore, we use two steps, first we use a stringent HWE threshold for controls, followed by a less stringent threshold for the case data.  <em>そのため、2つのステップを使用する。まずコントロールに対して厳しいHWE閾値を使用し、次にケースデータに対してより厳しくない閾値を使用する。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_8 --hwe 1e-6 --make-bed --out HapMap_hwe_filter_step1</code></pre>
+<p>The HWE threshold for the cases filters out only SNPs which deviate extremely from HWE.   <em>症例のHWE閾値は、HWEから極端に逸脱するSNPのみをフィルタリングする。</em></p>
+<p>This second HWE step only focusses on cases because in the controls all SNPs with a HWE p-value &lt; hwe 1e-6 were already removed. <em>対照群ではHWE p値 &lt; hwe 1e-6のSNPはすでに除去されているので、この2番目のHWEステップは症例にのみ焦点を当てる。</em></p>
+<pre><code>plink --bfile HapMap_hwe_filter_step1 --hwe 1e-10 --hwe-all --make-bed --out HapMap_3_r3_9</code></pre>
+<p>Theoretical background for this step is given in our accompanying article: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29484742">https://www.ncbi.nlm.nih.gov/pubmed/29484742</a> .  <em>このステップの理論的背景は、添付の記事</em></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f02dc5cd-9e6f-44cb-af7e-5dbdc2e07255">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#すべてのSNPのHWE p値の分布をチェック</span>
+plink --bfile HapMap_3_r3_8 --hardy
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to plink.log.
+Options in effect:
+  --bfile HapMap_3_r3_8
+  --hardy
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 112 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998039.
+--hardy: Writing Hardy-Weinberg report (founders only) to plink.hwe ... 101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c8d85823-7a0e-4e94-8fd1-53c5a5cef04a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#HWE p値が0.00001以下のSNPを選択すると強く乖離したSNPにズームインできる。</span>
+awk <span class="s1">'{ if ($9 &lt;0.00001) print $0 }'</span> plink.hwe &gt; plinkzoomhwe.hwe
+cat hwe.R
+Rscript --no-save hwe.R
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>hwe&lt;-read.table (file="plink.hwe", header=TRUE)
+pdf("histhwe.pdf")
+hist(hwe[,9],main="Histogram HWE")
+dev.off()
+
+hwe_zoom&lt;-read.table (file="plinkzoomhwe.hwe", header=TRUE)
+pdf("histhwe_below_theshold.pdf")
+hist(hwe_zoom[,9],main="Histogram HWE: strongly deviating SNPs only")
+dev.off()
+null device 
+          1 
+null device 
+          1 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e76389f4-6473-488a-90ba-003264a1b71c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">filename</span><span class="o">=</span><span class="s2">"histhwe"</span>
+pdftoppm -png <span class="nv">$filename</span>.pdf <span class="nv">$filename</span>
+cp <span class="nv">$filename</span>-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=18e4a98e-9464-464f-824e-9cdf92a7b13b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">filename</span><span class="o">=</span><span class="s2">"histhwe_below_theshold"</span>
+pdftoppm -png <span class="nv">$filename</span>.pdf <span class="nv">$filename</span>
+cp <span class="nv">$filename</span>-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=46c6d904-6c7d-4511-a362-af807b332c92">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="No description has been provided for this image" src="pic/histhwe-1.png" width="45%"/> <img alt="No description has been provided for this image" src="pic/histhwe_below_theshold-1.png" width="45%"/></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7b6a1d89-37ef-447e-9365-c20778b3a54a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#デフォルトでは、plinkの--hweオプションはコントロールだけをフィルターする。</span>
+<span class="c1">#そのため、2つのステップを使用する。</span>
+<span class="c1">#まずコントロールに対して厳しいHWE閾値を使用し、次にケースデータに対してより厳しくない閾値を使用する。</span>
+plink --bfile HapMap_3_r3_8 --hwe 1e-6 --make-bed --out HapMap_hwe_filter_step1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to HapMap_hwe_filter_step1.log.
+Options in effect:
+  --bfile HapMap_3_r3_8
+  --hwe 1e-6
+  --make-bed
+  --out HapMap_hwe_filter_step1
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 112 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998039.
+--hwe: 0 variants removed due to Hardy-Weinberg exact test.
+1073226 variants and 164 people pass filters and QC.
+Among remaining phenotypes, 56 are cases and 56 are controls.  (52 phenotypes
+are missing.)
+--make-bed to HapMap_hwe_filter_step1.bed + HapMap_hwe_filter_step1.bim +
+HapMap_hwe_filter_step1.fam ... 101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=369e0182-f00b-4f83-abbc-9f451d14c8d7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#症例のHWE閾値は、HWEから極端に逸脱するSNPのみをフィルタリングする。</span>
+<span class="c1">#対照群ではHWE p値 &lt; hwe 1e-6のSNPはすでに除去されているので、この2番目のHWEステップは症例にのみ焦点を当てる。</span>
+plink --bfile HapMap_hwe_filter_step1 --hwe 1e-10 --hwe-all --make-bed --out HapMap_3_r3_9
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to HapMap_3_r3_9.log.
+Options in effect:
+  --bfile HapMap_hwe_filter_step1
+  --hwe 1e-10
+  --hwe-all
+  --make-bed
+  --out HapMap_3_r3_9
+
+Note: --hwe-all flag deprecated.  Use "--hwe include-nonctrl".
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 112 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998039.
+--hwe: 0 variants removed due to Hardy-Weinberg exact test.
+1073226 variants and 164 people pass filters and QC.
+Among remaining phenotypes, 56 are cases and 56 are controls.  (52 phenotypes
+are missing.)
+--make-bed to HapMap_3_r3_9.bed + HapMap_3_r3_9.bim + HapMap_3_r3_9.fam ...
+101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cc1fe348-616c-419e-b796-e70204953dca">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Step-5%EF%BC%9A%E3%83%98%E3%83%86%E3%83%AD%E6%8E%A5%E5%90%88%E5%BA%A6%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">Step 5：ヘテロ接合度チェック<a class="anchor-link" href="#Step-5%EF%BC%9A%E3%83%98%E3%83%86%E3%83%AD%E6%8E%A5%E5%90%88%E5%BA%A6%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">¶</a></h3><p>Generate a plot of the distribution of the heterozygosity rate of your subjects.  <em>被験者のヘテロ接合率の分布をプロットする。</em></p>
+<p>And remove individuals with a heterozygosity rate deviating more than 3 sd from the mean.  <em>そしてヘテロ接合率が平均値から3 sd以上ずれている個体を削除する。</em></p>
+<p>Checks for heterozygosity are performed on a set of SNPs which are not highly correlated.  <em>ヘテロ接合のチェックは、相関の高くないSNPの集合に対して行われる。</em></p>
+<p>Therefore, to generate a list of non-(highly)correlated SNPs, we exclude high inversion regions (inversion.txt [High LD regions]) and prune the SNPs using the command --indep-pairwise�.　　</p>
+<p>The parameters �50 5 0.2� stand respectively for: the window size, the number of SNPs to shift the window at each step, and the multiple correlation coefficient for a SNP being regressed on all other SNPs simultaneously.  <em>パラメータ 50 5 0.2 はそれぞれ、窓の大きさ、各ステップで窓をシフトさせるSNPの数、SNPが他のSNPと同時に回帰される場合の重相関係数を表す。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_9 --exclude inversion.txt --range --indep-pairwise 50 5 0.2 --out indepSNP</code></pre>
+<p>Note, don't delete the file indepSNP.prune.in, we will use this file in later steps of the tutorial.  <em>indepSNP.prune.inは削除しないでください。このファイルはチュートリアルの後のステップで使用します。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_9 --extract indepSNP.prune.in --het --out R_check</code></pre>
+<p>This file contains your pruned data set.</p>
+<p>Plot of the heterozygosity rate distribution <em>ヘテロ接合率分布のプロット</em></p>
+<pre><code>Rscript --no-save check_heterozygosity_rate.R</code></pre>
+<p>The following code generates a list of individuals who deviate more than 3 standard deviations from the heterozygosity rate mean.  <em>以下のコードは、ヘテロ接合率の平均値から3標準偏差以上ずれた個体のリストを生成する。</em></p>
+<p>For data manipulation we recommend using UNIX. However, when performing statistical calculations R might be more convenient, hence the use of the Rscript for this step:</p>
+<pre><code>Rscript --no-save heterozygosity_outliers_list.R</code></pre>
+<p>Output of the command above: fail-het-qc.txt .
+When using our example data/the HapMap data this list contains 2 individuals (i.e., two individuals have a heterozygosity rate deviating more than 3 SD's from the mean).  <em>私たちの例のデータ／HapMapデータを使用する場合、このリストには2個体が含まれる（すなわち、平均から3SD以上乖離したヘテロ接合率を持つ個体が2個体ある）。</em>
+Adapt this file to make it compatible for PLINK, by removing all quotation marks from the file and selecting only the first two columns.  <em>このファイルをPLINKに適合させるために、ファイルから引用符をすべて取り除き、最初の2列だけを選択する。</em></p>
+<pre><code>sed 's/"// g' fail-het-qc.txt | awk '{print$1, $2}'&gt; het_fail_ind.txt</code></pre>
+<p>Remove heterozygosity rate outliers.  <em>ヘテロ接合率の異常値を取り除く。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_9 --remove het_fail_ind.txt --make-bed --out HapMap_3_r3_10</code></pre>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e44c781a-0a1a-4fac-9ba0-7e8e262b0037">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#ヘテロ接合率分布のプロット</span>
+plink --bfile HapMap_3_r3_9 --exclude inversion.txt --range --indep-pairwise <span class="m">50</span> <span class="m">5</span> <span class="m">0</span>.2 --out indepSNP
+plink --bfile HapMap_3_r3_9 --extract indepSNP.prune.in --het --out R_check
+cat check_heterozygosity_rate.R
+Rscript --no-save check_heterozygosity_rate.R
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to indepSNP.log.
+Options in effect:
+  --bfile HapMap_3_r3_9
+  --exclude inversion.txt
+  --indep-pairwise 50 5 0.2
+  --out indepSNP
+  --range
+
+Note: --range flag deprecated.  Use e.g. "--extract range &lt;filename&gt;".
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+--exclude range: 9893 variants excluded.
+--exclude range: 1063333 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 112 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998034.
+1063333 variants and 164 people pass filters and QC.
+Among remaining phenotypes, 56 are cases and 56 are controls.  (52 phenotypes
+are missing.)
+Pruned 79323 variants from chromosome 1, leaving 8397.
+Pruned 81833 variants from chromosome 2, leaving 7965.
+Pruned 67905 variants from chromosome 3, leaving 6957.
+Pruned 59914 variants from chromosome 4, leaving 6215.
+Pruned 62681 variants from chromosome 5, leaving 6336.
+Pruned 59440 variants from chromosome 6, leaving 6092.
+Pruned 53506 variants from chromosome 7, leaving 5598.
+Pruned 51227 variants from chromosome 8, leaving 5025.
+Pruned 45349 variants from chromosome 9, leaving 4983.
+Pruned 51843 variants from chromosome 10, leaving 5382.
+Pruned 50263 variants from chromosome 11, leaving 5021.
+Pruned 47315 variants from chromosome 12, leaving 5250.
+Pruned 36460 variants from chromosome 13, leaving 4030.
+Pruned 31645 variants from chromosome 14, leaving 3499.
+Pruned 28604 variants from chromosome 15, leaving 3404.
+Pruned 30134 variants from chromosome 16, leaving 3685.
+Pruned 24471 variants from chromosome 17, leaving 3366.
+Pruned 28242 variants from chromosome 18, leaving 3413.
+Pruned 16854 variants from chromosome 19, leaving 2808.
+Pruned 24897 variants from chromosome 20, leaving 3051.
+Pruned 13769 variants from chromosome 21, leaving 1713.
+Pruned 13514 variants from chromosome 22, leaving 1954.
+Pruning complete.  959189 of 1063333 variants removed.
+Marker lists written to indepSNP.prune.in and indepSNP.prune.out .
+PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to R_check.log.
+Options in effect:
+  --bfile HapMap_3_r3_9
+  --extract indepSNP.prune.in
+  --het
+  --out R_check
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+--extract: 104144 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 112 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998028.
+104144 variants and 164 people pass filters and QC.
+Among remaining phenotypes, 56 are cases and 56 are controls.  (52 phenotypes
+are missing.)
+--het: 104144 variants scanned, report written to R_check.het .
+het &lt;- read.table("R_check.het", head=TRUE)
+pdf("heterozygosity.pdf")
+het$HET_RATE = (het$"N.NM." - het$"O.HOM.")/het$"N.NM."
+hist(het$HET_RATE, xlab="Heterozygosity Rate", ylab="Frequency", main= "Heterozygosity Rate")
+dev.off()
+null device 
+          1 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=28b7e24b-0a9d-4c8d-a91d-cd76dfa0b074">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">filename</span><span class="o">=</span><span class="s2">"heterozygosity"</span>
+pdftoppm -png <span class="nv">$filename</span>.pdf <span class="nv">$filename</span>
+cp <span class="nv">$filename</span>-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=02535b40-3895-4cb6-9310-14070911187d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<img alt="No description has been provided for this image" src="pic/heterozygosity-1.png" width="50%"/>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7e15f1e4-a04b-44b4-815f-2fdd7ed120ba">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#以下のコードは、ヘテロ接合率の平均値から3標準偏差以上ずれた個体のリストを生成する。</span>
+cat heterozygosity_outliers_list.R
+Rscript --no-save heterozygosity_outliers_list.R
+
+cat fail-het-qc.txt
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>het &lt;- read.table("R_check.het", head=TRUE)
+het$HET_RATE = (het$"N.NM." - het$"O.HOM.")/het$"N.NM."
+het_fail = subset(het, (het$HET_RATE &lt; mean(het$HET_RATE)-3*sd(het$HET_RATE)) | (het$HET_RATE &gt; mean(het$HET_RATE)+3*sd(het$HET_RATE)));
+het_fail$HET_DST = (het_fail$HET_RATE-mean(het$HET_RATE))/sd(het$HET_RATE);
+write.table(het_fail, "fail-het-qc.txt", row.names=FALSE)
+"FID" "IID" "O.HOM." "E.HOM." "N.NM." "F" "HET_RATE" "HET_DST"
+1330 "NA12342" 68049 67240 103571 0.02229 0.342972453679119 -3.66711854374478
+1459 "NA12874" 68802 67560 104068 0.0339 0.338874582004074 -5.04839854982741
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b9badf3b-6628-4ab0-a8de-8e7d60dadd0a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#ファイルから引用符をすべて取り除き、最初の2列だけを選択する。</span>
+sed <span class="s1">'s/"// g'</span> fail-het-qc.txt <span class="p">|</span> awk <span class="s1">'{print$1, $2}'</span>&gt; het_fail_ind.txt
+<span class="c1">#ヘテロ接合率の異常値を取り除く。</span>
+plink --bfile HapMap_3_r3_9 --remove het_fail_ind.txt --make-bed --out HapMap_3_r3_10
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to HapMap_3_r3_10.log.
+Options in effect:
+  --bfile HapMap_3_r3_9
+  --make-bed
+  --out HapMap_3_r3_10
+  --remove het_fail_ind.txt
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+164 people (80 males, 84 females) loaded from .fam.
+112 phenotype values loaded from .fam.
+--remove: 162 people remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 110 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate in remaining samples is 0.998063.
+1073226 variants and 162 people pass filters and QC.
+Among remaining phenotypes, 55 are cases and 55 are controls.  (52 phenotypes
+are missing.)
+--make-bed to HapMap_3_r3_10.bed + HapMap_3_r3_10.bim + HapMap_3_r3_10.fam ...
+101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=38f54ae5-40f8-4dc6-96e2-b93fb70737dd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Step-6%EF%BC%9A%E8%A1%80%E7%B8%81%E9%96%A2%E4%BF%82%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">Step 6：血縁関係チェック<a class="anchor-link" href="#Step-6%EF%BC%9A%E8%A1%80%E7%B8%81%E9%96%A2%E4%BF%82%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">¶</a></h3><p>It is essential to check datasets you analyse for cryptic relatedness.　　<em>分析するデータセットに隠微な血縁関係がないかチェックすることは不可欠である。</em></p>
+<p>Assuming a random population sample we are going to exclude all individuals above the pihat threshold of 0.2 in this tutorial.　　<em>このチュートリアルでは、無作為母集団標本を仮定して、pihatのしきい値0.2以上の個体はすべて除外します。</em></p>
+<p>Check for relationships between individuals with a pihat &gt; 0.2.   <em>pihat &gt; 0.2の個体間の関係を調べます。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_10 --extract indepSNP.prune.in --genome --min 0.2 --out pihat_min0.2</code></pre>
+<p>The HapMap dataset is known to contain parent-offspring relations.  <em>HapMap データセットには親子関係が含まれていることが知られている。</em></p>
+<p>The following commands will visualize specifically these parent-offspring relations, using the z values.   <em>以下のコマンドは、これらの親子関係を z 値を使って具体的に可視化する。</em></p>
+<pre><code>awk '{ if ($8 &gt;0.9) print $0 }' pihat_min0.2.genome&gt;zoom_pihat.genome</code></pre>
+<p>Generate a plot to assess the type of relationship.  <em>血縁関係のタイプを評価するプロットを生成する。</em></p>
+<pre><code>Rscript --no-save Relatedness.R</code></pre>
+<p>The generated plots show a considerable amount of related individuals (explentation plot; PO = parent-offspring, UN = unrelated individuals) in the Hapmap data, this is expected since the dataset was constructed as such.　　　<em>生成されたプロットはHapmapデータにかなりの数の関連個体（説明プロット；PO = parent-offspring, UN = unrelated individuals）が含まれていることを示しているが、これはデータセットがそのように構築されていることから予想されることである。</em></p>
+<p>Normally, family based data should be analyzed using specific family based methods. In this tutorial, for demonstrative purposes, we treat the relatedness as cryptic relatedness in a random population sample.   <em>通常、ファミリー・ベースのデータは、特定のファミリー・ベースの手法を用いて解析されるべきです。このチュートリアルでは、デモンストレーションのために、ランダムな母集団サンプルにおける隠微な血縁関係を扱います。</em></p>
+<p>In this tutorial, we aim to remove all 'relatedness' from our dataset. <em>このチュートリアルでは、データセットからすべての「血縁」を取り除くことを目的とする。</em></p>
+<p>To demonstrate that the majority of the relatedness was due to parent-offspring we only include founders (individuals without parents in the dataset).  <em>血縁関係の大部分が親-子によるものであることを実証するために、ファウンダー（データセットに親のいない個体）のみを含める。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_10 --filter-founders --make-bed --out HapMap_3_r3_11</code></pre>
+<p>Now we will look again for individuals with a pihat &gt;0.2.  <em>ここでもう一度、0.2以上のpihatを持つ個体について調べる。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_11 --extract indepSNP.prune.in --genome --min 0.2 --out pihat_min0.2_in_founders</code></pre>
+<p>The file 'pihat_min0.2_in_founders.genome' shows that, after exclusion of all non-founders, only 1 individual pair with a pihat greater than 0.2 remains in the HapMap data. <em>ファイル'pihat_min0.2_in_founders.genome'を見ると、すべての非ファウンダーを除外した後、0.2より大きいpihatを持つ個体ペアが1組だけHapMapデータに残っている。</em></p>
+<p>This is likely to be a full sib or DZ twin pair based on the Z values. Noteworthy, they were not given the same family identity (FID) in the HapMap data. <em>これは、Z値から見て、完全な兄弟姉妹か二卵性双生児のペアである可能性が高い。注目すべきは、HapMapデータでは同じファミリーID（FID）が与えられていないことである。</em></p>
+<p>For each pair of 'related' individuals with a pihat &gt; 0.2, we recommend to remove the individual with the lowest call rate.   <em>pihat &gt; 0.2の「関連」個体の各ペアについて、コール率が最も低い個体を削除することを推奨する。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_11 --missing</code></pre>
+<p>Use an UNIX text editor (e.g., vi(m) ) to check which individual has the highest call rate in the 'related pair'.  <em>UNIXのテキストエディタ(vi(m)など)を使って、「関連ペア」の中でどの個体のコール率が最も高いかを調べる。</em></p>
+<p>Generate a list of FID and IID of the individual(s) with a Pihat above 0.2, to check who had the lower call rate of the pair.  <em>Pihatが0.2以上の個体のFIDとIIDのリストを作成し、そのペアの中でコール率が低いのは誰かを調べる。</em></p>
+<p>In our dataset the individual 13291  NA07045 had the lower call rate. <em>私たちのデータセットでは、13291 NA07045という個体のコール率が低い。</em></p>
+<pre><code>vi 0.2_low_call_rate_pihat.txt
+i 
+13291  NA07045
+# Press esc on keyboard!
+:x
+# Press enter on keyboard!</code></pre>
+<p>In case of multiple 'related' pairs, the list generated above can be extended using the same method as for our lone 'related' pair.  <em>複数の「親族」ペアがある場合、上記で作成したリストは、単独の「親族」ペアと同じ方法で拡張できる。</em></p>
+<p>Delete the individuals with the lowest call rate in 'related' pairs with a pihat &gt; 0.2 　　<em>pihat&gt;0.2の「親族」ペアの中で、コール率が最も低い個体を削除する。</em></p>
+<pre><code>plink --bfile HapMap_3_r3_11 --remove 0.2_low_call_rate_pihat.txt --make-bed --out HapMap_3_r3_12</code></pre>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2683e14a-26ed-407a-81e1-1be2bfd943c0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#pihat &gt; 0.2の個体間の関係を調べます。</span>
+plink --bfile HapMap_3_r3_10 --extract indepSNP.prune.in --genome --min <span class="m">0</span>.2 --out pihat_min0.2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to pihat_min0.2.log.
+Options in effect:
+  --bfile HapMap_3_r3_10
+  --extract indepSNP.prune.in
+  --genome
+  --min 0.2
+  --out pihat_min0.2
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+162 people (78 males, 84 females) loaded from .fam.
+110 phenotype values loaded from .fam.
+--extract: 104144 variants remaining.
+Using up to 63 threads (change this with --threads).
+Before main variant filters, 110 founders and 52 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998042.
+104144 variants and 162 people pass filters and QC.
+Among remaining phenotypes, 55 are cases and 55 are controls.  (52 phenotypes
+are missing.)
+IBD calculations complete.  
+Finished writing pihat_min0.2.genome .
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=af8502d4-b6ce-4253-842d-6c5394a213a1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#以下のコマンドは、これらの親子関係を z 値を使って具体的に可視化する。</span>
+awk <span class="s1">'{ if ($8 &gt;0.9) print $0 }'</span> pihat_min0.2.genome &gt; zoom_pihat.genome
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a273aae6-27e3-490d-b223-7c0d3b5c922c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [103]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#血縁関係のタイプを評価するプロットを生成する。</span>
+cat Relatedness.R
+<span class="c1">#Rscript --no-save Relatedness.R</span>
+cat Relatedness.R <span class="p">|</span> grep <span class="s2">"levels("</span>
+cat Relatedness.R <span class="p">|</span> grep <span class="s2">"RT)"</span>
+cat Relatedness.R <span class="p">|</span> sed -e <span class="s1">'s/levels(relatedness$RT)/unique(relatedness[,"RT"])/g'</span> 
+cat Relatedness.R <span class="p">|</span> sed -e <span class="s1">'s/levels(relatedness$RT)/unique(relatedness[,"RT"])/g'</span>  &gt; Relatedness_HM.R
+Rscript --no-save Relatedness_HM.R
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>pdf("relatedness.pdf")
+relatedness = read.table("pihat_min0.2.genome", header=T)
+par(pch=16, cex=1)
+with(relatedness,plot(Z0,Z1, xlim=c(0,1), ylim=c(0,1), type="n"))
+with(subset(relatedness,RT=="PO") , points(Z0,Z1,col=4))
+with(subset(relatedness,RT=="UN") , points(Z0,Z1,col=3))
+legend(1,1, xjust=1, yjust=1, legend=levels(relatedness$RT), pch=16, col=c(4,3))
+
+pdf("zoom_relatedness.pdf")
+relatedness_zoom = read.table("zoom_pihat.genome", header=T)
+par(pch=16, cex=1)
+with(relatedness_zoom,plot(Z0,Z1, xlim=c(0,0.02), ylim=c(0.98,1), type="n"))
+with(subset(relatedness_zoom,RT=="PO") , points(Z0,Z1,col=4))
+with(subset(relatedness_zoom,RT=="UN") , points(Z0,Z1,col=3))
+legend(0.02,1, xjust=1, yjust=1, legend=levels(relatedness$RT), pch=16, col=c(4,3))
+
+pdf("hist_relatedness.pdf")
+relatedness = read.table("pihat_min0.2.genome", header=T)
+hist(relatedness[,10],main="Histogram relatedness", xlab= "Pihat")  
+dev.off() 
+
+legend(1,1, xjust=1, yjust=1, legend=<span class="ansi-red-intense-fg ansi-bold">levels(</span>relatedness$RT), pch=16, col=c(4,3))
+legend(0.02,1, xjust=1, yjust=1, legend=<span class="ansi-red-intense-fg ansi-bold">levels(</span>relatedness$RT), pch=16, col=c(4,3))
+legend(1,1, xjust=1, yjust=1, legend=levels(relatedness$<span class="ansi-red-intense-fg ansi-bold">RT)</span>, pch=16, col=c(4,3))
+legend(0.02,1, xjust=1, yjust=1, legend=levels(relatedness$<span class="ansi-red-intense-fg ansi-bold">RT)</span>, pch=16, col=c(4,3))
+pdf("relatedness.pdf")
+relatedness = read.table("pihat_min0.2.genome", header=T)
+par(pch=16, cex=1)
+with(relatedness,plot(Z0,Z1, xlim=c(0,1), ylim=c(0,1), type="n"))
+with(subset(relatedness,RT=="PO") , points(Z0,Z1,col=4))
+with(subset(relatedness,RT=="UN") , points(Z0,Z1,col=3))
+legend(1,1, xjust=1, yjust=1, legend=unique(relatedness[,"RT"]), pch=16, col=c(4,3))
+
+pdf("zoom_relatedness.pdf")
+relatedness_zoom = read.table("zoom_pihat.genome", header=T)
+par(pch=16, cex=1)
+with(relatedness_zoom,plot(Z0,Z1, xlim=c(0,0.02), ylim=c(0.98,1), type="n"))
+with(subset(relatedness_zoom,RT=="PO") , points(Z0,Z1,col=4))
+with(subset(relatedness_zoom,RT=="UN") , points(Z0,Z1,col=3))
+legend(0.02,1, xjust=1, yjust=1, legend=unique(relatedness[,"RT"]), pch=16, col=c(4,3))
+
+pdf("hist_relatedness.pdf")
+relatedness = read.table("pihat_min0.2.genome", header=T)
+hist(relatedness[,10],main="Histogram relatedness", xlab= "Pihat")  
+dev.off() 
+
+pdf 
+  2 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=559d191f-b25e-49f7-96bb-0c9c37709b2d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [107]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">filename</span><span class="o">=</span><span class="s2">"relatedness"</span>
+pdftoppm -png <span class="nv">$filename</span>.pdf <span class="nv">$filename</span>
+cp <span class="nv">$filename</span>-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b29f7538-9fca-4f6a-b123-6729cfa4e490">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [108]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">filename</span><span class="o">=</span><span class="s2">"zoom_relatedness"</span>
+pdftoppm -png <span class="nv">$filename</span>.pdf <span class="nv">$filename</span>
+cp <span class="nv">$filename</span>-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7835fc08-4486-45ef-b492-197101b0fa1d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [109]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nv">filename</span><span class="o">=</span><span class="s2">"hist_relatedness"</span>
+pdftoppm -png <span class="nv">$filename</span>.pdf <span class="nv">$filename</span>
+cp <span class="nv">$filename</span>-1.png ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e12dfb69-3e50-4a42-99ee-00e654c07024">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="No description has been provided for this image" src="pic/relatedness-1.png" width="33%"/><img alt="No description has been provided for this image" src="pic/zoom_relatedness-1.png" width="33%"/><img alt="No description has been provided for this image" src="pic/hist_relatedness-1.png" width="33%"/>
+生成されたプロットはHapmapデータにかなりの数の関連個体（説明プロット；PO = parent-offspring, UN = unrelated individuals）が含まれていることを示しているが、これはデータセットがそのように構築されていることから予想されることである。</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7ee40fe6-5580-4d44-a431-dd4c7410d3b3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [111]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#通常、ファミリー・ベースのデータは、特定のファミリー・ベースの手法を用いて解析されるべきです。このチュートリアルでは、デモンストレーションのために、ランダムな母集団サンプルにおける隠微な血縁関係を扱います。</span>
+<span class="c1">#このチュートリアルでは、データセットからすべての「血縁」を取り除くことを目的とする</span>
+
+<span class="c1">#血縁関係の大部分が親-子によるものであることを実証するために、ファウンダー（データセットに親のいない個体）のみを含める。</span>
+plink --bfile HapMap_3_r3_10 --filter-founders --make-bed --out HapMap_3_r3_11
+
+<span class="c1">#ここでもう一度、0.2以上のpihatを持つ個体について調べる。</span>
+plink --bfile HapMap_3_r3_11 --extract indepSNP.prune.in --genome --min <span class="m">0</span>.2 --out pihat_min0.2_in_founders
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to HapMap_3_r3_11.log.
+Options in effect:
+  --bfile HapMap_3_r3_10
+  --filter-founders
+  --make-bed
+  --out HapMap_3_r3_11
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+162 people (78 males, 84 females) loaded from .fam.
+110 phenotype values loaded from .fam.
+52 people removed due to founder status (--filter-founders).
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 110 founders and 0 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate in remaining samples is 0.998025.
+1073226 variants and 110 people pass filters and QC.
+Among remaining phenotypes, 55 are cases and 55 are controls.
+--make-bed to HapMap_3_r3_11.bed + HapMap_3_r3_11.bim + HapMap_3_r3_11.fam ...
+101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
+PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to pihat_min0.2_in_founders.log.
+Options in effect:
+  --bfile HapMap_3_r3_11
+  --extract indepSNP.prune.in
+  --genome
+  --min 0.2
+  --out pihat_min0.2_in_founders
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+110 people (55 males, 55 females) loaded from .fam.
+110 phenotype values loaded from .fam.
+--extract: 104144 variants remaining.
+Using up to 63 threads (change this with --threads).
+Before main variant filters, 110 founders and 0 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.997978.
+104144 variants and 110 people pass filters and QC.
+Among remaining phenotypes, 55 are cases and 55 are controls.
+IBD calculations complete.  
+Finished writing pihat_min0.2_in_founders.genome .
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1dff2355-84f8-4870-883f-3c4161b2e0da">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [113]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cat pihat_min0.2_in_founders.genome
+<span class="c1">#これは、Z値から見て、完全な兄弟姉妹か二卵性双生児のペアである可能性が高い。注目すべきは、HapMapデータでは同じファミリーID（FID）が与えられていないことである</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>   FID1     IID1   FID2     IID2 RT    EZ      Z0      Z1      Z2  PI_HAT PHE       DST     PPC   RATIO
+  13291  NA07045   1454  NA12813 UN    NA  0.2572  0.5007  0.2421  0.4924   0  0.839777  1.0000  9.7022
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e8a7895c-ee7e-4b41-adab-6b70d4beb26f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [114]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#pihat &gt; 0.2の「関連」個体の各ペアについて、コール率が最も低い個体を削除することを推奨する。</span>
+plink --bfile HapMap_3_r3_11 --missing
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to plink.log.
+Options in effect:
+  --bfile HapMap_3_r3_11
+  --missing
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+110 people (55 males, 55 females) loaded from .fam.
+110 phenotype values loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 110 founders and 0 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate is 0.998025.
+--missing: Sample missing data report written to plink.imiss, and variant-based
+missing data report written to plink.lmiss.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c9962727-7514-4a24-b772-99bf70fc2b50">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [116]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">"13291  NA07045"</span> &gt; <span class="m">0</span>.2_low_call_rate_pihat.txt
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=882542f0-c711-4219-8b78-53c2a4e5931a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [117]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#pihat&gt;0.2の「親族」ペアの中で、コール率が最も低い個体を削除する。</span>
+plink --bfile HapMap_3_r3_11 --remove <span class="m">0</span>.2_low_call_rate_pihat.txt --make-bed --out HapMap_3_r3_12
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>PLINK v1.90b7 64-bit (16 Jan 2023)             www.cog-genomics.org/plink/1.9/
+(C) 2005-2023 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to HapMap_3_r3_12.log.
+Options in effect:
+  --bfile HapMap_3_r3_11
+  --make-bed
+  --out HapMap_3_r3_12
+  --remove 0.2_low_call_rate_pihat.txt
+
+257564 MB RAM detected; reserving 128782 MB for main workspace.
+1073226 variants loaded from .bim file.
+110 people (55 males, 55 females) loaded from .fam.
+110 phenotype values loaded from .fam.
+--remove: 109 people remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 109 founders and 0 nonfounders present.
+Calculating allele frequencies... 10111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989 done.
+Total genotyping rate in remaining samples is 0.998028.
+1073226 variants and 109 people pass filters and QC.
+Among remaining phenotypes, 54 are cases and 55 are controls.
+--make-bed to HapMap_3_r3_12.bed + HapMap_3_r3_12.bim + HapMap_3_r3_12.fam ...
+101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899done.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ac8d7f24-b3fa-4840-b0a2-6828e0dd9c0c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="CONGRATULATIONS!!">CONGRATULATIONS!!<a class="anchor-link" href="#CONGRATULATIONS!!">¶</a></h3><p>You've just succesfully completed the first tutorial! You are now able to conduct a proper genetic QC.</p>
+<p>For the next tutorial, using the script: 2_Main_script_MDS.txt, you need the following files:</p>
+<ul>
+<li>The bfile HapMap_3_r3_12 (i.e., HapMap_3_r3_12.fam,HapMap_3_r3_12.bed, and HapMap_3_r3_12.bim</li>
+<li>indepSNP.prune.in</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=49a55af3-83d2-4b25-a9ba-b66ec01db05b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
+cp HapMap_3_r3_12.fam ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/2_Population_stratification/
+cp HapMap_3_r3_12.bed ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/2_Population_stratification/
+cp HapMap_3_r3_12.bim ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/2_Population_stratification/
+cp indepSNP.prune.in ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/2_Population_stratification/
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8e6206c3-ed07-487d-a37b-cae32513be7a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>
+</pre></div>
 </div>
 </div>
 </div>
