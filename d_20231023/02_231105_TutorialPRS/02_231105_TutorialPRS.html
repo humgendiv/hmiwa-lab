@@ -7482,6 +7482,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="02_231105_TutorialPRS">02_231105_TutorialPRS<a class="anchor-link" href="#02_231105_TutorialPRS">¶</a></h1><p>Polygenic Risk Scoreの計算実習をしてみましょう</p>
+<h2 id="%E4%BD%BF%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%B1%95%E9%96%8B">使用データの展開<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%B1%95%E9%96%8B">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7652,6 +7653,17 @@ Archive:  3_Association_GWAS.zip
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a9321c87-eb0a-48a0-b4e7-f65b3fd5fa67">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="1.GWAS%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AAQC">1.GWASに必要なQC<a class="anchor-link" href="#1.GWAS%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AAQC">¶</a></h2><p>まずディレクトリに移動します。</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9bcf8a9d-03d7-44df-9c0c-d3d341f57169">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7681,6 +7693,17 @@ HapMap_3_r3_1.bed            hwe.R
 HapMap_3_r3_1.bim            inversion.txt
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d1715073-9116-4238-b9f8-af63c3b93aab">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>これからやるスクリプトはこんな感じ。</p>
 </div>
 </div>
 </div>
@@ -7908,12 +7931,23 @@ plink --bfile HapMap_3_r3_11 --remove 0.2_low_call_rate_pihat.txt --make-bed --o
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=35b08337-83ef-418d-842b-1d094f9591b1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>主に使うのはplinkなので起動チェックしておく</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f7f50342-a55a-41c5-afa8-fce3debd0151">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1">#plinkのアドレスのチェック</span>
@@ -7930,13 +7964,13 @@ plink --bfile HapMap_3_r3_11 --remove 0.2_low_call_rate_pihat.txt --make-bed --o
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Step-1">Step 1<a class="anchor-link" href="#Step-1">¶</a></h3><p>Investigate missingness per individual and per SNP and make histograms.</p>
+<h3 id="Step-1">Step 1<a class="anchor-link" href="#Step-1">¶</a></h3><p>Investigate missingness per individual and per SNP and make histograms.<em>個体ごと、SNPごとの欠損度を調査し、ヒストグラムを作成する。</em></p>
 <pre><code>plink --bfile HapMap_3_r3_1 --missing    </code></pre>
-<p>output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.</p>
-<p>Generate plots to visualize the missingness results.</p>
+<p>output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.<em>これらのファイルはそれぞれ、個体ごとの欠損SNPの割合と、SNPごとの欠損個体の割合を示している。</em></p>
+<p>Generate plots to visualize the missingness results.<em>missingness（欠損）の結果を可視化するプロットを作成する。</em></p>
 <pre><code>Rscript --no-save hist_miss.R</code></pre>
-<p>Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.</p>
-<p>The following two QC commands will not remove any SNPs or individuals. However, it is good practice to start the QC with these non-stringent thresholds.</p>
+<p>Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.<em>欠損の多いSNPと個体を削除する。このステップとそれに続くすべてのステップの説明は、このスクリプトのコメントに記載されている論文のbox 1とtable 1にあります。</em></p>
+<p>The following two QC commands will not remove any SNPs or individuals. However, it is good practice to start the QC with these non-stringent thresholds.<em>以下の2つのQCコマンドでは、SNPや個体は削除されない。しかし、これらの厳しくないしきい値でQCを開始するのは良い習慣である。</em></p>
 <p>Delete SNPs with missingness &gt;0.2.</p>
 <pre><code>plink --bfile HapMap_3_r3_1 --geno 0.2 --make-bed --out HapMap_3_r3_2</code></pre>
 <p>Delete individuals with missingness &gt;0.2.</p>
@@ -7953,10 +7987,12 @@ plink --bfile HapMap_3_r3_11 --remove 0.2_low_call_rate_pihat.txt --make-bed --o
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Investigate missingness per individual and per SNP and make histograms.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#欠損値調査</span>
+<span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
+<span class="c1"># Investigate missingness per individual and per SNP and make histograms.</span>
 <span class="nv">$plink</span> --bfile HapMap_3_r3_1 --missing    
 <span class="c1"># output: plink.imiss and plink.lmiss, these files show respectively the proportion of missing SNPs per individual and the proportion of missing individuals per SNP.</span>
 </pre></div>
@@ -8000,12 +8036,28 @@ missing data report written to plink.lmiss.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Generate plots to visualize the missingness results.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#欠損値チェックの結果出力</span>
+<span class="c1"># Generate plots to visualize the missingness results.</span>
+<span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
 cat hist_miss.R
-Rscript --no-save hist_miss.R
+<span class="c1">#Rscript --no-save hist_miss.R #dev.off()はまめにした方が良い</span>
+
+<span class="nb">echo</span> <span class="s1">'#change file name and plot'</span> &gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'indmiss&lt;-read.table(file="plink.imiss", header=TRUE)'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'snpmiss&lt;-read.table(file="plink.lmiss", header=TRUE)'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'# read data into R'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">''</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'pdf("histimiss.pdf") #indicates pdf format and gives title to file'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'hist(indmiss[,6],main="Histogram individual missingness") #selects column 6, names header of file'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'dev.off() # shuts down the current device'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">''</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'pdf("histlmiss.pdf") #indicates pdf format and gives title to file'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'hist(snpmiss[,5],main="Histogram SNP missingness")'</span> &gt;&gt; hist_miss_HM.R
+<span class="nb">echo</span> <span class="s1">'dev.off() # shuts down the current device'</span> &gt;&gt; hist_miss_HM.R
+Rscript --no-save hist_miss_HM.R
 </pre></div>
 </div>
 </div>
@@ -8028,10 +8080,163 @@ hist(indmiss[,6],main="Histogram individual missingness") #selects column 6, nam
 pdf("histlmiss.pdf") 
 hist(snpmiss[,5],main="Histogram SNP missingness")  
 dev.off() # shuts down the current device
-pdf 
-  2 
+null device 
+          1 
+null device 
+          1 
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a113f8c0-d327-4b7a-8663-108fc8cb1fd4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>【ここから少々話がそれる】</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d5b1010c-f3fd-47b2-a10f-22b657bddaf5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#画像表示のためのアプリケーションをインストールしてみる</span>
+<span class="nb">cd</span> 
+<span class="nv">brew</span><span class="o">=</span>~/homebrew/bin/brew
+<span class="nv">$brew</span> install libsixel
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Running `brew update --auto-update`...
+Installing from the API is now the default behaviour!
+You can save space and time by running:
+  brew untap homebrew/core
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libsixel/manifests/1.10.3_1</span>
+#=#=#                                                                          ######################################################################### 100.0%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Fetching dependencies for libsixel: </span><span class="ansi-green-intense-fg ansi-bold">jpeg-turbo</span><span class="ansi-bold"> and </span><span class="ansi-green-intense-fg ansi-bold">libpng</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/manifests/3.0.0</span>
+######################################################################### 100.0%####################################################################      94.7%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Fetching </span><span class="ansi-green-intense-fg ansi-bold">jpeg-turbo</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/blobs/sha256:44943f3</span>
+######################################################################### 100.0%                                                                           0.1%
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libpng/manifests/1.6.40</span>
+#=#=#                                                                          ######################################################################### 100.0%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Fetching </span><span class="ansi-green-intense-fg ansi-bold">libpng</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libpng/blobs/sha256:71da4cbafaa</span>
+######################################################################### 100.0%                                                                           1.7%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Fetching </span><span class="ansi-green-intense-fg ansi-bold">libsixel</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libsixel/blobs/sha256:f496efefb</span>
+######################################################################### 100.0%#                                                                          2.9%
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Installing dependencies for libsixel: </span><span class="ansi-green-intense-fg ansi-bold">jpeg-turbo</span><span class="ansi-bold"> and </span><span class="ansi-green-intense-fg ansi-bold">libpng</span>
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Installing libsixel dependency: </span><span class="ansi-green-intense-fg ansi-bold">jpeg-turbo</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/manifests/3.0.0</span>
+Already downloaded: /home/hmiwa/.cache/Homebrew/downloads/325e745bcb7840d6a83df7bfcafaa4dbc30b29140f252fb82b7714493df29d6d--jpeg-turbo-3.0.0.bottle_manifest.json
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Pouring jpeg-turbo--3.0.0.x86_64_linux.bottle.tar.gz</span>
+🍺  /home/hmiwa/homebrew/Cellar/jpeg-turbo/3.0.0: 44 files, 5.2MB
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Installing libsixel dependency: </span><span class="ansi-green-intense-fg ansi-bold">libpng</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Downloading https://ghcr.io/v2/homebrew/core/libpng/manifests/1.6.40</span>
+Already downloaded: /home/hmiwa/.cache/Homebrew/downloads/d2caacc64e32be045b902fa78d2bb4aea7fba8f088cef85cd34b1beab15b755a--libpng-1.6.40.bottle_manifest.json
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Pouring libpng--1.6.40.x86_64_linux.bottle.tar.gz</span>
+🍺  /home/hmiwa/homebrew/Cellar/libpng/1.6.40: 28 files, 1.5MB
+<span class="ansi-green-fg">==&gt;</span> <span class="ansi-bold">Installing </span><span class="ansi-green-intense-fg ansi-bold">libsixel</span>
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Pouring libsixel--1.10.3_1.x86_64_linux.bottle.tar.gz</span>
+🍺  /home/hmiwa/homebrew/Cellar/libsixel/1.10.3_1: 19 files, 1.1MB
+<span class="ansi-blue-fg">==&gt;</span> <span class="ansi-bold">Running `brew cleanup libsixel`...</span>
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e0aca6fb-f532-4cf7-a6c8-ba05bbcf5ca3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
+<span class="nv">img2sixel</span><span class="o">=</span>~/homebrew/bin/img2sixel
+pdftoppm -png histlmiss.pdf histlmiss
+<span class="c1">#$img2sixel histlmiss-1.png #環境には合わなかったようだ</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=019c16cf-4403-4789-a280-ed34af184c31">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#Rのパッケージでもやってみようかと思ったけど難しそうだった</span>
+<span class="c1">#Rscript 'install.packages("imager")'</span>
+<span class="c1">#Rscript -e 'library("imager");img = load.image("myimage.png");plot(img)'</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8ee837ad-9f2b-4ca3-813e-cc716b02093a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/GWA_tutorial/1_QC_GWAS
+<span class="nv">img2sixel</span><span class="o">=</span>~/homebrew/bin/img2sixel
+pdftoppm -png histlmiss.pdf histlmiss
+pdftoppm -png histimiss.pdf histimiss
+<span class="c1">#eog histlmiss-1.png #eogも難しそう</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=57df2e58-2d22-40c2-8abc-85e856a22b17">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>最初からマークダウンで処理すればよかったのでは【解決！】</p>
+<p><img alt="No description has been provided for this image" src="GWA_tutorial/1_QC_GWAS/histlmiss-1.png" width="45%"/> <img alt="No description has been provided for this image" src="GWA_tutorial/1_QC_GWAS/histimiss-1.png" width="45%"/></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f16cd6e9-76b5-4334-80ae-a6b3c4be5f00">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>【画像表示問題は解決したのでここから本題に戻ります。】</p>
 </div>
 </div>
 </div>
@@ -8040,10 +8245,11 @@ pdf
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1"># QC処理</span>
+<span class="c1"># Delete SNPs and individuals with high levels of missingness, explanation of this and all following steps can be found in box 1 and table 1 of the article mentioned in the comments of this script.</span>
 <span class="c1"># The following two QC commands will not remove any SNPs or individuals. However, it is good practice to start the QC with these non-stringent thresholds.  </span>
 <span class="c1"># Delete SNPs with missingness &gt;0.2.</span>
 <span class="nv">$plink</span> --bfile HapMap_3_r3_1 --geno <span class="m">0</span>.2 --make-bed --out HapMap_3_r3_2
@@ -8180,15 +8386,15 @@ are missing.)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Step2">Step2<a class="anchor-link" href="#Step2">¶</a></h3><p>Check for sex discrepancy.</p>
-<p>Subjects who were a priori determined as females must have a F value of &lt;0.2, and subjects who were a priori determined as males must have a F value &gt;0.8. This F value is based on the X chromosome inbreeding (homozygosity) estimate.</p>
-<p>Subjects who do not fulfil these requirements are flagged "PROBLEM" by PLINK.</p>
+<h3 id="Step2">Step2<a class="anchor-link" href="#Step2">¶</a></h3><p>Check for sex discrepancy.<em>性別の不一致をチェックする。</em></p>
+<p>Subjects who were a priori determined as females must have a F value of &lt;0.2, and subjects who were a priori determined as males must have a F value &gt;0.8. This F value is based on the X chromosome inbreeding (homozygosity) estimate.<em>先験的に女性と判定された被験者はF値が&lt;0.2でなければならず、先験的に男性と判定された被験者はF値が&gt;0.8でなければならない。このF値はX染色体の近親交配（ホモ接合性）の推定値に基づいている。</em></p>
+<p>Subjects who do not fulfil these requirements are flagged "PROBLEM" by PLINK.<em>これらの条件を満たさない被験者は、PLINKによって "PROBLEM "のフラグが立てられます。</em></p>
 <pre><code>plink --bfile HapMap_3_r3_5 --check-sex </code></pre>
-<p>Generate plots to visualize the sex-check results.</p>
+<p>Generate plots to visualize the sex-check results.<em>性チェック結果を可視化するプロットを作成します。</em></p>
 <pre><code>Rscript --no-save gender_check.R</code></pre>
-<p>These checks indicate that there is one woman with a sex discrepancy, F value of 0.99. (When using other datasets often a few discrepancies will be found).</p>
-<p>The following two scripts can be used to deal with individuals with a sex discrepancy.</p>
-<p>Note, please use one of the two options below to generate the bfile hapmap_r23a_6, this file we will use in the next step of this tutorial.</p>
+<p>These checks indicate that there is one woman with a sex discrepancy, F value of 0.99. (When using other datasets often a few discrepancies will be found). <em>これらのチェックは、F値が0.99の雌雄不一致の女性が1人いることを示している。(他のデータセットを使用する場合、しばしば数個の不一致が見つかる)。</em></p>
+<p>The following two scripts can be used to deal with individuals with a sex discrepancy.<em>以下の2つのスクリプトは、性別の不一致がある個人を処理するのに使える。</em></p>
+<p>Note, please use one of the two options below to generate the bfile hapmap_r23a_6, this file we will use in the next step of this tutorial.<em>このチュートリアルの次のステップで使用するファイル haap_r23a_6 を生成するために、以下の2つのオプションのどちらかを使用してください。</em></p>
 <ol>
 <li><p>Delete individuals with sex discrepancy.</p>
 <pre><code> grep "PROBLEM" plink.sexcheck| awk '{print$1,$2}'&gt; sex_discrepancy.txt</code></pre>
@@ -8209,10 +8415,11 @@ are missing.)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span><span class="c1"># Check for sex discrepancy.</span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1"># サンプルの性別チェック</span>
+<span class="c1"># Check for sex discrepancy.</span>
 <span class="c1"># Subjects who were a priori determined as females must have a F value of &lt;0.2, and subjects who were a priori determined as males must have a F value &gt;0.8. This F value is based on the X chromosome inbreeding (homozygosity) estimate.</span>
 <span class="c1"># Subjects who do not fulfil these requirements are flagged "PROBLEM" by PLINK.</span>
 <span class="nv">$plink</span> --bfile HapMap_3_r3_5 --check-sex
@@ -8260,7 +8467,7 @@ Report written to plink.sexcheck .
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1"># Generate plots to visualize the sex-check results.</span>
@@ -8303,6 +8510,33 @@ null device
           1 
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=de2d1354-08af-467a-86f4-f0259e4474ef">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>pdftoppm -png Gender_check.pdf Gender_check
+pdftoppm -png Men_check.pdf Men_check
+pdftoppm -png Women_check.pdf Women_check
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d10cfbdf-42d3-4059-8b14-0500fb2e281d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="No description has been provided for this image" src="GWA_tutorial/1_QC_GWAS/Gender_check-1.png" width="33%"/><img alt="No description has been provided for this image" src="GWA_tutorial/1_QC_GWAS/Men_check-1.png" width="33%"/><img alt="No description has been provided for this image" src="GWA_tutorial/1_QC_GWAS/Women_check-1.png" width="33%"/></p>
 </div>
 </div>
 </div>
