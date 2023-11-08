@@ -13902,21 +13902,351 @@ ls ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/*2023-11-07.png
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="%E6%BC%94%E7%BF%92">演習<a class="anchor-link" href="#%E6%BC%94%E7%BF%92">¶</a></h2><p>1-3の結果を使ってPRSiceを動かしてみよう</p>
+<h2 id="%E6%BC%94%E7%BF%92">演習<a class="anchor-link" href="#%E6%BC%94%E7%BF%92">¶</a></h2><p><del>1-3の結果を使ってPRSiceを動かしてみよう</del> -&gt; とりあえず別のチュートリアルや実解析をしてみながらの方が良さそう。</p>
+<p>実際のところ、GWAS(assocなど)は先行研究から引っ張ってくることになるはず。</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f5878fb0-7333-459f-9cbc-31354b085314">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f5878fb0-7333-459f-9cbc-31354b085314">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-bash"><pre><span></span>
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#いまあるファイルの確認</span>
+<span class="nb">cd</span> ~/hmiwa1/storage/hmiwa-lab/02_231105_TutorialPRS
+ls
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>1kG_MDS2.bed
+1kG_MDS2.bim
+1kG_MDS2.fam
+1kG_MDS2.log
+1kG_MDS2.nosex
+1kG_MDS3.bed
+1kG_MDS3.bim
+1kG_MDS3.fam
+1kG_MDS3.log
+1kG_MDS3.nosex
+1kG_MDS4.bed
+1kG_MDS4.bim
+1kG_MDS4.fam
+1kG_MDS4.log
+1kG_MDS4.nosex
+1kG_MDS5.bed
+1kG_MDS5.bim
+1kG_MDS5.fam
+1kG_MDS5.log
+1kG_MDS5.nosex
+1kG_MDS6.bed
+1kG_MDS6.bim
+1kG_MDS6.fam
+1kG_MDS6.log
+1kG_MDS6.nosex
+1kG_MDS6_SNPs.txt
+1kG_MDS7.bed
+1kG_MDS7.bim
+1kG_MDS7.fam
+1kG_MDS7.log
+1kG_MDS7.nosex
+1kGMDS7_tmp
+1kG_MDS8.bed
+1kG_MDS8.bim
+1kG_MDS8.fam
+1kG_MDS8.log
+1kG_MDS8.nosex
+1kG_MDS.bed
+1kG_MDS.bim
+1kG_MDS.fam
+1kG_MDS.log
+1kG_MDS.nosex
+1kg_ref-list.txt
+20100804.ALL.panel
+20100804.ALL.panel.1
+adjusted_assoc_results.assoc
+adjusted_assoc_results.assoc.adjusted
+adjusted_assoc_results.log
+ALL.2of4intersection.20100804.genotypes.bed
+ALL.2of4intersection.20100804.genotypes.bim
+ALL.2of4intersection.20100804.genotypes.fam
+ALL.2of4intersection.20100804.genotypes.log
+ALL.2of4intersection.20100804.genotypes_no_missing_IDs.bed
+ALL.2of4intersection.20100804.genotypes_no_missing_IDs.bim
+ALL.2of4intersection.20100804.genotypes_no_missing_IDs.fam
+ALL.2of4intersection.20100804.genotypes_no_missing_IDs.log
+ALL.2of4intersection.20100804.genotypes_no_missing_IDs.nosex
+ALL.2of4intersection.20100804.genotypes.nosex
+<span class="ansi-red-intense-fg ansi-bold">ALL.2of4intersection.20100804.genotypes.vcf.gz</span>
+all_differences.txt
+<span class="ansi-magenta-intense-fg ansi-bold">assoc_manhattan.jpeg</span>
+assoc_results.assoc
+assoc_results.log
+buildhapmap.txt
+corrected_hapmap.bed
+corrected_hapmap.bim
+corrected_hapmap.fam
+corrected_hapmap.log
+corrected_hapmap_tmp
+covar_mds.txt
+EUR_MDS_merge2
+flip_list.txt
+HapMap_3_r3_12.bed
+HapMap_3_r3_12.bim
+HapMap_3_r3_12.fam
+HapMap_3_r3_13.bed
+HapMap_3_r3_13.bim
+HapMap_3_r3_13.fam
+HapMap_3_r3_13.genome
+HapMap_3_r3_13.log
+HapMap_3_r3_13_mds.cluster1
+HapMap_3_r3_13_mds.cluster2
+HapMap_3_r3_13_mds.cluster3
+HapMap_3_r3_13_mds.log
+HapMap_3_r3_13_mds.mds
+HapMap-adj.bed
+HapMap-adj.bim
+HapMap-adj.fam
+HapMap-adj.log
+HapMap-adj_tmp
+HapMap_MDS2.bed
+HapMap_MDS2.bim
+HapMap_MDS2.fam
+HapMap_MDS2.log
+HapMap_MDS.bed
+HapMap_MDS.bim
+HapMap_MDS.fam
+HapMap_MDS.log
+HapMap_MDS.map
+HapMap_MDS.ped
+HapMap_SNPs.txt
+HapMap_subset_for_perm.bed
+HapMap_subset_for_perm.bim
+HapMap_subset_for_perm.fam
+HapMap_subset_for_perm.log
+indepSNP.prune.in
+<span class="ansi-magenta-intense-fg ansi-bold">Logistic_manhattan.jpeg</span>
+logistic_results.assoc_2.logistic
+logistic_results.assoc.logistic
+logistic_results.log
+MDS_merge2.bed
+MDS_merge2.bim
+MDS_merge2.cluster1
+MDS_merge2.cluster2
+MDS_merge2.cluster3
+MDS_merge2.fam
+MDS_merge2.genome
+MDS_merge2.log
+MDS_merge2.mds
+MDS_merge2.nosex
+MDS.pdf
+<span class="ansi-magenta-intense-fg ansi-bold">QQ-Plot_assoc.jpeg</span>
+<span class="ansi-magenta-intense-fg ansi-bold">QQ-Plot_logistic.jpeg</span>
+race_1kG10.txt
+race_1kG11.txt
+race_1kG12.txt
+race_1kG13.txt
+race_1kG14.txt
+race_1kG2.txt
+race_1kG3.txt
+race_1kG4.txt
+race_1kG5.txt
+race_1kG6.txt
+race_1kG7.txt
+race_1kG8.txt
+race_1kG9.txt
+race_1kG.txt
+racefile_own.txt
+racefile.txt
+SNPs_for_exlusion.txt
+sorted_subset.txt
+subset_1M_perm_result.assoc
+subset_1M_perm_result.assoc.mperm
+subset_1M_perm_result.log
+subset_snp_chr_22.txt
+uncorresponding_SNPs.txt
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=939cfbcb-0f6e-4d12-8048-255a85a07d51">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="c1">#assocファイル</span>
+ls <span class="p">|</span> grep assoc
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>adjusted_<span class="ansi-red-intense-fg ansi-bold">assoc</span>_results.<span class="ansi-red-intense-fg ansi-bold">assoc</span>
+adjusted_<span class="ansi-red-intense-fg ansi-bold">assoc</span>_results.<span class="ansi-red-intense-fg ansi-bold">assoc</span>.adjusted
+adjusted_<span class="ansi-red-intense-fg ansi-bold">assoc</span>_results.log
+<span class="ansi-red-intense-fg ansi-bold">assoc</span>_manhattan.jpeg
+<span class="ansi-red-intense-fg ansi-bold">assoc</span>_results.<span class="ansi-red-intense-fg ansi-bold">assoc</span>
+<span class="ansi-red-intense-fg ansi-bold">assoc</span>_results.log
+logistic_results.<span class="ansi-red-intense-fg ansi-bold">assoc</span>_2.logistic
+logistic_results.<span class="ansi-red-intense-fg ansi-bold">assoc</span>.logistic
+QQ-Plot_<span class="ansi-red-intense-fg ansi-bold">assoc</span>.jpeg
+subset_1M_perm_result.<span class="ansi-red-intense-fg ansi-bold">assoc</span>
+subset_1M_perm_result.<span class="ansi-red-intense-fg ansi-bold">assoc</span>.mperm
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d62cf5f3-47ee-4f06-81f7-40e3979db013">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>head adjusted_assoc_results.assoc.adjusted
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre> CHR         SNP      UNADJ         GC       BONF       HOLM   SIDAK_SS   SIDAK_SD     FDR_BH     FDR_BY
+   3   rs1097157   1.66e-06  1.861e-06          1          1     0.8316     0.8316     0.2871          1 
+   3   rs1840290   1.66e-06  1.861e-06          1          1     0.8316     0.8316     0.2871          1 
+   8    rs279466  2.441e-06  2.727e-06          1          1     0.9272     0.9272     0.2871          1 
+   8    rs279460  2.441e-06  2.727e-06          1          1     0.9272     0.9272     0.2871          1 
+   8    rs279453  2.441e-06  2.727e-06          1          1     0.9272     0.9272     0.2871          1 
+   8   rs2623297  2.441e-06  2.727e-06          1          1     0.9272     0.9272     0.2871          1 
+   3   rs1598120  2.527e-06  2.821e-06          1          1     0.9336     0.9336     0.2871          1 
+   3   rs2085079  3.162e-06  3.523e-06          1          1     0.9664     0.9664     0.2871          1 
+   3    rs834858  3.162e-06  3.523e-06          1          1     0.9664     0.9664     0.2871          1 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b79b9af9-e191-46f5-ae14-7e9f2ab75312">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>head adjusted_assoc_results.assoc
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre> CHR         SNP         BP   A1      F_A      F_U   A2        CHISQ            P           OR 
+   1   rs3131972     742584    A   0.1944   0.1455    G       0.9281       0.3354        1.418 
+   1   rs3131969     744045    A   0.1759      0.1    G        2.647       0.1037        1.921 
+   1   rs1048488     750775    C   0.1981   0.1455    T        1.054       0.3045        1.451 
+   1  rs12562034     758311    A  0.06481   0.1182    G        1.863       0.1723       0.5171 
+   1  rs12124819     766409    G    0.287      0.3    A      0.04416       0.8336       0.9394 
+   1   rs4040617     769185    G   0.1667      0.1    A          2.1       0.1473          1.8 
+   1   rs4970383     828418    A   0.2222   0.1727    C       0.8431       0.3585        1.368 
+   1   rs4475691     836671    T   0.1574   0.1273    C       0.4057       0.5242        1.281 
+   1   rs1806509     843817    C   0.4259   0.3455    A         1.49       0.2222        1.406 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1c5ecd2f-6474-4d83-9144-619dba651cef">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>head logistic_results.assoc.logistic
+head logistic_results.assoc_2.logistic <span class="c1">#NAが除去されている</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre> CHR         SNP         BP   A1       TEST    NMISS         OR         STAT            P 
+   1   rs3131972     742584    A        ADD      109      1.957        1.552       0.1207
+   1   rs3131969     744045    A        ADD      109      2.322          1.8      0.07179
+   1   rs1048488     750775    C        ADD      108      1.986        1.591       0.1117
+   1  rs12562034     758311    A        ADD      109     0.3292       -1.912      0.05586
+   1  rs12124819     766409    G        ADD      109     0.9143      -0.2787       0.7805
+   1   rs4040617     769185    G        ADD      109      2.059        1.549       0.1214
+   1   rs4970383     828418    A        ADD      109      1.825         1.41       0.1587
+   1   rs4475691     836671    T        ADD      109      1.669        1.116       0.2643
+   1   rs1806509     843817    C        ADD      109      1.817        1.854      0.06371
+ CHR         SNP         BP   A1       TEST    NMISS         OR         STAT            P 
+   1   rs3131972     742584    A        ADD      109      1.957        1.552       0.1207
+   1   rs3131969     744045    A        ADD      109      2.322          1.8      0.07179
+   1   rs1048488     750775    C        ADD      108      1.986        1.591       0.1117
+   1  rs12562034     758311    A        ADD      109     0.3292       -1.912      0.05586
+   1  rs12124819     766409    G        ADD      109     0.9143      -0.2787       0.7805
+   1   rs4040617     769185    G        ADD      109      2.059        1.549       0.1214
+   1   rs4970383     828418    A        ADD      109      1.825         1.41       0.1587
+   1   rs4475691     836671    T        ADD      109      1.669        1.116       0.2643
+   1   rs1806509     843817    C        ADD      109      1.817        1.854      0.06371
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=802e4263-fc1c-4116-95c7-f60514f7bfca">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>それぞれの項目などについてある程度まとめてあって参考になる</p>
+<p><a href="https://gist.github.com/kokitsuyuzaki/7907646">https://gist.github.com/kokitsuyuzaki/7907646</a></p>
 </div>
 </div>
 </div>
