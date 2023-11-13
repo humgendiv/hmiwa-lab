@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PRSTutorial1103</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>03_231113_TutorialPRS</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,6 +14259,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="03_231113_TutorialPRS">03_231113_TutorialPRS<a class="anchor-link" href="#03_231113_TutorialPRS">&#182;</a></h1><hr>
 <h1 id="Basic-Tutorial-for-Polygenic-Risk-Score-Analysis">Basic Tutorial for Polygenic Risk Score Analysis<a class="anchor-link" href="#Basic-Tutorial-for-Polygenic-Risk-Score-Analysis">&#182;</a></h1><p><a href="https://choishingwan.github.io/PRS-Tutorial/">https://choishingwan.github.io/PRS-Tutorial/</a></p>
 <p>今回はこれにしたがって動かしてみます</p>
 
@@ -14274,12 +14275,12 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="c1">#データのダウンロード</span>
-<span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
-mkdir -p data
-<span class="nb">cd</span> data
-wget <span class="s2">&quot;https://drive.google.com/u/0/uc?id=1RWjk49QNZj9zvJHc9X_wyZ51fdy6xQjv&amp;export=download&quot;</span> -O Height.gwas.txt.gz
-ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#データのダウンロード</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">hmiwa</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="n">d_20231023</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">data</span>
+<span class="n">cd</span> <span class="n">data</span>
+<span class="n">wget</span> <span class="s2">&quot;https://drive.google.com/u/0/uc?id=1RWjk49QNZj9zvJHc9X_wyZ51fdy6xQjv&amp;export=download&quot;</span> <span class="o">-</span><span class="n">O</span> <span class="n">Height</span><span class="o">.</span><span class="n">gwas</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -14347,8 +14348,8 @@ Height.gwas.txt.gz  100%[===================&gt;]  21.56M  37.5MB/s    in 0.6s
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="c1">#なかみの確認</span>
-gunzip -c Height.gwas.txt.gz <span class="p">|</span> head
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#なかみの確認</span>
+<span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">gwas</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">head</span>
 </pre></div>
 
      </div>
@@ -14429,7 +14430,7 @@ gzip: stdout: Broken pipe
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>md5sum Height.gwas.txt.gz
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">md5sum</span> <span class="n">Height</span><span class="o">.</span><span class="n">gwas</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 
      </div>
@@ -14476,9 +14477,9 @@ gzip: stdout: Broken pipe
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>gunzip -c Height.gwas.txt.gz <span class="p">|</span><span class="se">\</span>
-awk <span class="s1">&#39;NR==1 || ($11 &gt; 0.01) &amp;&amp; ($10 &gt; 0.8) {print}&#39;</span> <span class="p">|</span><span class="se">\</span>
-gzip  &gt; Height.gz
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">gwas</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span>\
+<span class="n">awk</span> <span class="s1">&#39;NR==1 || ($11 &gt; 0.01) &amp;&amp; ($10 &gt; 0.8) </span><span class="si">{print}</span><span class="s1">&#39;</span> <span class="o">|</span>\
+<span class="n">gzip</span>  <span class="o">&gt;</span> <span class="n">Height</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 
      </div>
@@ -14492,7 +14493,7 @@ gzip  &gt; Height.gz
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -14546,9 +14547,9 @@ gzip  &gt; Height.gz
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>gunzip -c Height.gz <span class="p">|</span><span class="se">\</span>
-awk <span class="s1">&#39;{seen[$3]++; if(seen[$3]==1){ print}}&#39;</span> <span class="p">|</span><span class="se">\</span>
-gzip - &gt; Height.nodup.gz
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span>\
+<span class="n">awk</span> <span class="s1">&#39;{seen[$3]++; if(seen[$3]==1){ print}}&#39;</span> <span class="o">|</span>\
+<span class="n">gzip</span> <span class="o">-</span> <span class="o">&gt;</span> <span class="n">Height</span><span class="o">.</span><span class="n">nodup</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 
      </div>
@@ -14562,7 +14563,7 @@ gzip - &gt; Height.nodup.gz
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -14608,12 +14609,12 @@ gzip - &gt; Height.nodup.gz
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Height.gz&quot;</span>
-gunzip -c Height.gz <span class="p">|</span> head -n <span class="m">5</span>
-<span class="nb">echo</span> <span class="s2">&quot;count:&quot;</span><span class="sb">`</span>gunzip -c Height.gz <span class="p">|</span> wc <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span><span class="sb">`</span>
-<span class="nb">echo</span> <span class="s2">&quot;Height.nodup.gz&quot;</span>
-gunzip -c Height.nodup.gz <span class="p">|</span> head -n <span class="m">5</span>
-<span class="nb">echo</span> <span class="s2">&quot;count:&quot;</span><span class="sb">`</span>gunzip -c Height.nodup.gz <span class="p">|</span> wc <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span><span class="sb">`</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;Height.gz&quot;</span>
+<span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">5</span>
+<span class="n">echo</span> <span class="s2">&quot;count:&quot;</span><span class="err">`</span><span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $1}&#39;</span><span class="err">`</span>
+<span class="n">echo</span> <span class="s2">&quot;Height.nodup.gz&quot;</span>
+<span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">nodup</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">5</span>
+<span class="n">echo</span> <span class="s2">&quot;count:&quot;</span><span class="err">`</span><span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">nodup</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $1}&#39;</span><span class="err">`</span>
 </pre></div>
 
      </div>
@@ -14674,12 +14675,12 @@ count:529494
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>gunzip -c Height.nodup.gz <span class="p">|</span><span class="se">\</span>
-awk <span class="s1">&#39;!( ($4==&quot;A&quot; &amp;&amp; $5==&quot;T&quot;) || \</span>
-<span class="s1">        ($4==&quot;T&quot; &amp;&amp; $5==&quot;A&quot;) || \</span>
-<span class="s1">        ($4==&quot;G&quot; &amp;&amp; $5==&quot;C&quot;) || \</span>
-<span class="s1">        ($4==&quot;C&quot; &amp;&amp; $5==&quot;G&quot;)) {print}&#39;</span> <span class="p">|</span><span class="se">\</span>
-    gzip &gt; Height.QC.gz
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">nodup</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span>\
+<span class="n">awk</span> <span class="s1">&#39;!( ($4==&quot;A&quot; &amp;&amp; $5==&quot;T&quot;) || </span><span class="se">\</span>
+<span class="s1">        ($4==&quot;T&quot; &amp;&amp; $5==&quot;A&quot;) || </span><span class="se">\</span>
+<span class="s1">        ($4==&quot;G&quot; &amp;&amp; $5==&quot;C&quot;) || </span><span class="se">\</span>
+<span class="s1">        ($4==&quot;C&quot; &amp;&amp; $5==&quot;G&quot;)) </span><span class="si">{print}</span><span class="s1">&#39;</span> <span class="o">|</span>\
+    <span class="n">gzip</span> <span class="o">&gt;</span> <span class="n">Height</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 
      </div>
@@ -14693,7 +14694,7 @@ awk <span class="s1">&#39;!( ($4==&quot;A&quot; &amp;&amp; $5==&quot;T&quot;) ||
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>gunzip -c Height.QC.gz <span class="p">|</span> wc <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">Height</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $1}&#39;</span>
 </pre></div>
 
      </div>
@@ -14746,14 +14747,14 @@ awk <span class="s1">&#39;!( ($4==&quot;A&quot; &amp;&amp; $5==&quot;T&quot;) ||
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="c1">#データのダウンロード</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#データのダウンロード</span>
 <span class="c1">#https://drive.google.com/u/0/uc?id=1uhJR_3sn7RA8U5iYQbcmTp6vFdQiF4F2&amp;export=download</span>
-<span class="nv">FILE_ID</span><span class="o">=</span>1uhJR_3sn7RA8U5iYQbcmTp6vFdQiF4F2
-<span class="nv">FILE_NAME</span><span class="o">=</span>EUR.zip
-curl -sc /tmp/cookie <span class="s2">&quot;https://drive.google.com/uc?export=download&amp;id=</span><span class="si">${</span><span class="nv">FILE_ID</span><span class="si">}</span><span class="s2">&quot;</span> &gt; /dev/null
-<span class="nv">CODE</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>awk <span class="s1">&#39;/_warning_/ {print $NF}&#39;</span> /tmp/cookie<span class="k">)</span><span class="s2">&quot;</span>  
-curl -Lb /tmp/cookie <span class="s2">&quot;https://drive.google.com/uc?export=download&amp;confirm=</span><span class="si">${</span><span class="nv">CODE</span><span class="si">}</span><span class="s2">&amp;id=</span><span class="si">${</span><span class="nv">FILE_ID</span><span class="si">}</span><span class="s2">&quot;</span> -o <span class="si">${</span><span class="nv">FILE_NAME</span><span class="si">}</span>
-ls
+<span class="n">FILE_ID</span><span class="o">=</span><span class="mi">1</span><span class="n">uhJR_3sn7RA8U5iYQbcmTp6vFdQiF4F2</span>
+<span class="n">FILE_NAME</span><span class="o">=</span><span class="n">EUR</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">sc</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">cookie</span> <span class="s2">&quot;https://drive.google.com/uc?export=download&amp;id=$</span><span class="si">{FILE_ID}</span><span class="s2">&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+<span class="n">CODE</span><span class="o">=</span><span class="s2">&quot;$(awk &#39;/_warning_/ {print $NF}&#39; /tmp/cookie)&quot;</span>  
+<span class="n">curl</span> <span class="o">-</span><span class="n">Lb</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">cookie</span> <span class="s2">&quot;https://drive.google.com/uc?export=download&amp;confirm=$</span><span class="si">{CODE}</span><span class="s2">&amp;id=$</span><span class="si">{FILE_ID}</span><span class="s2">&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="err">$</span><span class="p">{</span><span class="n">FILE_NAME</span><span class="p">}</span>
+<span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -14792,9 +14793,9 @@ ls
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>file EUR.zip
-unzip EUR.zip
-ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span> <span class="n">EUR</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">unzip</span> <span class="n">EUR</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -14846,7 +14847,7 @@ EUR.bim  EUR.fam  <span class="ansi-red-intense-fg ansi-bold">EUR.zip</span>    
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>md5sum EUR*
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">md5sum</span> <span class="n">EUR</span><span class="o">*</span>
 </pre></div>
 
      </div>
@@ -14895,15 +14896,15 @@ dd445ce969a81cded20da5c88b82d4df  EUR.height
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>plink <span class="se">\</span>
-    --bfile EUR <span class="se">\</span>
-    --maf <span class="m">0</span>.01 <span class="se">\</span>
-    --hwe 1e-6 <span class="se">\</span>
-    --geno <span class="m">0</span>.01 <span class="se">\</span>
-    --mind <span class="m">0</span>.01 <span class="se">\</span>
-    --write-snplist <span class="se">\</span>
-    --make-just-fam <span class="se">\</span>
-    --out EUR.QC
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span> \
+    <span class="o">--</span><span class="n">maf</span> <span class="mf">0.01</span> \
+    <span class="o">--</span><span class="n">hwe</span> <span class="mf">1e-6</span> \
+    <span class="o">--</span><span class="n">geno</span> <span class="mf">0.01</span> \
+    <span class="o">--</span><span class="n">mind</span> <span class="mf">0.01</span> \
+    <span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">snplist</span> \
+    <span class="o">--</span><span class="n">make</span><span class="o">-</span><span class="n">just</span><span class="o">-</span><span class="n">fam</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span>
 </pre></div>
 
      </div>
@@ -14984,12 +14985,12 @@ List of variant IDs written to EUR.QC.snplist .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>plink <span class="se">\</span>
-    --bfile EUR <span class="se">\</span>
-    --keep EUR.QC.fam <span class="se">\</span>
-    --extract EUR.QC.snplist <span class="se">\</span>
-    --indep-pairwise <span class="m">200</span> <span class="m">50</span> <span class="m">0</span>.25 <span class="se">\</span>
-    --out EUR.QC
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span> \
+    <span class="o">--</span><span class="n">keep</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">fam</span> \
+    <span class="o">--</span><span class="n">extract</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">snplist</span> \
+    <span class="o">--</span><span class="n">indep</span><span class="o">-</span><span class="n">pairwise</span> <span class="mi">200</span> <span class="mi">50</span> <span class="mf">0.25</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span>
 </pre></div>
 
      </div>
@@ -15080,12 +15081,12 @@ Marker lists written to EUR.QC.prune.in and EUR.QC.prune.out .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>plink <span class="se">\</span>
-    --bfile EUR <span class="se">\</span>
-    --extract EUR.QC.prune.in <span class="se">\</span>
-    --keep EUR.QC.fam <span class="se">\</span>
-    --het <span class="se">\</span>
-    --out EUR.QC
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span> \
+    <span class="o">--</span><span class="n">extract</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">prune</span><span class="o">.</span><span class="ow">in</span> \
+    <span class="o">--</span><span class="n">keep</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">fam</span> \
+    <span class="o">--</span><span class="n">het</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span>
 </pre></div>
 
      </div>
@@ -15150,13 +15151,13 @@ Note: No phenotypes present.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;dat &lt;- read.table(&quot;EUR.QC.het&quot;, header=T) # Read in the EUR.het file, specify it has header&#39;</span> &gt; het.R
-<span class="nb">echo</span> <span class="s1">&#39;m &lt;- mean(dat$F) # Calculate the mean&#39;</span> &gt;&gt; het.R
-<span class="nb">echo</span> <span class="s1">&#39;s &lt;- sd(dat$F) # Calculate the SD&#39;</span> &gt;&gt; het.R
-<span class="nb">echo</span> <span class="s1">&#39;valid &lt;- subset(dat, F &lt;= m+3*s &amp; F &gt;= m-3*s) # Get any samples with F coefficient within 3 SD of the population mean&#39;</span> &gt;&gt; het.R
-<span class="nb">echo</span> <span class="s1">&#39;write.table(valid[,c(1,2)], &quot;EUR.valid.sample&quot;, quote=F, row.names=F) # print FID and IID for valid samples&#39;</span> &gt;&gt; het.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;dat &lt;- read.table(&quot;EUR.QC.het&quot;, header=T) # Read in the EUR.het file, specify it has header&#39;</span> <span class="o">&gt;</span> <span class="n">het</span><span class="o">.</span><span class="n">R</span>
+<span class="n">echo</span> <span class="s1">&#39;m &lt;- mean(dat$F) # Calculate the mean&#39;</span> <span class="o">&gt;&gt;</span> <span class="n">het</span><span class="o">.</span><span class="n">R</span>
+<span class="n">echo</span> <span class="s1">&#39;s &lt;- sd(dat$F) # Calculate the SD&#39;</span> <span class="o">&gt;&gt;</span> <span class="n">het</span><span class="o">.</span><span class="n">R</span>
+<span class="n">echo</span> <span class="s1">&#39;valid &lt;- subset(dat, F &lt;= m+3*s &amp; F &gt;= m-3*s) # Get any samples with F coefficient within 3 SD of the population mean&#39;</span> <span class="o">&gt;&gt;</span> <span class="n">het</span><span class="o">.</span><span class="n">R</span>
+<span class="n">echo</span> <span class="s1">&#39;write.table(valid[,c(1,2)], &quot;EUR.valid.sample&quot;, quote=F, row.names=F) # print FID and IID for valid samples&#39;</span> <span class="o">&gt;&gt;</span> <span class="n">het</span><span class="o">.</span><span class="n">R</span>
 
-Rscript --no-save het.R
+<span class="n">Rscript</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">save</span> <span class="n">het</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -15170,7 +15171,7 @@ Rscript --no-save het.R
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -15208,7 +15209,7 @@ EUR.fam  EUR.QC.hh   EUR.QC.prune.out  <span class="ansi-red-intense-fg ansi-bol
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>head EUR.valid.sample
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head</span> <span class="n">EUR</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">sample</span>
 </pre></div>
 
      </div>
@@ -15252,8 +15253,8 @@ HG00108 HG00108
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>wc EUR.valid.sample
-wc EUR.QC.het
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wc</span> <span class="n">EUR</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">sample</span>
+<span class="n">wc</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">het</span>
 </pre></div>
 
      </div>
@@ -15303,9 +15304,9 @@ wc EUR.QC.het
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
-mkdir -p ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS
-mv data ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">hmiwa</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="n">d_20231023</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span>
+<span class="n">mv</span> <span class="n">data</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span>
 </pre></div>
 
      </div>
@@ -15319,10 +15320,10 @@ mv data ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;hmiwa-lab&quot;</span>
-ls ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
-<span class="nb">echo</span> <span class="s2">&quot;hmiwa1&quot;</span>
-ls ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;hmiwa-lab&quot;</span>
+<span class="n">ls</span> <span class="o">~/</span><span class="n">hmiwa</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="n">d_20231023</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span>
+<span class="n">echo</span> <span class="s2">&quot;hmiwa1&quot;</span>
+<span class="n">ls</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span>
 </pre></div>
 
      </div>
@@ -15373,26 +15374,26 @@ EUR.fam  EUR.QC.hh   EUR.QC.prune.out  <span class="ansi-red-intense-fg ansi-bol
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span>
 <span class="c1">#1-4は連続して実行すること</span>
-cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/mismatchSNP.R</span>
-<span class="s"># Read in bim file</span>
-<span class="s">bim &lt;- read.table(&quot;EUR.bim&quot;)</span>
-<span class="s">colnames(bim) &lt;- c(&quot;CHR&quot;, &quot;SNP&quot;, &quot;CM&quot;, &quot;BP&quot;, &quot;B.A1&quot;, &quot;B.A2&quot;)</span>
-<span class="s"># Read in QCed SNPs</span>
-<span class="s">qc &lt;- read.table(&quot;EUR.QC.snplist&quot;, header = F, stringsAsFactors = F)</span>
-<span class="s"># Read in the GWAS data</span>
-<span class="s">height &lt;-</span>
-<span class="s">    read.table(gzfile(&quot;Height.QC.gz&quot;),</span>
-<span class="s">            header = T,</span>
-<span class="s">            stringsAsFactors = F, </span>
-<span class="s">            sep=&quot;\t&quot;)</span>
-<span class="s"># Change all alleles to upper case for easy comparison</span>
-<span class="s">height\$A1 &lt;- toupper(height\$A1)</span>
-<span class="s">height\$A2 &lt;- toupper(height\$A2)</span>
-<span class="s">bim\$B.A1 &lt;- toupper(bim\$B.A1)</span>
-<span class="s">bim\$B.A2 &lt;- toupper(bim\$B.A2)</span>
-<span class="s">EOL</span>
+<span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">mismatchSNP</span><span class="o">.</span><span class="n">R</span>
+<span class="c1"># Read in bim file</span>
+<span class="n">bim</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.bim&quot;</span><span class="p">)</span>
+<span class="n">colnames</span><span class="p">(</span><span class="n">bim</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;CHR&quot;</span><span class="p">,</span> <span class="s2">&quot;SNP&quot;</span><span class="p">,</span> <span class="s2">&quot;CM&quot;</span><span class="p">,</span> <span class="s2">&quot;BP&quot;</span><span class="p">,</span> <span class="s2">&quot;B.A1&quot;</span><span class="p">,</span> <span class="s2">&quot;B.A2&quot;</span><span class="p">)</span>
+<span class="c1"># Read in QCed SNPs</span>
+<span class="n">qc</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.QC.snplist&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+<span class="c1"># Read in the GWAS data</span>
+<span class="n">height</span> <span class="o">&lt;-</span>
+    <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">gzfile</span><span class="p">(</span><span class="s2">&quot;Height.QC.gz&quot;</span><span class="p">),</span>
+            <span class="n">header</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span>
+            <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span> 
+            <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Change all alleles to upper case for easy comparison</span>
+<span class="n">height</span>\<span class="err">$</span><span class="n">A1</span> <span class="o">&lt;-</span> <span class="n">toupper</span><span class="p">(</span><span class="n">height</span>\<span class="err">$</span><span class="n">A1</span><span class="p">)</span>
+<span class="n">height</span>\<span class="err">$</span><span class="n">A2</span> <span class="o">&lt;-</span> <span class="n">toupper</span><span class="p">(</span><span class="n">height</span>\<span class="err">$</span><span class="n">A2</span><span class="p">)</span>
+<span class="n">bim</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span> <span class="o">&lt;-</span> <span class="n">toupper</span><span class="p">(</span><span class="n">bim</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span><span class="p">)</span>
+<span class="n">bim</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span> <span class="o">&lt;-</span> <span class="n">toupper</span><span class="p">(</span><span class="n">bim</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span><span class="p">)</span>
+<span class="n">EOL</span>
 </pre></div>
 
      </div>
@@ -15411,36 +15412,36 @@ cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_Tutori
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt;&gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/mismatchSNP.R</span>
-<span class="s"># Merge summary statistic with target</span>
-<span class="s">info &lt;- merge(bim, height, by = c(&quot;SNP&quot;, &quot;CHR&quot;, &quot;BP&quot;))</span>
-<span class="s"># Filter QCed SNPs</span>
-<span class="s">info &lt;- info[info\$SNP %in% qc\$V1,]</span>
-<span class="s"># Function for finding the complementary allele</span>
-<span class="s">complement &lt;- function(x) {</span>
-<span class="s">    switch (</span>
-<span class="s">        x,</span>
-<span class="s">        &quot;A&quot; = &quot;T&quot;,</span>
-<span class="s">        &quot;C&quot; = &quot;G&quot;,</span>
-<span class="s">        &quot;T&quot; = &quot;A&quot;,</span>
-<span class="s">        &quot;G&quot; = &quot;C&quot;,</span>
-<span class="s">        return(NA)</span>
-<span class="s">    )</span>
-<span class="s">}</span>
-<span class="s"># Get SNPs that have the same alleles across base and target</span>
-<span class="s">info.match &lt;- subset(info, A1 == B.A1 &amp; A2 == B.A2)</span>
-<span class="s"># Identify SNPs that are complementary between base and target</span>
-<span class="s">info\$C.A1 &lt;- sapply(info\$B.A1, complement)</span>
-<span class="s">info\$C.A2 &lt;- sapply(info\$B.A2, complement)</span>
-<span class="s">info.complement &lt;- subset(info, A1 == C.A1 &amp; A2 == C.A2)</span>
-<span class="s"># Update the complementary alleles in the bim file</span>
-<span class="s"># This allow us to match the allele in subsequent analysis</span>
-<span class="s">complement.snps &lt;- bim\$SNP %in% info.complement\$SNP</span>
-<span class="s">bim[complement.snps,]\$B.A1 &lt;-</span>
-<span class="s">    sapply(bim[complement.snps,]\$B.A1, complement)</span>
-<span class="s">bim[complement.snps,]\$B.A2 &lt;-</span>
-<span class="s">    sapply(bim[complement.snps,]\$B.A2, complement)</span>
-<span class="s">EOL</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">mismatchSNP</span><span class="o">.</span><span class="n">R</span>
+<span class="c1"># Merge summary statistic with target</span>
+<span class="n">info</span> <span class="o">&lt;-</span> <span class="n">merge</span><span class="p">(</span><span class="n">bim</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;SNP&quot;</span><span class="p">,</span> <span class="s2">&quot;CHR&quot;</span><span class="p">,</span> <span class="s2">&quot;BP&quot;</span><span class="p">))</span>
+<span class="c1"># Filter QCed SNPs</span>
+<span class="n">info</span> <span class="o">&lt;-</span> <span class="n">info</span><span class="p">[</span><span class="n">info</span>\<span class="err">$</span><span class="n">SNP</span> <span class="o">%</span><span class="k">in</span>% qc\$V1,]
+<span class="c1"># Function for finding the complementary allele</span>
+<span class="n">complement</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">switch</span> <span class="p">(</span>
+        <span class="n">x</span><span class="p">,</span>
+        <span class="s2">&quot;A&quot;</span> <span class="o">=</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;C&quot;</span> <span class="o">=</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;T&quot;</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;G&quot;</span> <span class="o">=</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span>
+        <span class="k">return</span><span class="p">(</span><span class="n">NA</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+<span class="c1"># Get SNPs that have the same alleles across base and target</span>
+<span class="n">info</span><span class="o">.</span><span class="n">match</span> <span class="o">&lt;-</span> <span class="n">subset</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">A1</span> <span class="o">==</span> <span class="n">B</span><span class="o">.</span><span class="n">A1</span> <span class="o">&amp;</span> <span class="n">A2</span> <span class="o">==</span> <span class="n">B</span><span class="o">.</span><span class="n">A2</span><span class="p">)</span>
+<span class="c1"># Identify SNPs that are complementary between base and target</span>
+<span class="n">info</span>\<span class="err">$</span><span class="n">C</span><span class="o">.</span><span class="n">A1</span> <span class="o">&lt;-</span> <span class="n">sapply</span><span class="p">(</span><span class="n">info</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span><span class="p">,</span> <span class="n">complement</span><span class="p">)</span>
+<span class="n">info</span>\<span class="err">$</span><span class="n">C</span><span class="o">.</span><span class="n">A2</span> <span class="o">&lt;-</span> <span class="n">sapply</span><span class="p">(</span><span class="n">info</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span><span class="p">,</span> <span class="n">complement</span><span class="p">)</span>
+<span class="n">info</span><span class="o">.</span><span class="n">complement</span> <span class="o">&lt;-</span> <span class="n">subset</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">A1</span> <span class="o">==</span> <span class="n">C</span><span class="o">.</span><span class="n">A1</span> <span class="o">&amp;</span> <span class="n">A2</span> <span class="o">==</span> <span class="n">C</span><span class="o">.</span><span class="n">A2</span><span class="p">)</span>
+<span class="c1"># Update the complementary alleles in the bim file</span>
+<span class="c1"># This allow us to match the allele in subsequent analysis</span>
+<span class="n">complement</span><span class="o">.</span><span class="n">snps</span> <span class="o">&lt;-</span> <span class="n">bim</span>\<span class="err">$</span><span class="n">SNP</span> <span class="o">%</span><span class="k">in</span>% info.complement\$SNP
+<span class="n">bim</span><span class="p">[</span><span class="n">complement</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span> <span class="o">&lt;-</span>
+    <span class="n">sapply</span><span class="p">(</span><span class="n">bim</span><span class="p">[</span><span class="n">complement</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span><span class="p">,</span> <span class="n">complement</span><span class="p">)</span>
+<span class="n">bim</span><span class="p">[</span><span class="n">complement</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span> <span class="o">&lt;-</span>
+    <span class="n">sapply</span><span class="p">(</span><span class="n">bim</span><span class="p">[</span><span class="n">complement</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span><span class="p">,</span> <span class="n">complement</span><span class="p">)</span>
+<span class="n">EOL</span>
 </pre></div>
 
      </div>
@@ -15459,33 +15460,33 @@ cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_Tutori
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt;&gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/mismatchSNP.R</span>
-<span class="s"># identify SNPs that need recoding</span>
-<span class="s">info.recode &lt;- subset(info, A1 == B.A2 &amp; A2 == B.A1)</span>
-<span class="s"># Update the recode SNPs</span>
-<span class="s">recode.snps &lt;- bim\$SNP %in% info.recode\$SNP</span>
-<span class="s">tmp &lt;- bim[recode.snps,]\$B.A1</span>
-<span class="s">bim[recode.snps,]\$B.A1 &lt;- bim[recode.snps,]\$B.A2</span>
-<span class="s">bim[recode.snps,]\$B.A2 &lt;- tmp</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">mismatchSNP</span><span class="o">.</span><span class="n">R</span>
+<span class="c1"># identify SNPs that need recoding</span>
+<span class="n">info</span><span class="o">.</span><span class="n">recode</span> <span class="o">&lt;-</span> <span class="n">subset</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">A1</span> <span class="o">==</span> <span class="n">B</span><span class="o">.</span><span class="n">A2</span> <span class="o">&amp;</span> <span class="n">A2</span> <span class="o">==</span> <span class="n">B</span><span class="o">.</span><span class="n">A1</span><span class="p">)</span>
+<span class="c1"># Update the recode SNPs</span>
+<span class="n">recode</span><span class="o">.</span><span class="n">snps</span> <span class="o">&lt;-</span> <span class="n">bim</span>\<span class="err">$</span><span class="n">SNP</span> <span class="o">%</span><span class="k">in</span>% info.recode\$SNP
+<span class="n">tmp</span> <span class="o">&lt;-</span> <span class="n">bim</span><span class="p">[</span><span class="n">recode</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span>
+<span class="n">bim</span><span class="p">[</span><span class="n">recode</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span> <span class="o">&lt;-</span> <span class="n">bim</span><span class="p">[</span><span class="n">recode</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span>
+<span class="n">bim</span><span class="p">[</span><span class="n">recode</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span> <span class="o">&lt;-</span> <span class="n">tmp</span>
 
-<span class="s"># identify SNPs that need recoding &amp; complement</span>
-<span class="s">info.crecode &lt;- subset(info, A1 == C.A2 &amp; A2 == C.A1)</span>
-<span class="s"># Update the recode + strand flip SNPs</span>
-<span class="s">com.snps &lt;- bim\$SNP %in% info.crecode\$SNP</span>
-<span class="s">tmp &lt;- bim[com.snps,]\$B.A1</span>
-<span class="s">bim[com.snps,]\$B.A1 &lt;- as.character(sapply(bim[com.snps,]\$B.A2, complement))</span>
-<span class="s">bim[com.snps,]\$B.A2 &lt;- as.character(sapply(tmp, complement))</span>
+<span class="c1"># identify SNPs that need recoding &amp; complement</span>
+<span class="n">info</span><span class="o">.</span><span class="n">crecode</span> <span class="o">&lt;-</span> <span class="n">subset</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">A1</span> <span class="o">==</span> <span class="n">C</span><span class="o">.</span><span class="n">A2</span> <span class="o">&amp;</span> <span class="n">A2</span> <span class="o">==</span> <span class="n">C</span><span class="o">.</span><span class="n">A1</span><span class="p">)</span>
+<span class="c1"># Update the recode + strand flip SNPs</span>
+<span class="n">com</span><span class="o">.</span><span class="n">snps</span> <span class="o">&lt;-</span> <span class="n">bim</span>\<span class="err">$</span><span class="n">SNP</span> <span class="o">%</span><span class="k">in</span>% info.crecode\$SNP
+<span class="n">tmp</span> <span class="o">&lt;-</span> <span class="n">bim</span><span class="p">[</span><span class="n">com</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span>
+<span class="n">bim</span><span class="p">[</span><span class="n">com</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A1</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">character</span><span class="p">(</span><span class="n">sapply</span><span class="p">(</span><span class="n">bim</span><span class="p">[</span><span class="n">com</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span><span class="p">,</span> <span class="n">complement</span><span class="p">))</span>
+<span class="n">bim</span><span class="p">[</span><span class="n">com</span><span class="o">.</span><span class="n">snps</span><span class="p">,]</span>\<span class="err">$</span><span class="n">B</span><span class="o">.</span><span class="n">A2</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">character</span><span class="p">(</span><span class="n">sapply</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">complement</span><span class="p">))</span>
 
-<span class="s"># Output updated bim file</span>
-<span class="s">write.table(</span>
-<span class="s">    bim[,c(&quot;SNP&quot;, &quot;B.A1&quot;)],</span>
-<span class="s">    &quot;EUR.a1&quot;,</span>
-<span class="s">    quote = F,</span>
-<span class="s">    row.names = F,</span>
-<span class="s">    col.names = F,</span>
-<span class="s">    sep=&quot;\t&quot;</span>
-<span class="s">)</span>
-<span class="s">EOL</span>
+<span class="c1"># Output updated bim file</span>
+<span class="n">write</span><span class="o">.</span><span class="n">table</span><span class="p">(</span>
+    <span class="n">bim</span><span class="p">[,</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;SNP&quot;</span><span class="p">,</span> <span class="s2">&quot;B.A1&quot;</span><span class="p">)],</span>
+    <span class="s2">&quot;EUR.a1&quot;</span><span class="p">,</span>
+    <span class="n">quote</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+    <span class="n">col</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+<span class="n">EOL</span>
 </pre></div>
 
      </div>
@@ -15504,20 +15505,20 @@ cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_Tutori
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt;&gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/mismatchSNP.R</span>
-<span class="s">mismatch &lt;-</span>
-<span class="s">    bim\$SNP[!(bim\$SNP %in% info.match\$SNP |</span>
-<span class="s">                bim\$SNP %in% info.complement\$SNP | </span>
-<span class="s">                bim\$SNP %in% info.recode\$SNP |</span>
-<span class="s">                bim\$SNP %in% info.crecode\$SNP)]</span>
-<span class="s">write.table(</span>
-<span class="s">    mismatch,</span>
-<span class="s">    &quot;EUR.mismatch&quot;,</span>
-<span class="s">    quote = F,</span>
-<span class="s">    row.names = F,</span>
-<span class="s">    col.names = F</span>
-<span class="s">)</span>
-<span class="s">EOL</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">mismatchSNP</span><span class="o">.</span><span class="n">R</span>
+<span class="n">mismatch</span> <span class="o">&lt;-</span>
+    <span class="n">bim</span>\<span class="err">$</span><span class="n">SNP</span><span class="p">[</span><span class="o">!(</span>bim<span class="se">\$</span>SNP %in% info.match<span class="se">\$</span>SNP <span class="p">|</span>
+                <span class="n">bim</span>\<span class="err">$</span><span class="n">SNP</span> <span class="o">%</span><span class="k">in</span>% info.complement\$SNP | 
+                <span class="n">bim</span>\<span class="err">$</span><span class="n">SNP</span> <span class="o">%</span><span class="k">in</span>% info.recode\$SNP |
+                <span class="n">bim</span>\<span class="err">$</span><span class="n">SNP</span> <span class="o">%</span><span class="k">in</span>% info.crecode\$SNP)]
+<span class="n">write</span><span class="o">.</span><span class="n">table</span><span class="p">(</span>
+    <span class="n">mismatch</span><span class="p">,</span>
+    <span class="s2">&quot;EUR.mismatch&quot;</span><span class="p">,</span>
+    <span class="n">quote</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="n">F</span><span class="p">,</span>
+    <span class="n">col</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="n">F</span>
+<span class="p">)</span>
+<span class="n">EOL</span>
 </pre></div>
 
      </div>
@@ -15531,7 +15532,7 @@ cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_Tutori
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/mismatchSNP.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">mismatchSNP</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -15646,7 +15647,7 @@ write.table(
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/mismatchSNP.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Rscript</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">mismatchSNP</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -15660,7 +15661,7 @@ write.table(
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span>
 </pre></div>
 
      </div>
@@ -15710,12 +15711,12 @@ EUR.fam  EUR.QC.hh     EUR.QC.snplist    <span class="ansi-red-intense-fg ansi-b
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>plink <span class="se">\</span>
-    --bfile EUR <span class="se">\</span>
-    --extract EUR.QC.prune.in <span class="se">\</span>
-    --keep EUR.valid.sample <span class="se">\</span>
-    --check-sex <span class="se">\</span>
-    --out EUR.QC
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span> \
+    <span class="o">--</span><span class="n">extract</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">prune</span><span class="o">.</span><span class="ow">in</span> \
+    <span class="o">--</span><span class="n">keep</span> <span class="n">EUR</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">sample</span> \
+    <span class="o">--</span><span class="n">check</span><span class="o">-</span><span class="n">sex</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span>
 </pre></div>
 
      </div>
@@ -15781,13 +15782,13 @@ Report written to EUR.QC.sexcheck .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt;&gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/sexcheck.R</span>
-<span class="s"># Read in file</span>
-<span class="s">valid &lt;- read.table(&quot;EUR.valid.sample&quot;, header=T)</span>
-<span class="s">dat &lt;- read.table(&quot;EUR.QC.sexcheck&quot;, header=T)</span>
-<span class="s">valid &lt;- subset(dat, STATUS==&quot;OK&quot; &amp; FID %in% valid\$FID)</span>
-<span class="s">write.table(valid[,c(&quot;FID&quot;, &quot;IID&quot;)], &quot;EUR.QC.valid&quot;, row.names=F, col.names=F, sep=&quot;\t&quot;, quote=F) </span>
-<span class="s">EOL</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">sexcheck</span><span class="o">.</span><span class="n">R</span>
+<span class="c1"># Read in file</span>
+<span class="n">valid</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.valid.sample&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.QC.sexcheck&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">valid</span> <span class="o">&lt;-</span> <span class="n">subset</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">STATUS</span><span class="o">==</span><span class="s2">&quot;OK&quot;</span> <span class="o">&amp;</span> <span class="n">FID</span> <span class="o">%</span><span class="k">in</span>% valid\$FID)
+<span class="n">write</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">valid</span><span class="p">[,</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span> <span class="s2">&quot;IID&quot;</span><span class="p">)],</span> <span class="s2">&quot;EUR.QC.valid&quot;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">,</span> <span class="n">col</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">F</span><span class="p">)</span> 
+<span class="n">EOL</span>
 </pre></div>
 
      </div>
@@ -15801,7 +15802,7 @@ Report written to EUR.QC.sexcheck .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/sexcheck.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">sexcheck</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -15840,7 +15841,7 @@ write.table(valid[,c(&#34;FID&#34;, &#34;IID&#34;)], &#34;EUR.QC.valid&#34;, row
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/sexcheck.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Rscript</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">sexcheck</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -15854,7 +15855,7 @@ write.table(valid[,c(&#34;FID&#34;, &#34;IID&#34;)], &#34;EUR.QC.valid&#34;, row
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -15894,7 +15895,7 @@ EUR.height  EUR.QC.log    EUR.valid.sample  het.R
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>head EUR.QC.valid
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">valid</span>
 </pre></div>
 
      </div>
@@ -15938,7 +15939,7 @@ HG00109	HG00109
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>head EUR.QC.sexcheck
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">sexcheck</span>
 </pre></div>
 
      </div>
@@ -15982,8 +15983,8 @@ HG00109	HG00109
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>wc EUR.QC.valid
-wc EUR.QC.sexcheck
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wc</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">valid</span>
+<span class="n">wc</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">sexcheck</span>
 </pre></div>
 
      </div>
@@ -16034,12 +16035,12 @@ wc EUR.QC.sexcheck
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>plink <span class="se">\</span>
-    --bfile EUR <span class="se">\</span>
-    --extract EUR.QC.prune.in <span class="se">\</span>
-    --keep EUR.QC.valid <span class="se">\</span>
-    --rel-cutoff <span class="m">0</span>.125 <span class="se">\</span>
-    --out EUR.QC
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span> \
+    <span class="o">--</span><span class="n">extract</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">prune</span><span class="o">.</span><span class="ow">in</span> \
+    <span class="o">--</span><span class="n">keep</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">valid</span> \
+    <span class="o">--</span><span class="n">rel</span><span class="o">-</span><span class="n">cutoff</span> <span class="mf">0.125</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span>
 </pre></div>
 
      </div>
@@ -16098,7 +16099,7 @@ Remaining sample IDs written to EUR.QC.rel.id .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -16138,8 +16139,8 @@ EUR.height  EUR.QC.log    EUR.QC.valid      <span class="ansi-red-intense-fg ans
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>head EUR.QC.rel.id
-wc EUR.QC.rel.id
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">rel</span><span class="o">.</span><span class="n">id</span>
+<span class="n">wc</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">rel</span><span class="o">.</span><span class="n">id</span>
 </pre></div>
 
      </div>
@@ -16201,14 +16202,14 @@ HG00109	HG00109
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>plink <span class="se">\</span>
-    --bfile EUR <span class="se">\</span>
-    --make-bed <span class="se">\</span>
-    --keep EUR.QC.rel.id <span class="se">\</span>
-    --out EUR.QC <span class="se">\</span>
-    --extract EUR.QC.snplist <span class="se">\</span>
-    --exclude EUR.mismatch <span class="se">\</span>
-    --a1-allele EUR.a1
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span> \
+    <span class="o">--</span><span class="n">make</span><span class="o">-</span><span class="n">bed</span> \
+    <span class="o">--</span><span class="n">keep</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">rel</span><span class="o">.</span><span class="n">id</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span> \
+    <span class="o">--</span><span class="n">extract</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">snplist</span> \
+    <span class="o">--</span><span class="n">exclude</span> <span class="n">EUR</span><span class="o">.</span><span class="n">mismatch</span> \
+    <span class="o">--</span><span class="n">a1</span><span class="o">-</span><span class="n">allele</span> <span class="n">EUR</span><span class="o">.</span><span class="n">a1</span>
 </pre></div>
 
      </div>
@@ -16268,7 +16269,7 @@ Note: No phenotypes present.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -16338,12 +16339,12 @@ EUR.height  EUR.QC.hh     EUR.QC.sexcheck   <span class="ansi-red-intense-fg ans
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/updateES.R</span>
-<span class="s">dat &lt;- read.table(gzfile(&quot;Height.QC.gz&quot;), header=T)</span>
-<span class="s">dat\$BETA &lt;- log(dat\$OR)</span>
-<span class="s">write.table(dat, &quot;Height.QC.Transformed&quot;, quote=F, row.names=F)</span>
-<span class="s">EOL</span>
-cat ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/updateES.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">updateES</span><span class="o">.</span><span class="n">R</span>
+<span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">gzfile</span><span class="p">(</span><span class="s2">&quot;Height.QC.gz&quot;</span><span class="p">),</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">dat</span>\<span class="err">$</span><span class="n">BETA</span> <span class="o">&lt;-</span> <span class="n">log</span><span class="p">(</span><span class="n">dat</span>\<span class="err">$</span><span class="n">OR</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="s2">&quot;Height.QC.Transformed&quot;</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">F</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">EOL</span>
+<span class="n">cat</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">updateES</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -16380,8 +16381,8 @@ write.table(dat, &#34;Height.QC.Transformed&#34;, quote=F, row.names=F)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/
-Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/updateES.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span>
+<span class="n">Rscript</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">updateES</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -16403,7 +16404,7 @@ Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/updateES.R
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>head Height.QC.Transformed
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head</span> <span class="n">Height</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">Transformed</span>
 </pre></div>
 
      </div>
@@ -16454,15 +16455,15 @@ Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/updateES.R
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>plink <span class="se">\</span>
-    --bfile EUR.QC <span class="se">\</span>
-    --clump-p1 <span class="m">1</span> <span class="se">\</span>
-    --clump-r2 <span class="m">0</span>.1 <span class="se">\</span>
-    --clump-kb <span class="m">250</span> <span class="se">\</span>
-    --clump Height.QC.Transformed <span class="se">\</span>
-    --clump-snp-field SNP <span class="se">\</span>
-    --clump-field P <span class="se">\</span>
-    --out EUR
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span> \
+    <span class="o">--</span><span class="n">clump</span><span class="o">-</span><span class="n">p1</span> <span class="mi">1</span> \
+    <span class="o">--</span><span class="n">clump</span><span class="o">-</span><span class="n">r2</span> <span class="mf">0.1</span> \
+    <span class="o">--</span><span class="n">clump</span><span class="o">-</span><span class="n">kb</span> <span class="mi">250</span> \
+    <span class="o">--</span><span class="n">clump</span> <span class="n">Height</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">Transformed</span> \
+    <span class="o">--</span><span class="n">clump</span><span class="o">-</span><span class="n">snp</span><span class="o">-</span><span class="n">field</span> <span class="n">SNP</span> \
+    <span class="o">--</span><span class="n">clump</span><span class="o">-</span><span class="n">field</span> <span class="n">P</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span>
 </pre></div>
 
      </div>
@@ -16542,7 +16543,7 @@ Results written to EUR.clumped .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>awk <span class="s1">&#39;NR!=1{print $3}&#39;</span> EUR.clumped &gt;  EUR.valid.snp
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">awk</span> <span class="s1">&#39;NR!=1{print $3}&#39;</span> <span class="n">EUR</span><span class="o">.</span><span class="n">clumped</span> <span class="o">&gt;</span>  <span class="n">EUR</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">snp</span>
 </pre></div>
 
      </div>
@@ -16581,7 +16582,7 @@ Results written to EUR.clumped .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>awk <span class="s1">&#39;{print $3,$8}&#39;</span> Height.QC.Transformed &gt; SNP.pvalue
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">awk</span> <span class="s1">&#39;{print $3,$8}&#39;</span> <span class="n">Height</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">Transformed</span> <span class="o">&gt;</span> <span class="n">SNP</span><span class="o">.</span><span class="n">pvalue</span>
 </pre></div>
 
      </div>
@@ -16605,13 +16606,13 @@ Results written to EUR.clumped .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;0.001 0 0.001&quot;</span> &gt; range_list 
-<span class="nb">echo</span> <span class="s2">&quot;0.05 0 0.05&quot;</span> &gt;&gt; range_list
-<span class="nb">echo</span> <span class="s2">&quot;0.1 0 0.1&quot;</span> &gt;&gt; range_list
-<span class="nb">echo</span> <span class="s2">&quot;0.2 0 0.2&quot;</span> &gt;&gt; range_list
-<span class="nb">echo</span> <span class="s2">&quot;0.3 0 0.3&quot;</span> &gt;&gt; range_list
-<span class="nb">echo</span> <span class="s2">&quot;0.4 0 0.4&quot;</span> &gt;&gt; range_list
-<span class="nb">echo</span> <span class="s2">&quot;0.5 0 0.5&quot;</span> &gt;&gt; range_list
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;0.001 0 0.001&quot;</span> <span class="o">&gt;</span> <span class="n">range_list</span> 
+<span class="n">echo</span> <span class="s2">&quot;0.05 0 0.05&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">range_list</span>
+<span class="n">echo</span> <span class="s2">&quot;0.1 0 0.1&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">range_list</span>
+<span class="n">echo</span> <span class="s2">&quot;0.2 0 0.2&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">range_list</span>
+<span class="n">echo</span> <span class="s2">&quot;0.3 0 0.3&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">range_list</span>
+<span class="n">echo</span> <span class="s2">&quot;0.4 0 0.4&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">range_list</span>
+<span class="n">echo</span> <span class="s2">&quot;0.5 0 0.5&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">range_list</span>
 </pre></div>
 
      </div>
@@ -16635,12 +16636,12 @@ Results written to EUR.clumped .
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>plink <span class="se">\</span>
-    --bfile EUR.QC <span class="se">\</span>
-    --score Height.QC.Transformed <span class="m">3</span> <span class="m">4</span> <span class="m">12</span> header <span class="se">\</span>
-    --q-score-range range_list SNP.pvalue <span class="se">\</span>
-    --extract EUR.valid.snp <span class="se">\</span>
-    --out EUR
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span> \
+    <span class="o">--</span><span class="n">score</span> <span class="n">Height</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">Transformed</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">12</span> <span class="n">header</span> \
+    <span class="o">--</span><span class="n">q</span><span class="o">-</span><span class="n">score</span><span class="o">-</span><span class="nb">range</span> <span class="n">range_list</span> <span class="n">SNP</span><span class="o">.</span><span class="n">pvalue</span> \
+    <span class="o">--</span><span class="n">extract</span> <span class="n">EUR</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">snp</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span>
 </pre></div>
 
      </div>
@@ -16700,7 +16701,7 @@ Results written to EUR.*.profile.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls -l *.profile
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="o">*.</span><span class="n">profile</span>
 </pre></div>
 
      </div>
@@ -16750,17 +16751,17 @@ Results written to EUR.*.profile.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="c1"># First, we need to perform prunning</span>
-plink <span class="se">\</span>
-    --bfile EUR.QC <span class="se">\</span>
-    --indep-pairwise <span class="m">200</span> <span class="m">50</span> <span class="m">0</span>.25 <span class="se">\</span>
-    --out EUR
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First, we need to perform prunning</span>
+<span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span> \
+    <span class="o">--</span><span class="n">indep</span><span class="o">-</span><span class="n">pairwise</span> <span class="mi">200</span> <span class="mi">50</span> <span class="mf">0.25</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span>
 <span class="c1"># Then we calculate the first 6 PCs</span>
-plink <span class="se">\</span>
-    --bfile EUR.QC <span class="se">\</span>
-    --extract EUR.prune.in <span class="se">\</span>
-    --pca <span class="m">6</span> <span class="se">\</span>
-    --out EUR
+<span class="n">plink</span> \
+    <span class="o">--</span><span class="n">bfile</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span> \
+    <span class="o">--</span><span class="n">extract</span> <span class="n">EUR</span><span class="o">.</span><span class="n">prune</span><span class="o">.</span><span class="ow">in</span> \
+    <span class="o">--</span><span class="n">pca</span> <span class="mi">6</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span>
 </pre></div>
 
      </div>
@@ -16903,52 +16904,52 @@ ServerApp.rate_limit_window=3.0 (secs)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/BFPRS.R</span>
-<span class="s">p.threshold &lt;- c(0.001,0.05,0.1,0.2,0.3,0.4,0.5)</span>
-<span class="s"># Read in the phenotype file </span>
-<span class="s">phenotype &lt;- read.table(&quot;EUR.height&quot;, header=T)</span>
-<span class="s"># Read in the PCs</span>
-<span class="s">pcs &lt;- read.table(&quot;EUR.eigenvec&quot;, header=F)</span>
-<span class="s"># The default output from plink does not include a header</span>
-<span class="s"># To make things simple, we will add the appropriate headers</span>
-<span class="s"># (1:6 because there are 6 PCs)</span>
-<span class="s">colnames(pcs) &lt;- c(&quot;FID&quot;, &quot;IID&quot;, paste0(&quot;PC&quot;,1:6)) </span>
-<span class="s"># Read in the covariates (here, it is sex)</span>
-<span class="s">covariate &lt;- read.table(&quot;EUR.cov&quot;, header=T)</span>
-<span class="s"># Now merge the files</span>
-<span class="s">pheno &lt;- merge(merge(phenotype, covariate, by=c(&quot;FID&quot;, &quot;IID&quot;)), pcs, by=c(&quot;FID&quot;,&quot;IID&quot;))</span>
-<span class="s"># We can then calculate the null model (model with PRS) using a linear regression </span>
-<span class="s"># (as height is quantitative)</span>
-<span class="s">null.model &lt;- lm(Height~., data=pheno[,!colnames(pheno)%in%c(&quot;FID&quot;,&quot;IID&quot;)])</span>
-<span class="s"># And the R2 of the null model is </span>
-<span class="s">null.r2 &lt;- summary(null.model)\$r.squared</span>
-<span class="s">prs.result &lt;- NULL</span>
-<span class="s">for(i in p.threshold){</span>
-<span class="s">    # Go through each p-value threshold</span>
-<span class="s">    prs &lt;- read.table(paste0(&quot;EUR.&quot;,i,&quot;.profile&quot;), header=T)</span>
-<span class="s">    # Merge the prs with the phenotype matrix</span>
-<span class="s">    # We only want the FID, IID and PRS from the PRS file, therefore we only select the </span>
-<span class="s">    # relevant columns</span>
-<span class="s">    pheno.prs &lt;- merge(pheno, prs[,c(&quot;FID&quot;,&quot;IID&quot;, &quot;SCORE&quot;)], by=c(&quot;FID&quot;, &quot;IID&quot;))</span>
-<span class="s">    # Now perform a linear regression on Height with PRS and the covariates</span>
-<span class="s">    # ignoring the FID and IID from our model</span>
-<span class="s">    model &lt;- lm(Height~., data=pheno.prs[,!colnames(pheno.prs)%in%c(&quot;FID&quot;,&quot;IID&quot;)])</span>
-<span class="s">    # model R2 is obtained as </span>
-<span class="s">    model.r2 &lt;- summary(model)\$r.squared</span>
-<span class="s">    # R2 of PRS is simply calculated as the model R2 minus the null R2</span>
-<span class="s">    prs.r2 &lt;- model.r2-null.r2</span>
-<span class="s">    # We can also obtain the coeffcient and p-value of association of PRS as follow</span>
-<span class="s">    prs.coef &lt;- summary(model)\$coeff[&quot;SCORE&quot;,]</span>
-<span class="s">    prs.beta &lt;- as.numeric(prs.coef[1])</span>
-<span class="s">    prs.se &lt;- as.numeric(prs.coef[2])</span>
-<span class="s">    prs.p &lt;- as.numeric(prs.coef[4])</span>
-<span class="s">    # We can then store the results</span>
-<span class="s">    prs.result &lt;- rbind(prs.result, data.frame(Threshold=i, R2=prs.r2, P=prs.p, BETA=prs.beta,SE=prs.se))</span>
-<span class="s">}</span>
-<span class="s"># Best result is:</span>
-<span class="s">prs.result[which.max(prs.result\$R2),]</span>
-<span class="s">EOL</span>
-cat ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/BFPRS.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">BFPRS</span><span class="o">.</span><span class="n">R</span>
+<span class="n">p</span><span class="o">.</span><span class="n">threshold</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># Read in the phenotype file </span>
+<span class="n">phenotype</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.height&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="c1"># Read in the PCs</span>
+<span class="n">pcs</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.eigenvec&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="c1"># The default output from plink does not include a header</span>
+<span class="c1"># To make things simple, we will add the appropriate headers</span>
+<span class="c1"># (1:6 because there are 6 PCs)</span>
+<span class="n">colnames</span><span class="p">(</span><span class="n">pcs</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span> <span class="s2">&quot;IID&quot;</span><span class="p">,</span> <span class="n">paste0</span><span class="p">(</span><span class="s2">&quot;PC&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">))</span> 
+<span class="c1"># Read in the covariates (here, it is sex)</span>
+<span class="n">covariate</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.cov&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="c1"># Now merge the files</span>
+<span class="n">pheno</span> <span class="o">&lt;-</span> <span class="n">merge</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">phenotype</span><span class="p">,</span> <span class="n">covariate</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span> <span class="s2">&quot;IID&quot;</span><span class="p">)),</span> <span class="n">pcs</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span><span class="s2">&quot;IID&quot;</span><span class="p">))</span>
+<span class="c1"># We can then calculate the null model (model with PRS) using a linear regression </span>
+<span class="c1"># (as height is quantitative)</span>
+<span class="n">null</span><span class="o">.</span><span class="n">model</span> <span class="o">&lt;-</span> <span class="n">lm</span><span class="p">(</span><span class="n">Height</span><span class="o">~.</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pheno</span><span class="p">[,</span><span class="o">!</span>colnames<span class="o">(</span>pheno<span class="o">)</span>%in%c<span class="o">(</span><span class="s2">&quot;FID&quot;</span>,<span class="s2">&quot;IID&quot;</span><span class="o">)])</span>
+<span class="c1"># And the R2 of the null model is </span>
+<span class="n">null</span><span class="o">.</span><span class="n">r2</span> <span class="o">&lt;-</span> <span class="n">summary</span><span class="p">(</span><span class="n">null</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>\<span class="err">$</span><span class="n">r</span><span class="o">.</span><span class="n">squared</span>
+<span class="n">prs</span><span class="o">.</span><span class="n">result</span> <span class="o">&lt;-</span> <span class="n">NULL</span>
+<span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">threshold</span><span class="p">){</span>
+    <span class="c1"># Go through each p-value threshold</span>
+    <span class="n">prs</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="s2">&quot;EUR.&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;.profile&quot;</span><span class="p">),</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+    <span class="c1"># Merge the prs with the phenotype matrix</span>
+    <span class="c1"># We only want the FID, IID and PRS from the PRS file, therefore we only select the </span>
+    <span class="c1"># relevant columns</span>
+    <span class="n">pheno</span><span class="o">.</span><span class="n">prs</span> <span class="o">&lt;-</span> <span class="n">merge</span><span class="p">(</span><span class="n">pheno</span><span class="p">,</span> <span class="n">prs</span><span class="p">[,</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span><span class="s2">&quot;IID&quot;</span><span class="p">,</span> <span class="s2">&quot;SCORE&quot;</span><span class="p">)],</span> <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span> <span class="s2">&quot;IID&quot;</span><span class="p">))</span>
+    <span class="c1"># Now perform a linear regression on Height with PRS and the covariates</span>
+    <span class="c1"># ignoring the FID and IID from our model</span>
+    <span class="n">model</span> <span class="o">&lt;-</span> <span class="n">lm</span><span class="p">(</span><span class="n">Height</span><span class="o">~.</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pheno</span><span class="o">.</span><span class="n">prs</span><span class="p">[,</span><span class="o">!</span>colnames<span class="o">(</span>pheno.prs<span class="o">)</span>%in%c<span class="o">(</span><span class="s2">&quot;FID&quot;</span>,<span class="s2">&quot;IID&quot;</span><span class="o">)])</span>
+    <span class="c1"># model R2 is obtained as </span>
+    <span class="n">model</span><span class="o">.</span><span class="n">r2</span> <span class="o">&lt;-</span> <span class="n">summary</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>\<span class="err">$</span><span class="n">r</span><span class="o">.</span><span class="n">squared</span>
+    <span class="c1"># R2 of PRS is simply calculated as the model R2 minus the null R2</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">r2</span> <span class="o">&lt;-</span> <span class="n">model</span><span class="o">.</span><span class="n">r2</span><span class="o">-</span><span class="n">null</span><span class="o">.</span><span class="n">r2</span>
+    <span class="c1"># We can also obtain the coeffcient and p-value of association of PRS as follow</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">coef</span> <span class="o">&lt;-</span> <span class="n">summary</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>\<span class="err">$</span><span class="n">coeff</span><span class="p">[</span><span class="s2">&quot;SCORE&quot;</span><span class="p">,]</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">beta</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">coef</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">se</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">coef</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">p</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">coef</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+    <span class="c1"># We can then store the results</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">result</span> <span class="o">&lt;-</span> <span class="n">rbind</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">Threshold</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">R2</span><span class="o">=</span><span class="n">prs</span><span class="o">.</span><span class="n">r2</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="n">prs</span><span class="o">.</span><span class="n">p</span><span class="p">,</span> <span class="n">BETA</span><span class="o">=</span><span class="n">prs</span><span class="o">.</span><span class="n">beta</span><span class="p">,</span><span class="n">SE</span><span class="o">=</span><span class="n">prs</span><span class="o">.</span><span class="n">se</span><span class="p">))</span>
+<span class="p">}</span>
+<span class="c1"># Best result is:</span>
+<span class="n">prs</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="n">which</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="n">R2</span><span class="p">),]</span>
+<span class="n">EOL</span>
+<span class="n">cat</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">BFPRS</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -17025,7 +17026,7 @@ prs.result[which.max(prs.result$R2),]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/BFPRS.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Rscript</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">BFPRS</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -17078,10 +17079,10 @@ prs.result[which.max(prs.result$R2),]
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/
-wget https://github.com/choishingwan/PRSice/releases/download/2.3.3/PRSice_linux.zip
-unzip PRSice_linux.zip
-ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">choishingwan</span><span class="o">/</span><span class="n">PRSice</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="mf">2.3</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">PRSice_linux</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">unzip</span> <span class="n">PRSice_linux</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -17187,14 +17188,14 @@ EUR.mismatch       <span class="ansi-red-intense-fg ansi-bold">EUR.zip</span>   
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSgetpc.R</span>
-<span class="s">covariate &lt;- read.table(&quot;EUR.cov&quot;, header=T)</span>
-<span class="s">pcs &lt;- read.table(&quot;EUR.eigenvec&quot;, header=F)</span>
-<span class="s">colnames(pcs) &lt;- c(&quot;FID&quot;,&quot;IID&quot;, paste0(&quot;PC&quot;,1:6))</span>
-<span class="s">cov &lt;- merge(covariate, pcs, by=c(&quot;FID&quot;, &quot;IID&quot;))</span>
-<span class="s">write.table(cov,&quot;EUR.covariate&quot;, quote=F, row.names=F)</span>
-<span class="s">EOL</span>
-cat ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSgetpc.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">PRSgetpc</span><span class="o">.</span><span class="n">R</span>
+<span class="n">covariate</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.cov&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">pcs</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.eigenvec&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">colnames</span><span class="p">(</span><span class="n">pcs</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span><span class="s2">&quot;IID&quot;</span><span class="p">,</span> <span class="n">paste0</span><span class="p">(</span><span class="s2">&quot;PC&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">cov</span> <span class="o">&lt;-</span> <span class="n">merge</span><span class="p">(</span><span class="n">covariate</span><span class="p">,</span> <span class="n">pcs</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span> <span class="s2">&quot;IID&quot;</span><span class="p">))</span>
+<span class="n">write</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">cov</span><span class="p">,</span><span class="s2">&quot;EUR.covariate&quot;</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">F</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">EOL</span>
+<span class="n">cat</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">PRSgetpc</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -17233,8 +17234,8 @@ write.table(cov,&#34;EUR.covariate&#34;, quote=F, row.names=F)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">cd</span> ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/
-Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSgetpc.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span>
+<span class="n">Rscript</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">PRSgetpc</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -17248,7 +17249,7 @@ Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSgetpc.R
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span>
 </pre></div>
 
      </div>
@@ -17311,18 +17312,18 @@ EUR.log                           <span class="ansi-red-intense-fg ansi-bold">EU
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>Rscript PRSice.R <span class="se">\</span>
-    --prsice PRSice_linux <span class="se">\</span>
-    --base Height.QC.gz <span class="se">\</span>
-    --target EUR.QC <span class="se">\</span>
-    --binary-target F <span class="se">\</span>
-    --pheno EUR.height <span class="se">\</span>
-    --cov EUR.covariate <span class="se">\</span>
-    --base-maf MAF:0.01 <span class="se">\</span>
-    --base-info INFO:0.8 <span class="se">\</span>
-    --stat OR <span class="se">\</span>
-    --or <span class="se">\</span>
-    --out EUR
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Rscript</span> <span class="n">PRSice</span><span class="o">.</span><span class="n">R</span> \
+    <span class="o">--</span><span class="n">prsice</span> <span class="n">PRSice_linux</span> \
+    <span class="o">--</span><span class="n">base</span> <span class="n">Height</span><span class="o">.</span><span class="n">QC</span><span class="o">.</span><span class="n">gz</span> \
+    <span class="o">--</span><span class="n">target</span> <span class="n">EUR</span><span class="o">.</span><span class="n">QC</span> \
+    <span class="o">--</span><span class="n">binary</span><span class="o">-</span><span class="n">target</span> <span class="n">F</span> \
+    <span class="o">--</span><span class="n">pheno</span> <span class="n">EUR</span><span class="o">.</span><span class="n">height</span> \
+    <span class="o">--</span><span class="n">cov</span> <span class="n">EUR</span><span class="o">.</span><span class="n">covariate</span> \
+    <span class="o">--</span><span class="n">base</span><span class="o">-</span><span class="n">maf</span> <span class="n">MAF</span><span class="p">:</span><span class="mf">0.01</span> \
+    <span class="o">--</span><span class="n">base</span><span class="o">-</span><span class="n">info</span> <span class="n">INFO</span><span class="p">:</span><span class="mf">0.8</span> \
+    <span class="o">--</span><span class="n">stat</span> <span class="n">OR</span> \
+    <span class="o">--</span><span class="ow">or</span> \
+    <span class="o">--</span><span class="n">out</span> <span class="n">EUR</span>
 </pre></div>
 
      </div>
@@ -17514,7 +17515,7 @@ ServerApp.rate_limit_window=3.0 (secs)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls -l EUR*
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">EUR</span><span class="o">*</span>
 </pre></div>
 
      </div>
@@ -17591,7 +17592,7 @@ ServerApp.rate_limit_window=3.0 (secs)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat EUR.log
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="n">EUR</span><span class="o">.</span><span class="n">log</span>
 </pre></div>
 
      </div>
@@ -17730,7 +17731,7 @@ empirical P-value.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat EUR.best <span class="p">|</span> head -n <span class="m">15</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="n">EUR</span><span class="o">.</span><span class="n">best</span> <span class="o">|</span> <span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">15</span>
 </pre></div>
 
      </div>
@@ -17779,7 +17780,7 @@ HG00113 HG00113 Yes 7.34236439e-06
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>head EUR.prsice
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head</span> <span class="n">EUR</span><span class="o">.</span><span class="n">prsice</span>
 </pre></div>
 
      </div>
@@ -17823,7 +17824,7 @@ HG00113 HG00113 Yes 7.34236439e-06
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>head EUR.summary
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head</span> <span class="n">EUR</span><span class="o">.</span><span class="n">summary</span>
 </pre></div>
 
      </div>
@@ -17859,8 +17860,8 @@ HG00113 HG00113 Yes 7.34236439e-06
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>mkdir -p ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS/pic
-cp *.png ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS/pic/
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/</span><span class="n">hmiwa</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="n">d_20231023</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">pic</span>
+<span class="n">cp</span> <span class="o">*.</span><span class="n">png</span> <span class="o">~/</span><span class="n">hmiwa</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="n">d_20231023</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">pic</span><span class="o">/</span>
 </pre></div>
 
      </div>
@@ -17874,7 +17875,7 @@ cp *.png ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS/pic/
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>ls ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS/pic/
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ls</span> <span class="o">~/</span><span class="n">hmiwa</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="n">d_20231023</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">pic</span><span class="o">/</span>
 </pre></div>
 
      </div>
@@ -17925,101 +17926,101 @@ cp *.png ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS/pic/
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSplot1.R</span>
-<span class="s">p.threshold &lt;- c(0.001,0.05,0.1,0.2,0.3,0.4,0.5)</span>
-<span class="s"># Read in the phenotype file </span>
-<span class="s">phenotype &lt;- read.table(&quot;EUR.height&quot;, header=T)</span>
-<span class="s"># Read in the PCs</span>
-<span class="s">pcs &lt;- read.table(&quot;EUR.eigenvec&quot;, header=F)</span>
-<span class="s"># The default output from plink does not include a header</span>
-<span class="s"># To make things simple, we will add the appropriate headers</span>
-<span class="s"># (1:6 because there are 6 PCs)</span>
-<span class="s">colnames(pcs) &lt;- c(&quot;FID&quot;, &quot;IID&quot;, paste0(&quot;PC&quot;,1:6)) </span>
-<span class="s"># Read in the covariates (here, it is sex)</span>
-<span class="s">covariate &lt;- read.table(&quot;EUR.cov&quot;, header=T)</span>
-<span class="s"># Now merge the files</span>
-<span class="s">pheno &lt;- merge(merge(phenotype, covariate, by=c(&quot;FID&quot;, &quot;IID&quot;)), pcs, by=c(&quot;FID&quot;,&quot;IID&quot;))</span>
-<span class="s"># We can then calculate the null model (model with PRS) using a linear regression </span>
-<span class="s"># (as height is quantitative)</span>
-<span class="s">null.model &lt;- lm(Height~., data=pheno[,!colnames(pheno)%in%c(&quot;FID&quot;,&quot;IID&quot;)])</span>
-<span class="s"># And the R2 of the null model is </span>
-<span class="s">null.r2 &lt;- summary(null.model)\$r.squared</span>
-<span class="s">prs.result &lt;- NULL</span>
-<span class="s">for(i in p.threshold){</span>
-<span class="s">    # Go through each p-value threshold</span>
-<span class="s">    prs &lt;- read.table(paste0(&quot;EUR.&quot;,i,&quot;.profile&quot;), header=T)</span>
-<span class="s">    # Merge the prs with the phenotype matrix</span>
-<span class="s">    # We only want the FID, IID and PRS from the PRS file, therefore we only select the </span>
-<span class="s">    # relevant columns</span>
-<span class="s">    pheno.prs &lt;- merge(pheno, prs[,c(&quot;FID&quot;,&quot;IID&quot;, &quot;SCORE&quot;)], by=c(&quot;FID&quot;, &quot;IID&quot;))</span>
-<span class="s">    # Now perform a linear regression on Height with PRS and the covariates</span>
-<span class="s">    # ignoring the FID and IID from our model</span>
-<span class="s">    model &lt;- lm(Height~., data=pheno.prs[,!colnames(pheno.prs)%in%c(&quot;FID&quot;,&quot;IID&quot;)])</span>
-<span class="s">    # model R2 is obtained as </span>
-<span class="s">    model.r2 &lt;- summary(model)\$r.squared</span>
-<span class="s">    # R2 of PRS is simply calculated as the model R2 minus the null R2</span>
-<span class="s">    prs.r2 &lt;- model.r2-null.r2</span>
-<span class="s">    # We can also obtain the coeffcient and p-value of association of PRS as follow</span>
-<span class="s">    prs.coef &lt;- summary(model)\$coeff[&quot;SCORE&quot;,]</span>
-<span class="s">    prs.beta &lt;- as.numeric(prs.coef[1])</span>
-<span class="s">    prs.se &lt;- as.numeric(prs.coef[2])</span>
-<span class="s">    prs.p &lt;- as.numeric(prs.coef[4])</span>
-<span class="s">    # We can then store the results</span>
-<span class="s">    prs.result &lt;- rbind(prs.result, data.frame(Threshold=i, R2=prs.r2, P=prs.p, BETA=prs.beta,SE=prs.se))</span>
-<span class="s">}</span>
-<span class="s"># Best result is:</span>
-<span class="s">prs.result[which.max(prs.result\$R2),]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">PRSplot1</span><span class="o">.</span><span class="n">R</span>
+<span class="n">p</span><span class="o">.</span><span class="n">threshold</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># Read in the phenotype file </span>
+<span class="n">phenotype</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.height&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="c1"># Read in the PCs</span>
+<span class="n">pcs</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.eigenvec&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="c1"># The default output from plink does not include a header</span>
+<span class="c1"># To make things simple, we will add the appropriate headers</span>
+<span class="c1"># (1:6 because there are 6 PCs)</span>
+<span class="n">colnames</span><span class="p">(</span><span class="n">pcs</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span> <span class="s2">&quot;IID&quot;</span><span class="p">,</span> <span class="n">paste0</span><span class="p">(</span><span class="s2">&quot;PC&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">))</span> 
+<span class="c1"># Read in the covariates (here, it is sex)</span>
+<span class="n">covariate</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.cov&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="c1"># Now merge the files</span>
+<span class="n">pheno</span> <span class="o">&lt;-</span> <span class="n">merge</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">phenotype</span><span class="p">,</span> <span class="n">covariate</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span> <span class="s2">&quot;IID&quot;</span><span class="p">)),</span> <span class="n">pcs</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span><span class="s2">&quot;IID&quot;</span><span class="p">))</span>
+<span class="c1"># We can then calculate the null model (model with PRS) using a linear regression </span>
+<span class="c1"># (as height is quantitative)</span>
+<span class="n">null</span><span class="o">.</span><span class="n">model</span> <span class="o">&lt;-</span> <span class="n">lm</span><span class="p">(</span><span class="n">Height</span><span class="o">~.</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pheno</span><span class="p">[,</span><span class="o">!</span>colnames<span class="o">(</span>pheno<span class="o">)</span>%in%c<span class="o">(</span><span class="s2">&quot;FID&quot;</span>,<span class="s2">&quot;IID&quot;</span><span class="o">)])</span>
+<span class="c1"># And the R2 of the null model is </span>
+<span class="n">null</span><span class="o">.</span><span class="n">r2</span> <span class="o">&lt;-</span> <span class="n">summary</span><span class="p">(</span><span class="n">null</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>\<span class="err">$</span><span class="n">r</span><span class="o">.</span><span class="n">squared</span>
+<span class="n">prs</span><span class="o">.</span><span class="n">result</span> <span class="o">&lt;-</span> <span class="n">NULL</span>
+<span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">threshold</span><span class="p">){</span>
+    <span class="c1"># Go through each p-value threshold</span>
+    <span class="n">prs</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="s2">&quot;EUR.&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;.profile&quot;</span><span class="p">),</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+    <span class="c1"># Merge the prs with the phenotype matrix</span>
+    <span class="c1"># We only want the FID, IID and PRS from the PRS file, therefore we only select the </span>
+    <span class="c1"># relevant columns</span>
+    <span class="n">pheno</span><span class="o">.</span><span class="n">prs</span> <span class="o">&lt;-</span> <span class="n">merge</span><span class="p">(</span><span class="n">pheno</span><span class="p">,</span> <span class="n">prs</span><span class="p">[,</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span><span class="s2">&quot;IID&quot;</span><span class="p">,</span> <span class="s2">&quot;SCORE&quot;</span><span class="p">)],</span> <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;FID&quot;</span><span class="p">,</span> <span class="s2">&quot;IID&quot;</span><span class="p">))</span>
+    <span class="c1"># Now perform a linear regression on Height with PRS and the covariates</span>
+    <span class="c1"># ignoring the FID and IID from our model</span>
+    <span class="n">model</span> <span class="o">&lt;-</span> <span class="n">lm</span><span class="p">(</span><span class="n">Height</span><span class="o">~.</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pheno</span><span class="o">.</span><span class="n">prs</span><span class="p">[,</span><span class="o">!</span>colnames<span class="o">(</span>pheno.prs<span class="o">)</span>%in%c<span class="o">(</span><span class="s2">&quot;FID&quot;</span>,<span class="s2">&quot;IID&quot;</span><span class="o">)])</span>
+    <span class="c1"># model R2 is obtained as </span>
+    <span class="n">model</span><span class="o">.</span><span class="n">r2</span> <span class="o">&lt;-</span> <span class="n">summary</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>\<span class="err">$</span><span class="n">r</span><span class="o">.</span><span class="n">squared</span>
+    <span class="c1"># R2 of PRS is simply calculated as the model R2 minus the null R2</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">r2</span> <span class="o">&lt;-</span> <span class="n">model</span><span class="o">.</span><span class="n">r2</span><span class="o">-</span><span class="n">null</span><span class="o">.</span><span class="n">r2</span>
+    <span class="c1"># We can also obtain the coeffcient and p-value of association of PRS as follow</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">coef</span> <span class="o">&lt;-</span> <span class="n">summary</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>\<span class="err">$</span><span class="n">coeff</span><span class="p">[</span><span class="s2">&quot;SCORE&quot;</span><span class="p">,]</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">beta</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">coef</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">se</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">coef</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">p</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">coef</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+    <span class="c1"># We can then store the results</span>
+    <span class="n">prs</span><span class="o">.</span><span class="n">result</span> <span class="o">&lt;-</span> <span class="n">rbind</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">Threshold</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">R2</span><span class="o">=</span><span class="n">prs</span><span class="o">.</span><span class="n">r2</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="n">prs</span><span class="o">.</span><span class="n">p</span><span class="p">,</span> <span class="n">BETA</span><span class="o">=</span><span class="n">prs</span><span class="o">.</span><span class="n">beta</span><span class="p">,</span><span class="n">SE</span><span class="o">=</span><span class="n">prs</span><span class="o">.</span><span class="n">se</span><span class="p">))</span>
+<span class="p">}</span>
+<span class="c1"># Best result is:</span>
+<span class="n">prs</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="n">which</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="n">R2</span><span class="p">),]</span>
 
-<span class="s"># ggplot2 is a handy package for plotting</span>
-<span class="s">library(ggplot2)</span>
-<span class="s"># generate a pretty format for p-value output</span>
-<span class="s">prs.result\$print.p &lt;- round(prs.result\$P, digits = 3)</span>
-<span class="s">prs.result\$print.p[!is.na(prs.result\$print.p) &amp;</span>
-<span class="s">                    prs.result\$print.p == 0] &lt;-</span>
-<span class="s">    format(prs.result\$P[!is.na(prs.result\$print.p) &amp;</span>
-<span class="s">                            prs.result\$print.p == 0], digits = 2)</span>
-<span class="s">prs.result\$print.p &lt;- sub(&quot;e&quot;, &quot;*x*10^&quot;, prs.result\$print.p)</span>
-<span class="s"># Initialize ggplot, requiring the threshold as the x-axis (use factor so that it is uniformly distributed)</span>
-<span class="s">ggplot(data = prs.result, aes(x = factor(Threshold), y = R2)) +</span>
-<span class="s">    # Specify that we want to print p-value on top of the bars</span>
-<span class="s">    geom_text(</span>
-<span class="s">        aes(label = paste(print.p)),</span>
-<span class="s">        vjust = -1.5,</span>
-<span class="s">        hjust = 0,</span>
-<span class="s">        angle = 45,</span>
-<span class="s">        cex = 4,</span>
-<span class="s">        parse = T</span>
-<span class="s">    )  +</span>
-<span class="s">    # Specify the range of the plot, *1.25 to provide enough space for the p-values</span>
-<span class="s">    scale_y_continuous(limits = c(0, max(prs.result\$R2) * 1.25)) +</span>
-<span class="s">    # Specify the axis labels</span>
-<span class="s">    xlab(expression(italic(P) - value ~ threshold ~ (italic(P)[T]))) +</span>
-<span class="s">    ylab(expression(paste(&quot;PRS model fit:  &quot;, R ^ 2))) +</span>
-<span class="s">    # Draw a bar plot</span>
-<span class="s">    geom_bar(aes(fill = -log10(P)), stat = &quot;identity&quot;) +</span>
-<span class="s">    # Specify the colors</span>
-<span class="s">    scale_fill_gradient2(</span>
-<span class="s">        low = &quot;dodgerblue&quot;,</span>
-<span class="s">        high = &quot;firebrick&quot;,</span>
-<span class="s">        mid = &quot;dodgerblue&quot;,</span>
-<span class="s">        midpoint = 1e-4,</span>
-<span class="s">        name = bquote(atop(-log[10] ~ model, italic(P) - value),)</span>
-<span class="s">    ) +</span>
-<span class="s">    # Some beautification of the plot</span>
-<span class="s">    theme_classic() + theme(</span>
-<span class="s">        axis.title = element_text(face = &quot;bold&quot;, size = 18),</span>
-<span class="s">        axis.text = element_text(size = 14),</span>
-<span class="s">        legend.title = element_text(face = &quot;bold&quot;, size =</span>
-<span class="s">                                        18),</span>
-<span class="s">        legend.text = element_text(size = 14),</span>
-<span class="s">        axis.text.x = element_text(angle = 45, hjust =</span>
-<span class="s">                                    1)</span>
-<span class="s">    )</span>
-<span class="s"># save the plot</span>
-<span class="s">ggsave(&quot;EUR.height.bar.png&quot;, height = 7, width = 7)</span>
-<span class="s">EOL</span>
-<span class="nb">cd</span> ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/
-Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSplot1.R
+<span class="c1"># ggplot2 is a handy package for plotting</span>
+<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="c1"># generate a pretty format for p-value output</span>
+<span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="nb">print</span><span class="o">.</span><span class="n">p</span> <span class="o">&lt;-</span> <span class="nb">round</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="n">P</span><span class="p">,</span> <span class="n">digits</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="nb">print</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="o">!</span>is.na<span class="o">(</span>prs.result<span class="se">\$</span>print.p<span class="o">)</span> <span class="p">&amp;</span>
+                    <span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="nb">print</span><span class="o">.</span><span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">&lt;-</span>
+    <span class="nb">format</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="n">P</span><span class="p">[</span><span class="o">!</span>is.na<span class="o">(</span>prs.result<span class="se">\$</span>print.p<span class="o">)</span> <span class="p">&amp;</span>
+                            <span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="nb">print</span><span class="o">.</span><span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">],</span> <span class="n">digits</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="nb">print</span><span class="o">.</span><span class="n">p</span> <span class="o">&lt;-</span> <span class="n">sub</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;*x*10^&quot;</span><span class="p">,</span> <span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="nb">print</span><span class="o">.</span><span class="n">p</span><span class="p">)</span>
+<span class="c1"># Initialize ggplot, requiring the threshold as the x-axis (use factor so that it is uniformly distributed)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">prs</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">factor</span><span class="p">(</span><span class="n">Threshold</span><span class="p">),</span> <span class="n">y</span> <span class="o">=</span> <span class="n">R2</span><span class="p">))</span> <span class="o">+</span>
+    <span class="c1"># Specify that we want to print p-value on top of the bars</span>
+    <span class="n">geom_text</span><span class="p">(</span>
+        <span class="n">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="n">paste</span><span class="p">(</span><span class="nb">print</span><span class="o">.</span><span class="n">p</span><span class="p">)),</span>
+        <span class="n">vjust</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span>
+        <span class="n">hjust</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">angle</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="n">cex</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="n">parse</span> <span class="o">=</span> <span class="n">T</span>
+    <span class="p">)</span>  <span class="o">+</span>
+    <span class="c1"># Specify the range of the plot, *1.25 to provide enough space for the p-values</span>
+    <span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">prs</span><span class="o">.</span><span class="n">result</span>\<span class="err">$</span><span class="n">R2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.25</span><span class="p">))</span> <span class="o">+</span>
+    <span class="c1"># Specify the axis labels</span>
+    <span class="n">xlab</span><span class="p">(</span><span class="n">expression</span><span class="p">(</span><span class="n">italic</span><span class="p">(</span><span class="n">P</span><span class="p">)</span> <span class="o">-</span> <span class="n">value</span> <span class="o">~</span> <span class="n">threshold</span> <span class="o">~</span> <span class="p">(</span><span class="n">italic</span><span class="p">(</span><span class="n">P</span><span class="p">)[</span><span class="n">T</span><span class="p">])))</span> <span class="o">+</span>
+    <span class="n">ylab</span><span class="p">(</span><span class="n">expression</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">&quot;PRS model fit:  &quot;</span><span class="p">,</span> <span class="n">R</span> <span class="o">^</span> <span class="mi">2</span><span class="p">)))</span> <span class="o">+</span>
+    <span class="c1"># Draw a bar plot</span>
+    <span class="n">geom_bar</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="o">-</span><span class="n">log10</span><span class="p">(</span><span class="n">P</span><span class="p">)),</span> <span class="n">stat</span> <span class="o">=</span> <span class="s2">&quot;identity&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="c1"># Specify the colors</span>
+    <span class="n">scale_fill_gradient2</span><span class="p">(</span>
+        <span class="n">low</span> <span class="o">=</span> <span class="s2">&quot;dodgerblue&quot;</span><span class="p">,</span>
+        <span class="n">high</span> <span class="o">=</span> <span class="s2">&quot;firebrick&quot;</span><span class="p">,</span>
+        <span class="n">mid</span> <span class="o">=</span> <span class="s2">&quot;dodgerblue&quot;</span><span class="p">,</span>
+        <span class="n">midpoint</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">bquote</span><span class="p">(</span><span class="n">atop</span><span class="p">(</span><span class="o">-</span><span class="n">log</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">~</span> <span class="n">model</span><span class="p">,</span> <span class="n">italic</span><span class="p">(</span><span class="n">P</span><span class="p">)</span> <span class="o">-</span> <span class="n">value</span><span class="p">),)</span>
+    <span class="p">)</span> <span class="o">+</span>
+    <span class="c1"># Some beautification of the plot</span>
+    <span class="n">theme_classic</span><span class="p">()</span> <span class="o">+</span> <span class="n">theme</span><span class="p">(</span>
+        <span class="n">axis</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">element_text</span><span class="p">(</span><span class="n">face</span> <span class="o">=</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">18</span><span class="p">),</span>
+        <span class="n">axis</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">14</span><span class="p">),</span>
+        <span class="n">legend</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">element_text</span><span class="p">(</span><span class="n">face</span> <span class="o">=</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span>
+                                        <span class="mi">18</span><span class="p">),</span>
+        <span class="n">legend</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">14</span><span class="p">),</span>
+        <span class="n">axis</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span> <span class="n">hjust</span> <span class="o">=</span>
+                                    <span class="mi">1</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="c1"># save the plot</span>
+<span class="n">ggsave</span><span class="p">(</span><span class="s2">&quot;EUR.height.bar.png&quot;</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">EOL</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span>
+<span class="n">Rscript</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">PRSplot1</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -18056,7 +18057,7 @@ Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSplot1.R
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cp EUR.height.bar.png ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS/pic/
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cp</span> <span class="n">EUR</span><span class="o">.</span><span class="n">height</span><span class="o">.</span><span class="n">bar</span><span class="o">.</span><span class="n">png</span> <span class="o">~/</span><span class="n">hmiwa</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="n">d_20231023</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">pic</span><span class="o">/</span>
 </pre></div>
 
      </div>
@@ -18084,25 +18085,25 @@ Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSplot1.R
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cat <span class="s">&lt;&lt;EOL &gt; ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSplot2.R</span>
-<span class="s">library(ggplot2)</span>
-<span class="s"># Read in the files</span>
-<span class="s">prs &lt;- read.table(&quot;EUR.0.3.profile&quot;, header=T)</span>
-<span class="s">height &lt;- read.table(&quot;EUR.height&quot;, header=T)</span>
-<span class="s">sex &lt;- read.table(&quot;EUR.cov&quot;, header=T)</span>
-<span class="s"># Rename the sex</span>
-<span class="s">sex\$Sex &lt;- as.factor(sex\$Sex)</span>
-<span class="s">levels(sex\$Sex) &lt;- c(&quot;Male&quot;, &quot;Female&quot;)</span>
-<span class="s"># Merge the files</span>
-<span class="s">dat &lt;- merge(merge(prs, height), sex)</span>
-<span class="s"># Start plotting</span>
-<span class="s">ggplot(dat, aes(x=SCORE, y=Height, color=Sex))+</span>
-<span class="s">    geom_point()+</span>
-<span class="s">    theme_classic()+</span>
-<span class="s">    labs(x=&quot;Polygenic Score&quot;, y=&quot;Height&quot;)</span>
-<span class="s">ggsave(&quot;EUR.height.scatter.png&quot;, height = 7, width = 7)</span>
-<span class="s">EOL</span>
-Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSplot2.R
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">PRSplot2</span><span class="o">.</span><span class="n">R</span>
+<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="c1"># Read in the files</span>
+<span class="n">prs</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.0.3.profile&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">height</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.height&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">sex</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;EUR.cov&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="c1"># Rename the sex</span>
+<span class="n">sex</span>\<span class="err">$</span><span class="n">Sex</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">sex</span>\<span class="err">$</span><span class="n">Sex</span><span class="p">)</span>
+<span class="n">levels</span><span class="p">(</span><span class="n">sex</span>\<span class="err">$</span><span class="n">Sex</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Male&quot;</span><span class="p">,</span> <span class="s2">&quot;Female&quot;</span><span class="p">)</span>
+<span class="c1"># Merge the files</span>
+<span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">merge</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">prs</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">sex</span><span class="p">)</span>
+<span class="c1"># Start plotting</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">SCORE</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Height</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">Sex</span><span class="p">))</span><span class="o">+</span>
+    <span class="n">geom_point</span><span class="p">()</span><span class="o">+</span>
+    <span class="n">theme_classic</span><span class="p">()</span><span class="o">+</span>
+    <span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Polygenic Score&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Height&quot;</span><span class="p">)</span>
+<span class="n">ggsave</span><span class="p">(</span><span class="s2">&quot;EUR.height.scatter.png&quot;</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">EOL</span>
+<span class="n">Rscript</span> <span class="o">~/</span><span class="n">hmiwa1</span><span class="o">/</span><span class="n">storage</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">PRSplot2</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -18137,7 +18138,7 @@ Rscript ~/hmiwa1/storage/hmiwa-lab/03_231113_TutorialPRS/data/PRSplot2.R
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-bash"><pre><span></span>cp EUR.height.scatter.png ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS/pic/
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cp</span> <span class="n">EUR</span><span class="o">.</span><span class="n">height</span><span class="o">.</span><span class="n">scatter</span><span class="o">.</span><span class="n">png</span> <span class="o">~/</span><span class="n">hmiwa</span><span class="o">/</span><span class="n">hmiwa</span><span class="o">-</span><span class="n">lab</span><span class="o">/</span><span class="n">d_20231023</span><span class="o">/</span><span class="mi">03_231113</span><span class="n">_TutorialPRS</span><span class="o">/</span><span class="n">pic</span><span class="o">/</span>
 </pre></div>
 
      </div>
