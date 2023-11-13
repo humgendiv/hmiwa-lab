@@ -1,0 +1,696 @@
+(base) PS C:\Users\himar> ssh hmiwa-lab
+Enter passphrase for key 'C:\Users\himar/.ssh/id_rsa':
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Mon Nov 13 00:03:38 2023 from 133.11.3.131
+hmiwa@humgendiv:~$ cd ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 3), reused 6 (delta 3), pack-reused 0
+Unpacking objects: 100% (6/6), 20.89 KiB | 4.18 MiB/s, done.
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Updating d327d55..18765f4
+Fast-forward
+ d_20231023/99_log/20231107_anaconda.txt |  218 ++++++++++++++++++++++
+ d_20231023/99_log/20231107_ubuntu.txt   | 1035 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 1253 insertions(+)
+ create mode 100644 d_20231023/99_log/20231107_anaconda.txt
+ create mode 100644 d_20231023/99_log/20231107_ubuntu.txt
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ jupyter notebook
+[I 2023-11-13 11:53:32.969 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-13 11:53:32.976 ServerApp] Package jupyter_lsp took 0.0064s to import
+[W 2023-11-13 11:53:32.976 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 11:53:32.979 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-13 11:53:32.980 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-13 11:53:32.999 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-13 11:53:32.999 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 11:53:33.000 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-13 11:53:33.003 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-13 11:53:33.006 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-13 11:53:33.010 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-13 11:53:33.162 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-13 11:53:33.172 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-13 11:53:33.175 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-13 11:53:33.175 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-13 11:53:33.176 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-13 11:53:33.176 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-13 11:53:33.176 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-13 11:53:33.178 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-13 11:53:33.180 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-13 11:53:33.180 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+[I 2023-11-13 11:53:33.180 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-13 11:53:33.180 ServerApp] http://localhost:8888/tree?token=14cb789d75dca10a8cd18a83d32f6104ea05ad12b19dbfa2
+[I 2023-11-13 11:53:33.180 ServerApp]     http://127.0.0.1:8888/tree?token=14cb789d75dca10a8cd18a83d32f6104ea05ad12b19dbfa2
+[I 2023-11-13 11:53:33.180 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-13 11:53:33.183 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-13 11:53:33.183 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1294461-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=14cb789d75dca10a8cd18a83d32f6104ea05ad12b19dbfa2
+        http://127.0.0.1:8888/tree?token=14cb789d75dca10a8cd18a83d32f6104ea05ad12b19dbfa2
+[I 2023-11-13 11:53:33.375 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-13 11:53:55.082 ServerApp] Kernel started: 12cd1791-a8fb-4ca6-aef5-4e4f5ec01c9a
+[I 2023-11-13 11:53:57.627 ServerApp] Connecting to kernel 12cd1791-a8fb-4ca6-aef5-4e4f5ec01c9a.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-13 11:57:54.865 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 11:59:54.926 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:03:55.431 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[W 2023-11-13 12:05:20.567 ServerApp] delete /loadbim.R
+[W 2023-11-13 12:05:37.819 ServerApp] delete /loadbim.R
+[I 2023-11-13 12:05:55.483 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:07:55.526 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:09:55.570 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:11:55.631 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:13:55.681 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:15:55.726 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:17:55.792 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:19:55.868 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:21:55.914 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:23:55.988 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:27:56.421 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:29:56.502 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:31:56.576 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:33:56.655 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:35:56.733 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:37:56.793 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:38:54.157 ServerApp] Kernel interrupted: 12cd1791-a8fb-4ca6-aef5-4e4f5ec01c9a
+[I 2023-11-13 12:39:56.868 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:40:34.931 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 12:40:50.202 ServerApp] Kernel shutdown: 12cd1791-a8fb-4ca6-aef5-4e4f5ec01c9a
+[I 2023-11-13 12:40:52.852 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-13 12:40:52.853 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 11 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .ipynb_checkpoints/PRSTutorial1103-checkpoint.ipynb
+        modified:   PRSTutorial1103.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git add -A .
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git commit -m "[update] try another PRS tutorial (chapter.2)"
+[main 127fd7c] [update] try another PRS tutorial (chapter.2)
+ 2 files changed, 1354 insertions(+), 74 deletions(-)
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 6.73 KiB | 3.36 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   18765f4..127fd7c  main -> main
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+remote: Enumerating objects: 22, done.
+remote: Counting objects: 100% (22/22), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 18 (delta 8), reused 16 (delta 6), pack-reused 0
+Unpacking objects: 100% (18/18), 1.86 MiB | 1.81 MiB/s, done.
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Updating 127fd7c..9870908
+Fast-forward
+ d_20231023/01_231025_TutorialPRS/SamoanGWAS/.gitignore                                         |   4 +
+ d_20231023/01_231025_TutorialPRS/SamoanGWAS/Carlson2021/10038_2020_816_MOESM1_ESM.pdf          | Bin 0 -> 1455764 bytes
+ d_20231023/01_231025_TutorialPRS/SamoanGWAS/Carlson2021/s10038-020-0816-9.pdf                  | Bin 0 -> 1258344 bytes
+ d_20231023/01_231025_TutorialPRS/SamoanGWAS/phs000914.v1.p1/.gitkeep                           |   0
+ d_20231023/99_log/202311091343.txt                                                             | 388 +++++++++++++++++++++++++++++++++++++++++++++++
+ .../20231109_134628.Default.w0t0p0.A4370366-72D8-4AD0-84A0-FF519685D12E.445.442947021.log      |   2 +
+ d_20231023/99_log/202311131337.txt                                                             | 330 ++++++++++++++++++++++++++++++++++++++++
+ .../20231113_124444.Default.w0t0p0.4ED7A8A9-BF80-4747-A4ED-66890EEC8335.22167.4277725625.log   |   2 +
+ 8 files changed, 726 insertions(+)
+ create mode 100644 d_20231023/01_231025_TutorialPRS/SamoanGWAS/.gitignore
+ create mode 100644 d_20231023/01_231025_TutorialPRS/SamoanGWAS/Carlson2021/10038_2020_816_MOESM1_ESM.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/SamoanGWAS/Carlson2021/s10038-020-0816-9.pdf
+ create mode 100644 d_20231023/01_231025_TutorialPRS/SamoanGWAS/phs000914.v1.p1/.gitkeep
+ create mode 100644 d_20231023/99_log/202311091343.txt
+ create mode 100644 d_20231023/99_log/20231109_134628.Default.w0t0p0.A4370366-72D8-4AD0-84A0-FF519685D12E.445.442947021.log
+ create mode 100644 d_20231023/99_log/202311131337.txt
+ create mode 100644 d_20231023/99_log/20231113_124444.Default.w0t0p0.4ED7A8A9-BF80-4747-A4ED-66890EEC8335.22167.4277725625.log
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 14 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ jupyter notebook
+[I 2023-11-13 13:49:46.747 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-13 13:49:46.753 ServerApp] Package jupyter_lsp took 0.0065s to import
+[W 2023-11-13 13:49:46.753 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 13:49:46.757 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-13 13:49:46.757 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-13 13:49:46.776 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-13 13:49:46.776 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 13:49:46.777 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-13 13:49:46.780 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-13 13:49:46.784 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-13 13:49:46.787 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-13 13:49:46.940 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-13 13:49:46.952 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-13 13:49:46.954 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-13 13:49:46.955 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-13 13:49:46.956 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-13 13:49:46.956 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-13 13:49:46.956 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-13 13:49:46.958 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-13 13:49:46.960 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-13 13:49:46.960 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+[I 2023-11-13 13:49:46.960 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-13 13:49:46.960 ServerApp] http://localhost:8888/tree?token=21b8190f18e9c4f23dac20d3c2e2b643547d7b4b885e088c
+[I 2023-11-13 13:49:46.960 ServerApp]     http://127.0.0.1:8888/tree?token=21b8190f18e9c4f23dac20d3c2e2b643547d7b4b885e088c
+[I 2023-11-13 13:49:46.960 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-13 13:49:46.963 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-13 13:49:46.963 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1297978-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=21b8190f18e9c4f23dac20d3c2e2b643547d7b4b885e088c
+        http://127.0.0.1:8888/tree?token=21b8190f18e9c4f23dac20d3c2e2b643547d7b4b885e088c
+[I 2023-11-13 13:49:47.190 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-13 13:50:10.001 ServerApp] Kernel started: 36110a5a-a4aa-4a06-8764-8bc42ccde299
+[I 2023-11-13 13:50:12.710 ServerApp] Connecting to kernel 36110a5a-a4aa-4a06-8764-8bc42ccde299.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-13 13:52:09.276 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 13:54:09.379 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 13:56:09.457 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 13:58:09.588 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:00:09.663 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:02:09.774 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:04:09.849 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:06:09.922 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:08:09.976 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:10:10.041 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:12:10.105 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:14:10.176 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:16:10.261 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:18:10.338 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:20:10.454 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[W 2023-11-13 14:23:29.756 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+
+[W 2023-11-13 14:23:31.045 ServerApp] iopub messages resumed
+[I 2023-11-13 14:24:10.532 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:26:10.619 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:28:10.690 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:30:10.760 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:32:10.813 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:32:13.879 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:34:13.952 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:35:30.123 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 14:35:31.318 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:25:20.361 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:27:20.459 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:29:20.531 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:31:20.633 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:33:20.739 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[W 2023-11-13 15:35:06.819 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+
+[W 2023-11-13 15:35:08.406 ServerApp] iopub messages resumed
+[W 2023-11-13 15:35:10.092 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+
+[I 2023-11-13 15:35:20.841 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:37:12.650 ServerApp] Kernel interrupted: 36110a5a-a4aa-4a06-8764-8bc42ccde299
+[I 2023-11-13 15:37:20.928 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:39:21.023 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:41:21.184 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:43:21.253 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:45:21.328 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[W 2023-11-13 15:46:46.569 ServerApp] 404 GET /files/~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS/pic/EUR_BARPLOT_2023-11-13.png?_xsrf=[secret]&1699858006628 (905aa36339394575b8b900e16c1325f3@127.0.0.1) 17.51ms referer=http://localhost:8888/notebooks/PRSTutorial1103.ipynb
+[I 2023-11-13 15:47:21.424 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:49:21.523 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[W 2023-11-13 15:50:04.468 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+
+[W 2023-11-13 15:50:05.918 ServerApp] iopub messages resumed
+[W 2023-11-13 15:50:07.994 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+
+[W 2023-11-13 15:50:09.633 ServerApp] iopub messages resumed
+[I 2023-11-13 15:51:21.884 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:53:22.876 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:55:23.249 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:57:23.321 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 15:59:23.726 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 16:01:24.462 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 16:03:26.562 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 16:05:26.637 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 16:06:42.709 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 16:06:54.633 ServerApp] Kernel shutdown: 36110a5a-a4aa-4a06-8764-8bc42ccde299
+[I 2023-11-13 16:06:54.919 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-13 16:06:54.919 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 14 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .ipynb_checkpoints/PRSTutorial1103-checkpoint.ipynb
+        modified:   PRSTutorial1103.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pic/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git add -A .
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git commit -m "[update] try another PRS tutorial (chapter.3-4)"
+[main b81cbd0] [update] try another PRS tutorial (chapter.3-4)
+ 6 files changed, 3096 insertions(+), 6 deletions(-)
+ create mode 100644 d_20231023/03_231113_TutorialPRS/pic/EUR.height.bar.png
+ create mode 100644 d_20231023/03_231113_TutorialPRS/pic/EUR.height.scatter.png
+ create mode 100644 d_20231023/03_231113_TutorialPRS/pic/EUR_BARPLOT_2023-11-13.png
+ create mode 100644 d_20231023/03_231113_TutorialPRS/pic/EUR_HIGH-RES_PLOT_2023-11-13.png
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 588.15 KiB | 3.50 MiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   9870908..b81cbd0  main -> main
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ exit
+logout
+Connection to 133.11.2.58 closed.
+(base) PS C:\Users\himar> ls
+
+
+    ディレクトリ: C:\Users\himar
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2021/03/31     22:06                .conda
+d-----        2020/11/25      0:04                .idlerc
+d-----        2021/12/15     13:26                .igv
+d-----        2021/06/28      1:54                .imagej
+d-----        2021/04/01      0:16                .ipython
+d-----        2021/04/01      1:44                .jupyter
+d-----        2021/04/01      0:47                .matplotlib
+d-----        2022/09/14     10:48                .ms-ad
+d-----        2023/07/11     17:13                .ssh
+d-----        2023/06/20     18:36                .vscode
+d-----        2022/08/01     16:19                .vscode-R
+d-r---        2021/03/16      2:12                3D Objects
+d-r---        2022/10/27     16:41                Contacts
+d-----        2020/11/15     22:14                Corel
+d-r---        2023/11/07     12:44                Desktop
+d-----        2021/09/20     21:46                Documents
+d-r---        2023/11/13     15:26                Downloads
+d-r---        2022/10/27     16:41                Favorites
+d-----        2021/12/15     14:41                igv
+d-r---        2022/10/27     16:41                Links
+d-----        2021/04/01      0:48                miniconda3
+d-r---        2022/10/27     16:41                Music
+dar--l        2023/11/13     11:39                OneDrive
+d-r---        2022/10/27     16:41                Saved Games
+d-r---        2022/10/27     16:41                Searches
+d-----        2020/11/24      1:52                source
+d-r---        2022/10/27     16:41                Videos
+d-----        2023/09/28     17:40                Zotero
+-a----        2023/02/13      4:17           5484 .bash_history
+-a----        2021/03/31     22:05             42 .condarc
+-a----        2023/02/13      4:52            213 .gitconfig
+-a----        2023/02/13      4:52             20 .lesshst
+-a----        2022/07/16      2:12            130 .minttyrc
+-a----        2022/08/30     22:58             17 .python_history
+-a----        2022/02/13      0:53             25 .structure
+-a----        2022/07/29     11:40           1813 .viminfo
+-a----        2021/08/28     14:55            145 BullseyeCoverageError.txt
+-a----        2021/10/18     18:35           2606 ClevoUWP.json
+-a----        2022/07/14     17:26           1347 mintty.exe.stackdump
+-a----        2021/10/18     18:35            274 uwp.txt
+
+
+(base) PS C:\Users\himar> cd I:
+(base) PS I:\> ls
+
+
+    ディレクトリ: I:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2023/05/24     21:53                ADRC
+d-----        2023/05/24     21:53                ADRC_Plink
+d-----        2023/05/24     19:12                default
+d-----        2023/11/13     11:48                hmiwa-lab
+-a----        2023/06/29     14:51            180 README
+
+
+(base) PS I:\> cd hmiwa-lab
+(base) PS I:\hmiwa-lab> jupyter notebook
+[W 16:11:52.432 NotebookApp] Terminals not available (error was No module named 'winpty.cywinpty')
+[I 16:11:52.584 NotebookApp] Serving notebooks from local directory: I:\hmiwa-lab
+[I 16:11:52.584 NotebookApp] Jupyter Notebook 6.3.0 is running at:
+[I 16:11:52.584 NotebookApp] http://localhost:8888/?token=99b891a77d1dc7e4b9e286643e8f708ede2a44a32194f612
+[I 16:11:52.584 NotebookApp]  or http://127.0.0.1:8888/?token=99b891a77d1dc7e4b9e286643e8f708ede2a44a32194f612
+[I 16:11:52.584 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:11:52.632 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///C:/Users/himar/AppData/Roaming/jupyter/runtime/nbserver-24044-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=99b891a77d1dc7e4b9e286643e8f708ede2a44a32194f612
+     or http://127.0.0.1:8888/?token=99b891a77d1dc7e4b9e286643e8f708ede2a44a32194f612
+[W 16:12:01.023 NotebookApp] Notebook d_20231023/03_231113_TutorialPRS/PRSTutorial1103.ipynb is not trusted
+[I 16:12:02.600 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR_BARPLOT_2023-11-13.png (::1) 1.010000ms
+[I 16:12:02.603 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR_HIGH-RES_PLOT_2023-11-13.png (::1) 1.720000ms
+[I 16:12:02.604 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR.height.bar.png (::1) 3.150000ms
+[I 16:12:02.605 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR.height.scatter.png (::1) 3.650000ms
+[W 16:12:14.912 NotebookApp] Notebook d_20231023/03_231113_TutorialPRS/PRSTutorial1103.ipynb is not trusted
+[I 16:12:50.415 NotebookApp] Interrupted...
+[I 16:12:50.417 NotebookApp] Shutting down 0 kernels
+(base) PS I:\hmiwa-lab> cd C:
+(base) PS C:\Users\himar> cd hmiwa-lab
+cd : パス 'C:\Users\himar\hmiwa-lab' が存在しないため検出できません。
+発生場所 行:1 文字:1
++ cd hmiwa-lab
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\himar\hmiwa-lab:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+(base) PS C:\Users\himar> ssh hmiwa-lab
+Enter passphrase for key 'C:\Users\himar/.ssh/id_rsa':
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Mon Nov 13 11:51:28 2023 from 133.11.3.101
+hmiwa@humgendiv:~$ cd ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 3), reused 5 (delta 3), pack-reused 0
+Unpacking objects: 100% (5/5), 121.62 KiB | 358.00 KiB/s, done.
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Updating b81cbd0..9d47716
+Fast-forward
+ d_20231023/03_231113_TutorialPRS/PRSTutorial1103.html | 18171 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 18171 insertions(+)
+ create mode 100644 d_20231023/03_231113_TutorialPRS/PRSTutorial1103.html
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ ls
+pic  PRSTutorial1103.html  PRSTutorial1103.ipynb
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ mv PRSTutorial1103.html 03_231113_TutorialPRS.html
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ mv PRSTutorial1103.ipynb 03_231113_TutorialPRS.ipynb
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ ls
+03_231113_TutorialPRS.html  03_231113_TutorialPRS.ipynb  pic
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 16 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    PRSTutorial1103.html
+        deleted:    PRSTutorial1103.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        03_231113_TutorialPRS.html
+        03_231113_TutorialPRS.ipynb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git add -A .
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git commit -m "[update] rename files"
+[main 285514c] [update] rename files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ rename d_20231023/03_231113_TutorialPRS/{PRSTutorial1103.html => 03_231113_TutorialPRS.html} (100%)
+ rename d_20231023/03_231113_TutorialPRS/{PRSTutorial1103.ipynb => 03_231113_TutorialPRS.ipynb} (100%)
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 384 bytes | 384.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   9d47716..285514c  main -> main
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ jupyter notebook
+[I 2023-11-13 16:16:45.830 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-13 16:16:45.836 ServerApp] Package jupyter_lsp took 0.0065s to import
+[W 2023-11-13 16:16:45.837 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 16:16:45.840 ServerApp] Package jupyter_server_terminals took 0.0034s to import
+[I 2023-11-13 16:16:45.841 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-13 16:16:45.866 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-13 16:16:45.866 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 16:16:45.867 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-13 16:16:45.870 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-13 16:16:45.873 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-13 16:16:45.877 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-13 16:16:46.064 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-13 16:16:46.076 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-13 16:16:46.078 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-13 16:16:46.079 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-13 16:16:46.080 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-13 16:16:46.080 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-13 16:16:46.081 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-13 16:16:46.083 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-13 16:16:46.084 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-13 16:16:46.085 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+[I 2023-11-13 16:16:46.085 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-13 16:16:46.085 ServerApp] http://localhost:8888/tree?token=a94f8449bdb72f478f293301fa8821ca509341ab2cae5fc3
+[I 2023-11-13 16:16:46.085 ServerApp]     http://127.0.0.1:8888/tree?token=a94f8449bdb72f478f293301fa8821ca509341ab2cae5fc3
+[I 2023-11-13 16:16:46.085 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-13 16:16:46.087 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-13 16:16:46.087 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1308904-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=a94f8449bdb72f478f293301fa8821ca509341ab2cae5fc3
+        http://127.0.0.1:8888/tree?token=a94f8449bdb72f478f293301fa8821ca509341ab2cae5fc3
+[I 2023-11-13 16:16:46.335 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-13 16:17:01.087 ServerApp] Kernel started: 090910ba-c655-4eb5-bcd5-88d78c00d922
+[I 2023-11-13 16:17:03.801 ServerApp] Connecting to kernel 090910ba-c655-4eb5-bcd5-88d78c00d922.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-13 16:17:59.937 ServerApp] Saving file at /03_231113_TutorialPRS.ipynb
+[I 2023-11-13 16:18:06.444 ServerApp] Kernel shutdown: 090910ba-c655-4eb5-bcd5-88d78c00d922
+[I 2023-11-13 16:18:09.178 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-13 16:18:09.178 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git add -A .
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git commit -m "[update] add the title"
+[main 91e831e] [update] add the title
+ 2 files changed, 3230 insertions(+)
+ create mode 100644 d_20231023/03_231113_TutorialPRS/.ipynb_checkpoints/03_231113_TutorialPRS-checkpoint.ipynb
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 35.83 KiB | 5.12 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   285514c..91e831e  main -> main
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ exit
+logout
+Connection to 133.11.2.58 closed.
+(base) PS C:\Users\himar> jupyter notebook
+[W 16:19:11.661 NotebookApp] Terminals not available (error was No module named 'winpty.cywinpty')
+[I 16:19:11.809 NotebookApp] Serving notebooks from local directory: C:\Users\himar
+[I 16:19:11.809 NotebookApp] Jupyter Notebook 6.3.0 is running at:
+[I 16:19:11.809 NotebookApp] http://localhost:8888/?token=37743317488dadccd069404970e5c75be56b5a8180237bdd
+[I 16:19:11.809 NotebookApp]  or http://127.0.0.1:8888/?token=37743317488dadccd069404970e5c75be56b5a8180237bdd
+[I 16:19:11.810 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:19:11.858 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///C:/Users/himar/AppData/Roaming/jupyter/runtime/nbserver-29936-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=37743317488dadccd069404970e5c75be56b5a8180237bdd
+     or http://127.0.0.1:8888/?token=37743317488dadccd069404970e5c75be56b5a8180237bdd
+[I 16:19:26.643 NotebookApp] Interrupted...
+[I 16:19:26.644 NotebookApp] Shutting down 0 kernels
+(base) PS C:\Users\himar> cd I:\hmiwa^lab
+cd : パス 'I:\hmiwa^lab' が存在しないため検出できません。
+発生場所 行:1 文字:1
++ cd I:\hmiwa^lab
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (I:\hmiwa^lab:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+(base) PS C:\Users\himar> cd I:\hmiwa-lab
+(base) PS I:\hmiwa-lab> jupyter notebook
+[W 16:19:44.425 NotebookApp] Terminals not available (error was No module named 'winpty.cywinpty')
+[I 16:19:44.572 NotebookApp] Serving notebooks from local directory: I:\hmiwa-lab
+[I 16:19:44.572 NotebookApp] Jupyter Notebook 6.3.0 is running at:
+[I 16:19:44.572 NotebookApp] http://localhost:8888/?token=e7bd1df03527b1b9238c77b6f73f1a08d7dbbcdd92d9ec81
+[I 16:19:44.572 NotebookApp]  or http://127.0.0.1:8888/?token=e7bd1df03527b1b9238c77b6f73f1a08d7dbbcdd92d9ec81
+[I 16:19:44.572 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:19:44.619 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///C:/Users/himar/AppData/Roaming/jupyter/runtime/nbserver-19776-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=e7bd1df03527b1b9238c77b6f73f1a08d7dbbcdd92d9ec81
+     or http://127.0.0.1:8888/?token=e7bd1df03527b1b9238c77b6f73f1a08d7dbbcdd92d9ec81
+[W 16:19:51.611 NotebookApp] Notebook d_20231023/03_231113_TutorialPRS/PRSTutorial1103.ipynb is not trusted
+[I 16:19:53.245 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR_BARPLOT_2023-11-13.png (::1) 0.000000ms
+[I 16:19:53.247 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR_HIGH-RES_PLOT_2023-11-13.png (::1) 1.590000ms
+[I 16:19:53.249 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR.height.bar.png (::1) 1.010000ms
+[I 16:19:53.251 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR.height.scatter.png (::1) 2.420000ms
+[W 16:19:58.599 NotebookApp] Notebook d_20231023/03_231113_TutorialPRS/PRSTutorial1103.ipynb is not trusted
+[I 16:20:15.719 NotebookApp] Interrupted...
+[I 16:20:15.720 NotebookApp] Shutting down 0 kernels
+(base) PS I:\hmiwa-lab> jupyter notebook
+[W 16:20:37.913 NotebookApp] Terminals not available (error was No module named 'winpty.cywinpty')
+[I 16:20:38.052 NotebookApp] Serving notebooks from local directory: I:\hmiwa-lab
+[I 16:20:38.053 NotebookApp] Jupyter Notebook 6.3.0 is running at:
+[I 16:20:38.053 NotebookApp] http://localhost:8888/?token=d273d3c12167d60b8df49e94666fe7f2de887aca6aa840ee
+[I 16:20:38.054 NotebookApp]  or http://127.0.0.1:8888/?token=d273d3c12167d60b8df49e94666fe7f2de887aca6aa840ee
+[I 16:20:38.054 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:20:38.100 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///C:/Users/himar/AppData/Roaming/jupyter/runtime/nbserver-25844-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=d273d3c12167d60b8df49e94666fe7f2de887aca6aa840ee
+     or http://127.0.0.1:8888/?token=d273d3c12167d60b8df49e94666fe7f2de887aca6aa840ee
+[W 16:20:44.328 NotebookApp] Notebook d_20231023/03_231113_TutorialPRS/03_231113_TutorialPRS.ipynb is not trusted
+[I 16:20:45.996 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR_BARPLOT_2023-11-13.png (::1) 1.980000ms
+[I 16:20:45.998 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR.height.bar.png (::1) 1.000000ms
+[I 16:20:46.000 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR.height.scatter.png (::1) 2.990000ms
+[I 16:20:46.001 NotebookApp] 302 GET /notebooks/d_20231023/03_231113_TutorialPRS/pic/EUR_HIGH-RES_PLOT_2023-11-13.png (::1) 3.990000ms
+[I 16:20:47.476 NotebookApp] Kernel started: ca493756-24ee-49cc-9725-838bf7718c5f, name: python3
+[I 16:20:52.661 NotebookApp] Saving file at /d_20231023/03_231113_TutorialPRS/03_231113_TutorialPRS.ipynb
+[I 16:21:03.728 NotebookApp] Starting buffering for ca493756-24ee-49cc-9725-838bf7718c5f:2522db3366674d5a85fa22148c227d61
+[I 16:21:03.733 NotebookApp] Kernel shutdown: ca493756-24ee-49cc-9725-838bf7718c5f
+[I 16:21:07.304 NotebookApp] Interrupted...
+[I 16:21:07.305 NotebookApp] Shutting down 0 kernels
+(base) PS I:\hmiwa-lab> cd
+(base) PS I:\hmiwa-lab> cd C:
+(base) PS C:\Users\himar> ls
+
+
+    ディレクトリ: C:\Users\himar
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2021/03/31     22:06                .conda
+d-----        2020/11/25      0:04                .idlerc
+d-----        2021/12/15     13:26                .igv
+d-----        2021/06/28      1:54                .imagej
+d-----        2021/04/01      0:16                .ipython
+d-----        2021/04/01      1:44                .jupyter
+d-----        2021/04/01      0:47                .matplotlib
+d-----        2022/09/14     10:48                .ms-ad
+d-----        2023/07/11     17:13                .ssh
+d-----        2023/06/20     18:36                .vscode
+d-----        2022/08/01     16:19                .vscode-R
+d-r---        2021/03/16      2:12                3D Objects
+d-r---        2022/10/27     16:41                Contacts
+d-----        2020/11/15     22:14                Corel
+d-r---        2023/11/07     12:44                Desktop
+d-----        2021/09/20     21:46                Documents
+d-r---        2023/11/13     16:20                Downloads
+d-r---        2022/10/27     16:41                Favorites
+d-----        2021/12/15     14:41                igv
+d-r---        2022/10/27     16:41                Links
+d-----        2021/04/01      0:48                miniconda3
+d-r---        2022/10/27     16:41                Music
+dar--l        2023/11/13     11:39                OneDrive
+d-r---        2022/10/27     16:41                Saved Games
+d-r---        2022/10/27     16:41                Searches
+d-----        2020/11/24      1:52                source
+d-r---        2022/10/27     16:41                Videos
+d-----        2023/09/28     17:40                Zotero
+-a----        2023/02/13      4:17           5484 .bash_history
+-a----        2021/03/31     22:05             42 .condarc
+-a----        2023/02/13      4:52            213 .gitconfig
+-a----        2023/02/13      4:52             20 .lesshst
+-a----        2022/07/16      2:12            130 .minttyrc
+-a----        2022/08/30     22:58             17 .python_history
+-a----        2022/02/13      0:53             25 .structure
+-a----        2022/07/29     11:40           1813 .viminfo
+-a----        2021/08/28     14:55            145 BullseyeCoverageError.txt
+-a----        2021/10/18     18:35           2606 ClevoUWP.json
+-a----        2022/07/14     17:26           1347 mintty.exe.stackdump
+-a----        2021/10/18     18:35            274 uwp.txt
+
+
+(base) PS C:\Users\himar>
