@@ -1,0 +1,1035 @@
+Linux 用の Windows サブシステムが Microsoft Store で入手可能になりました。
+'wsl.exe --update' を実行するか、https://aka.ms/wslstorepage
+ にアクセスしてアップグレードできます。Microsoft Store から WSL をインストールすると、最新の WSL 更新がより速く提供されます。
+詳細については、https://aka.ms/wslstoreinfo
+をご覧ください。
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 4.4.0-22621-Microsoft x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Nov  7 16:33:36 JST 2023
+
+  System load:    0.52      Processes:              7
+  Usage of /home: unknown   Users logged in:        0
+  Memory usage:   83%       IPv4 address for eth0:  133.11.3.101
+  Swap usage:     1%        IPv4 address for wifi0: 133.11.2.94
+
+
+255 updates can be applied immediately.
+191 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+This message is shown once a day. To disable it please create the
+/home/h_30/.hushlogin file.
+h_30@MyComputer:~$ jupyter notebook
+
+Command 'jupyter' not found, but can be installed with:
+
+sudo apt install jupyter-core
+
+h_30@MyComputer:~$ pip install jupyter
+
+Command 'pip' not found, but can be installed with:
+
+sudo apt install python3-pip
+
+h_30@MyComputer:~$ python3
+Python 3.8.10 (default, Nov 26 2021, 20:14:08)
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+h_30@MyComputer:~$ pip3 install jupyter
+
+Command 'pip3' not found, but can be installed with:
+
+sudo apt install python3-pip
+
+h_30@MyComputer:~$ brew install jupyter
+Updating Homebrew...
+==> Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:68923daf3e139482b977c3deba63a3b54ea37bb5f716482948878819ef911bad
+######################################################################## 100.0%
+==> Pouring portable-ruby-2.6.10_1.x86_64_linux.bottle.tar.gz
+==> Re-running `brew update` for linuxbrew-core migration
+Warning: HOMEBREW_CORE_GIT_REMOTE was set: https://github.com/Homebrew/linuxbrew-core.
+It has been unset for the migration.
+You may need to change this from a linuxbrew-core mirror to a homebrew-core one.
+
+HOMEBREW_CORE_GIT_REMOTE set: using https://github.com/Homebrew/homebrew-core as the Homebrew/homebrew-core Git remote.
+remote: Enumerating objects: 684917, done.
+remote: Counting objects: 100% (684917/684917), done.
+remote: Compressing objects: 100% (179683/179683), done.
+remote: Total 684917 (delta 505028), reused 684739 (delta 504919), pack-reused 0
+Receiving objects: 100% (684917/684917), 236.99 MiB | 11.10 MiB/s, done.
+Resolving deltas: 100% (505028/505028), completed with 6687 local objects.
+From https://github.com/Homebrew/homebrew-core
+ + 51b47956b07...b36e9c875a8 master     -> origin/master  (forced update)
+==> Homebrew collects anonymous analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics have been recorded yet (nor will be during this `brew` run).
+
+==> homebrew/core is old and unneeded, untapping to save space...
+Untapping homebrew/core...
+Untapped 2 commands and 5865 formulae (6,208 files, 790.5MB).
+==> Downloading https://ghcr.io/v2/homebrew/core/jupyterlab/manifests/4.0.8
+############################################################################################################################################### 100.0%==> Fetching dependencies for jupyterlab: linux-headers@5.15, glibc, gmp, isl, mpfr, libmpc, lz4, xz, zlib, zstd, binutils, gcc, pycparser, python-setuptools, libffi, cffi, pygments, mpdecimal, ca-certificates, openssl@3, ncurses, readline, sqlite, berkeley-db@5, libedit, krb5, libtirpc, libnsl, expat, libxcrypt, unzip, python@3.11, six, ipython, brotli, c-ares, icu4c, libnghttp2, libuv, node, pandoc, python-certifi, python-packaging, black, mypy, pydocstyle, ruff, python-lsp-server, python-psutil, libyaml, pyyaml, libsodium, zeromq, libxml2, libgpg-error, libgcrypt and libxslt
+==> Downloading https://ghcr.io/v2/homebrew/core/linux-headers/5.15/manifests/5.15.137
+############################################################################################################################################### 100.0%==> Fetching linux-headers@5.15
+==> Downloading https://ghcr.io/v2/homebrew/core/linux-headers/5.15/blobs/sha256:f33dbc3b6e8a79cf879636905cb2c2b1db6693a2f6fc1bf8e67907b0a53c61da
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/glibc/manifests/2.35_1
+############################################################################################################################################### 100.0%==> Fetching glibc
+==> Downloading https://ghcr.io/v2/homebrew/core/glibc/blobs/sha256:274dd06ae6ecaee3025d6bf21cf4c7641df9a1cc3973e162911a1f4a76000a24
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+############################################################################################################################################### 100.0%==> Installing gmp dependency: glibc
+==> Downloading https://ghcr.io/v2/homebrew/core/glibc/manifests/2.35_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/0b9d36176fd9b681842d23337db0fd45753c857707574090ef783dc4adb0a44f--glibc-2.35_1.bottle_manifest.json
+==> Installing dependencies for glibc: linux-headers@5.15
+==> Installing glibc dependency: linux-headers@5.15
+==> Downloading https://ghcr.io/v2/homebrew/core/linux-headers/5.15/manifests/5.15.137
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/5268907dd94befec6ba31f762b367675ca11a39dd82836fa4f94725ff49ff4eb--linux-headers@5.15-5.15.137.bottle_manifest.json
+==> Pouring linux-headers@5.15--5.15.137.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/linux-headers@5.15/5.15.137: 961 files, 5.5MB
+==> Installing glibc
+==> Pouring glibc--2.35_1.x86_64_linux.bottle.tar.gz
+==> /home/linuxbrew/.linuxbrew/Cellar/glibc/2.35_1/sbin/ldconfig
+==> Installing locale data for en_US.UTF-8
+==> /home/linuxbrew/.linuxbrew/Cellar/glibc/2.35_1/bin/localedef -i en_US -f UTF-8 en_US.UTF-8
+🍺  /home/linuxbrew/.linuxbrew/Cellar/glibc/2.35_1: 1,404 files, 46.9MB
+==> Fetching gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/blobs/sha256:3dca3544faca889c7389a5fdbd2b5b00582c34a4e14607033573ad3b06ca7882
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.26
+############################################################################################################################################### 100.0%==> Fetching isl
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/blobs/sha256:db14ba1e4ea23ab41e06930dcf25ae9023c5e395c88602da2a9b6a98d54c92d3
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.2.0-p12
+############################################################################################################################################### 100.0%==> Fetching mpfr
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/blobs/sha256:57c89c97863cb0d08251271de84ae157b364af3b304a0c0e8a13bdd57d4f026a
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.3.1
+############################################################################################################################################### 100.0%==> Fetching libmpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/blobs/sha256:f6542ae5bcf643ca0c980c7000cde1585922e76be080b3cc3422dac0d4a50904
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/lz4/manifests/1.9.4
+############################################################################################################################################### 100.0%==> Fetching lz4
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:1757fefc3840e11c4822e4c2a95aa62aca44a4eaccce6f5c414ea51d1e58bf8e
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.4.5
+############################################################################################################################################### 100.0%==> Fetching xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:50675435a60d1190dbea52c5dbd65e70c7bd430e4de7472dc57901222ca11fb7
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/zlib/manifests/1.3
+############################################################################################################################################### 100.0%==> Fetching zlib
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/blobs/sha256:a47a3b5c8ee68010ab374a3d395e7a39a2d08f4f0096386c884c04a6d2e9df1d
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.5-1
+############################################################################################################################################### 100.0%==> Fetching zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:96afcbd191c9961446161a6fabf09cbbb4c6b3df371cee25b71c2c5d611719a2
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/binutils/manifests/2.41
+############################################################################################################################################### 100.0%==> Fetching binutils
+==> Downloading https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:3b91a59270365b124e3d73d14d75c9085f156f9b521b94387793b91cff1f98c3
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/13.2.0-1
+############################################################################################################################################### 100.0%==> Fetching gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:51d17af287f8c295c6a846175c64577c9aa75e523a6fe116c9a66e5b028b0f9c
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/pycparser/manifests/2.21_1
+############################################################################################################################################### 100.0%==> Installing pycparser dependency: gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/13.2.0-1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1070e0c204c0143186700b3f10737c381298fe114bdb26969e3cc6455b83e6e5--gcc-13.2.0-1.bottle_manifest.json
+==> Installing dependencies for gcc: isl, mpfr, libmpc, lz4, xz, zlib, zstd and binutils
+==> Installing gcc dependency: isl
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.26
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/ec0bbec77171645273dd59a9ccfdf290deccd999b3ca2082e0478d282b777ec0--isl-0.26.bottle_manifest.json
+==> Pouring isl--0.26.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/isl/0.26: 74 files, 9.8MB
+==> Installing gcc dependency: mpfr
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.2.0-p12
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/d11db1fb1639030bbe9b0e2518a12765b48cd30dfad27f38d1affdbbf404c046--mpfr-4.2.0-p12.bottle_manifest.json
+==> Pouring mpfr--4.2.0-p12.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mpfr/4.2.0-p12: 31 files, 3.9MB
+==> Installing gcc dependency: libmpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.3.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/fdfa98e0f8bb3ce075cb32776ac2345aa2f89252706c162aecfc841085fa76be--libmpc-1.3.1.bottle_manifest.json
+==> Pouring libmpc--1.3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libmpc/1.3.1: 13 files, 617.5KB
+==> Installing gcc dependency: lz4
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/manifests/1.9.4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/379e59b981667f9585b33a2ff318769d8edca3ce6fd2e9a67ed291ae3e0cc872--lz4-1.9.4.bottle_manifest.json
+==> Pouring lz4--1.9.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/lz4/1.9.4: 22 files, 664KB
+==> Installing gcc dependency: xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.4.5
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/4e81fda476fb634a7e1ac650019bfe768a65d6c387015992df4cd75adf9b3fce--xz-5.4.5.bottle_manifest.json
+==> Pouring xz--5.4.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/xz/5.4.5: 313 files, 3.8MB
+==> Installing gcc dependency: zlib
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/manifests/1.3
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b4c20c0489e59e6d8c5f8e4abdd47f07d52fe38699b6f0fea76781631025eecd--zlib-1.3.bottle_manifest.json
+==> Pouring zlib--1.3.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zlib/1.3: 13 files, 445.2KB
+==> Installing gcc dependency: zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.5-1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/fc13698599720a53800064b40cddd854399651cf8760d9b0e46092f2e8da701a--zstd-1.5.5-1.bottle_manifest.json
+==> Pouring zstd--1.5.5.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zstd/1.5.5: 31 files, 2.7MB
+==> Installing gcc dependency: binutils
+==> Downloading https://ghcr.io/v2/homebrew/core/binutils/manifests/2.41
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/06cd935b73925633b6181886748531112240cdb3b9bbaf121c437d716c6f8e90--binutils-2.41.bottle_manifest.json
+==> Pouring binutils--2.41.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/binutils/2.41: 4,729 files, 468.9MB
+==> Installing gcc
+==> Pouring gcc--13.2.0.x86_64_linux.bottle.1.tar.gz
+Warning: The post-install step did not complete successfully
+You can try again using:
+  brew postinstall gcc
+==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gcc/13.2.0: 1,658 files, 319.8MB
+==> Fetching pycparser
+==> Downloading https://ghcr.io/v2/homebrew/core/pycparser/blobs/sha256:07dbdd6e32af33650d0bcc5ecaa7b90623e47167aed9ef29f9aa5003987a0d69
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/python-setuptools/manifests/68.2.2
+############################################################################################################################################### 100.0%==> Fetching python-setuptools
+==> Downloading https://ghcr.io/v2/homebrew/core/python-setuptools/blobs/sha256:06a95823fc00225cdf94739d478b2a4bbb687f59f77d42166998bebd53c45972
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libffi/manifests/3.4.4
+############################################################################################################################################### 100.0%==> Fetching libffi
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/blobs/sha256:dcc9412995b5e319f64796a77b1eb8e684f1d1b6b5d7ac824f434ada692e4ff8
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/cffi/manifests/1.16.0_1
+############################################################################################################################################### 100.0%==> Fetching cffi
+==> Downloading https://ghcr.io/v2/homebrew/core/cffi/blobs/sha256:d014e7fedeb7161b5f6ca55d47bff9c7e3fe4798f76cb6a891d9e2b073917dee
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/pygments/manifests/2.16.1_1
+############################################################################################################################################### 100.0%==> Fetching pygments
+==> Downloading https://ghcr.io/v2/homebrew/core/pygments/blobs/sha256:d21d474ed493f0d9a5c373a51eecb677bc6ea75f864bc6744dd806923739fbcd
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/manifests/2.5.1
+############################################################################################################################################### 100.0%==> Fetching mpdecimal
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/blobs/sha256:c5d64a4dd47dc1b66887c0cecd884f0848a801cb2f684cde0f4664e709574067
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2023-08-22
+############################################################################################################################################### 100.0%==> Fetching ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:68805f32523ea598c61d118e1a41cceb4589fe6e8c265133dcf70d6b1ae05883
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.1.4
+############################################################################################################################################### 100.0%==> Fetching openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:9d25623d60634b81347e22c20e81d830b91b8f80557c77dca9ecdcedb98d43c6
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.4-1
+############################################################################################################################################### 100.0%==> Fetching ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/blobs/sha256:58970126fed5ca09650b60c453e2b911a85f038b45af9091b5b2ef2b61d7d40e
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.1
+############################################################################################################################################### 100.0%==> Fetching readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/blobs/sha256:7dc8f7ebbfcb22adcd5535a8da083ed8aa3c42c8579c465a2263d778868bc058
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.44.0
+############################################################################################################################################### 100.0%==> Fetching sqlite
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:0450f828eaf1c1ab73488add39bb240b99cb6750aa973e8253e07151fc288ce7
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/manifests/5.3.28_1
+############################################################################################################################################### 100.0%==> Fetching berkeley-db@5
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/blobs/sha256:c0e2906cc6657dc497fec75629560b0a404b81cebadf5e10c1f70616a14fa886
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libedit/manifests/20230828-3.1
+############################################################################################################################################### 100.0%==> Fetching libedit
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/blobs/sha256:5cb9c8007d6d9b21cc81c5bcd92e50ee75bc9605a0a2014399c31c720a92edcd
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/krb5/manifests/1.21.2
+############################################################################################################################################### 100.0%==> Fetching krb5
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/blobs/sha256:4bb56ec3b3263b64169a57e3722f54f60ee048a57d290dfffc0481e09d05ceb3
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libtirpc/manifests/1.3.3
+############################################################################################################################################### 100.0%==> Fetching libtirpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libtirpc/blobs/sha256:26371c5e683f16a4b2ebf4475150672f76d45e3d43583c942fcb0e916be77dc3
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libnsl/manifests/2.0.1
+############################################################################################################################################### 100.0%==> Fetching libnsl
+==> Downloading https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:fd62e18814426db752379866b0ecb55a655fcf7ffd068883625f9a7eed1f56b9
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.5.0
+############################################################################################################################################### 100.0%==> Fetching expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/blobs/sha256:ed2b581249b57581db4178a3f219f94f75d8b540867cc27fe1b809b3d32f1772
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/manifests/4.4.36
+############################################################################################################################################### 100.0%==> Fetching libxcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/blobs/sha256:ad1c4b570d7a66046038c13345b54337d858a2db78dcfb7e90a2b21adc1d6802
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/unzip/manifests/6.0_8
+############################################################################################################################################### 100.0%==> Fetching unzip
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/blobs/sha256:baf15e19852a0f9756e3302fa6f3866eaeccc06730c9907bffc19f32861d64bf
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/python/3.11/manifests/3.11.6_1
+############################################################################################################################################### 100.0%==> Fetching python@3.11
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:a64185695607db888898e2041aec2a20be10e4d04c47e02438f2167256693d00
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/six/manifests/1.16.0_4
+############################################################################################################################################### 100.0%==> Fetching six
+==> Downloading https://ghcr.io/v2/homebrew/core/six/blobs/sha256:af0e594f44ac758201a84eda10f5eec0e7958ac67c219c6a09165eb18ac79797
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/ipython/manifests/8.17.2
+############################################################################################################################################### 100.0%==> Fetching ipython
+==> Downloading https://ghcr.io/v2/homebrew/core/ipython/blobs/sha256:afb1bfcf4e0f6288b7aa4476bc2bf56f91b072a65fcc2cb1a30149b2c4bba6ce
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/brotli/manifests/1.1.0-1
+############################################################################################################################################### 100.0%==> Fetching brotli
+==> Downloading https://ghcr.io/v2/homebrew/core/brotli/blobs/sha256:5a2e1cc12312a092b38e79952fd2232f564f2c64cda0f69e97a55c65df9b29ab
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/c-ares/manifests/1.21.0
+############################################################################################################################################### 100.0%==> Fetching c-ares
+==> Downloading https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:08cb7da011d44055fbf57eeb6f268f5644bb78ed32c0d517437493a95b57cafe
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/manifests/73.2
+############################################################################################################################################### 100.0%==> Fetching icu4c
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/blobs/sha256:714dc987ca9c9b594e6e17c02640f93b49074f81264be16051a93a8f5f674d77
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/manifests/1.58.0
+############################################################################################################################################### 100.0%==> Fetching libnghttp2
+==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:1723ddcaacc3ad10052a0cb4e8cc1644f1ddfd6b51a70a3f9a57c98b247134a4
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.47.0
+############################################################################################################################################### 100.0%==> Fetching libuv
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/blobs/sha256:593f317a0edb0b7ea18f1fd4f25d9f8a374e596ffe28a375cdbd43a2e5e7c9b7
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/node/manifests/21.1.0
+############################################################################################################################################### 100.0%==> Fetching node
+==> Downloading https://ghcr.io/v2/homebrew/core/node/blobs/sha256:3bb614fb3dd8a8ab2c6ac64c8d3f815c6afdee329884dd6c4b079b9b174b2e9a
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/pandoc/manifests/3.1.9
+############################################################################################################################################### 100.0%==> Fetching pandoc
+==> Downloading https://ghcr.io/v2/homebrew/core/pandoc/blobs/sha256:4dc523534694f7f16b43dbffac43daaf0d9c21c3c62d0c7e5c72b27c2a75b76a
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/python-certifi/manifests/2023.7.22_1
+############################################################################################################################################### 100.0%==> Fetching python-certifi
+==> Downloading https://ghcr.io/v2/homebrew/core/python-certifi/blobs/sha256:a540eaf727baaa449fe5ae998e22f704accdb80555824fb7171af9e12104256f
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/python-packaging/manifests/23.2_1
+############################################################################################################################################### 100.0%==> Fetching python-packaging
+==> Downloading https://ghcr.io/v2/homebrew/core/python-packaging/blobs/sha256:62d837e1e916680d71e2f453315dea5c0798b1adfd2b469f0e70ad94734faeae
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/black/manifests/23.10.1
+############################################################################################################################################### 100.0%==> Fetching black
+==> Downloading https://ghcr.io/v2/homebrew/core/black/blobs/sha256:b8a9397030beccea90e62c09a0800d7d1e62e9446fa4145ca749690fdbf31c66
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/mypy/manifests/1.6.1
+############################################################################################################################################### 100.0%==> Fetching mypy
+==> Downloading https://ghcr.io/v2/homebrew/core/mypy/blobs/sha256:3f084ee2e800be5d526f0a88000f56e1ae82af32bc513e9acea047901288ee3e
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/pydocstyle/manifests/6.3.0
+############################################################################################################################################### 100.0%==> Fetching pydocstyle
+==> Downloading https://ghcr.io/v2/homebrew/core/pydocstyle/blobs/sha256:0f5028fbde0c073b5929daabb7fca939454809943f98fb5e15076899883277a4
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/ruff/manifests/0.1.4
+############################################################################################################################################### 100.0%==> Fetching ruff
+==> Downloading https://ghcr.io/v2/homebrew/core/ruff/blobs/sha256:87580cc8e228bb0c323032975e068dd4b3bd56223ddf972dca4424a13c98cafa
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/python-lsp-server/manifests/1.8.2
+############################################################################################################################################### 100.0%==> Fetching python-lsp-server
+==> Downloading https://ghcr.io/v2/homebrew/core/python-lsp-server/blobs/sha256:38bc8c93a1c9a0b3021e40ad907d321bb362ce00f776ed96b0af43b8bb450bb4
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/python-psutil/manifests/5.9.6
+############################################################################################################################################### 100.0%==> Fetching python-psutil
+==> Downloading https://ghcr.io/v2/homebrew/core/python-psutil/blobs/sha256:3cb95f593edd62967537b3a2cfa2d123c8dc613500b8e41774535eb59643bd28
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libyaml/manifests/0.2.5
+############################################################################################################################################### 100.0%==> Fetching libyaml
+==> Downloading https://ghcr.io/v2/homebrew/core/libyaml/blobs/sha256:354677a745b6c62109e792ddbd0cbdaf9e6a471d84fdbde3a7d9bae36d832da8
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/pyyaml/manifests/6.0.1_1
+############################################################################################################################################### 100.0%==> Fetching pyyaml
+==> Downloading https://ghcr.io/v2/homebrew/core/pyyaml/blobs/sha256:d53f5c35de430f055c83fdbb1e857b3423cbea9c66523f929cb525876ef55fae
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libsodium/manifests/1.0.19
+############################################################################################################################################### 100.0%==> Fetching libsodium
+==> Downloading https://ghcr.io/v2/homebrew/core/libsodium/blobs/sha256:b8ca1515b870335e26ee78bae614a734ccc1f30f3dbad1514f503ce7d9972d5f
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/zeromq/manifests/4.3.5_1
+############################################################################################################################################### 100.0%==> Fetching zeromq
+==> Downloading https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:904b3146ea9aab3b4fdb584c74be1fa762145d3435eef653becc38ce0600c1bc
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/manifests/2.11.5_1
+############################################################################################################################################### 100.0%==> Fetching libxml2
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:57ceccd15fd3b58cb7be51a09879c6d31f58ddc300a74379f29823177975f280
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libgpg-error/manifests/1.47
+############################################################################################################################################### 100.0%==> Fetching libgpg-error
+==> Downloading https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:c108c343e2fefc5fd01043e153aacd26a32396984eb6ed4b68702116efba5994
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libgcrypt/manifests/1.10.2
+############################################################################################################################################### 100.0%==> Fetching libgcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:fb4cdae9d33f557d8cc4f4fb34a2078a5ab9b91b6cfe9fabfcb966a6e39807bd
+############################################################################################################################################### 100.0%==> Downloading https://ghcr.io/v2/homebrew/core/libxslt/manifests/1.1.38_1
+############################################################################################################################################### 100.0%==> Fetching libxslt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:32f5991ea5c42e4f76e859e4ba4406da9183e621dd09bc0c955be5fe865b7df9
+############################################################################################################################################### 100.0%Error: Permission denied @ rb_file_s_rename - (/home/linuxbrew/.linuxbrew/Cellar/glibc/2.35_1, /home/linuxbrew/.linuxbrew/Cellar/glibc/2.35_1.tmp)
+h_30@MyComputer:~$ brew install jupyter
+Running `brew update --auto-update`...
+==> Downloading https://ghcr.io/v2/homebrew/core/jupyterlab/manifests/4.0.8
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/405f7028545ba8047dd86b0ee0cc0d43802d70c3309aa7e779071c842c705a73--jupyterlab-4.0.8.bottle_manifest.json
+==> Fetching dependencies for jupyterlab: gmp, pycparser, python-setuptools, libffi, cffi, pygments, mpdecimal, ca-certificates, openssl@3, ncurses, readline, sqlite, berkeley-db@5, libedit, krb5, libtirpc, libnsl, expat, libxcrypt, unzip, python@3.11, six, ipython, brotli, c-ares, icu4c, libnghttp2, libuv, node, pandoc, python-certifi, python-packaging, black, mypy, pydocstyle, ruff, python-lsp-server, python-psutil, libyaml, pyyaml, libsodium,zeromq, libxml2, libgpg-error, libgcrypt and libxslt
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/70a72a71216843d66a953c06ff6337445ce9bc94fae9f0e301e2f59005274a8e--gmp-6.3.0.bottle_manifest.json
+==> Fetching gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/blobs/sha256:3dca3544faca889c7389a5fdbd2b5b00582c34a4e14607033573ad3b06ca7882
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/c33d6941e09b97b6780d25231108e3ddd11f638829b2c50670223f42e0586657--gmp--6.3.0.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/pycparser/manifests/2.21_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/89b5ad0df19c96fc291bcef62c0035ee399d4562b2a32e64d3f4e8c461943ad2--pycparser-2.21_1.bottle_manifest.json
+==> Fetching pycparser
+==> Downloading https://ghcr.io/v2/homebrew/core/pycparser/blobs/sha256:07dbdd6e32af33650d0bcc5ecaa7b90623e47167aed9ef29f9aa5003987a0d69
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/d3cda342156a1232b75c216a8439b5cac55415f6fb38d2567af16d15dc500cc8--pycparser--2.21_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/python-setuptools/manifests/68.2.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/151f47f6f59597343d42954b5ffea4de6be29e18a9d7a07fc2386a3ad08752dc--python-setuptools-68.2.2.bottle_manifest.json
+==> Fetching python-setuptools
+==> Downloading https://ghcr.io/v2/homebrew/core/python-setuptools/blobs/sha256:06a95823fc00225cdf94739d478b2a4bbb687f59f77d42166998bebd53c45972
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/38d0040dff74dd8825c3bff47aa2285d410984d6c0bbcff11ff1fd6878fbdb22--python-setuptools--68.2.2.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/manifests/3.4.4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f5fd52c2060b392cd349c2d45b783adb0e507a5166f125893d6e733d9b7f4afa--libffi-3.4.4.bottle_manifest.json
+==> Fetching libffi
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/blobs/sha256:dcc9412995b5e319f64796a77b1eb8e684f1d1b6b5d7ac824f434ada692e4ff8
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/ca3d433de16e89ddbae57be1a624745600ee07b647342f4380254acc06fa0431--libffi--3.4.4.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/cffi/manifests/1.16.0_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/5d2e37eae3c804286ede5b97431a92ee9f350863fb22c486837e648e0342f7d9--cffi-1.16.0_1.bottle_manifest.json
+==> Fetching cffi
+==> Downloading https://ghcr.io/v2/homebrew/core/cffi/blobs/sha256:d014e7fedeb7161b5f6ca55d47bff9c7e3fe4798f76cb6a891d9e2b073917dee
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/ad531e60dcc27554377225dbfd094e8c5482fdeb23e3174e70006b66b76b6084--cffi--1.16.0_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/pygments/manifests/2.16.1_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/bcd2dc1eadde155296790c07687747ed12bd2b6a9589cb2328d3c87a6da622ed--pygments-2.16.1_1.bottle_manifest.json
+==> Fetching pygments
+==> Downloading https://ghcr.io/v2/homebrew/core/pygments/blobs/sha256:d21d474ed493f0d9a5c373a51eecb677bc6ea75f864bc6744dd806923739fbcd
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/186f69363ec8d39935d08c75641b138cd422aee0be758002e86ab5bbdd1b7eb8--pygments--2.16.1_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/manifests/2.5.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f367c2ee08c56b88be0662703a8e4275f8657608a268c8c44e845154b0cea543--mpdecimal-2.5.1.bottle_manifest.json
+==> Fetching mpdecimal
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/blobs/sha256:c5d64a4dd47dc1b66887c0cecd884f0848a801cb2f684cde0f4664e709574067
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/e02dc86f10704b9aeb72336cbffeb0d490260c2d5d976556c00f8d9fce6bef03--mpdecimal--2.5.1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2023-08-22
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/a8cd32e30cae0b7335779e93a6554f294f09485802fc253a3a8be441337a6115--ca-certificates-2023-08-22.bottle_manifest.json
+==> Fetching ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:68805f32523ea598c61d118e1a41cceb4589fe6e8c265133dcf70d6b1ae05883
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/9ceea6204c5584488d00fa77f8ed52b4cf9609a828d84c4bf4216256202c29de--ca-certificates--2023-08-22.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.1.4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/528fccab152aa17857e73f54f268d413bf94e22188c0e4ff17a6c497d2783b88--openssl@3-3.1.4.bottle_manifest.json
+==> Fetching openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:9d25623d60634b81347e22c20e81d830b91b8f80557c77dca9ecdcedb98d43c6
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/c95d10caf5c7b7942eec517a2e4fcf5a2a4d992fa16ce2522082f3b89ba7d7f8--openssl@3--3.1.4.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.4-1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/548168356558130632a3202b3fc2f3069f554bd5c1010b30e61f1180cf1f6b09--ncurses-6.4-1.bottle_manifest.json
+==> Fetching ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/blobs/sha256:58970126fed5ca09650b60c453e2b911a85f038b45af9091b5b2ef2b61d7d40e
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/8bf2040025d4c7dea3896c7a73768b3b1084c7ee6fc781794e8939ec4496de9e--ncurses--6.4.x86_64_linux.bottle.1.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/ab483c9a913ae82f3a2b3ae20918791bc3bd6825c7122a29cd4f1e0c65413759--readline-8.2.1.bottle_manifest.json
+==> Fetching readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/blobs/sha256:7dc8f7ebbfcb22adcd5535a8da083ed8aa3c42c8579c465a2263d778868bc058
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/745da703cff6fe6b71c73d44a63220e5c8404f68da87d60f42b78e07740ec3fb--readline--8.2.1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.44.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b6e7cd31f42971fa5388d696a09f9cc3c6e7c5b49c3d0d49b9324db1a268b203--sqlite-3.44.0.bottle_manifest.json
+==> Fetching sqlite
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:0450f828eaf1c1ab73488add39bb240b99cb6750aa973e8253e07151fc288ce7
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/38e1db757a0b83c48754c8c925dbac44f118c5d4fb7ccac7eab2b7b9f9d28e91--sqlite--3.44.0.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/manifests/5.3.28_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/17e4e0def00184b561c8a490b5c0813a7c4f5e1365eb2e927570786eb4e05e09--berkeley-db@5-5.3.28_1.bottle_manifest.json
+==> Fetching berkeley-db@5
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/blobs/sha256:c0e2906cc6657dc497fec75629560b0a404b81cebadf5e10c1f70616a14fa886
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/8b5fb485cdbb78c808921aeee52f32eadf4dc239fa5c03df690e316a1f9f4021--berkeley-db@5--5.3.28_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/manifests/20230828-3.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/aa32e07f286c25cd98716dc981bedecd086e432b4f5336ca63a30da3be5c79e1--libedit-20230828-3.1.bottle_manifest.json
+==> Fetching libedit
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/blobs/sha256:5cb9c8007d6d9b21cc81c5bcd92e50ee75bc9605a0a2014399c31c720a92edcd
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b37f5047d8199fa3a77cb2a5e176b6fd38e74913292694e09cc8f4d916a23444--libedit--20230828-3.1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/manifests/1.21.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1dac813e15dc58f7f64511565951ee43912a4a82b355448e23600e07b1b7107c--krb5-1.21.2.bottle_manifest.json
+==> Fetching krb5
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/blobs/sha256:4bb56ec3b3263b64169a57e3722f54f60ee048a57d290dfffc0481e09d05ceb3
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/26d8295a6218a1a7e66cd22cc92e965c1f8f45d6336588072355f22777c34375--krb5--1.21.2.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libtirpc/manifests/1.3.3
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/8855f5ef631c25ab1532940cd26ad4e298df26b4414ccd1426becf1b4ed7a3f9--libtirpc-1.3.3.bottle_manifest.json
+==> Fetching libtirpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libtirpc/blobs/sha256:26371c5e683f16a4b2ebf4475150672f76d45e3d43583c942fcb0e916be77dc3
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/5fff9750e00be58fcd7274922fd551422a2b885f50e849d9af74a44e659317f1--libtirpc--1.3.3.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libnsl/manifests/2.0.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/aa9502e1380fc6bf1af297a4f3d3402c1c175bd35d24d012b71a1a90c54d38bc--libnsl-2.0.1.bottle_manifest.json
+==> Fetching libnsl
+==> Downloading https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:fd62e18814426db752379866b0ecb55a655fcf7ffd068883625f9a7eed1f56b9
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f098d7455721f3e69c0e1b88d060812e225dd3460d0d58976e60e58948edd40d--libnsl--2.0.1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.5.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b842e1c2e5cbf31a2e2a3fdf4f68d06bf3a25a4a0429320411cb400db2461400--expat-2.5.0.bottle_manifest.json
+==> Fetching expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/blobs/sha256:ed2b581249b57581db4178a3f219f94f75d8b540867cc27fe1b809b3d32f1772
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/03989dcf45492d507e54ac1d0f80f9f8f366ec958b882f52b45394159d128c6c--expat--2.5.0.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/manifests/4.4.36
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/950e230307625f9e57d74f0076caab42b6c67a325c70b83efa2c9cc84be1f839--libxcrypt-4.4.36.bottle_manifest.json
+==> Fetching libxcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/blobs/sha256:ad1c4b570d7a66046038c13345b54337d858a2db78dcfb7e90a2b21adc1d6802
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/8a89cd46e87dade4849639585d2fd436fa581e9d21471f24e76e590d177c095f--libxcrypt--4.4.36.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/manifests/6.0_8
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b9a98c1a65dea38eb0bb5d9106a5758ed0ff17635811bd7f7cd6be5908c2961b--unzip-6.0_8.bottle_manifest.json
+==> Fetching unzip
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/blobs/sha256:baf15e19852a0f9756e3302fa6f3866eaeccc06730c9907bffc19f32861d64bf
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b21864e34ef4cb82ce78fcf50f8d91e7b3525e695b095c7d006c15cd802eefbb--unzip--6.0_8.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.11/manifests/3.11.6_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/481941c47c71dfeb6fba3057ead9b0bd21f7ca514b815bd8dde7cbeff257b362--python@3.11-3.11.6_1.bottle_manifest.json
+==> Fetching python@3.11
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:a64185695607db888898e2041aec2a20be10e4d04c47e02438f2167256693d00
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/cd2ffd1a2663b50c5c7cae4cf170eca6ecb487819e60688f58c0f0fba9894eb5--python@3.11--3.11.6_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/six/manifests/1.16.0_4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/d658d3e82cd694d7f522b1df4eec1d883dcec244931403fd77c6a0d75ad71193--six-1.16.0_4.bottle_manifest.json
+==> Fetching six
+==> Downloading https://ghcr.io/v2/homebrew/core/six/blobs/sha256:af0e594f44ac758201a84eda10f5eec0e7958ac67c219c6a09165eb18ac79797
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1accbd0251585d2b8b2ef3d34d74534356f53f1b9b3a8878d61363b3c228a653--six--1.16.0_4.all.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/ipython/manifests/8.17.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/2f730c0b229d5f8f535eba181f285216c8fbb7a6d2cc28a55e8aa1a1ff7ef8c8--ipython-8.17.2.bottle_manifest.json
+==> Fetching ipython
+==> Downloading https://ghcr.io/v2/homebrew/core/ipython/blobs/sha256:afb1bfcf4e0f6288b7aa4476bc2bf56f91b072a65fcc2cb1a30149b2c4bba6ce
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/db87716f4e7f0e15555971a9ed4d0d6064bb8fb7344d9904d5d81c6d1c749f44--ipython--8.17.2.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/brotli/manifests/1.1.0-1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/565098509cdfa90593ec9a41b41239f073843f88caed60ddaa3e6194ac4defda--brotli-1.1.0-1.bottle_manifest.json
+==> Fetching brotli
+==> Downloading https://ghcr.io/v2/homebrew/core/brotli/blobs/sha256:5a2e1cc12312a092b38e79952fd2232f564f2c64cda0f69e97a55c65df9b29ab
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/410bfc27d179794eadd0fa0e911d51df753591d3afd1c2aa30ad721353b9daf5--brotli--1.1.0.x86_64_linux.bottle.1.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/c-ares/manifests/1.21.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/63ab38196d8386349f796f445fe3de589b4069be4be250bc04bb2c81e212f061--c-ares-1.21.0.bottle_manifest.json
+==> Fetching c-ares
+==> Downloading https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:08cb7da011d44055fbf57eeb6f268f5644bb78ed32c0d517437493a95b57cafe
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/3e9edeaeec390cc2f82ad34d85feb2ecab79014f55bd1feffdd0fa3b00487319--c-ares--1.21.0.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/manifests/73.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/2e5082de52a2c85ae665e51f8d0de0651611397cb02f4b4e2bb37898ba52a629--icu4c-73.2.bottle_manifest.json
+==> Fetching icu4c
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/blobs/sha256:714dc987ca9c9b594e6e17c02640f93b49074f81264be16051a93a8f5f674d77
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/d467742181d935c7e6128244f70d5fced229aaf7d1f2b7af9ae1009f663c0f49--icu4c--73.2.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/manifests/1.58.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/9b2081d73959d4308c84740344d5f8169bbb9125dd76d20a71556a11a0171253--libnghttp2-1.58.0.bottle_manifest.json
+==> Fetching libnghttp2
+==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:1723ddcaacc3ad10052a0cb4e8cc1644f1ddfd6b51a70a3f9a57c98b247134a4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/4e42c9e99cc2728437e8fb2755d30d563af5d2608e9d5a21daa1efe25ff59a46--libnghttp2--1.58.0.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.47.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/bfee09d0f61c35b1a86c5b7a0f6b2f9e0a8b18a81bbd065f6eea7054b543f3ea--libuv-1.47.0.bottle_manifest.json
+==> Fetching libuv
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/blobs/sha256:593f317a0edb0b7ea18f1fd4f25d9f8a374e596ffe28a375cdbd43a2e5e7c9b7
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/12f4661900c57156f87fb34953506fd2cd98266ef1fde69cd49ed37f0b5278a8--libuv--1.47.0.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/node/manifests/21.1.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/928fee421121cea709f2824a912d11ba60794079e12679642dc75dec485c640f--node-21.1.0.bottle_manifest.json
+==> Fetching node
+==> Downloading https://ghcr.io/v2/homebrew/core/node/blobs/sha256:3bb614fb3dd8a8ab2c6ac64c8d3f815c6afdee329884dd6c4b079b9b174b2e9a
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/4052b750bf111874010dbc331a607109c03492bbd5dac002d84fdbc541651852--node--21.1.0.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/pandoc/manifests/3.1.9
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/ee04802a3085d42f5b411b15b448efaa0959889364203ed17b392c1e1f95960b--pandoc-3.1.9.bottle_manifest.json
+==> Fetching pandoc
+==> Downloading https://ghcr.io/v2/homebrew/core/pandoc/blobs/sha256:4dc523534694f7f16b43dbffac43daaf0d9c21c3c62d0c7e5c72b27c2a75b76a
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/c01a0e33d325e9026e1f1bf450958b7d1aecb625c45d58d5f6cf52e9429a504b--pandoc--3.1.9.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/python-certifi/manifests/2023.7.22_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/21ab05a59659b6f6385e006b100acf809abb28ce7f4a71e7c6fd38107120bf92--python-certifi-2023.7.22_1.bottle_manifest.json
+==> Fetching python-certifi
+==> Downloading https://ghcr.io/v2/homebrew/core/python-certifi/blobs/sha256:a540eaf727baaa449fe5ae998e22f704accdb80555824fb7171af9e12104256f
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1aee56e746b20f8ca34c45abdd641d259ed1dd0816d694c05855bd69117689cd--python-certifi--2023.7.22_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/python-packaging/manifests/23.2_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b4720c6b9e8f88804fc0b8bf8127418c0670c3b7ce80b4f87ebd30e57b0cb8d8--python-packaging-23.2_1.bottle_manifest.json
+==> Fetching python-packaging
+==> Downloading https://ghcr.io/v2/homebrew/core/python-packaging/blobs/sha256:62d837e1e916680d71e2f453315dea5c0798b1adfd2b469f0e70ad94734faeae
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/4083765551bf4a98048f71591ca564ba61ee7fce7ac6cf54d57accd15ce05429--python-packaging--23.2_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/black/manifests/23.10.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b89154c4c67a5ea6f4d8a4a881919ab257ee1aea5aaa660d8081ca26ff5f1538--black-23.10.1.bottle_manifest.json
+==> Fetching black
+==> Downloading https://ghcr.io/v2/homebrew/core/black/blobs/sha256:b8a9397030beccea90e62c09a0800d7d1e62e9446fa4145ca749690fdbf31c66
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/31e51d12728dc0e2a4c37926eb44b91adc6a13d0eda44c533c7717bf185f8681--black--23.10.1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/mypy/manifests/1.6.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/84a025ea0295115b01d3436805c5457a4f937c0111b989c6a9506a97416e0c4a--mypy-1.6.1.bottle_manifest.json
+==> Fetching mypy
+==> Downloading https://ghcr.io/v2/homebrew/core/mypy/blobs/sha256:3f084ee2e800be5d526f0a88000f56e1ae82af32bc513e9acea047901288ee3e
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/e6977d8850c76a24b235f7acf7f34e3ee2a0b20e096e35bc3e7c7836cc70477e--mypy--1.6.1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/pydocstyle/manifests/6.3.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1e1410307b7597ceb2229e07ed7d07020af0f855fd37b40f5c8aeebadf3a592a--pydocstyle-6.3.0.bottle_manifest.json
+==> Fetching pydocstyle
+==> Downloading https://ghcr.io/v2/homebrew/core/pydocstyle/blobs/sha256:0f5028fbde0c073b5929daabb7fca939454809943f98fb5e15076899883277a4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/7b66492cb97975dede7595662d8b2a0ea736fcf19ee4fffe3adf673b8253cc2a--pydocstyle--6.3.0.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/ruff/manifests/0.1.4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1e3c18aa4f7d2f264a170ea32fd52477d4428fef6e04d23d15e8748a08918c40--ruff-0.1.4.bottle_manifest.json
+==> Fetching ruff
+==> Downloading https://ghcr.io/v2/homebrew/core/ruff/blobs/sha256:87580cc8e228bb0c323032975e068dd4b3bd56223ddf972dca4424a13c98cafa
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/9d3bd73b6beb662777077247a8f0821c80d51127823188427ad49975e1bf2dd9--ruff--0.1.4.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/python-lsp-server/manifests/1.8.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/05b9136c53141974bd804c2276c93b0d7789d1706282399b2fc7d757f8795eaa--python-lsp-server-1.8.2.bottle_manifest.json
+==> Fetching python-lsp-server
+==> Downloading https://ghcr.io/v2/homebrew/core/python-lsp-server/blobs/sha256:38bc8c93a1c9a0b3021e40ad907d321bb362ce00f776ed96b0af43b8bb450bb4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/754a6c01b0425ee02b3062d315400d69a00223c271e27a25feb5964ed8ed1991--python-lsp-server--1.8.2.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/python-psutil/manifests/5.9.6
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/7a21efdd9e181da59f84efb4eb49e3a7896c57392b5aee2eb156ed8bbc5c6899--python-psutil-5.9.6.bottle_manifest.json
+==> Fetching python-psutil
+==> Downloading https://ghcr.io/v2/homebrew/core/python-psutil/blobs/sha256:3cb95f593edd62967537b3a2cfa2d123c8dc613500b8e41774535eb59643bd28
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/784c798abe3b5fa5740fea35d7f4c6d5ae6b3167b98050ef7bb5e71f038a9536--python-psutil--5.9.6.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libyaml/manifests/0.2.5
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/5f6b0af1730aa1bc02f8021c90ed7ffe988eeba95eec83e6c828f77332ba6406--libyaml-0.2.5.bottle_manifest.json
+==> Fetching libyaml
+==> Downloading https://ghcr.io/v2/homebrew/core/libyaml/blobs/sha256:354677a745b6c62109e792ddbd0cbdaf9e6a471d84fdbde3a7d9bae36d832da8
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/6d8da2dfa9eaac1786bfffa38f8973c7a7b5868e0eb7e975f28d824f98a8622c--libyaml--0.2.5.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/pyyaml/manifests/6.0.1_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/bb167293fae0bea9e7a2acd7496bdc04de8fd1d22a0d4c554a42477cda37397a--pyyaml-6.0.1_1.bottle_manifest.json
+==> Fetching pyyaml
+==> Downloading https://ghcr.io/v2/homebrew/core/pyyaml/blobs/sha256:d53f5c35de430f055c83fdbb1e857b3423cbea9c66523f929cb525876ef55fae
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/5b88422fd57d9450a7b896afa2e43e9be19e73adc040b076787472a14b05a0c5--pyyaml--6.0.1_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libsodium/manifests/1.0.19
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/be1ad9f264fab9dfc313d95d9ac7d59ae1774d775801e6f935cf9fe8fe35ab21--libsodium-1.0.19.bottle_manifest.json
+==> Fetching libsodium
+==> Downloading https://ghcr.io/v2/homebrew/core/libsodium/blobs/sha256:b8ca1515b870335e26ee78bae614a734ccc1f30f3dbad1514f503ce7d9972d5f
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/bae4f9bb162a5fb46b5e92dc38292761a2a8cff327aaf70a5b49dad5974b2a1a--libsodium--1.0.19.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/zeromq/manifests/4.3.5_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/27b053a576863f2b2aa214070e5737e3a0ce0a073760d26c39902468274880b1--zeromq-4.3.5_1.bottle_manifest.json
+==> Fetching zeromq
+==> Downloading https://ghcr.io/v2/homebrew/core/zeromq/blobs/sha256:904b3146ea9aab3b4fdb584c74be1fa762145d3435eef653becc38ce0600c1bc
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f77f077d84ee44882ac77a70f83456a8c34e18c57d69bf8e7f19f8c494d05fe1--zeromq--4.3.5_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/manifests/2.11.5_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/e9a440dc42d5a229daa66e0799ea4647a1a0d24d2d07b5660c2315c1df1ca35c--libxml2-2.11.5_1.bottle_manifest.json
+==> Fetching libxml2
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:57ceccd15fd3b58cb7be51a09879c6d31f58ddc300a74379f29823177975f280
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/4cb1538a18b6a24404c782d174bc05a5373d89d3ee456f16c8963e511b8790cc--libxml2--2.11.5_1.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libgpg-error/manifests/1.47
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/98f5d26e0bbc42377eac3ea624367f84264ea91bb4ca8c4e7cc6fa402bb3d3d5--libgpg-error-1.47.bottle_manifest.json
+==> Fetching libgpg-error
+==> Downloading https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:c108c343e2fefc5fd01043e153aacd26a32396984eb6ed4b68702116efba5994
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f4c9b1e1971e40840d58d64900da22b4db0c699e610c7b1d3fe97a8b0e345fe7--libgpg-error--1.47.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libgcrypt/manifests/1.10.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f6c7c66ce599dfcea928a8f5a22ae6133f07b79ca416e38cac9dfbef62aef6c4--libgcrypt-1.10.2.bottle_manifest.json
+==> Fetching libgcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:fb4cdae9d33f557d8cc4f4fb34a2078a5ab9b91b6cfe9fabfcb966a6e39807bd
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/832197f1fc4617327dbc2bfd2ddf53519fa9619671a4a27934f4ea93126748c7--libgcrypt--1.10.2.x86_64_linux.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libxslt/manifests/1.1.38_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/919836ac13cf7f2b1a61c2a03611718923ac8cde386b11b757e91025591c3f43--libxslt-1.1.38_1.bottle_manifest.json
+==> Fetching libxslt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxslt/blobs/sha256:32f5991ea5c42e4f76e859e4ba4406da9183e621dd09bc0c955be5fe865b7df9
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/c2240ef8136c95cbe1120a6dc58221cef8e73245435a83c6c4daebf74ba57d0b--libxslt--1.1.38_1.x86_64_linux.bottle.tar.gz
+==> Fetching jupyterlab
+==> Downloading https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:60bcf5aa5ac92860dd714cd9e7955424a720ddbd6ed31c8b815d28bf6464e14c
+############################################################################################################################################### 100.0%==> Installing dependencies for jupyterlab: gmp, pycparser, python-setuptools, libffi, cffi, pygments, mpdecimal, ca-certificates, openssl@3, ncurses, readline, sqlite, berkeley-db@5, libedit, krb5, libtirpc, libnsl, expat, libxcrypt, unzip, python@3.11, six, ipython, brotli, c-ares, icu4c, libnghttp2, libuv, node, pandoc, python-certifi, python-packaging, black, mypy, pydocstyle, ruff, python-lsp-server, python-psutil, libyaml, pyyaml, libsodium, zeromq, libxml2, libgpg-error, libgcrypt and libxslt
+==> Installing jupyterlab dependency: gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/70a72a71216843d66a953c06ff6337445ce9bc94fae9f0e301e2f59005274a8e--gmp-6.3.0.bottle_manifest.json
+==> Pouring gmp--6.3.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gmp/6.3.0: 23 files, 3.9MB
+==> Installing jupyterlab dependency: pycparser
+==> Downloading https://ghcr.io/v2/homebrew/core/pycparser/manifests/2.21_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/89b5ad0df19c96fc291bcef62c0035ee399d4562b2a32e64d3f4e8c461943ad2--pycparser-2.21_1.bottle_manifest.json
+==> Pouring pycparser--2.21_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pycparser/2.21_1: 102 files, 1.8MB
+==> Installing jupyterlab dependency: python-setuptools
+==> Downloading https://ghcr.io/v2/homebrew/core/python-setuptools/manifests/68.2.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/151f47f6f59597343d42954b5ffea4de6be29e18a9d7a07fc2386a3ad08752dc--python-setuptools-68.2.2.bottle_manifest.json
+==> Pouring python-setuptools--68.2.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/python-setuptools/68.2.2: 245 files, 2.9MB
+==> Installing jupyterlab dependency: libffi
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/manifests/3.4.4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f5fd52c2060b392cd349c2d45b783adb0e507a5166f125893d6e733d9b7f4afa--libffi-3.4.4.bottle_manifest.json
+==> Pouring libffi--3.4.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libffi/3.4.4: 18 files, 698.6KB
+==> Installing jupyterlab dependency: cffi
+==> Downloading https://ghcr.io/v2/homebrew/core/cffi/manifests/1.16.0_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/5d2e37eae3c804286ede5b97431a92ee9f350863fb22c486837e648e0342f7d9--cffi-1.16.0_1.bottle_manifest.json
+==> Pouring cffi--1.16.0_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/cffi/1.16.0_1: 101 files, 3.4MB
+==> Installing jupyterlab dependency: pygments
+==> Downloading https://ghcr.io/v2/homebrew/core/pygments/manifests/2.16.1_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/bcd2dc1eadde155296790c07687747ed12bd2b6a9589cb2328d3c87a6da622ed--pygments-2.16.1_1.bottle_manifest.json
+==> Pouring pygments--2.16.1_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pygments/2.16.1_1: 980 files, 12.3MB
+==> Installing jupyterlab dependency: mpdecimal
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/manifests/2.5.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f367c2ee08c56b88be0662703a8e4275f8657608a268c8c44e845154b0cea543--mpdecimal-2.5.1.bottle_manifest.json
+==> Pouring mpdecimal--2.5.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mpdecimal/2.5.1: 71 files, 2.3MB
+==> Installing jupyterlab dependency: ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2023-08-22
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/a8cd32e30cae0b7335779e93a6554f294f09485802fc253a3a8be441337a6115--ca-certificates-2023-08-22.bottle_manifest.json
+==> Pouring ca-certificates--2023-08-22.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ca-certificates/2023-08-22: 3 files, 223.4KB
+==> Installing jupyterlab dependency: openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.1.4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/528fccab152aa17857e73f54f268d413bf94e22188c0e4ff17a6c497d2783b88--openssl@3-3.1.4.bottle_manifest.json
+==> Pouring openssl@3--3.1.4.x86_64_linux.bottle.tar.gz
+Unlinking /home/linuxbrew/.linuxbrew/Cellar/openssl@1.1/1.1.1h... 3982 symlinks removed.
+🍺  /home/linuxbrew/.linuxbrew/Cellar/openssl@3/3.1.4: 6,505 files, 35.0MB
+==> Installing jupyterlab dependency: ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.4-1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/548168356558130632a3202b3fc2f3069f554bd5c1010b30e61f1180cf1f6b09--ncurses-6.4-1.bottle_manifest.json
+==> Pouring ncurses--6.4.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ncurses/6.4: 3,991 files, 10.5MB
+==> Installing jupyterlab dependency: readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/ab483c9a913ae82f3a2b3ae20918791bc3bd6825c7122a29cd4f1e0c65413759--readline-8.2.1.bottle_manifest.json
+==> Pouring readline--8.2.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/readline/8.2.1: 50 files, 2MB
+==> Installing jupyterlab dependency: sqlite
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.44.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b6e7cd31f42971fa5388d696a09f9cc3c6e7c5b49c3d0d49b9324db1a268b203--sqlite-3.44.0.bottle_manifest.json
+==> Pouring sqlite--3.44.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/sqlite/3.44.0: 12 files, 6MB
+==> Installing jupyterlab dependency: berkeley-db@5
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/manifests/5.3.28_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/17e4e0def00184b561c8a490b5c0813a7c4f5e1365eb2e927570786eb4e05e09--berkeley-db@5-5.3.28_1.bottle_manifest.json
+==> Pouring berkeley-db@5--5.3.28_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/berkeley-db@5/5.3.28_1: 5,271 files, 87.2MB
+==> Installing jupyterlab dependency: libedit
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/manifests/20230828-3.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/aa32e07f286c25cd98716dc981bedecd086e432b4f5336ca63a30da3be5c79e1--libedit-20230828-3.1.bottle_manifest.json
+==> Pouring libedit--20230828-3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libedit/20230828-3.1: 54 files, 754.5KB
+==> Installing jupyterlab dependency: krb5
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/manifests/1.21.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1dac813e15dc58f7f64511565951ee43912a4a82b355448e23600e07b1b7107c--krb5-1.21.2.bottle_manifest.json
+==> Pouring krb5--1.21.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/krb5/1.21.2: 163 files, 5.2MB
+==> Installing jupyterlab dependency: libtirpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libtirpc/manifests/1.3.3
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/8855f5ef631c25ab1532940cd26ad4e298df26b4414ccd1426becf1b4ed7a3f9--libtirpc-1.3.3.bottle_manifest.json
+==> Pouring libtirpc--1.3.3.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libtirpc/1.3.3: 85 files, 1012.6KB
+==> Installing jupyterlab dependency: libnsl
+==> Downloading https://ghcr.io/v2/homebrew/core/libnsl/manifests/2.0.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/aa9502e1380fc6bf1af297a4f3d3402c1c175bd35d24d012b71a1a90c54d38bc--libnsl-2.0.1.bottle_manifest.json
+==> Pouring libnsl--2.0.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libnsl/2.0.1: 17 files, 167KB
+==> Installing jupyterlab dependency: expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.5.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b842e1c2e5cbf31a2e2a3fdf4f68d06bf3a25a4a0429320411cb400db2461400--expat-2.5.0.bottle_manifest.json
+==> Pouring expat--2.5.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/expat/2.5.0: 21 files, 818.6KB
+==> Installing jupyterlab dependency: libxcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/manifests/4.4.36
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/950e230307625f9e57d74f0076caab42b6c67a325c70b83efa2c9cc84be1f839--libxcrypt-4.4.36.bottle_manifest.json
+==> Pouring libxcrypt--4.4.36.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxcrypt/4.4.36: 24 files, 337.9KB
+==> Installing jupyterlab dependency: unzip
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/manifests/6.0_8
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b9a98c1a65dea38eb0bb5d9106a5758ed0ff17635811bd7f7cd6be5908c2961b--unzip-6.0_8.bottle_manifest.json
+==> Pouring unzip--6.0_8.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/unzip/6.0_8: 16 files, 577.3KB
+==> Installing jupyterlab dependency: python@3.11
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.11/manifests/3.11.6_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/481941c47c71dfeb6fba3057ead9b0bd21f7ca514b815bd8dde7cbeff257b362--python@3.11-3.11.6_1.bottle_manifest.json
+==> Pouring python@3.11--3.11.6_1.x86_64_linux.bottle.tar.gz
+==> /home/linuxbrew/.linuxbrew/Cellar/python@3.11/3.11.6_1/bin/python3.11 -Im ensurepip
+==> /home/linuxbrew/.linuxbrew/Cellar/python@3.11/3.11.6_1/bin/python3.11 -Im pip install -v --no-index --upgrade --isolated --target=/home/linuxbrew/🍺  /home/linuxbrew/.linuxbrew/Cellar/python@3.11/3.11.6_1: 2,843 files, 66.5MB
+==> Installing jupyterlab dependency: six
+==> Downloading https://ghcr.io/v2/homebrew/core/six/manifests/1.16.0_4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/d658d3e82cd694d7f522b1df4eec1d883dcec244931403fd77c6a0d75ad71193--six-1.16.0_4.bottle_manifest.json
+==> Pouring six--1.16.0_4.all.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/six/1.16.0_4: 20 files, 127.9KB
+==> Installing jupyterlab dependency: ipython
+==> Downloading https://ghcr.io/v2/homebrew/core/ipython/manifests/8.17.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/2f730c0b229d5f8f535eba181f285216c8fbb7a6d2cc28a55e8aa1a1ff7ef8c8--ipython-8.17.2.bottle_manifest.json
+==> Pouring ipython--8.17.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ipython/8.17.2: 2,542 files, 9.8MB
+==> Installing jupyterlab dependency: brotli
+==> Downloading https://ghcr.io/v2/homebrew/core/brotli/manifests/1.1.0-1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/565098509cdfa90593ec9a41b41239f073843f88caed60ddaa3e6194ac4defda--brotli-1.1.0-1.bottle_manifest.json
+==> Pouring brotli--1.1.0.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/brotli/1.1.0: 24 files, 957.9KB
+==> Installing jupyterlab dependency: c-ares
+==> Downloading https://ghcr.io/v2/homebrew/core/c-ares/manifests/1.21.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/63ab38196d8386349f796f445fe3de589b4069be4be250bc04bb2c81e212f061--c-ares-1.21.0.bottle_manifest.json
+==> Pouring c-ares--1.21.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/c-ares/1.21.0: 85 files, 652.4KB
+==> Installing jupyterlab dependency: icu4c
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/manifests/73.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/2e5082de52a2c85ae665e51f8d0de0651611397cb02f4b4e2bb37898ba52a629--icu4c-73.2.bottle_manifest.json
+==> Pouring icu4c--73.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/icu4c/73.2: 268 files, 87MB
+==> Installing jupyterlab dependency: libnghttp2
+==> Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/manifests/1.58.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/9b2081d73959d4308c84740344d5f8169bbb9125dd76d20a71556a11a0171253--libnghttp2-1.58.0.bottle_manifest.json
+==> Pouring libnghttp2--1.58.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libnghttp2/1.58.0: 14 files, 822.8KB
+==> Installing jupyterlab dependency: libuv
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.47.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/bfee09d0f61c35b1a86c5b7a0f6b2f9e0a8b18a81bbd065f6eea7054b543f3ea--libuv-1.47.0.bottle_manifest.json
+==> Pouring libuv--1.47.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libuv/1.47.0: 20 files, 1.3MB
+==> Installing jupyterlab dependency: node
+==> Downloading https://ghcr.io/v2/homebrew/core/node/manifests/21.1.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/928fee421121cea709f2824a912d11ba60794079e12679642dc75dec485c640f--node-21.1.0.bottle_manifest.json
+==> Pouring node--21.1.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/node/21.1.0: 2,525 files, 72.3MB
+==> Installing jupyterlab dependency: pandoc
+==> Downloading https://ghcr.io/v2/homebrew/core/pandoc/manifests/3.1.9
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/ee04802a3085d42f5b411b15b448efaa0959889364203ed17b392c1e1f95960b--pandoc-3.1.9.bottle_manifest.json
+==> Pouring pandoc--3.1.9.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pandoc/3.1.9: 10 files, 280.5MB
+==> Installing jupyterlab dependency: python-certifi
+==> Downloading https://ghcr.io/v2/homebrew/core/python-certifi/manifests/2023.7.22_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/21ab05a59659b6f6385e006b100acf809abb28ce7f4a71e7c6fd38107120bf92--python-certifi-2023.7.22_1.bottle_manifest.json
+==> Pouring python-certifi--2023.7.22_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/python-certifi/2023.7.22_1: 43 files, 39.9KB
+==> Installing jupyterlab dependency: python-packaging
+==> Downloading https://ghcr.io/v2/homebrew/core/python-packaging/manifests/23.2_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b4720c6b9e8f88804fc0b8bf8127418c0670c3b7ce80b4f87ebd30e57b0cb8d8--python-packaging-23.2_1.bottle_manifest.json
+==> Pouring python-packaging--23.2_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/python-packaging/23.2_1: 79 files, 544KB
+==> Installing jupyterlab dependency: black
+==> Downloading https://ghcr.io/v2/homebrew/core/black/manifests/23.10.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/b89154c4c67a5ea6f4d8a4a881919ab257ee1aea5aaa660d8081ca26ff5f1538--black-23.10.1.bottle_manifest.json
+==> Pouring black--23.10.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/black/23.10.1: 356 files, 3.7MB
+==> Installing jupyterlab dependency: mypy
+==> Downloading https://ghcr.io/v2/homebrew/core/mypy/manifests/1.6.1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/84a025ea0295115b01d3436805c5457a4f937c0111b989c6a9506a97416e0c4a--mypy-1.6.1.bottle_manifest.json
+==> Pouring mypy--1.6.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mypy/1.6.1: 1,238 files, 41.2MB
+==> Installing jupyterlab dependency: pydocstyle
+==> Downloading https://ghcr.io/v2/homebrew/core/pydocstyle/manifests/6.3.0
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1e1410307b7597ceb2229e07ed7d07020af0f855fd37b40f5c8aeebadf3a592a--pydocstyle-6.3.0.bottle_manifest.json
+==> Pouring pydocstyle--6.3.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pydocstyle/6.3.0: 820 files, 11.3MB
+==> Installing jupyterlab dependency: ruff
+==> Downloading https://ghcr.io/v2/homebrew/core/ruff/manifests/0.1.4
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/1e3c18aa4f7d2f264a170ea32fd52477d4428fef6e04d23d15e8748a08918c40--ruff-0.1.4.bottle_manifest.json
+==> Pouring ruff--0.1.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ruff/0.1.4: 11 files, 18MB
+==> Installing jupyterlab dependency: python-lsp-server
+==> Downloading https://ghcr.io/v2/homebrew/core/python-lsp-server/manifests/1.8.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/05b9136c53141974bd804c2276c93b0d7789d1706282399b2fc7d757f8795eaa--python-lsp-server-1.8.2.bottle_manifest.json
+==> Pouring python-lsp-server--1.8.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/python-lsp-server/1.8.2: 2,363 files, 7.5MB
+==> Installing jupyterlab dependency: python-psutil
+==> Downloading https://ghcr.io/v2/homebrew/core/python-psutil/manifests/5.9.6
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/7a21efdd9e181da59f84efb4eb49e3a7896c57392b5aee2eb156ed8bbc5c6899--python-psutil-5.9.6.bottle_manifest.json
+==> Pouring python-psutil--5.9.6.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/python-psutil/5.9.6: 81 files, 2.3MB
+==> Installing jupyterlab dependency: libyaml
+==> Downloading https://ghcr.io/v2/homebrew/core/libyaml/manifests/0.2.5
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/5f6b0af1730aa1bc02f8021c90ed7ffe988eeba95eec83e6c828f77332ba6406--libyaml-0.2.5.bottle_manifest.json
+==> Pouring libyaml--0.2.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libyaml/0.2.5: 11 files, 375.3KB
+==> Installing jupyterlab dependency: pyyaml
+==> Downloading https://ghcr.io/v2/homebrew/core/pyyaml/manifests/6.0.1_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/bb167293fae0bea9e7a2acd7496bdc04de8fd1d22a0d4c554a42477cda37397a--pyyaml-6.0.1_1.bottle_manifest.json
+==> Pouring pyyaml--6.0.1_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pyyaml/6.0.1_1: 86 files, 4.7MB
+==> Installing jupyterlab dependency: libsodium
+==> Downloading https://ghcr.io/v2/homebrew/core/libsodium/manifests/1.0.19
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/be1ad9f264fab9dfc313d95d9ac7d59ae1774d775801e6f935cf9fe8fe35ab21--libsodium-1.0.19.bottle_manifest.json
+==> Pouring libsodium--1.0.19.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libsodium/1.0.19: 78 files, 1.4MB
+==> Installing jupyterlab dependency: zeromq
+==> Downloading https://ghcr.io/v2/homebrew/core/zeromq/manifests/4.3.5_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/27b053a576863f2b2aa214070e5737e3a0ce0a073760d26c39902468274880b1--zeromq-4.3.5_1.bottle_manifest.json
+==> Pouring zeromq--4.3.5_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zeromq/4.3.5_1: 85 files, 7.1MB
+==> Installing jupyterlab dependency: libxml2
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/manifests/2.11.5_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/e9a440dc42d5a229daa66e0799ea4647a1a0d24d2d07b5660c2315c1df1ca35c--libxml2-2.11.5_1.bottle_manifest.json
+==> Pouring libxml2--2.11.5_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxml2/2.11.5_1: 215 files, 9.8MB
+==> Installing jupyterlab dependency: libgpg-error
+==> Downloading https://ghcr.io/v2/homebrew/core/libgpg-error/manifests/1.47
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/98f5d26e0bbc42377eac3ea624367f84264ea91bb4ca8c4e7cc6fa402bb3d3d5--libgpg-error-1.47.bottle_manifest.json
+==> Pouring libgpg-error--1.47.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libgpg-error/1.47: 50 files, 1.7MB
+==> Installing jupyterlab dependency: libgcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libgcrypt/manifests/1.10.2
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/f6c7c66ce599dfcea928a8f5a22ae6133f07b79ca416e38cac9dfbef62aef6c4--libgcrypt-1.10.2.bottle_manifest.json
+==> Pouring libgcrypt--1.10.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libgcrypt/1.10.2: 24 files, 3.8MB
+==> Installing jupyterlab dependency: libxslt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxslt/manifests/1.1.38_1
+Already downloaded: /home/h_30/.cache/Homebrew/downloads/919836ac13cf7f2b1a61c2a03611718923ac8cde386b11b757e91025591c3f43--libxslt-1.1.38_1.bottle_manifest.json
+==> Pouring libxslt--1.1.38_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxslt/1.1.38_1: 102 files, 1.3MB
+==> Installing jupyterlab
+==> Pouring jupyterlab--4.0.8.x86_64_linux.bottle.tar.gz
+==> Caveats
+Additional kernels can be installed into the shared jupyter directory
+  /home/linuxbrew/.linuxbrew/etc/jupyter
+
+Bash completion has been installed to:
+  /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/jupyterlab/4.0.8: 4,632 files, 91.3MB
+==> Running `brew cleanup jupyterlab`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Upgrading 1 dependent of upgraded formulae:
+Disable this behaviour by setting HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+openblas 0.3.15_2 -> 0.3.24
+==> Downloading https://ghcr.io/v2/homebrew/core/openblas/manifests/0.3.24
+############################################################################################################################################### 100.0%==> Checking for dependents of upgraded formulae...
+==> No broken dependents to reinstall!
+==> `brew cleanup` has not been run in the last 30 days, running now...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /home/linuxbrew/.linuxbrew/Cellar/binutils/2.36.1... (4,617 files, 265.2MB)
+Removing: /home/h_30/.cache/Homebrew/binutils--2.36.1... (48.5MB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/gcc/11.1.0_1... (2,182 files, 347.3MB)
+Removing: /home/h_30/.cache/Homebrew/gcc--11.1.0_1... (115.4MB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/gmp/6.2.1... (23 files, 3.9MB)
+Removing: /home/h_30/.cache/Homebrew/gmp--6.2.1... (1.1MB)
+Removing: /home/h_30/.cache/Homebrew/gsl--2.6... (3.4MB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/isl/0.24... (74 files, 8.9MB)
+Removing: /home/h_30/.cache/Homebrew/isl--0.24... (2.0MB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/libmpc/1.2.1... (14 files, 528.9KB)
+Removing: /home/h_30/.cache/Homebrew/libmpc--1.2.1... (147.0KB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/mpfr/4.1.0... (30 files, 7.8MB)
+Removing: /home/h_30/.cache/Homebrew/mpfr--4.1.0... (3.2MB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/ncurses/6.2... (3,901 files, 9.2MB)
+Removing: /home/h_30/.cache/Homebrew/openblas--0.3.15_2... (18.4MB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/xz/5.2.5... (128 files, 1.7MB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/zlib/1.2.11... (12 files, 396KB)
+Removing: /home/linuxbrew/.linuxbrew/Cellar/zstd/1.5.0... (31 files, 3.1MB)
+Removing: /home/h_30/.cache/Homebrew/zstd--1.5.0... (1.2MB)
+Removing: /home/h_30/.cache/Homebrew/binutils_bottle_manifest--2.36.1... (7.9KB)
+Removing: /home/h_30/.cache/Homebrew/gcc_bottle_manifest--11.1.0_1... (2.7KB)
+Removing: /home/h_30/.cache/Homebrew/gmp_bottle_manifest--6.2.1... (1.8KB)
+Removing: /home/h_30/.cache/Homebrew/gsl_bottle_manifest--2.6... (1.6KB)
+Removing: /home/h_30/.cache/Homebrew/isl_bottle_manifest--0.24... (1.9KB)
+Removing: /home/h_30/.cache/Homebrew/libmpc_bottle_manifest--1.2.1... (1.7KB)
+Removing: /home/h_30/.cache/Homebrew/mpfr_bottle_manifest--4.1.0... (1.7KB)
+Removing: /home/h_30/.cache/Homebrew/openblas_bottle_manifest--0.3.15_2... (2.2KB)
+Removing: /home/h_30/.cache/Homebrew/zstd_bottle_manifest--1.5.0... (1.9KB)
+Pruned 0 symbolic links and 2 directories from /home/linuxbrew/.linuxbrew
+==> Caveats
+==> jupyterlab
+Additional kernels can be installed into the shared jupyter directory
+  /home/linuxbrew/.linuxbrew/etc/jupyter
+
+Bash completion has been installed to:
+  /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+h_30@MyComputer:~$ jupyter notebook
+[I 2023-11-07 07:59:54.106 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 07:59:54.245 ServerApp] Package jupyter_lsp took 0.1392s to import
+[W 2023-11-07 07:59:54.246 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 07:59:54.310 ServerApp] Package jupyter_server_terminals took 0.0635s to import
+[I 2023-11-07 07:59:54.310 ServerApp] Package jupyterlab took 0.0000s to import
+Fail to get yarn configuration. [Errno 8] Exec format error: '/home/linuxbrew/.linuxbrew/bin/node'
+[I 2023-11-07 07:59:54.444 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-07 07:59:54.444 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extens^C[I 2023-11-07 08:00:23.181 ServerApp] interrupted
+[I 2023-11-07 08:00:23.182 ServerApp] Serving notebooks from local directory: /home/h_30
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=0dcbff09fec3957ce21e0c63cb65d8feb85f7ebc6f49fef1
+        http://127.0.0.1:8888/tree?token=0dcbff09fec3957ce21e0c63cb65d8feb85f7ebc6f49fef1
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 08:00:25.411 ServerApp] Shutdown confirmed
+[I 2023-11-07 08:00:25.413 ServerApp] Shutting down 5 extensions
+h_30@MyComputer:~$ jupyter notebook
+[I 2023-11-07 08:00:28.904 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 08:00:28.924 ServerApp] Package jupyter_lsp took 0.0195s to import
+[W 2023-11-07 08:00:28.924 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 08:00:28.933 ServerApp] Package jupyter_server_terminals took 0.0087s to import
+[I 2023-11-07 08:00:28.934 ServerApp] Package jupyterlab took 0.0000s to import
+Fail to get yarn configuration. [Errno 8] Exec format error: '/home/linuxbrew/.linuxbrew/bin/node'
+[I 2023-11-07 08:00:28.978 ServerApp] Package notebook_shim took 0.0000s to import
+[I 2023-11-07 08:00:50.902 JupyterNotebookApp] 302 GET /tree?token=[secret] (@127.0.0.1) 3.40ms
+[I 2023-11-07 08:01:16.665 JupyterNotebookApp] 302 GET /tree?token=[secret] (@127.0.0.1) 0.59ms
+^C[I 2023-11-07 08:01:30.194 ServerApp] interrupted
+[I 2023-11-07 08:01:30.195 ServerApp] Serving notebooks from local directory: /home/h_30
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=e07270a11bdeeab2e7621e2ccbfd2fde8fb28518ad4221be
+        http://127.0.0.1:8888/tree?token=e07270a11bdeeab2e7621e2ccbfd2fde8fb28518ad4221be
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 08:01:31.763 ServerApp] Shutdown confirmed
+[I 2023-11-07 08:01:31.765 ServerApp] Shutting down 5 extensions
+h_30@MyComputer:~$ $ jupyter notebook --generate-config
+$: command not found
+h_30@MyComputer:~$ jupyter notebook --generate-config
+Writing default config to: /home/h_30/.jupyter/jupyter_notebook_config.py
+h_30@MyComputer:~$ cat ~/.jupyter/jupyter_notebook_config.py | grep browser
+## Whether to open in a browser after starting.
+#          The specific browser used is platform dependent and
+#          determined by the python standard library `webbrowser`
+#          module, unless it is overridden using the --browser
+#          (ServerApp.browser) configuration option.
+# c.ExtensionApp.open_browser = False
+## Whether to open in a browser after starting.
+#  See also: ExtensionApp.open_browser
+# c.LabServerApp.open_browser = False
+## Whether to expose the global app instance to browser via window.jupyterapp
+# c.JupyterNotebookApp.expose_app_in_browser = False
+## Whether to open in a browser after starting.
+#  See also: ExtensionApp.open_browser
+# c.JupyterNotebookApp.open_browser = False
+#         shows that the browser thinks it's on a non-local domain.
+#                        browser when starting the server. If not specified, the
+#                        default browser will be determined by the `webbrowser`
+# c.ServerApp.browser = ''
+## Whether to open in a browser after starting.
+#                          The specific browser used is platform dependent and
+#                          determined by the python standard library `webbrowser`
+#                          module, unless it is overridden using the --browser
+#                          (ServerApp.browser) configuration option.
+# c.ServerApp.open_browser = False
+## Disable launching browser by redirect file
+#       prevented the authentication token used to launch the browser from being visible.
+#       launching a browser using a redirect file can lead the browser failing to load.
+#       the browser.
+#       Disabling this setting to False will disable this behavior, allowing the browser
+#          `new` argument passed to the standard library method `webbrowser.open`.
+#          The behaviour is not guaranteed, but depends on browser support. Valid
+#          See the `webbrowser.open` documentation for details.
+# c.ServerApp.webbrowser_open_new = 2
+h_30@MyComputer:~$ jupyter notebook
+[I 2023-11-07 08:09:10.898 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 08:09:10.927 ServerApp] Package jupyter_lsp took 0.0288s to import
+[W 2023-11-07 08:09:10.928 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 08:09:10.941 ServerApp] Package jupyter_server_terminals took 0.0133s to import
+[I 2023-11-07 08:09:10.942 ServerApp] Package jupyterlab took 0.0000s to import
+Fail to get yarn configuration. [Errno 8] Exec format error: '/home/linuxbrew/.linuxbrew/bin/node'
+^C[I 2023-11-07 08:09:18.290 ServerApp] interrupted
+[I 2023-11-07 08:09:18.291 ServerApp] Serving notebooks from local directory: /home/h_30
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=c402d51423f81f44c26abfbfe30c8a4e2670b909b0d19a6a
+        http://127.0.0.1:8888/tree?token=c402d51423f81f44c26abfbfe30c8a4e2670b909b0d19a6a
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 08:09:20.307 ServerApp] Shutdown confirmed
+[I 2023-11-07 08:09:20.309 ServerApp] Shutting down 5 extensions
+h_30@MyComputer:~$ jupyter notebook
+[I 2023-11-07 08:10:04.748 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 08:10:04.768 ServerApp] Package jupyter_lsp took 0.0194s to import
+[W 2023-11-07 08:10:04.768 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 08:10:04.780 ServerApp] Package jupyter_server_terminals took 0.0117s to import
+[I 2023-11-07 08:10:04.781 ServerApp] Package jupyterlab took 0.0000s to import
+Fail to get yarn configuration. [Errno 8] Exec format error: '/home/linuxbrew/.linuxbrew/bin/node'
+^C[I 2023-11-07 08:10:17.033 ServerApp] interrupted
+[I 2023-11-07 08:10:17.034 ServerApp] Serving notebooks from local directory: /home/h_30
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=088632137ec1e47fda6c45423a4012c387f76b7935ef04d7
+        http://127.0.0.1:8888/tree?token=088632137ec1e47fda6c45423a4012c387f76b7935ef04d7
+Shutdown this Jupyter server (y/[n])? t^[[2~y^[[3~[I 2023-11-07 08:10:22.035 ServerApp] No answer for 5s:
+[I 2023-11-07 08:10:22.035 ServerApp] resuming operation...
+^C[I 2023-11-07 08:10:23.616 ServerApp] interrupted
+[I 2023-11-07 08:10:23.616 ServerApp] Serving notebooks from local directory: /home/h_30
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=088632137ec1e47fda6c45423a4012c387f76b7935ef04d7
+        http://127.0.0.1:8888/tree?token=088632137ec1e47fda6c45423a4012c387f76b7935ef04d7
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 08:10:24.962 ServerApp] Shutdown confirmed
+[I 2023-11-07 08:10:24.963 ServerApp] Shutting down 5 extensions
+h_30@MyComputer:~$ jupyter notebook
+[I 2023-11-07 08:10:38.796 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 08:10:38.814 ServerApp] Package jupyter_lsp took 0.0176s to import
+[W 2023-11-07 08:10:38.814 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 08:10:38.824 ServerApp] Package jupyter_server_terminals took 0.0090s to import
+[I 2023-11-07 08:10:38.824 ServerApp] Package jupyterlab took 0.0000s to import
+Fail to get yarn configuration. [Errno 8] Exec format error: '/home/linuxbrew/.linuxbrew/bin/node'
+^C[I 2023-11-07 08:11:18.706 ServerApp] interrupted
+[I 2023-11-07 08:11:18.706 ServerApp] Serving notebooks from local directory: /home/h_30
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=f1805f1a38d8874e6cfba3ee6859ce45cf61bef563e2b96d
+        http://127.0.0.1:8888/tree?token=f1805f1a38d8874e6cfba3ee6859ce45cf61bef563e2b96d
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 08:11:20.089 ServerApp] Shutdown confirmed
+[I 2023-11-07 08:11:20.090 ServerApp] Shutting down 5 extensions
+h_30@MyComputer:~$ jupyter notebook
+[I 2023-11-07 08:11:23.803 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 08:11:23.825 ServerApp] Package jupyter_lsp took 0.0220s to import
+[W 2023-11-07 08:11:23.826 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 08:11:23.836 ServerApp] Package jupyter_server_terminals took 0.0095s to import
+[I 2023-11-07 08:11:23.837 ServerApp] Package jupyterlab took 0.0000s to import
+Fail to get yarn configuration. [Errno 8] Exec format error: '/home/linuxbrew/.linuxbrew/bin/node'
+[I 2023-11-07 08:11:38.124 JupyterNotebookApp] 302 GET /tree?token=[secret] (@127.0.0.1) 8.85ms
+^C[I 2023-11-07 08:12:15.164 ServerApp] interrupted
+[I 2023-11-07 08:12:15.165 ServerApp] Serving notebooks from local directory: /home/h_30
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=489a3610900f8261cf73f57e9204b72295d4ef05e7f97eef
+        http://127.0.0.1:8888/tree?token=489a3610900f8261cf73f57e9204b72295d4ef05e7f97eef
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 08:12:16.395 ServerApp] Shutdown confirmed
+[I 2023-11-07 08:12:16.397 ServerApp] Shutting down 5 extensions
+h_30@MyComputer:~$ rm ~/.jupyter/jupyter_notebook_config.py
+h_30@MyComputer:~$ jupyter notebook
+[I 2023-11-07 08:12:32.150 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 08:12:32.170 ServerApp] Package jupyter_lsp took 0.0192s to import
+[W 2023-11-07 08:12:32.170 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 08:12:32.179 ServerApp] Package jupyter_server_terminals took 0.0086s to import
+[I 2023-11-07 08:12:32.179 ServerApp] Package jupyterlab took 0.0000s to import
+Fail to get yarn configuration. [Errno 8] Exec format error: '/home/linuxbrew/.linuxbrew/bin/node'
+[I 2023-11-07 08:12:32.222 ServerApp] Package notebook_shim took 0.0000s to import
+[I 2023-11-07 08:12:51.857 JupyterNotebookApp] 302 GET /tree?token=[secret] (@127.0.0.1) 2.59ms
+^C[I 2023-11-07 08:15:58.403 ServerApp] interrupted
+[I 2023-11-07 08:15:58.403 ServerApp] Serving notebooks from local directory: /home/h_30
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=967bf0686fcc998f95ecec18d1d1d6f8cae8212aa6696ce3
+        http://127.0.0.1:8888/tree?token=967bf0686fcc998f95ecec18d1d1d6f8cae8212aa6696ce3
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 08:15:59.770 ServerApp] Shutdown confirmed
+[I 2023-11-07 08:15:59.773 ServerApp] Shutting down 5 extensions
+h_30@MyComputer:~$ #jupyterはアンインストールしました
+h_30@MyComputer:~$ #brew uninstall jupyter
+h_30@MyComputer:~$ ssh hmiwa-lab
+ssh: Could not resolve hostname hmiwa-lab: Name or service not known
+h_30@MyComputer:~$ ssh hmiwa-lab
+ssh: Could not resolve hostname hmiwa-lab: Name or service not known
+h_30@MyComputer:~$ ssh hmiwa-lab
+Enter passphrase for key '/home/h_30/.ssh/id_rsa':
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Tue Nov  7 17:24:47 2023 from 133.11.3.101
+hmiwa@humgendiv:~$ exit
+logout
+Connection to 133.11.2.58 closed.
+h_30@MyComputer:~$

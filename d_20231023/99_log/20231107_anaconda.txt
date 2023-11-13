@@ -1,0 +1,218 @@
+(base) PS C:\Users\himar> jupyter notebook
+[W 17:19:40.279 NotebookApp] Terminals not available (error was No module named 'winpty.cywinpty')
+[I 17:19:40.451 NotebookApp] Serving notebooks from local directory: C:\Users\himar
+[I 17:19:40.451 NotebookApp] Jupyter Notebook 6.3.0 is running at:
+[I 17:19:40.451 NotebookApp] http://localhost:8888/?token=9af7501c9ff6fb5c54f9658fadbebc8cedc08a4b6eab7198
+[I 17:19:40.451 NotebookApp]  or http://127.0.0.1:8888/?token=9af7501c9ff6fb5c54f9658fadbebc8cedc08a4b6eab7198
+[I 17:19:40.451 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 17:19:40.527 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///C:/Users/himar/AppData/Roaming/jupyter/runtime/nbserver-22964-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=9af7501c9ff6fb5c54f9658fadbebc8cedc08a4b6eab7198
+     or http://127.0.0.1:8888/?token=9af7501c9ff6fb5c54f9658fadbebc8cedc08a4b6eab7198
+[I 17:19:58.907 NotebookApp] Interrupted...
+[I 17:19:58.907 NotebookApp] Shutting down 0 kernels
+(base) PS C:\Users\himar> ssh hmiwa-spc
+Enter passphrase for key 'C:\Users\himar/.ssh/id_rsa':
+Last login: Tue Oct 24 00:21:44 2023 from 133.11.2.58
+---------------------------------------------------------------------
+Thank you for using NIG supercomputer system.
+This is the gateway node, do not run program here.
+Please use 'qlogin' to login to a login node.
+---------------------------------------------------------------------
+[hmiwa-spc@gwB2 ~]$ exit
+logout
+Connection to gw2.ddbj.nig.ac.jp closed.
+(base) PS C:\Users\himar> ssh hmiwa-lab
+Enter passphrase for key 'C:\Users\himar/.ssh/id_rsa':
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Mon Nov  6 23:00:11 2023 from 133.11.3.159
+hmiwa@humgendiv:~$ jupyter notebook
+[I 2023-11-07 17:22:18.788 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 17:22:18.794 ServerApp] Package jupyter_lsp took 0.0064s to import
+[W 2023-11-07 17:22:18.795 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 17:22:18.798 ServerApp] Package jupyter_server_terminals took 0.0030s to import
+[I 2023-11-07 17:22:18.798 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-07 17:22:18.817 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-07 17:22:18.818 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 17:22:18.818 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-07 17:22:18.821 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-07 17:22:18.825 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-07 17:22:18.828 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-07 17:22:18.980 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-07 17:22:18.993 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-07 17:22:18.997 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-07 17:22:18.998 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-07 17:22:18.999 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-07 17:22:18.999 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-07 17:22:19.000 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-07 17:22:19.003 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-07 17:22:19.005 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-07 17:22:19.006 ServerApp] Serving notebooks from local directory: /home/hmiwa
+[I 2023-11-07 17:22:19.006 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-07 17:22:19.006 ServerApp] http://localhost:8888/tree?token=c65c48c882cd7b8e305b626fbf050dfb98e78d4b8bef64ca
+[I 2023-11-07 17:22:19.006 ServerApp]     http://127.0.0.1:8888/tree?token=c65c48c882cd7b8e305b626fbf050dfb98e78d4b8bef64ca
+[I 2023-11-07 17:22:19.006 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-07 17:22:19.010 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-07 17:22:19.010 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1202727-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=c65c48c882cd7b8e305b626fbf050dfb98e78d4b8bef64ca
+        http://127.0.0.1:8888/tree?token=c65c48c882cd7b8e305b626fbf050dfb98e78d4b8bef64ca
+[I 2023-11-07 17:22:19.286 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-07 17:22:52.565 ServerApp] Kernel started: 999d27e4-7b9c-46bc-b121-74f3b8787c77
+[I 2023-11-07 17:22:55.268 ServerApp] Connecting to kernel 999d27e4-7b9c-46bc-b121-74f3b8787c77.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[W 2023-11-07 17:22:56.155 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.155 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histlmiss-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.177 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histlmiss-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 23.56ms referer=None
+[W 2023-11-07 17:22:56.178 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.178 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histimiss-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.179 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histimiss-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 25.13ms referer=None
+[W 2023-11-07 17:22:56.505 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.506 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Gender_check-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.507 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Gender_check-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.86ms referer=None
+[W 2023-11-07 17:22:56.509 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.509 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Men_check-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.511 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Men_check-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.53ms referer=None
+[W 2023-11-07 17:22:56.544 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.544 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Women_check-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.546 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Women_check-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.02ms referer=None
+[W 2023-11-07 17:22:56.548 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.548 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/MAF_distribution-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.550 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/MAF_distribution-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.80ms referer=None
+[W 2023-11-07 17:22:56.559 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.559 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histhwe-1.png (127.0.0.1): Blocking requestfrom unknown origin
+[W 2023-11-07 17:22:56.561 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histhwe-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.88ms referer=None
+[W 2023-11-07 17:22:56.566 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.567 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histhwe_below_theshold-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.568 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histhwe_below_theshold-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.96ms referer=None
+[W 2023-11-07 17:22:56.587 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.587 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/relatedness-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.589 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/relatedness-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.84ms referer=None
+[W 2023-11-07 17:22:56.590 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.590 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/heterozygosity-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.592 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/heterozygosity-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.90ms referer=None
+[W 2023-11-07 17:22:56.610 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.611 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/hist_relatedness-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.612 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/hist_relatedness-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.57ms referer=None
+[W 2023-11-07 17:22:56.613 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.613 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/zoom_relatedness-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.615 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/zoom_relatedness-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 5.50ms referer=None
+[W 2023-11-07 17:22:56.663 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.663 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/MDS-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.665 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/MDS-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.02ms referer=None
+[W 2023-11-07 17:22:56.672 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.672 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/assoc_manhattan.jpeg (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.674 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/assoc_manhattan.jpeg (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.83ms referer=None
+[W 2023-11-07 17:22:56.686 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.686 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Logistic_manhattan.jpeg (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.688 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Logistic_manhattan.jpeg (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.03ms referer=None
+[W 2023-11-07 17:22:56.690 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.691 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/QQ-Plot_assoc.jpeg (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.692 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/QQ-Plot_assoc.jpeg (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.86ms referer=None
+[W 2023-11-07 17:22:56.694 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.694 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/QQ-Plot_logistic.jpeg (127.0.0.1): Blockingrequest from unknown origin
+[W 2023-11-07 17:22:56.696 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/QQ-Plot_logistic.jpeg (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.05ms referer=None
+[W 2023-11-07 17:22:56.698 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.698 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/PRSice_BARPLOT_2023-11-07.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.700 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/PRSice_BARPLOT_2023-11-07.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.57ms referer=None
+[W 2023-11-07 17:22:56.701 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:56.701 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/PRSice_HIGH-RES_PLOT_2023-11-07.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:56.703 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/PRSice_HIGH-RES_PLOT_2023-11-07.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 5.49ms referer=None
+[W 2023-11-07 17:22:57.164 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.164 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histlmiss-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.166 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histlmiss-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.20ms referer=None
+[W 2023-11-07 17:22:57.168 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.168 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histimiss-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.170 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histimiss-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.84ms referer=None
+[W 2023-11-07 17:22:57.190 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.190 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Men_check-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.192 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Men_check-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 4.22ms referer=None
+[W 2023-11-07 17:22:57.192 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.193 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Gender_check-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.194 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Gender_check-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 6.18ms referer=None
+[W 2023-11-07 17:22:57.195 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.195 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Women_check-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.197 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Women_check-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 8.27ms referer=None
+[W 2023-11-07 17:22:57.199 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.199 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/MAF_distribution-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.201 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/MAF_distribution-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.43ms referer=None
+[W 2023-11-07 17:22:57.202 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.202 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histhwe-1.png (127.0.0.1): Blocking requestfrom unknown origin
+[W 2023-11-07 17:22:57.203 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histhwe-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 5.41ms referer=None
+[W 2023-11-07 17:22:57.207 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.207 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histhwe_below_theshold-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.209 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/histhwe_below_theshold-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 5.32ms referer=None
+[W 2023-11-07 17:22:57.210 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.210 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/heterozygosity-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.212 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/heterozygosity-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 7.20ms referer=None
+[W 2023-11-07 17:22:57.213 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.213 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/relatedness-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.215 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/relatedness-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 8.89ms referer=None
+[W 2023-11-07 17:22:57.215 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.215 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/zoom_relatedness-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.217 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/zoom_relatedness-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 10.59ms referer=None
+[W 2023-11-07 17:22:57.220 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.220 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/hist_relatedness-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.222 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/hist_relatedness-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 4.02ms referer=None
+[W 2023-11-07 17:22:57.222 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.223 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/MDS-1.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.224 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/MDS-1.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 5.35ms referer=None
+[W 2023-11-07 17:22:57.228 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.228 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/assoc_manhattan.jpeg (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.229 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/assoc_manhattan.jpeg (905aa36339394575b8b900e16c1325f3@127.0.0.1) 4.62ms referer=None
+[W 2023-11-07 17:22:57.230 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.230 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Logistic_manhattan.jpeg (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.231 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/Logistic_manhattan.jpeg (905aa36339394575b8b900e16c1325f3@127.0.0.1) 5.68ms referer=None
+[W 2023-11-07 17:22:57.232 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.232 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/QQ-Plot_assoc.jpeg (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.233 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/QQ-Plot_assoc.jpeg (905aa36339394575b8b900e16c1325f3@127.0.0.1) 6.91ms referer=None
+[W 2023-11-07 17:22:57.234 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.234 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/QQ-Plot_logistic.jpeg (127.0.0.1): Blockingrequest from unknown origin
+[W 2023-11-07 17:22:57.235 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/QQ-Plot_logistic.jpeg (905aa36339394575b8b900e16c1325f3@127.0.0.1) 8.11ms referer=None
+[W 2023-11-07 17:22:57.237 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.237 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/PRSice_BARPLOT_2023-11-07.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.238 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/PRSice_BARPLOT_2023-11-07.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 2.68ms referer=None
+[W 2023-11-07 17:22:57.239 ServerApp] Blocking request with no referer
+[W 2023-11-07 17:22:57.239 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/PRSice_HIGH-RES_PLOT_2023-11-07.png (127.0.0.1): Blocking request from unknown origin
+[W 2023-11-07 17:22:57.240 ServerApp] 403 GET /files/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/pic/PRSice_HIGH-RES_PLOT_2023-11-07.png (905aa36339394575b8b900e16c1325f3@127.0.0.1) 3.82ms referer=None
+[I 2023-11-07 17:23:44.668 ServerApp] Kernel shutdown: 999d27e4-7b9c-46bc-b121-74f3b8787c77
+[I 2023-11-07 17:23:46.426 ServerApp] Starting buffering for 999d27e4-7b9c-46bc-b121-74f3b8787c77:09f9a488-195c-425f-8a3b-27496c8c0460
+^C[I 2023-11-07 17:23:49.702 ServerApp] interrupted
+[I 2023-11-07 17:23:49.702 ServerApp] Serving notebooks from local directory: /home/hmiwa
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=c65c48c882cd7b8e305b626fbf050dfb98e78d4b8bef64ca
+        http://127.0.0.1:8888/tree?token=c65c48c882cd7b8e305b626fbf050dfb98e78d4b8bef64ca
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 17:23:51.546 ServerApp] Shutdown confirmed
+[I 2023-11-07 17:23:51.547 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~$ exit
+logout
+Connection to 133.11.2.58 closed.
+(base) PS C:\Users\himar> ssh hmiwa-lab
+Enter passphrase for key 'C:\Users\himar/.ssh/id_rsa':
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Tue Nov  7 17:22:11 2023 from 133.11.3.101
+hmiwa@humgendiv:~$ exit
+logout
+Connection to 133.11.2.58 closed.
+(base) PS C:\Users\himar>
