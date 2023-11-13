@@ -1,0 +1,388 @@
+Last login: Tue Nov  7 14:58:23 on ttys000
+hmiwa@hanakonoMacBook-Air ~ % ssh hmiwa-lab                         
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Tue Nov  7 17:25:44 2023 from 133.11.3.101
+hmiwa@humgendiv:~$ ls hmiwa1/storage/hmiwa-lab/02_231105_TutorialPRS/
+1kG_MDS2.bed       1kG_MDS.bed                                                   HapMap_3_r3_12.fam                 MDS_merge2.bim
+1kG_MDS2.bim       1kG_MDS.bim                                                   HapMap_3_r3_13.bed                 MDS_merge2.cluster1
+1kG_MDS2.fam       1kG_MDS.fam                                                   HapMap_3_r3_13.bim                 MDS_merge2.cluster2
+1kG_MDS2.log       1kG_MDS.log                                                   HapMap_3_r3_13.fam                 MDS_merge2.cluster3
+1kG_MDS2.nosex     1kG_MDS.nosex                                                 HapMap_3_r3_13.genome              MDS_merge2.fam
+1kG_MDS3.bed       1kg_ref-list.txt                                              HapMap_3_r3_13.log                 MDS_merge2.genome
+1kG_MDS3.bim       20100804.ALL.panel                                            HapMap_3_r3_13_mds.cluster1        MDS_merge2.log
+1kG_MDS3.fam       20100804.ALL.panel.1                                          HapMap_3_r3_13_mds.cluster2        MDS_merge2.mds
+1kG_MDS3.log       adjusted_assoc_results.assoc                                  HapMap_3_r3_13_mds.cluster3        MDS_merge2.nosex
+1kG_MDS3.nosex     adjusted_assoc_results.assoc.adjusted                         HapMap_3_r3_13_mds.log             MDS.pdf
+1kG_MDS4.bed       adjusted_assoc_results.log                                    HapMap_3_r3_13_mds.mds             QQ-Plot_assoc.jpeg
+1kG_MDS4.bim       ALL.2of4intersection.20100804.genotypes.bed                   HapMap-adj.bed                     QQ-Plot_logistic.jpeg
+1kG_MDS4.fam       ALL.2of4intersection.20100804.genotypes.bim                   HapMap-adj.bim                     race_1kG10.txt
+1kG_MDS4.log       ALL.2of4intersection.20100804.genotypes.fam                   HapMap-adj.fam                     race_1kG11.txt
+1kG_MDS4.nosex     ALL.2of4intersection.20100804.genotypes.log                   HapMap-adj.log                     race_1kG12.txt
+1kG_MDS5.bed       ALL.2of4intersection.20100804.genotypes_no_missing_IDs.bed    HapMap-adj_tmp                     race_1kG13.txt
+1kG_MDS5.bim       ALL.2of4intersection.20100804.genotypes_no_missing_IDs.bim    HapMap_MDS2.bed                    race_1kG14.txt
+1kG_MDS5.fam       ALL.2of4intersection.20100804.genotypes_no_missing_IDs.fam    HapMap_MDS2.bim                    race_1kG2.txt
+1kG_MDS5.log       ALL.2of4intersection.20100804.genotypes_no_missing_IDs.log    HapMap_MDS2.fam                    race_1kG3.txt
+1kG_MDS5.nosex     ALL.2of4intersection.20100804.genotypes_no_missing_IDs.nosex  HapMap_MDS2.log                    race_1kG4.txt
+1kG_MDS6.bed       ALL.2of4intersection.20100804.genotypes.nosex                 HapMap_MDS.bed                     race_1kG5.txt
+1kG_MDS6.bim       ALL.2of4intersection.20100804.genotypes.vcf.gz                HapMap_MDS.bim                     race_1kG6.txt
+1kG_MDS6.fam       all_differences.txt                                           HapMap_MDS.fam                     race_1kG7.txt
+1kG_MDS6.log       assoc_manhattan.jpeg                                          HapMap_MDS.log                     race_1kG8.txt
+1kG_MDS6.nosex     assoc_results.assoc                                           HapMap_MDS.map                     race_1kG9.txt
+1kG_MDS6_SNPs.txt  assoc_results.log                                             HapMap_MDS.ped                     race_1kG.txt
+1kG_MDS7.bed       buildhapmap.txt                                               HapMap_SNPs.txt                    racefile_own.txt
+1kG_MDS7.bim       corrected_hapmap.bed                                          HapMap_subset_for_perm.bed         racefile.txt
+1kG_MDS7.fam       corrected_hapmap.bim                                          HapMap_subset_for_perm.bim         SNPs_for_exlusion.txt
+1kG_MDS7.log       corrected_hapmap.fam                                          HapMap_subset_for_perm.fam         sorted_subset.txt
+1kG_MDS7.nosex     corrected_hapmap.log                                          HapMap_subset_for_perm.log         subset_1M_perm_result.assoc
+1kGMDS7_tmp        corrected_hapmap_tmp                                          indepSNP.prune.in                  subset_1M_perm_result.assoc.mperm
+1kG_MDS8.bed       covar_mds.txt                                                 Logistic_manhattan.jpeg            subset_1M_perm_result.log
+1kG_MDS8.bim       EUR_MDS_merge2                                                logistic_results.assoc_2.logistic  subset_snp_chr_22.txt
+1kG_MDS8.fam       flip_list.txt                                                 logistic_results.assoc.logistic    uncorresponding_SNPs.txt
+1kG_MDS8.log       HapMap_3_r3_12.bed                                            logistic_results.log
+1kG_MDS8.nosex     HapMap_3_r3_12.bim                                            MDS_merge2.bed
+hmiwa@humgendiv:~$ cd ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ jupyter notebook
+[I 2023-11-07 20:36:51.590 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 20:36:51.597 ServerApp] Package jupyter_lsp took 0.0064s to import
+[W 2023-11-07 20:36:51.597 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 20:36:51.600 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-07 20:36:51.600 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-07 20:36:51.619 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-07 20:36:51.619 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 20:36:51.620 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-07 20:36:51.623 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-07 20:36:51.626 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-07 20:36:51.630 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-07 20:36:51.777 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-07 20:36:51.788 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-07 20:36:51.790 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-07 20:36:51.791 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-07 20:36:51.791 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-07 20:36:51.792 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-07 20:36:51.792 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-07 20:36:51.794 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-07 20:36:51.796 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-07 20:36:51.796 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+[I 2023-11-07 20:36:51.796 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-07 20:36:51.796 ServerApp] http://localhost:8888/tree?token=2313381b8f1b5b786177ae953f8f04ea81a153750d507787
+[I 2023-11-07 20:36:51.796 ServerApp]     http://127.0.0.1:8888/tree?token=2313381b8f1b5b786177ae953f8f04ea81a153750d507787
+[I 2023-11-07 20:36:51.796 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-07 20:36:51.798 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-07 20:36:51.798 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1211109-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=2313381b8f1b5b786177ae953f8f04ea81a153750d507787
+        http://127.0.0.1:8888/tree?token=2313381b8f1b5b786177ae953f8f04ea81a153750d507787
+[I 2023-11-07 20:36:52.067 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-07 20:37:10.518 ServerApp] Kernel started: dfd8fd88-f7f4-4707-b055-b24947cb9661
+[I 2023-11-07 20:37:13.222 ServerApp] Connecting to kernel dfd8fd88-f7f4-4707-b055-b24947cb9661.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-07 20:38:37.500 ServerApp] Starting buffering for dfd8fd88-f7f4-4707-b055-b24947cb9661:db99e5f2-034e-42b9-9ea2-0fe051ae7ee4
+^C[I 2023-11-07 20:38:39.173 ServerApp] interrupted
+[I 2023-11-07 20:38:39.174 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+    1 active kernel
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=2313381b8f1b5b786177ae953f8f04ea81a153750d507787
+        http://127.0.0.1:8888/tree?token=2313381b8f1b5b786177ae953f8f04ea81a153750d507787
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 20:38:41.156 ServerApp] Shutdown confirmed
+[I 2023-11-07 20:38:41.157 ServerApp] Shutting down 5 extensions
+[I 2023-11-07 20:38:41.158 ServerApp] Shutting down 1 kernel
+[I 2023-11-07 20:38:41.159 ServerApp] Kernel shutdown: dfd8fd88-f7f4-4707-b055-b24947cb9661
+^C[C 2023-11-07 20:38:42.421 ServerApp] received signal 2, stopping
+[I 2023-11-07 20:38:42.421 ServerApp] Shutting down 5 extensions
+[I 2023-11-07 20:38:42.422 ServerApp] Shutting down 1 kernel
+[I 2023-11-07 20:38:42.422 ServerApp] Kernel shutdown: dfd8fd88-f7f4-4707-b055-b24947cb9661
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ exit
+logout
+Connection to 133.11.2.58 closed.
+hmiwa@hanakonoMacBook-Air ~ % ssh hmiwa-lab
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Tue Nov  7 20:36:05 2023 from 133.11.3.152
+hmiwa@humgendiv:~$ cd ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ jupyter notebook
+[I 2023-11-07 21:07:57.086 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 21:07:57.092 ServerApp] Package jupyter_lsp took 0.0063s to import
+[W 2023-11-07 21:07:57.092 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 21:07:57.095 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-07 21:07:57.096 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-07 21:07:57.115 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-07 21:07:57.115 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 21:07:57.116 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-07 21:07:57.119 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-07 21:07:57.122 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-07 21:07:57.126 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-07 21:07:57.273 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-07 21:07:57.284 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-07 21:07:57.286 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-07 21:07:57.287 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-07 21:07:57.288 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-07 21:07:57.288 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-07 21:07:57.288 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-07 21:07:57.290 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-07 21:07:57.292 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-07 21:07:57.292 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+[I 2023-11-07 21:07:57.292 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-07 21:07:57.292 ServerApp] http://localhost:8888/tree?token=dc95f4da49195bc31616ead84c627a547759bdabaa9e1f49
+[I 2023-11-07 21:07:57.292 ServerApp]     http://127.0.0.1:8888/tree?token=dc95f4da49195bc31616ead84c627a547759bdabaa9e1f49
+[I 2023-11-07 21:07:57.292 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-07 21:07:57.294 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-07 21:07:57.295 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1211800-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=dc95f4da49195bc31616ead84c627a547759bdabaa9e1f49
+        http://127.0.0.1:8888/tree?token=dc95f4da49195bc31616ead84c627a547759bdabaa9e1f49
+[I 2023-11-07 21:07:57.528 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-07 21:08:11.924 ServerApp] Kernel started: 8e8a6528-734a-4e20-974c-dc6fc200387e
+[I 2023-11-07 21:08:14.641 ServerApp] Connecting to kernel 8e8a6528-734a-4e20-974c-dc6fc200387e.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-07 21:08:26.328 ServerApp] Starting buffering for 8e8a6528-734a-4e20-974c-dc6fc200387e:1406863e-0715-4033-a3db-f5cd9b6ed31e
+^C[I 2023-11-07 21:08:29.767 ServerApp] interrupted
+[I 2023-11-07 21:08:29.767 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+    1 active kernel
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=dc95f4da49195bc31616ead84c627a547759bdabaa9e1f49
+        http://127.0.0.1:8888/tree?token=dc95f4da49195bc31616ead84c627a547759bdabaa9e1f49
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-07 21:08:31.264 ServerApp] Shutdown confirmed
+[I 2023-11-07 21:08:31.265 ServerApp] Shutting down 5 extensions
+[I 2023-11-07 21:08:31.266 ServerApp] Shutting down 1 kernel
+[I 2023-11-07 21:08:31.267 ServerApp] Kernel shutdown: 8e8a6528-734a-4e20-974c-dc6fc200387e
+^C[C 2023-11-07 21:08:33.578 ServerApp] received signal 2, stopping
+[I 2023-11-07 21:08:33.578 ServerApp] Shutting down 5 extensions
+[I 2023-11-07 21:08:33.579 ServerApp] Shutting down 1 kernel
+[I 2023-11-07 21:08:33.579 ServerApp] Kernel shutdown: 8e8a6528-734a-4e20-974c-dc6fc200387e
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ jupyter notebook
+[I 2023-11-07 23:06:19.177 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-07 23:06:19.184 ServerApp] Package jupyter_lsp took 0.0063s to import
+[W 2023-11-07 23:06:19.184 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 23:06:19.187 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-07 23:06:19.187 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-07 23:06:19.207 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-07 23:06:19.207 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-07 23:06:19.207 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-07 23:06:19.211 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-07 23:06:19.214 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-07 23:06:19.217 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-07 23:06:19.364 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-07 23:06:19.375 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-07 23:06:19.377 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-07 23:06:19.378 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-07 23:06:19.379 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-07 23:06:19.379 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-07 23:06:19.379 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-07 23:06:19.381 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-07 23:06:19.383 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-07 23:06:19.383 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+[I 2023-11-07 23:06:19.383 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-07 23:06:19.383 ServerApp] http://localhost:8888/tree?token=07adcfed630b4fbf8047698f48ddce5145e42df8037e1d2e
+[I 2023-11-07 23:06:19.383 ServerApp]     http://127.0.0.1:8888/tree?token=07adcfed630b4fbf8047698f48ddce5145e42df8037e1d2e
+[I 2023-11-07 23:06:19.383 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-07 23:06:19.386 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-07 23:06:19.386 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1212816-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=07adcfed630b4fbf8047698f48ddce5145e42df8037e1d2e
+        http://127.0.0.1:8888/tree?token=07adcfed630b4fbf8047698f48ddce5145e42df8037e1d2e
+[I 2023-11-07 23:06:19.635 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-08 10:27:01.614 ServerApp] Kernel started: fce1a38c-f470-46d2-9b5c-b143009dc347
+[I 2023-11-08 10:27:04.316 ServerApp] Connecting to kernel fce1a38c-f470-46d2-9b5c-b143009dc347.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-08 20:06:34.594 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[I 2023-11-08 20:08:35.543 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[I 2023-11-08 20:10:35.905 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[I 2023-11-08 20:12:36.268 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[I 2023-11-08 20:14:36.636 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[I 2023-11-08 20:18:37.551 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[I 2023-11-08 20:20:37.916 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[I 2023-11-08 20:22:38.317 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[I 2023-11-08 20:22:42.559 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[W 2023-11-08 20:22:54.558 ServerApp] Alternative text is missing on 19 image(s).
+[I 2023-11-08 20:23:16.001 ServerApp] Saving file at /02_231105_TutorialPRS.ipynb
+[W 2023-11-08 20:23:16.060 ServerApp] /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS/.~02_231105_TutorialPRS.ipynb doesn't exist
+[I 2023-11-08 20:23:20.999 ServerApp] Kernel shutdown: fce1a38c-f470-46d2-9b5c-b143009dc347
+[I 2023-11-08 20:23:22.102 ServerApp] Starting buffering for fce1a38c-f470-46d2-9b5c-b143009dc347:542cbf13-aa14-4312-96bf-f8fe5ea22006
+^C[I 2023-11-08 20:23:24.486 ServerApp] interrupted
+[I 2023-11-08 20:23:24.487 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=07adcfed630b4fbf8047698f48ddce5145e42df8037e1d2e
+        http://127.0.0.1:8888/tree?token=07adcfed630b4fbf8047698f48ddce5145e42df8037e1d2e
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-08 20:23:29.109 ServerApp] Shutdown confirmed
+[I 2023-11-08 20:23:29.110 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .ipynb_checkpoints/02_231105_TutorialPRS-checkpoint.ipynb
+	modified:   02_231105_TutorialPRS.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.ipynb_checkpoints/02_231105_TutorialPRS-checkpoint.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 11 (delta 7), reused 8 (delta 4), pack-reused 0
+Unpacking objects: 100% (11/11), 28.72 KiB | 3.19 MiB/s, done.
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Updating ee37cfc..6f184c8
+Fast-forward
+ d_20231023/99_log/202311070102.txt |  626 ++++++++++++++++++++++++++++++++
+ d_20231023/99_log/202311070103.txt | 2090 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ d_20231023/99_log/202311071618.txt |   33 ++
+ 3 files changed, 2749 insertions(+)
+ create mode 100644 d_20231023/99_log/202311070102.txt
+ create mode 100644 d_20231023/99_log/202311070103.txt
+ create mode 100644 d_20231023/99_log/202311071618.txt
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ git add -A .
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ git commit -m "[update] TutorialPRS (ATM 2018)" -m "演習は今後のチュートリアルや日解析で代用する"
+[main d365eb5] [update] TutorialPRS (ATM 2018)
+ 3 files changed, 14514 insertions(+), 8 deletions(-)
+ create mode 100644 d_20231023/02_231105_TutorialPRS/.ipynb_checkpoints/02_231105_TutorialPRS-checkpoint.html
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 3.10 KiB | 634.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   6f184c8..d365eb5  main -> main
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ jupyter notebook
+[I 2023-11-08 20:29:35.408 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-08 20:29:35.415 ServerApp] Package jupyter_lsp took 0.0064s to import
+[W 2023-11-08 20:29:35.415 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-08 20:29:35.418 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-08 20:29:35.418 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-08 20:29:35.438 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-08 20:29:35.438 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-08 20:29:35.438 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-08 20:29:35.442 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-08 20:29:35.445 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-08 20:29:35.448 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-08 20:29:35.594 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-08 20:29:35.606 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-08 20:29:35.608 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-08 20:29:35.609 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-08 20:29:35.610 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-08 20:29:35.610 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-08 20:29:35.610 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-08 20:29:35.612 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-08 20:29:35.614 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-08 20:29:35.614 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+[I 2023-11-08 20:29:35.614 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-08 20:29:35.614 ServerApp] http://localhost:8888/tree?token=d55430b3f588ad2fccec16b0a92015f8c88a356725106f10
+[I 2023-11-08 20:29:35.614 ServerApp]     http://127.0.0.1:8888/tree?token=d55430b3f588ad2fccec16b0a92015f8c88a356725106f10
+[I 2023-11-08 20:29:35.614 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-08 20:29:35.616 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-08 20:29:35.616 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1226415-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=d55430b3f588ad2fccec16b0a92015f8c88a356725106f10
+        http://127.0.0.1:8888/tree?token=d55430b3f588ad2fccec16b0a92015f8c88a356725106f10
+[I 2023-11-08 20:29:35.858 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-08 20:29:52.484 ServerApp] Kernel started: 457af42b-665e-4d60-b713-0d0f698c69b3
+[I 2023-11-08 20:29:55.188 ServerApp] Connecting to kernel 457af42b-665e-4d60-b713-0d0f698c69b3.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[W 2023-11-08 20:29:56.447 ServerApp] Alternative text is missing on 19 image(s).
+[I 2023-11-08 20:30:13.749 ServerApp] Kernel shutdown: 457af42b-665e-4d60-b713-0d0f698c69b3
+[I 2023-11-08 20:30:15.112 ServerApp] Starting buffering for 457af42b-665e-4d60-b713-0d0f698c69b3:c457b7f9-d0f6-4c39-95ac-f21c98c37677
+^C[I 2023-11-08 20:30:17.841 ServerApp] interrupted
+[I 2023-11-08 20:30:17.842 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8888/tree?token=d55430b3f588ad2fccec16b0a92015f8c88a356725106f10
+        http://127.0.0.1:8888/tree?token=d55430b3f588ad2fccec16b0a92015f8c88a356725106f10
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-08 20:30:18.871 ServerApp] Shutdown confirmed
+[I 2023-11-08 20:30:18.872 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ jupyter notebook
+[I 2023-11-08 20:32:19.305 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-08 20:32:19.312 ServerApp] Package jupyter_lsp took 0.0063s to import
+[W 2023-11-08 20:32:19.312 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-08 20:32:19.315 ServerApp] Package jupyter_server_terminals took 0.0028s to import
+[I 2023-11-08 20:32:19.315 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-08 20:32:19.334 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-08 20:32:19.334 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-08 20:32:19.335 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-08 20:32:19.338 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-08 20:32:19.341 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-08 20:32:19.345 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-08 20:32:19.490 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-08 20:32:19.500 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-08 20:32:19.503 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-08 20:32:19.503 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-08 20:32:19.504 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-08 20:32:19.504 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-08 20:32:19.504 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-08 20:32:19.506 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-08 20:32:19.508 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-08 20:32:19.508 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+[I 2023-11-08 20:32:19.508 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-08 20:32:19.508 ServerApp] http://localhost:8888/tree?token=3547a202b5a942d8cca80daa936cb0e4095ea7362aa6c58e
+[I 2023-11-08 20:32:19.508 ServerApp]     http://127.0.0.1:8888/tree?token=3547a202b5a942d8cca80daa936cb0e4095ea7362aa6c58e
+[I 2023-11-08 20:32:19.508 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-08 20:32:19.511 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-08 20:32:19.511 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1226559-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=3547a202b5a942d8cca80daa936cb0e4095ea7362aa6c58e
+        http://127.0.0.1:8888/tree?token=3547a202b5a942d8cca80daa936cb0e4095ea7362aa6c58e
+[I 2023-11-08 20:32:19.781 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-08 20:32:32.998 ServerApp] Kernel started: df706460-75a6-4687-8490-1ff448c7a41e
+[I 2023-11-08 20:32:35.674 ServerApp] Connecting to kernel df706460-75a6-4687-8490-1ff448c7a41e.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[W 2023-11-08 20:32:39.191 ServerApp] Alternative text is missing on 19 image(s).
+[I 2023-11-08 20:33:05.610 ServerApp] Kernel shutdown: df706460-75a6-4687-8490-1ff448c7a41e
+[I 2023-11-08 20:33:05.889 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-08 20:33:05.890 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ client_loop: send disconnect: Broken pipe
+hmiwa@hanakonoMacBook-Air ~ % 

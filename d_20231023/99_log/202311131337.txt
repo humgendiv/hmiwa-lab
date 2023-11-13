@@ -1,0 +1,330 @@
+Last login: Thu Nov  9 13:46:29 on ttys000
+hmiwa@hanakonoMacBook-Air ~ % ssh hmiwa-lab
+^C
+hmiwa@hanakonoMacBook-Air ~ % ssh hmiwa-lab
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Tue Nov  7 21:07:51 2023 from 133.11.3.152
+hmiwa@humgendiv:~$ cd ~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/02_231105_TutorialPRS$ cd ~/hmiwa/hmiwa-lab/d_20231023/
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls
+01_231025_TutorialPRS  02_231105_TutorialPRS  99_log  README.md
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ mkdir 03_231113_PRSTrial
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls
+01_231025_TutorialPRS  02_231105_TutorialPRS  03_231113_PRSTrial  99_log  README.md
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ touch 03_231113_PRSTrial/.gitkeep
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 10 (delta 7), reused 10 (delta 7), pack-reused 0
+Unpacking objects: 100% (10/10), 3.44 KiB | 152.00 KiB/s, done.
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Updating d365eb5..3e2f444
+Fast-forward
+ d_20231023/02_231105_TutorialPRS/02_231105_TutorialPRS.html                                    | 338 ++++++++++++++++++++++++++++++++++++++++++++++-
+ .../20231108_202823.Default.w0t0p0.2B72298E-2EDF-4E70-8B5A-6C955FD71F7C.37851.2331413437.log   |   2 +
+ 2 files changed, 336 insertions(+), 4 deletions(-)
+ create mode 100644 d_20231023/99_log/20231108_202823.Default.w0t0p0.2B72298E-2EDF-4E70-8B5A-6C955FD71F7C.37851.2331413437.log
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls
+01_231025_TutorialPRS  02_231105_TutorialPRS  03_231113_PRSTrial  99_log  README.md
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ cd ~/hmiwa/hmiwa-lab/d_20231023/03_231113_PRSTrial
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_PRSTrial$ ls
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_PRSTrial$ git add -A .
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_PRSTrial$ git commit -m "[add] add a new directory"
+[main 8b105e8] [add] add a new directory
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d_20231023/03_231113_PRSTrial/.gitkeep
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_PRSTrial$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 386 bytes | 386.00 KiB/s, done.
+Total 4 (delta 2), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   3e2f444..8b105e8  main -> main
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_PRSTrial$ cd ~/hmiwa/hmiwa-lab/d_20231023/
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls
+01_231025_TutorialPRS  02_231105_TutorialPRS  03_231113_PRSTrial  99_log  README.md
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ mv 03_231113_PRSTrial 03_231113_TutorialPRS
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls
+01_231025_TutorialPRS  02_231105_TutorialPRS  03_231113_TutorialPRS  99_log  README.md
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ cd ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ ls
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ jupyter notebook
+[I 2023-11-13 01:37:21.916 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-13 01:37:21.926 ServerApp] Package jupyter_lsp took 0.0096s to import
+[W 2023-11-13 01:37:21.926 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 01:37:21.932 ServerApp] Package jupyter_server_terminals took 0.0059s to import
+[I 2023-11-13 01:37:21.932 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-13 01:37:21.969 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-13 01:37:21.969 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 01:37:21.970 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-13 01:37:21.973 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-13 01:37:21.976 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-13 01:37:21.980 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-13 01:37:22.181 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-13 01:37:22.197 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-13 01:37:22.199 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-13 01:37:22.199 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-13 01:37:22.204 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-13 01:37:22.204 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-13 01:37:22.204 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-13 01:37:22.206 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-13 01:37:22.208 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-13 01:37:22.208 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+[I 2023-11-13 01:37:22.208 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-13 01:37:22.208 ServerApp] http://localhost:8888/tree?token=e48c877e525b39959c54863c7abc2e23fa844329e187f5bf
+[I 2023-11-13 01:37:22.208 ServerApp]     http://127.0.0.1:8888/tree?token=e48c877e525b39959c54863c7abc2e23fa844329e187f5bf
+[I 2023-11-13 01:37:22.208 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-13 01:37:22.211 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-13 01:37:22.211 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1285070-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=e48c877e525b39959c54863c7abc2e23fa844329e187f5bf
+        http://127.0.0.1:8888/tree?token=e48c877e525b39959c54863c7abc2e23fa844329e187f5bf
+[I 2023-11-13 01:37:22.453 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-13 01:37:52.615 ServerApp] Creating new notebook in 
+[I 2023-11-13 01:37:59.421 ServerApp] Kernel started: fc8d33a7-470d-4e80-b9e2-d5dc5588bcf8
+[I 2023-11-13 01:38:02.089 ServerApp] Connecting to kernel fc8d33a7-470d-4e80-b9e2-d5dc5588bcf8.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-13 01:39:55.624 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 01:41:55.706 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 01:43:55.799 ServerApp] Saving file at /Untitled.ipynb
+[W 2023-11-13 01:44:41.483 ServerApp] delete /data
+[I 2023-11-13 01:45:55.904 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 01:49:55.986 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 01:51:56.071 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 01:53:56.157 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 01:55:56.249 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 01:57:56.336 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 01:59:56.432 ServerApp] Saving file at /Untitled.ipynb
+[I 2023-11-13 02:01:57.429 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:03:57.527 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:05:57.631 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:07:57.720 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:09:57.815 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:11:58.455 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:13:58.545 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:15:58.647 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:17:58.736 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:19:58.834 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:21:58.939 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:23:59.037 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:25:59.132 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:27:59.236 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:29:59.335 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[W 2023-11-13 02:31:10.796 ServerApp] delete /data/EUR.zip
+[I 2023-11-13 02:31:59.450 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:34:00.445 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:36:01.433 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:38:01.531 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:40:01.666 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:42:01.756 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:48:02.452 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:50:03.444 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:52:03.552 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:54:03.666 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:56:03.790 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 02:58:03.937 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:00:04.446 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:02:04.571 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:04:04.686 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:05:16.068 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:07:16.189 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:07:56.623 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:08:10.585 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:08:17.240 ServerApp] Kernel shutdown: fc8d33a7-470d-4e80-b9e2-d5dc5588bcf8
+[I 2023-11-13 03:08:19.920 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-13 03:08:19.920 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ channel 7: open failed: connect failed: Connection refused
+channel 7: open failed: connect failed: Connection refused
+channel 9: open failed: connect failed: Connection refused
+channel 10: open failed: connect failed: Connection refused
+channel 11: open failed: connect failed: Connection refused
+channel 12: open failed: connect failed: Connection refused
+channel 13: open failed: connect failed: Connection refused
+channel 3: open failed: connect failed: Connection refused
+^C
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../03_231113_PRSTrial/.gitkeep
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+no changes added to commit (use "git add" and/or "git commit -a")
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ cd ~/hmiwa/hmiwa-lab/d_20231023
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    03_231113_PRSTrial/.gitkeep
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	03_231113_TutorialPRS/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ git add -A .
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ git commit -m "[add] try another PRS tutorial"
+[main 451c085] [add] try another PRS tutorial
+ 23 files changed, 1638492 insertions(+)
+ rename d_20231023/{03_231113_PRSTrial => 03_231113_TutorialPRS}/.gitkeep (100%)
+ create mode 100644 d_20231023/03_231113_TutorialPRS/.ipynb_checkpoints/PRSTutorial1103-checkpoint.ipynb
+ create mode 100644 d_20231023/03_231113_TutorialPRS/PRSTutorial1103.ipynb
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.fam
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.het
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.hh
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.irem
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.log
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.prune.in
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.prune.out
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.snplist
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.bed
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.bim
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.cov
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.fam
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.height
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.valid.sample
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.zip
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/Height.QC.gz
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/Height.gwas.txt.gz
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/Height.gz
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/Height.nodup.gz
+ create mode 100644 d_20231023/03_231113_TutorialPRS/data/het.R
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (27/27), 162.14 MiB | 3.03 MiB/s, done.
+Total 27 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote: warning: See https://gh.io/lfs for more information.
+remote: warning: File d_20231023/03_231113_TutorialPRS/data/EUR.bed is 66.32 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To github.com:humgendiv/hmiwa-lab.git
+   8b105e8..451c085  main -> main
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 9 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ cd ~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ jupyter notebook
+[I 2023-11-13 03:12:49.728 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-13 03:12:49.734 ServerApp] Package jupyter_lsp took 0.0064s to import
+[W 2023-11-13 03:12:49.734 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 03:12:49.738 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-13 03:12:49.738 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-13 03:12:49.757 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-13 03:12:49.757 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-13 03:12:49.758 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-13 03:12:49.761 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-13 03:12:49.764 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-13 03:12:49.768 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-13 03:12:49.914 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-13 03:12:49.925 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-13 03:12:49.927 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-13 03:12:49.928 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-13 03:12:49.928 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-13 03:12:49.929 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-13 03:12:49.929 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-13 03:12:49.931 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-13 03:12:49.933 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-13 03:12:49.933 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS
+[I 2023-11-13 03:12:49.933 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-13 03:12:49.933 ServerApp] http://localhost:8888/tree?token=55d8355d0b9abfb86bffc93d30b89ea4d72bd1ed4bc11dd9
+[I 2023-11-13 03:12:49.933 ServerApp]     http://127.0.0.1:8888/tree?token=55d8355d0b9abfb86bffc93d30b89ea4d72bd1ed4bc11dd9
+[I 2023-11-13 03:12:49.933 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-13 03:12:49.935 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-13 03:12:49.936 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1289289-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=55d8355d0b9abfb86bffc93d30b89ea4d72bd1ed4bc11dd9
+        http://127.0.0.1:8888/tree?token=55d8355d0b9abfb86bffc93d30b89ea4d72bd1ed4bc11dd9
+[I 2023-11-13 03:12:50.210 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-13 03:13:11.718 ServerApp] Kernel started: ec551afc-decd-462a-8fc1-6aea16270434
+[I 2023-11-13 03:13:14.420 ServerApp] Connecting to kernel ec551afc-decd-462a-8fc1-6aea16270434.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-13 03:15:11.482 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:17:11.604 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:19:07.533 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:19:12.741 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:19:18.537 ServerApp] Saving file at /PRSTutorial1103.ipynb
+[I 2023-11-13 03:19:21.734 ServerApp] Kernel shutdown: ec551afc-decd-462a-8fc1-6aea16270434
+[I 2023-11-13 03:19:24.414 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-13 03:19:24.414 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git add -A .
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git commit -m "[delete] move large files to the storage"
+[main d327d55] [delete] move large files to the storage
+ 22 files changed, 98 insertions(+), 1636516 deletions(-)
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.fam
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.het
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.hh
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.irem
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.log
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.prune.in
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.prune.out
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.QC.snplist
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.bed
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.bim
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.cov
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.fam
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.height
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.valid.sample
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/EUR.zip
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/Height.QC.gz
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/Height.gwas.txt.gz
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/Height.gz
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/Height.nodup.gz
+ delete mode 100644 d_20231023/03_231113_TutorialPRS/data/het.R
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1007 bytes | 1007.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   451c085..d327d55  main -> main
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/03_231113_TutorialPRS$ exit
+logout
+Connection to 133.11.2.58 closed.
+hmiwa@hanakonoMacBook-Air ~ %   
+  [復元日時2023/11/13 12:44:37]
+Last login: Mon Nov 13 12:44:35 on console
+hmiwa@dhcp2-224 ~ % 
