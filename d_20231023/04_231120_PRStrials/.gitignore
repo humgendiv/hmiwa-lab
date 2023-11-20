@@ -1,0 +1,3 @@
+SGSS2023/*.zip
+SGSS2023/*/*
+!SGSS2023/*/.gitkeep
