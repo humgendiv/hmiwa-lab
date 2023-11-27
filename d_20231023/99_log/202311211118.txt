@@ -1,0 +1,378 @@
+Last login: Sat Nov 18 03:02:43 on ttys000
+hmiwa@hanakonoMacBook-Air ~ % ssh hmiwa-lab                             
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Mon Nov 13 16:14:14 2023 from 133.11.3.101
+hmiwa@humgendiv:~$ cd ~/hmiwa/hmiwa-lab/d_20231023/
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls
+01_231025_TutorialPRS  02_231105_TutorialPRS  03_231113_TutorialPRS  99_log  README.md
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls 03_231113_TutorialPRS
+03_231113_TutorialPRS.html  03_231113_TutorialPRS.ipynb  pic
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls 03_231113_TutorialPRS/pic
+EUR_BARPLOT_2023-11-13.png  EUR.height.bar.png  EUR.height.scatter.png  EUR_HIGH-RES_PLOT_2023-11-13.png
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 15 (delta 11), reused 13 (delta 9), pack-reused 0
+Unpacking objects: 100% (15/15), 14.97 KiB | 425.00 KiB/s, done.
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Updating 91e831e..e84406c
+Fast-forward
+ d_20231023/03_231113_TutorialPRS/03_231113_TutorialPRS.html  | 907 +++++++++++++++++++++++++++++++++++++++++----------------------------------------
+ d_20231023/03_231113_TutorialPRS/03_231113_TutorialPRS.ipynb |  50 +++--
+ d_20231023/99_log/202311131643.txt                           | 696 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 1178 insertions(+), 475 deletions(-)
+ create mode 100644 d_20231023/99_log/202311131643.txt
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ mkdir 04_231120_PRStrials
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ touch 04_231120_PRStrials/.gitkeep
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ ls
+01_231025_TutorialPRS  02_231105_TutorialPRS  03_231113_TutorialPRS  04_231120_PRStrials  99_log  README.md
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023$ cd ~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ ls
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ jupyter notebook
+[I 2023-11-20 14:46:36.621 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-20 14:46:36.628 ServerApp] Package jupyter_lsp took 0.0068s to import
+[W 2023-11-20 14:46:36.628 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-20 14:46:36.633 ServerApp] Package jupyter_server_terminals took 0.0044s to import
+[I 2023-11-20 14:46:36.633 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-20 14:46:36.659 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-20 14:46:36.659 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-20 14:46:36.659 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-20 14:46:36.663 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-20 14:46:36.666 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-20 14:46:36.669 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-20 14:46:36.866 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-20 14:46:36.877 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-20 14:46:36.879 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-20 14:46:36.880 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-20 14:46:36.881 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-20 14:46:36.882 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-20 14:46:36.882 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-20 14:46:36.884 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-20 14:46:36.885 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-20 14:46:36.886 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials
+[I 2023-11-20 14:46:36.886 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-20 14:46:36.886 ServerApp] http://localhost:8888/tree?token=eb00c0ecf44d94ddd39d0e2e28cfaf6a1780b3f7a704f4da
+[I 2023-11-20 14:46:36.886 ServerApp]     http://127.0.0.1:8888/tree?token=eb00c0ecf44d94ddd39d0e2e28cfaf6a1780b3f7a704f4da
+[I 2023-11-20 14:46:36.886 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-20 14:46:36.888 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-20 14:46:36.889 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1488634-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=eb00c0ecf44d94ddd39d0e2e28cfaf6a1780b3f7a704f4da
+        http://127.0.0.1:8888/tree?token=eb00c0ecf44d94ddd39d0e2e28cfaf6a1780b3f7a704f4da
+[I 2023-11-20 14:46:37.133 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-20 14:47:20.121 ServerApp] Creating new notebook in 
+[I 2023-11-20 14:47:26.504 ServerApp] Kernel started: 29235fdb-6087-4cc9-bbeb-4df41045afff
+[I 2023-11-20 14:47:29.220 ServerApp] Connecting to kernel 29235fdb-6087-4cc9-bbeb-4df41045afff.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-20 14:49:23.052 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 14:51:23.138 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 18:06:20.662 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 18:08:20.753 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[W 2023-11-20 18:12:11.260 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2023-11-20 18:12:12.881 ServerApp] iopub messages resumed
+[W 2023-11-20 18:12:14.383 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2023-11-20 18:12:16.250 ServerApp] iopub messages resumed
+[W 2023-11-20 18:12:16.800 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2023-11-20 18:12:17.067 ServerApp] iopub messages resumed
+[I 2023-11-20 18:12:17.132 ServerApp] Kernel interrupted: 29235fdb-6087-4cc9-bbeb-4df41045afff
+[W 2023-11-20 18:12:17.609 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2023-11-20 18:12:19.468 ServerApp] iopub messages resumed
+[W 2023-11-20 18:12:20.015 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[W 2023-11-20 18:12:20.292 ServerApp] iopub messages resumed
+[I 2023-11-20 18:12:20.497 ServerApp] Kernel interrupted: 29235fdb-6087-4cc9-bbeb-4df41045afff
+[W 2023-11-20 18:12:20.834 ServerApp] IOPub message rate exceeded.
+    The Jupyter server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--ServerApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    ServerApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    ServerApp.rate_limit_window=3.0 (secs)
+    
+[I 2023-11-20 18:12:23.133 ServerApp] Kernel interrupted: 29235fdb-6087-4cc9-bbeb-4df41045afff
+[I 2023-11-20 18:12:32.381 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[W 2023-11-20 18:12:32.398 ServerApp] /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials/.~04_231120_PRStrials.ipynb doesn't exist
+[I 2023-11-20 18:14:32.588 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 18:46:32.744 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 18:48:32.830 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 18:56:33.654 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 18:58:33.740 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:00:33.826 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:02:33.921 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:04:34.009 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:06:34.098 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:08:34.188 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:24:34.372 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:26:34.468 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:30:34.639 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:32:34.724 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:42:37.648 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:54:37.782 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:56:37.877 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 19:58:38.160 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 20:00:38.467 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 20:02:38.759 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 20:06:16.577 ServerApp] Creating new notebook in 
+[I 2023-11-20 20:06:23.214 ServerApp] Kernel started: e8eb3729-3f15-4af4-8c40-e7868f46b95b
+[I 2023-11-20 20:06:25.757 ServerApp] Connecting to kernel e8eb3729-3f15-4af4-8c40-e7868f46b95b.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-20 20:08:19.512 ServerApp] Saving file at /anaconda.ipynb
+[I 2023-11-20 20:08:55.506 ServerApp] Kernel interrupted: e8eb3729-3f15-4af4-8c40-e7868f46b95b
+[I 2023-11-20 20:10:19.590 ServerApp] Saving file at /anaconda.ipynb
+[I 2023-11-20 20:13:45.982 ServerApp] Saving file at /anaconda.ipynb
+[I 2023-11-20 20:13:47.717 ServerApp] Starting buffering for e8eb3729-3f15-4af4-8c40-e7868f46b95b:d92d7bc4-515a-47e7-b97b-f67985375577
+[I 2023-11-20 20:13:58.636 ServerApp] Kernel shutdown: e8eb3729-3f15-4af4-8c40-e7868f46b95b
+[I 2023-11-20 20:14:14.372 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 20:14:18.698 ServerApp] Kernel shutdown: 29235fdb-6087-4cc9-bbeb-4df41045afff
+[I 2023-11-20 20:14:18.983 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-20 20:14:18.983 ServerApp] Shutting down 5 extensions
+channel 4: open failed: connect failed: Connection refused
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ channel 4: open failed: connect failed: Connection refused
+channel 7: open failed: connect failed: Connection refused
+channel 3: open failed: connect failed: Connection refused
+channel 3: open failed: connect failed: Connection refused
+^C
+hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ exit
+logout
+Connection to 133.11.2.58 closed.
+hmiwa@hanakonoMacBook-Air ~ % ssh hmiwa-lab
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Mon Nov 20 20:11:48 2023 from 133.11.3.156
+(base) hmiwa@humgendiv:~$ cd ~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ jupyter notebook
+[I 2023-11-20 20:14:42.541 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-20 20:14:42.548 ServerApp] Package jupyter_lsp took 0.0064s to import
+[W 2023-11-20 20:14:42.548 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-20 20:14:42.551 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-20 20:14:42.552 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-20 20:14:42.571 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-20 20:14:42.571 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-20 20:14:42.572 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-20 20:14:42.575 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-20 20:14:42.578 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-20 20:14:42.582 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-20 20:14:42.734 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-20 20:14:42.745 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-20 20:14:42.747 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-20 20:14:42.748 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-20 20:14:42.749 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-20 20:14:42.749 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-20 20:14:42.749 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-20 20:14:42.751 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-20 20:14:42.753 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-20 20:14:42.753 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials
+[I 2023-11-20 20:14:42.753 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-20 20:14:42.753 ServerApp] http://localhost:8888/tree?token=a194ea2933a732d9fb92cc734963e20fa2e63d664afdc59b
+[I 2023-11-20 20:14:42.753 ServerApp]     http://127.0.0.1:8888/tree?token=a194ea2933a732d9fb92cc734963e20fa2e63d664afdc59b
+[I 2023-11-20 20:14:42.753 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-20 20:14:42.756 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-20 20:14:42.756 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1501760-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=a194ea2933a732d9fb92cc734963e20fa2e63d664afdc59b
+        http://127.0.0.1:8888/tree?token=a194ea2933a732d9fb92cc734963e20fa2e63d664afdc59b
+[I 2023-11-20 20:14:43.028 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-11-20 20:15:07.907 ServerApp] Kernel started: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 20:15:10.887 ServerApp] Connecting to kernel dc480a5b-32c7-4c4d-b61d-ff582c26362c.
+[IPKernelApp] WARNING | Unknown message type: 'comm_open'
+[IPKernelApp] WARNING | Unknown message type: 'comm_msg'
+[I 2023-11-20 20:17:07.776 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 20:19:08.075 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 20:21:08.384 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 20:23:08.699 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 20:27:09.084 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 21:01:20.883 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 21:03:21.216 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:03:20.860 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:05:21.578 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:07:22.011 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:09:22.369 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:11:22.743 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:13:23.102 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:15:23.463 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:17:23.828 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:19:24.247 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:21:24.598 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:23:25.095 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:39:20.996 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:41:22.137 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:43:22.614 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:45:22.993 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:47:23.363 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:49:23.733 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:51:24.129 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:53:24.904 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:55:25.281 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:57:25.650 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 22:59:26.045 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:01:26.443 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:03:26.848 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:05:27.248 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[IPKernelApp] ERROR | Exception in message handler:
+Traceback (most recent call last):
+  File "/home/hmiwa/.local/lib/python3.10/site-packages/ipykernel/kernelbase.py", line 418, in dispatch_shell
+    await result
+  File "/home/hmiwa/.local/lib/python3.10/site-packages/ipykernel/kernelbase.py", line 749, in execute_request
+    reply_content = self.do_execute(
+  File "/home/hmiwa/.local/lib/python3.10/site-packages/bash_kernel/kernel.py", line 194, in do_execute
+    self.bashwrapper.run_command(code.rstrip(), timeout=None)
+  File "/usr/lib/python3/dist-packages/pexpect/replwrap.py", line 107, in run_command
+    raise ValueError("Continuation prompt found - input was incomplete:\n"
+ValueError: Continuation prompt found - input was incomplete:
+python $ldscdir/munge_sumstats.py \
+--sumstats BMI_All_ancestry.txt \
+--out BMI_All_ancestry.out \
+--snp SNPNAME \
+--a1 REF \
+--a2 ALT \
+-p Pvalue \
+[I 2023-11-20 23:09:27.873 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:09:44.646 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:09:46.358 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:09:46.719 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:09:47.185 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:09:47.378 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:09:47.537 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:09:47.683 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:11:28.951 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:13:29.661 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:15:24.783 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:15:30.428 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:15:33.519 ServerApp] Kernel interrupted: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:17:30.830 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:19:31.228 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:21:31.720 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:23:32.283 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:25:32.773 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:27:33.247 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:29:33.685 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:35:34.150 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:36:27.722 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[W 2023-11-20 23:36:27.756 ServerApp] /home/hmiwa/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials/.~04_231120_PRStrials.ipynb doesn't exist
+[I 2023-11-20 23:36:33.299 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:52:49.601 ServerApp] Saving file at /04_231120_PRStrials.ipynb
+[I 2023-11-20 23:52:52.450 ServerApp] Kernel shutdown: dc480a5b-32c7-4c4d-b61d-ff582c26362c
+[I 2023-11-20 23:52:52.732 ServerApp] Shutting down on /api/shutdown request.
+[I 2023-11-20 23:52:52.733 ServerApp] Shutting down 5 extensions
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ 
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ git add -A .
+warning: adding embedded git repository: d_20231023/04_231120_PRStrials/ldsc
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> d_20231023/04_231120_PRStrials/ldsc
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached d_20231023/04_231120_PRStrials/ldsc
+hint: 
+hint: See "git help submodule" for more information.
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ git rm --cached d_20231023/04_231120_PRStrials/ldsc
+fatal: pathspec 'd_20231023/04_231120_PRStrials/ldsc' did not match any files
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ git add -A .
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ git commit -m "[add] PRS trials"
+[main b97f07c] [add] PRS trials
+ 10 files changed, 14389 insertions(+)
+ create mode 100644 d_20231023/04_231120_PRStrials/.gitignore
+ create mode 100644 d_20231023/04_231120_PRStrials/.gitkeep
+ create mode 100644 d_20231023/04_231120_PRStrials/.ipynb_checkpoints/04_231120_PRStrials-checkpoint.ipynb
+ create mode 100644 d_20231023/04_231120_PRStrials/.ipynb_checkpoints/anaconda-checkpoint.ipynb
+ create mode 100644 d_20231023/04_231120_PRStrials/04_231120_PRStrials.ipynb
+ create mode 100644 d_20231023/04_231120_PRStrials/SGSS2023/StatGenSummerSchool2023_GenomeDataAnalysis6/.gitkeep
+ create mode 100644 d_20231023/04_231120_PRStrials/SGSS2023/__for_install__/.gitkeep
+ create mode 100644 d_20231023/04_231120_PRStrials/anaconda.ipynb
+ create mode 160000 d_20231023/04_231120_PRStrials/ldsc
+ create mode 100644 d_20231023/04_231120_PRStrials/ldsc.log
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa': 
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (11/11), 32.13 KiB | 4.02 MiB/s, done.
+Total 11 (delta 2), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   e84406c..b97f07c  main -> main
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab/d_20231023/04_231120_PRStrials$ exit
+logout
+Connection to 133.11.2.58 closed.
+hmiwa@hanakonoMacBook-Air ~ % 
