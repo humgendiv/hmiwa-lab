@@ -1,0 +1,86 @@
+(base) PS C:\Users\himar> ssh hmiwa-lab
+Enter passphrase for key 'C:\Users\himar/.ssh/id_rsa':
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Thu Dec  7 15:52:51 2023 from 133.11.2.224
+(base) hmiwa@humgendiv:~$ ls
+anaconda  anaconda3  bcftools-1.17  hmiwa  hmiwa1  homebrew  local  R  snap
+(base) hmiwa@humgendiv:~$ cd hmiwa
+(base) hmiwa@humgendiv:~/hmiwa$ ls
+hmiwa-lab  m_20211215  white.rsa
+(base) hmiwa@humgendiv:~/hmiwa$ cd hmiwa-lab
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 9 (delta 5), reused 9 (delta 5), pack-reused 0
+Unpacking objects: 100% (9/9), 16.24 KiB | 111.00 KiB/s, done.
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Updating b97f07c..07aad63
+Fast-forward
+ d_20231023/99_log/202311150410.txt                                                             | 364 +++++++++++++++++++++++++++++++++++++++++++++
+ .../20231115_162753.Default.w0t0p0.7E398667-21E2-459C-8F68-A69E78F007F2.39081.2451910142.log   |   2 +
+ .../20231118_030242.Default.w0t0p0.F0D41008-CD0A-4CEF-92C9-E4D4561969AA.443.536700946.log      |   2 +
+ d_20231023/99_log/202311211118.txt                                                             | 378 +++++++++++++++++++++++++++++++++++++++++++++++
+ d_20231023/99_log/202311211119.txt                                                             | 373 ++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 1119 insertions(+)
+ create mode 100644 d_20231023/99_log/202311150410.txt
+ create mode 100644 d_20231023/99_log/20231115_162753.Default.w0t0p0.7E398667-21E2-459C-8F68-A69E78F007F2.39081.2451910142.log
+ create mode 100644 d_20231023/99_log/20231118_030242.Default.w0t0p0.F0D41008-CD0A-4CEF-92C9-E4D4561969AA.443.536700946.log
+ create mode 100644 d_20231023/99_log/202311211118.txt
+ create mode 100644 d_20231023/99_log/202311211119.txt
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ exit
+logout
+Connection to 133.11.2.58 closed.
+(base) PS C:\Users\himar> ssh hmiwa-lab
+Enter passphrase for key 'C:\Users\himar/.ssh/id_rsa':
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Thu Dec  7 15:53:11 2023 from 133.11.3.101
+(base) hmiwa@humgendiv:~$ cd hmiwa-lab
+-bash: cd: hmiwa-lab: No such file or directory
+(base) hmiwa@humgendiv:~$ cd hmiwa/hmiwa-lab
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ git add -A .
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ git commit -m "[add]"
+[main 1667084] [add]
+ 1 file changed, 13 insertions(+)
+ create mode 100644 d_20231023/ldsc.log
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ git push git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 64 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 589 bytes | 589.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:humgendiv/hmiwa-lab.git
+   07aad63..1667084  main -> main
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ git add -A .
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ git commit -m "[add]"
+On branch main
+Your branch is ahead of 'origin/main' by 24 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ git pull git@github.com:humgendiv/hmiwa-lab.git
+Enter passphrase for key '/home/hmiwa/.ssh/id_rsa':
+From github.com:humgendiv/hmiwa-lab
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+(base) hmiwa@humgendiv:~/hmiwa/hmiwa-lab$ exit
+logout
+Connection to 133.11.2.58 closed.
+(base) PS C:\Users\himar>
