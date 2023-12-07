@@ -1,0 +1,373 @@
+Last login: Mon Nov 20 14:12:04 on ttys000
+hmiwa@dhcp3-156 ~ % ssh hmiwa-lab                             
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+bind [127.0.0.1]:8888: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 8888
+Could not request local forwarding.
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Mon Nov 20 14:12:45 2023 from 133.11.3.156
+hmiwa@humgendiv:~$ ls
+bcftools-1.17  hmiwa  hmiwa1  homebrew  local  R  snap
+hmiwa@humgendiv:~$ cd hmiwa1
+hmiwa@humgendiv:~/hmiwa1$ ls
+archives  rawdata  storage
+hmiwa@humgendiv:~/hmiwa1$ cd storage
+hmiwa@humgendiv:~/hmiwa1/storage$ ls
+hmiwa-lab  hmiwa-spc
+hmiwa@humgendiv:~/hmiwa1/storage$ cd hmiwa-lab
+hmiwa@humgendiv:~/hmiwa1/storage/hmiwa-lab$ ls
+02_231105_TutorialPRS  03_231113_TutorialPRS
+hmiwa@humgendiv:~/hmiwa1/storage/hmiwa-lab$ cd
+hmiwa@humgendiv:~$ ls
+bcftools-1.17  hmiwa  hmiwa1  homebrew  local  R  snap
+hmiwa@humgendiv:~$ conda
+conda: command not found
+hmiwa@humgendiv:~$ python
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+hmiwa@humgendiv:~$ 
+hmiwa@humgendiv:~$ 
+hmiwa@humgendiv:~$ 
+hmiwa@humgendiv:~$ ls
+bcftools-1.17  hmiwa  hmiwa1  homebrew  local  R  snap
+hmiwa@humgendiv:~$ hmiwa
+hmiwa: command not found
+hmiwa@humgendiv:~$ cd hmiwa
+hmiwa@humgendiv:~/hmiwa$ ls
+hmiwa-lab  m_20211215  white.rsa
+hmiwa@humgendiv:~/hmiwa$ jupyter notebook
+[I 2023-11-20 20:05:36.848 ServerApp] Package notebook took 0.0000s to import
+[I 2023-11-20 20:05:36.855 ServerApp] Package jupyter_lsp took 0.0064s to import
+[W 2023-11-20 20:05:36.855 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-20 20:05:36.858 ServerApp] Package jupyter_server_terminals took 0.0029s to import
+[I 2023-11-20 20:05:36.858 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-11-20 20:05:36.878 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-11-20 20:05:36.878 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-11-20 20:05:36.878 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-11-20 20:05:36.881 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-11-20 20:05:36.885 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-11-20 20:05:36.888 ServerApp] notebook | extension was successfully linked.
+[I 2023-11-20 20:05:37.037 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-11-20 20:05:37.048 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-11-20 20:05:37.050 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-11-20 20:05:37.051 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-11-20 20:05:37.052 LabApp] JupyterLab extension loaded from /home/hmiwa/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-11-20 20:05:37.052 LabApp] JupyterLab application directory is /home/hmiwa/.local/share/jupyter/lab
+[I 2023-11-20 20:05:37.052 LabApp] Extension Manager is 'pypi'.
+[I 2023-11-20 20:05:37.054 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-11-20 20:05:37.056 ServerApp] notebook | extension was successfully loaded.
+[I 2023-11-20 20:05:37.056 ServerApp] The port 8888 is already in use, trying another port.
+[I 2023-11-20 20:05:37.056 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa
+[I 2023-11-20 20:05:37.056 ServerApp] Jupyter Server 2.9.1 is running at:
+[I 2023-11-20 20:05:37.056 ServerApp] http://localhost:8889/tree?token=c983700662a2652cd4ee7ae9eb857a856945ca3d0abf8429
+[I 2023-11-20 20:05:37.056 ServerApp]     http://127.0.0.1:8889/tree?token=c983700662a2652cd4ee7ae9eb857a856945ca3d0abf8429
+[I 2023-11-20 20:05:37.056 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-11-20 20:05:37.059 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-11-20 20:05:37.059 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/hmiwa/.local/share/jupyter/runtime/jpserver-1500818-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8889/tree?token=c983700662a2652cd4ee7ae9eb857a856945ca3d0abf8429
+        http://127.0.0.1:8889/tree?token=c983700662a2652cd4ee7ae9eb857a856945ca3d0abf8429
+[I 2023-11-20 20:05:37.272 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+^C[I 2023-11-20 20:06:00.713 ServerApp] interrupted
+[I 2023-11-20 20:06:00.713 ServerApp] Serving notebooks from local directory: /home/hmiwa/hmiwa
+    0 active kernels
+    Jupyter Server 2.9.1 is running at:
+    http://localhost:8889/tree?token=c983700662a2652cd4ee7ae9eb857a856945ca3d0abf8429
+        http://127.0.0.1:8889/tree?token=c983700662a2652cd4ee7ae9eb857a856945ca3d0abf8429
+Shutdown this Jupyter server (y/[n])? y
+[C 2023-11-20 20:06:02.292 ServerApp] Shutdown confirmed
+[I 2023-11-20 20:06:02.293 ServerApp] Shutting down 5 extensions
+hmiwa@humgendiv:~/hmiwa$ cd
+hmiwa@humgendiv:~$ bash anaconda/Anaconda3-2023.09-0-Linux-x86_64.sh
+
+Welcome to Anaconda3 2023.09-0
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+>>> 
+==================================================
+End User License Agreement - Anaconda Distribution
+==================================================
+
+Copyright 2015-2023, Anaconda, Inc.
+
+All rights reserved under the 3-clause BSD License:
+
+This End User License Agreement (the "Agreement") is a legal agreement between you and Anaconda, Inc. ("Anaconda") and governs your use of Anaconda Di
+stribution (which was formerly known as Anaconda Individual Edition).
+
+Subject to the terms of this Agreement, Anaconda hereby grants you a non-exclusive, non-transferable license to:
+
+  * Install and use the Anaconda Distribution (which was formerly known as Anaconda Individual Edition),
+  * Modify and create derivative works of sample source code delivered in Anaconda Distribution from Anaconda's repository, and;
+  * Redistribute code files in source (if provided to you by Anaconda as source) and binary forms, with or without modification subject to the require
+ments set forth below, and;
+
+Anaconda may, at its option, make available patches, workarounds or other updates to Anaconda Distribution. Unless the updates are provided with their
+ separate governing terms, they are deemed part of Anaconda Distribution licensed to you as provided in this Agreement.  This Agreement does not entit
+le you to any support for Anaconda Distribution.
+
+Anaconda reserves all rights not expressly granted to you in this Agreement.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentatio
+n and/or other materials provided with the distribution.
+  * Neither the name of Anaconda nor the names of its contributors may be used to endorse or promote products derived from this software without speci
+fic prior written permission.
+  * The purpose of the redistribution is not part of a commercial product for resale. Please contact the Anaconda team for a third party redistributio
+n commercial license
+  * Commercial usage of the repository is non-compliant with our Terms of Service . Please contact us to learn more about our commercial offerings.
+
+You acknowledge that, as between you and Anaconda, Anaconda owns all right, title, and interest, including all intellectual property rights, in and to
+ Anaconda Distribution and, with respect to third-party products distributed with or through Anaconda Distribution, the applicable third-party licenso
+rs own all right, title and interest, including all intellectual property rights, in and to such products.  If you send or transmit any communications
+ or materials to Anaconda suggesting or recommending changes to the software or documentation, including without limitation, new features or functiona
+lity relating thereto, or any comments, questions, suggestions or the like ("Feedback"), Anaconda is free to use such Feedback. You hereby assign to A
+naconda all right, title, and interest in, and Anaconda is free to use, without any attribution or compensation to any party, any ideas, know-how, con
+cepts, techniques or other intellectual property rights contained in the Feedback, for any purpose whatsoever, although Anaconda is not required to us
+e any Feedback.
+
+THIS SOFTWARE IS PROVIDED BY ANACONDA AND ITS CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED W
+ARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ANACONDA BE LIABLE FOR ANY DIRECT, INDIRECT, INCID
+ENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENC
+E OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, ANACONDA AND ITS AFFILIATES SHALL NOT BE LIABLE FOR ANY SPECIAL, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES
+, OR ANY LOST PROFITS, LOSS OF USE, LOSS OF DATA OR LOSS OF GOODWILL, OR THE COSTS OF PROCURING SUBSTITUTE PRODUCTS, ARISING OUT OF OR IN CONNECTION W
+ITH THIS AGREEMENT OR THE USE OR PERFORMANCE OF ANACONDA DISTRIBUTION, WHETHER SUCH LIABILITY ARISES FROM ANY CLAIM BASED UPON BREACH OF CONTRACT, BRE
+ACH OF WARRANTY, TORT (INCLUDING NEGLIGENCE), PRODUCT LIABILITY OR ANY OTHER CAUSE OF ACTION OR THEORY OF LIABILITY. IN NO EVENT WILL THE TOTAL CUMULA
+TIVE LIABILITY OF ANACONDA AND ITS AFFILIATES UNDER OR ARISING OUT OF THIS AGREEMENT EXCEED 10.00 U.S. DOLLARS.
+
+If you want to terminate this Agreement, you may do so by discontinuing use of Anaconda Distribution.  Anaconda may, at any time, terminate this Agree
+ment and the license granted hereunder if you fail to comply with any term of this Agreement.   Upon any termination of this Agreement, you agree to p
+romptly discontinue use of the Anaconda Distribution and destroy all copies in your possession or control. Upon any termination of this Agreement all 
+provisions survive except for the licenses granted to you.
+
+This Agreement is governed by and construed in accordance with the internal laws of the State of Texas without giving effect to any choice or conflict
+ of law provision or rule that would require or permit the application of the laws of any jurisdiction other than those of the State of Texas. Any leg
+al suit, action, or proceeding arising out of or related to this Agreement or the licenses granted hereunder by you must be instituted exclusively in 
+the federal courts of the United States or the courts of the State of Texas in each case located in Travis County, Texas, and you irrevocably submit t
+o the jurisdiction of such courts in any such suit, action, or proceeding.
+
+Notice of Third Party Software Licenses
+=======================================
+
+Anaconda Distribution provides access to a repository which contains software packages or tools licensed on an open source basis from third parties an
+d binary packages of these third party tools. These third party software packages or tools are provided on an "as is" basis and are subject to their r
+espective license agreements as well as this Agreement and the Terms of Service for the Repository located at https://know.anaconda.com/TOS.html; prov
+ided, however, no restriction contained in the Terms of Service shall be construed so as to limit Your ability to download the packages contained in A
+naconda Distribution provided you comply with the license for each such package.  These licenses may be accessed from within the Anaconda Distribution
+ software or https://www.anaconda.com/legal. Information regarding which license is applicable is available from within many of the third party softwa
+re packages and tools and at https://repo.anaconda.com/pkgs/main/ and https://repo.anaconda.com/pkgs/r/. Anaconda reserves the right, in its sole disc
+retion, to change which third party tools are included in the repository accessible through Anaconda Distribution.
+
+Intel Math Kernel Library
+-------------------------
+
+Anaconda Distribution provides access to re-distributable, run-time, shared-library files from the Intel Math Kernel Library ("MKL binaries").
+
+Copyright 2018 Intel Corporation.  License available at https://software.intel.com/en-us/license/intel-simplified-software-license (the "MKL License")
+.
+
+You may use and redistribute the MKL binaries, without modification, provided the following conditions are met:
+
+  * Redistributions must reproduce the above copyright notice and the following terms of use in the MKL binaries and in the documentation and/or other
+ materials provided with the distribution.
+  * Neither the name of Intel nor the names of its suppliers may be used to endorse or promote products derived from the MKL binaries without specific
+ prior written permission.
+  * No reverse engineering, decompilation, or disassembly of the MKL binaries is permitted.
+
+You are specifically authorized to use and redistribute the MKL binaries with your installation of Anaconda Distribution subject to the terms set fort
+h in the MKL License. You are also authorized to redistribute the MKL binaries with Anaconda Distribution or in the Anaconda package that contains the
+ MKL binaries. If needed, instructions for removing the MKL binaries after installation of Anaconda Distribution are available at https://docs.anacond
+a.com.
+
+cuDNN Software
+--------------
+
+Anaconda Distribution also provides access to cuDNN software binaries ("cuDNN binaries") from NVIDIA Corporation. You are specifically authorized to u
+se the cuDNN binaries with your installation of Anaconda Distribution subject to your compliance with the license agreement located at https://docs.nv
+idia.com/deeplearning/sdk/cudnn-sla/index.html. You are also authorized to redistribute the cuDNN binaries with an Anaconda Distribution package that 
+contains the cuDNN binaries. You can add or remove the cuDNN binaries utilizing the install and uninstall features in Anaconda Distribution.
+
+cuDNN binaries contain source code provided by NVIDIA Corporation.
+
+Arm Performance Libraries
+-------------------------
+
+Arm Performance Libraries (Free Version): Anaconda provides access to software and related documentation from the Arm Performance Libraries ("Arm PL")
+ provided by Arm Limited. By installing or otherwise accessing the Arm PL, you acknowledge and agree that use and distribution of the Arm PL is subjec
+t to your compliance with the Arm PL end user license agreement located at: https://developer.arm.com/tools-and-software/server-and-hpc/downloads/arm-
+performance-libraries/eula.
+
+Export; Cryptography Notice
+===========================
+
+You must comply with all domestic and international export laws and regulations that apply to the software, which include restrictions on destinations
+, end users, and end use.  Anaconda Distribution includes cryptographic software. The country in which you currently reside may have restrictions on t
+he import, possession, use, and/or re-export to another country, of encryption software. BEFORE using any encryption software, please check your count
+ry's laws, regulations and policies concerning the import, possession, or use, and re-export of encryption software, to see if this is permitted. See 
+the Wassenaar Arrangement http://www.wassenaar.org/ for more information.
+
+Anaconda has self-classified this software as Export Commodity Control Number (ECCN) EAR99 which includes mass market information security software us
+ing or performing cryptographic functions with asymmetric algorithms. No license is required for export of this software to non-embargoed countries.
+
+The Intel Math Kernel Library contained in Anaconda Distribution is classified by Intel as ECCN 5D992.c with no license required for export to non-emb
+argoed countries.
+
+The following packages listed on https://www.anaconda.com/cryptography are included in the repository accessible through Anaconda Distribution that re
+late to cryptography.
+
+Last updated February 25, 2022
+
+
+Do you accept the license terms? [yes|no]
+[no] >>> yes 
+
+Anaconda3 will now be installed into this location:
+/home/hmiwa/anaconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/hmiwa/anaconda3] >>> 
+PREFIX=/home/hmiwa/anaconda3
+Unpacking payload ...
+                                                                                                                                                      
+Installing base environment...
+
+
+Downloading and Extracting Packages
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Executing transaction: | 
+
+    Installed package of scikit-learn can be accelerated using scikit-learn-intelex.
+    More details are available here: https://intel.github.io/scikit-learn-intelex
+
+    For example:
+
+        $ conda install scikit-learn-intelex
+        $ python -m sklearnex my_application.py
+
+    
+
+done
+installation finished.
+Do you wish to update your shell profile to automatically initialize conda?
+This will activate conda on startup and change the command prompt when activated.
+If you'd prefer that conda's base environment not be activated on startup,
+   run the following command when conda is activated:
+
+conda config --set auto_activate_base false
+
+You can undo this by running `conda init --reverse $SHELL`? [yes|no]
+[no] >>> yes
+]no change     /home/hmiwa/anaconda3/condabin/conda
+no change     /home/hmiwa/anaconda3/bin/conda
+no change     /home/hmiwa/anaconda3/bin/conda-env
+no change     /home/hmiwa/anaconda3/bin/activate
+no change     /home/hmiwa/anaconda3/bin/deactivate
+no change     /home/hmiwa/anaconda3/etc/profile.d/conda.sh
+no change     /home/hmiwa/anaconda3/etc/fish/conf.d/conda.fish
+no change     /home/hmiwa/anaconda3/shell/condabin/Conda.psm1
+no change     /home/hmiwa/anaconda3/shell/condabin/conda-hook.ps1
+no change     /home/hmiwa/anaconda3/lib/python3.11/site-packages/xontrib/conda.xsh
+no change     /home/hmiwa/anaconda3/etc/profile.d/conda.csh
+modified      /home/hmiwa/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+Thank you for installing Anaconda3!
+hmiwa@humgendiv:~$ cat ~/.bashrc | tail -n 10
+else
+    if [ -f "/home/hmiwa/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/hmiwa/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/hmiwa/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+hmiwa@humgendiv:~$ which python
+/usr/bin/python
+hmiwa@humgendiv:~$ exit
+logout
+Connection to 133.11.2.58 closed.
+hmiwa@dhcp3-156 ~ % ssh hmiwa-lab                             
+Enter passphrase for key '/Users/hmiwa/.ssh/id_rsa': 
+bind [127.0.0.1]:8888: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 8888
+Could not request local forwarding.
+ヒトゲノム多様性研究室のワークステーションへログインしました。
+[OS: Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-32-generic x86_64)]
+
+不明点はラボ内Slackの#serverチャンネルまで
+
+*** System restart required ***
+You have new mail.
+Last login: Mon Nov 20 18:05:49 2023 from 133.11.3.156
+(base) hmiwa@humgendiv:~$ 
+(base) hmiwa@humgendiv:~$ which python
+/home/hmiwa/anaconda3/bin/python
+(base) hmiwa@humgendiv:~$ which pip
+/home/hmiwa/anaconda3/bin/pip
+(base) hmiwa@humgendiv:~$ which ipython
+/home/hmiwa/.local/bin/ipython
+(base) hmiwa@humgendiv:~$ which conda
+/home/hmiwa/anaconda3/bin/conda
+(base) hmiwa@humgendiv:~$ conda info
+
+     active environment : base
+    active env location : /home/hmiwa/anaconda3
+            shell level : 1
+       user config file : /home/hmiwa/.condarc
+ populated config files : 
+          conda version : 23.7.4
+    conda-build version : 3.26.1
+         python version : 3.11.5.final.0
+       virtual packages : __archspec=1=x86_64
+                          __glibc=2.35=0
+                          __linux=6.2.0=0
+                          __unix=0=0
+       base environment : /home/hmiwa/anaconda3  (writable)
+      conda av data dir : /home/hmiwa/anaconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /home/hmiwa/anaconda3/pkgs
+                          /home/hmiwa/.conda/pkgs
+       envs directories : /home/hmiwa/anaconda3/envs
+                          /home/hmiwa/.conda/envs
+               platform : linux-64
+             user-agent : conda/23.7.4 requests/2.31.0 CPython/3.11.5 Linux/6.2.0-32-generic ubuntu/22.04.3 glibc/2.35 aau/0.4.2 c/8cznhOvEGz_yoZule68X5A s/0KjNu9ys49RHJZChONVVIg e/vrHkIUyOMRDd7E943iHOzw
+                UID:GID : 1002:1002
+             netrc file : None
+           offline mode : False
+
+
+(base) hmiwa@humgendiv:~$ exit
+logout
+Connection to 133.11.2.58 closed.
+hmiwa@dhcp3-156 ~ % 
