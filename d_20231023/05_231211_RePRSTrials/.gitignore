@@ -1,0 +1,4 @@
+Documents/*
+!Documents/.gitkeep
+jupyter_venv5/*
+!jupyter_venv5/.gitkeep
