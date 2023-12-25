@@ -1,0 +1,17 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf Tongan.chrX.vcf.gz
+	--maf 0.01
+	--max-alleles 2
+	--min-alleles 2
+	--hwe 1e-06
+	--max-missing 0.99
+	--recode
+	--remove-filtered-all
+	--remove-indels
+	--stdout
+
+Error: Can't determine file type of Tongan.chrX.vcf.gz
