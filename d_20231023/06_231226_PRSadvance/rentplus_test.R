@@ -56,7 +56,7 @@ for(i in 1:dim(mark.dat)[1]){
    system(rent.tmp)
 
    #Write a string that will call tabix to extract a vcf from 1000 genomes.
-   tabix.str <- paste("tabix -h ALL.chr", as.character(chr), ".phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz ", as.character(chr), ":", as.character(lb), "-", as.character(ub), " | ~/homebrew/bin/vcf-subset -c ", id_file, " > ", vcf_file, sep = "")
+   tabix.str <- paste("tabix -h ~/hmiwa1/rawdata/1KGa/ALL.chr", as.character(chr), ".phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz ", as.character(chr), ":", as.character(lb), "-", as.character(ub), " | ~/homebrew/bin/vcf-subset -c ", id_file, " > ", vcf_file, sep = "")
    system(tabix.str)
 
    #Write to IMPUTE format, which is easy to change to RENT+ format.
